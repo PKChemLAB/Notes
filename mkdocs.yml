@@ -1,15 +1,37 @@
-site_name: My Notes
+site_name: "CPK's Notes"
+site_url: https://pkchemlab.github.io/Notes/
+
+repo_name: pkchemlab/Notes
+repo_url: https://github.com/pkchemlab/Notes
 theme:
   name: material
   language: zh
+  palette:
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+
   features:
-    - navigation.expand         # 左侧导航默认展开
-    - navigation.top            # 回到顶部
-    - toc.follow                # 右侧目录跟随滚动
-    - toc.integrate             # 右侧目录更“像文档”
-    - search.suggest            # 搜索提示
-    - search.highlight          # 搜索高亮
-    - content.code.copy         # 代码复制按钮
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
 
 nav:
   - 首页: index.md
@@ -17,8 +39,8 @@ nav:
   - 计算化学导论:
       - 课程主页: 计算化学导论/index.md
 
-  - 结构II：分子谱学:
-      - 课程主页: 结构II：分子谱学/index.md
+  - 结构II:分子谱学:
+      - 课程主页: 结构II&分子谱学/index.md
 
   - 数据结构基础:
       - 课程主页: 数据结构基础/index.md
@@ -26,15 +48,15 @@ nav:
   - 物理化学I:
       - 课程主页: 物理化学I/index.md
 
-plugins:
-  - search
 
-markdown_extensions:
+mmarkdown_extensions:
   - admonition
-  - toc:
-      permalink: true
   - tables
   - footnotes
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.tasklist:
@@ -43,5 +65,8 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  # 数学公式支持（写 LaTeX 必备）
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
