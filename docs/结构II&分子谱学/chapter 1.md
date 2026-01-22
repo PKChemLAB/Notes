@@ -270,15 +270,13 @@ $$
   2) **自发发射（spontaneous emission）**  
      发射方向、相位、偏振随机  
 
-![alt text](image\image.png)
+![alt](image\image.png)
 
-- 散射  
-
-![alt text](image\image-1.png)
+![alt](image\image-1.png)
 
 - 非弹性散射反映分子振动信息  
 
-![alt text](image\image-2.png)
+![alt](image\image-2.png)
 
 ---
 
@@ -1428,8 +1426,8 @@ $$
 - 非均匀展宽：高斯函数  
 
 ![alt](image/image-14.png)
-
-Voigt 线形：
+                                    
+Voigt 线形：             
 
 $$
 \begin{aligned}
