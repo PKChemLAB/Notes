@@ -41,6 +41,7 @@ nav:
 
   - 结构II:分子谱学:
       - 课程主页: 结构II&分子谱学/index.md
+      - chapter 1-光与分子的相互作用: 结构II&分子谱学/chapter 1.md
 
   - 数据结构基础:
       - 课程主页: 数据结构基础/index.md
@@ -53,7 +54,8 @@ nav:
 
 copyright: Copyright &copy; 2026 Peikai Chen
 
-mmarkdown_extensions:
+markdown_extensions:
+  - attr_list
   - admonition
   - tables
   - footnotes
