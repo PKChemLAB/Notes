@@ -1,5 +1,6 @@
 site_name: "CPK's Notes"
 site_url: https://pkchemlab.github.io/Notes/
+docs_dir: docs
 
 repo_name: pkchemlab/Notes
 repo_url: https://github.com/pkchemlab/Notes
@@ -34,7 +35,7 @@ plugins:
   - search
 
 nav:
-  - 首页: index.md
+  - 首页: 首页.md
 
   - 计算化学导论:
       - 课程主页: 计算化学导论/index.md
