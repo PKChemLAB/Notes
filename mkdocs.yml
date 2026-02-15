@@ -35,20 +35,20 @@ plugins:
   - search
 
 nav:
-  - 首页: 首页.md
+  - 首页: index.md
 
   - 计算化学导论:
-      - 课程主页: 计算化学导论/index.md
+      - 课程主页: intro-computational-chem/index.md
 
   - 结构II:分子谱学:
-      - 课程主页: 结构II&分子谱学/index.md
-      - chapter 1-光与分子的相互作用: 结构II&分子谱学/chapter 1.md
+      - 课程主页: structure-spectroscopy/index.md
+      - chapter 1-光与分子的相互作用: structure-spectroscopy/chapter 1.md
 
   - 数据结构基础:
-      - 课程主页: 数据结构基础/index.md
+      - 课程主页: data-structures/index.md
 
   - 物理化学I:
-      - 课程主页: 物理化学I/index.md
+      - 课程主页: physical-chem-1/index.md
   
   - Papers:
     - 总览: papers/index.md
