@@ -45,6 +45,7 @@ nav:
   - 结构II:分子谱学:
       - 课程主页: structure-spectroscopy/index.md
       - chapter 1-光与分子的相互作用: structure-spectroscopy/chapter-1.md
+      - chapter 2-分子光谱: structure-spectroscopy/chapter-2.md
 
   - 数据结构基础:
       - 课程主页: data-structures/index.md
