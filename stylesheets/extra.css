@@ -1,0 +1,93 @@
+/* ==========================================================================
+   1. 全局字体设置 (保留你原来的)
+   ========================================================================== */
+:root {
+  /* 正文字体：霞鹜文楷 + 微软雅黑 */
+  --md-text-font: "LXGW WenKai", "Microsoft YaHei", sans-serif;
+  /* 代码字体：JetBrains Mono */
+  --md-code-font: "JetBrains Mono", "Cascadia Code", monospace;
+}
+
+/* 应用字体设置 */
+.md-typeset {
+  line-height: 1.75;
+  font-family: var(--md-text-font);
+}
+
+code, pre {
+  font-family: var(--md-code-font);
+}
+
+/* ==========================================================================
+   2. 深色模式 (Slate) 深度定制 - 适配 Hugo PaperMod 风格
+   ========================================================================== */
+[data-md-color-scheme="slate"] {
+  /* --- 核心背景色 --- */
+  /* 页面背景：PaperMod 标志性的深炭灰 */
+  --md-default-bg-color: #1d1e20;
+  
+  /* 侧边栏/遮罩层背景：与页面背景一致，实现沉浸感 */
+  --md-default-fg-color--lightest: #1d1e20;
+  
+  /* 内容区域/卡片背景 */
+  --md-default-bg-color--light: #1d1e20;
+  
+  /* 代码块背景：稍微亮一点的灰色，与 PaperMod 保持一致 */
+  --md-code-bg-color: #2e2e33;
+  
+  /* --- 顶部导航栏关键设置 (修复文字消失问题) --- */
+  /* 1. 顶栏的背景色变量 (设为深炭灰) */
+  --md-primary-fg-color: #1d1e20;
+  
+  /* 2. 顶栏的“前景色”(即文字和图标颜色) -> 必须是白色 */
+  --md-primary-bg-color: #ffffff;
+  
+  /* --- 细节微调 --- */
+  /* 分割线颜色：调暗，避免刺眼 */
+  --md-default-fg-color--lighter: #353b45;
+  
+  /* 正文文字颜色：灰白色，阅读舒适 */
+  --md-text-color: #e5e5e5;
+}
+
+/* --- 强制覆盖顶部导航栏和标签栏背景 --- */
+/* 确保 Header 和 Tabs 即使在滚动时也保持深色背景 */
+[data-md-color-scheme="slate"] .md-header, 
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #1d1e20;
+}
+
+/* --- 搜索框优化 --- */
+/* 搜索框背景变深，融入顶栏 */
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: #2e2e33;
+  border-color: #2e2e33;
+}
+/* 搜索框内的占位符文字颜色 */
+[data-md-color-scheme="slate"] .md-search__input::placeholder {
+  color: #a0a0a0;
+}
+
+/* ==========================================================================
+   3. 卡片样式 (保留你原来的 + 微调适配深色)
+   ========================================================================== */
+.grid.cards > ul > li {
+  border-radius: 14px;
+  padding: 16px;
+  
+  /* 边框：原有的 0.08 在深色下可能太暗，稍微调亮到 0.1 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* 背景：保留你的半透明设计，但在深色底上稍微增加一点不透明度 */
+  background: rgba(255, 255, 255, 0.04);
+  
+  /* 添加平滑过渡效果 */
+  transition: border-color 0.25s, background-color 0.25s;
+}
+
+/* 鼠标悬停时的高亮效果 */
+.grid.cards > ul > li:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/data-structures/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/intro-computational-chem/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/papers/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/physical-chem-1/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/structure-spectroscopy/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/structure-spectroscopy/chapter-1/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+    <url>
+         <loc>https://pkchemlab.github.io/Notes/structure-spectroscopy/chapter-2/</loc>
+         <lastmod>2026-02-22</lastmod>
+    </url>
+</urlset>
