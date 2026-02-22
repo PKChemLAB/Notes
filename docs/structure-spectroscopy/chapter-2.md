@@ -188,17 +188,19 @@ $$
 
 ---
 
-### 2.1.3 *电子自旋与斯特恩-盖拉赫实验
+### 2.1.3 电子自旋与斯特恩-盖拉赫实验*
 **自旋是电子的内禀属性，独立于环境，不依赖 $r,\theta,\phi$，纯粹的量子现象**
 ![alt](image/image-17.png)
 
 #### 单电子的角动量与量子数
 轨道角动量
+
 - $|L|=\sqrt{l(l+1)}\hbar$
   
 - 空间取向（z分量）：$L_z=m_l \cdot \hbar$（$m_l=-l,-l+1,...,0,...,l-1,l$，共$2l+1$个离散值）
 
 自旋角动量
+
 - $|S|=\sqrt{s(s+1)}\hbar$（电子$s=1/2$）
   
 - 空间取向（z分量即磁场方向）：$S_z=m_s \cdot \hbar$（$m_s=+1/2$（自旋向上）、$m_s=-1/2$（自旋向下），共2个离散值）
@@ -210,9 +212,9 @@ $$
 
 闭壳层：电子子壳层（$n,l$确定）的所有$m_l、m_s$量子态都被电子填满，如$ns^2、np^6、nd^{10}$。
 
-- 总轨道角动量：全满壳层$m_l$总和为0，$L_{z,总}=0$，且因球对称，总轨道角动量$L_{总}=0$。
+- 全满壳层$m_l$总和为0，$L_{z,总}=0$，且因球对称，总轨道角动量$L_{总}=0$。
   
-- 总自旋角动量：每个轨道的2个电子自旋相反，$m_s$总和为0，总自旋角动量$S_{总}=0$。
+- 每个轨道的2个电子自旋相反，$m_s$总和为0，总自旋角动量$S_{总}=0$。
 
 闭壳层对原子总角动量、总磁矩贡献为0，仅需考虑未填满的价电子层。
 
@@ -240,14 +242,183 @@ $$
 - $\mu_z=+\mu_B$：受力沿磁场梯度方向（向上）偏转。
 
 - $\mu_z=-\mu_B$：受力沿磁场梯度反方向（向下）偏转。
+  
 原子束分裂为两道，在接收屏留下离散痕迹。
 
 ---
 
 ## 2.2 氢原子光谱
 
+![alt](image/image-18.png)
+
+根据跃迁速率
+$$
+\begin{aligned}
+W \propto |\mu_{if}|^2
+\end{aligned}
+$$
+
+- $\boldsymbol{\mu_{if} \neq 0}$，跃迁允许
+ 
+- $\boldsymbol{\mu_{if} = 0}$，跃迁禁阻
+
+跃迁偶极矩
+$$
+\begin{aligned}
+\mu_{if} = \langle i | \hat{\mu} | f \rangle
+\end{aligned}
+$$
+
+电偶极矩算符
+$$
+\begin{aligned}
+\hat{\mu} = -e\vec{r}
+\end{aligned}
+$$
+
+分量形式：
+$$
+\begin{aligned}
+\mu_x &= -er\sin\theta\cos\phi \\
+\mu_y &= -er\sin\theta\sin\phi \\
+\mu_z &= -er\cos\theta
+\end{aligned}
+$$
 
 
+积分形式
+$$
+\begin{aligned}
+\mu_{if} = \int \Psi_i(n_i,l_i,m_{l_i},m_{s_i}) \hat{\vec{\mu}} \Psi_f(n_f,l_f,m_{l_f},m_{s_f}) d\tau
+\end{aligned}
+$$
+
+投影：
+$$
+\begin{aligned}
+\mu_{if} = -e \int \Psi_i(n_i,l_i,m_{l_i},m_{s_i})
+\begin{pmatrix}
+r\sin\theta\cos\phi \\
+r\sin\theta\sin\phi \\
+r\cos\theta
+\end{pmatrix}
+\Psi_f(n_f,l_f,m_{l_f},m_{s_f}) r^2\sin\theta \, drd\theta d\phi d\sigma
+\end{aligned}
+$$
+
+
+氢原子总波函数
+
+$$
+\begin{aligned}
+\Psi(n,l,m_l,m_s) = \underbrace{R_{n,l}(r)}_{\text{径向}} \cdot \underbrace{Y_{l,m_l}(\theta,\phi)}_{\text{角向}} \cdot \underbrace{\psi_{m_s}(\sigma)}_{\text{自旋}}
+\end{aligned}
+$$
+
+将总波函数代入积分，可拆分为**径向积分×角向积分×自旋积分**的乘积形式：
+
+$$
+\begin{aligned}
+\mu_{if} = -e \cdot \underbrace{\int_{0}^{\infty} R_{n_i,l_i}(r) R_{n_f,l_f}(r) r^3 dr}_{\text{径向}}
+\times \underbrace{\int_{0}^{\pi}\int_{0}^{2\pi} Y_{l_i,m_{l_i}}^*
+\begin{pmatrix}
+\sin\theta\cos\phi \\
+\sin\theta\sin\phi \\
+\cos\theta
+\end{pmatrix}
+Y_{l_f,m_{l_f}} \sin\theta \, d\theta d\phi}_{\text{角向}}
+\times \underbrace{\int \psi_{m_{s_i}}^* \psi_{m_{s_f}} d\sigma}_{\text{自旋}}
+\end{aligned}
+$$
+
+
+写成狄拉克符号矩阵元的乘积形式：
+$$
+\begin{aligned}
+\mu_{if} = -e \cdot \langle n_i l_i \big| r^3 \big| n_f l_f \rangle
+\times \left\langle l_i m_{l_i} \bigg|
+\begin{pmatrix}
+\sin\theta\cos\phi \\
+\sin\theta\sin\phi \\
+\cos\theta
+\end{pmatrix}
+\bigg| l_f m_{l_f} \right\rangle
+\times \langle m_{s_i} \big| m_{s_f} \rangle
+\end{aligned}
+$$
+
+---
+
+#### 自旋
+自旋积分非零条件（自旋选择定则）：
+
+$$
+\begin{aligned}
+\int \psi_{m_{s_i}}^* \psi_{m_{s_f}} d\sigma \neq 0
+\implies m_{s_i} = m_{s_f},\ \text{即}\ \boldsymbol{\Delta m_s = 0}
+\end{aligned}
+$$
+
+
+---
+
+#### 角向
+代入角向波函数（球谐函数）形式：
+
+$$
+\begin{aligned}
+Y_{l,m_l}(\theta,\phi) \propto P_{l,m_l}(\cos\theta) e^{i m_l \phi}
+\end{aligned}
+$$
+
+将角向积分拆分为极角$\theta$积分与方位角$\phi$积分的乘积：
+
+$$
+\begin{aligned}
+\int_{0}^{\pi}\int_{0}^{2\pi} Y_{l_i,m_{l_i}}^*
+\begin{pmatrix}
+\sin\theta\cos\phi \\
+\sin\theta\sin\phi \\
+\cos\theta
+\end{pmatrix}
+Y_{l_f,m_{l_f}} \sin\theta \, d\theta d\phi
+= \int_{0}^{\pi} P_{l_i,m_{l_i}}^*(\cos\theta)
+\begin{pmatrix}
+\sin\theta \\
+\sin\theta \\
+\cos\theta
+\end{pmatrix}
+P_{l_f,m_{l_f}}(\cos\theta) d\theta
+\times \int_{0}^{2\pi} e^{-i m_{l_i} \phi}
+\begin{pmatrix}
+\cos\phi \\
+\sin\phi \\
+1
+\end{pmatrix}
+e^{i m_{l_f} \phi} d\phi
+\neq 0
+\end{aligned}
+$$
+
+由积分非零条件，得到角向选择定则：
+- 极角积分非零：$\boldsymbol{\Delta l = l_f - l_i = \pm 1}$
+- 方位角积分非零：$\boldsymbol{\Delta m_l = m_{l_f} - m_{l_i} = 0, \pm 1}$
+
+（注：光子角动量=1，电子跃迁过程需满足角动量守恒，因此角量子数的变化只能为±1）
+
+---
+
+#### 径向
+径向积分非零条件（主量子数选择定则）：
+
+$$
+\begin{aligned}
+-e \int_{0}^{\infty} R_{n_i,l_i}(r) R_{n_f,l_f}(r) r^3 dr \neq 0
+\implies \boldsymbol{\Delta n = n_f - n_i = \text{任意}}
+\end{aligned}
+$$
+
+径向积分对主量子数的变化无严格限制，任意主量子数差的径向积分均不会恒为零，主量子数的改变不受选择定则约束。
 
 
 
