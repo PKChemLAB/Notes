@@ -253,7 +253,7 @@ $$
   2) **自发发射（spontaneous emission）**  
      发射方向、相位、偏振随机  
 
-![alt](image/image.png)
+![alt](image/image-0.png)
 
 ![alt](image/image-1.png)
 
