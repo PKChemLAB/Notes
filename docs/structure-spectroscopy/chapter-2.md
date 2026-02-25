@@ -192,7 +192,7 @@ $$
 **自旋是电子的内禀属性，独立于环境，不依赖 $r,\theta,\phi$，纯粹的量子现象**
 ![alt](image/image-17.png)
 
-#### 单电子的角动量与量子数
+#### **单电子的角动量与量子数**
 轨道角动量
 
 - $|L|=\sqrt{l(l+1)}\hbar$
@@ -207,7 +207,7 @@ $$
 
 ---
 
-#### 多电子闭壳层的角动量抵消
+#### **多电子闭壳层的角动量抵消**
 **泡利不相容原理**：一个原子中，不可能有两个电子拥有完全相同的4个量子数（$n,l,m_l,m_s$）。同一轨道（$n,l,m_l$确定）最多填2个电子，且自旋相反。
 
 闭壳层：电子子壳层（$n,l$确定）的所有$m_l、m_s$量子态都被电子填满，如$ns^2、np^6、nd^{10}$。
@@ -227,7 +227,7 @@ $$
 
 ---
 
-#### 角动量 → 磁矩
+#### **角动量 → 磁矩**
 轨道磁矩：$\boldsymbol{\mu}_l = -\frac{e}{2m_e}\boldsymbol{L}$，5s电子轨道角动量为0，故轨道磁矩$\boldsymbol{\mu}_l=0$
 
  自旋磁矩：$\boldsymbol{\mu}_s = -g_s\frac{e}{2m_e}\boldsymbol{S}$（$g_s≈2$）
@@ -237,7 +237,7 @@ $$
 
 ---
 
-#### 磁矩 → 偏转与分裂
+#### **磁矩 → 偏转与分裂**
 
 - $\mu_z=+\mu_B$：受力沿磁场梯度方向（向上）偏转。
 
@@ -248,6 +248,8 @@ $$
 ---
 
 ## 2.2 氢原子光谱
+
+### 2.2.1 跃迁偶极
 
 ![alt](image/image-18.png)
 
@@ -349,7 +351,8 @@ $$
 
 ---
 
-#### 自旋
+### 2.2.2 类氢原子跃迁选择定则
+#### **自旋**
 自旋积分非零条件（自旋选择定则）：
 
 $$
@@ -362,7 +365,7 @@ $$
 
 ---
 
-#### 角向
+#### **角向**
 代入角向波函数（球谐函数）形式：
 
 $$
@@ -400,15 +403,99 @@ e^{i m_{l_f} \phi} d\phi
 \end{aligned}
 $$
 
-由积分非零条件，得到角向选择定则：
-- 极角积分非零：$\boldsymbol{\Delta l = l_f - l_i = \pm 1}$
-- 方位角积分非零：$\boldsymbol{\Delta m_l = m_{l_f} - m_{l_i} = 0, \pm 1}$
 
-（注：光子角动量=1，电子跃迁过程需满足角动量守恒，因此角量子数的变化只能为±1）
+>1、磁量子数选择定则 $\boldsymbol{\Delta m_l = 0,\pm1}$
+复指数正交性:
+$$
+\begin{aligned}
+\int_0^{2\pi} e^{ik\phi}d\phi = \begin{cases}
+2\pi \quad &k=0 \\
+0 \quad &k\neq0
+\end{cases}
+\end{aligned}
+$$
+$\Delta m_l = m_{l_f}-m_{l_i}$，为整数。
+$$
+\begin{aligned}
+e^{-i m_{l_i} \phi} \cdot e^{i m_{l_f} \phi} = e^{i \Delta m_l \phi}
+\end{aligned}
+$$
+**分量非零条件**
+  z分量（$\phi$部分=1）：
+    $$
+    \begin{aligned}
+    \int_0^{2\pi} e^{i\Delta m_l \phi}d\phi \neq0 \implies \boldsymbol{\Delta m_l=0}
+    \end{aligned}
+    $$
+  x分量（$\phi$部分=$\cos\phi$）：
+    $$
+    \begin{aligned}
+    \cos\phi=\frac{e^{i\phi}+e^{-i\phi}}{2}
+    \implies \boldsymbol{\Delta m_l=\pm1}
+    \end{aligned}
+    $$
+  y分量（$\phi$部分=$\sin\phi$）：
+    $$
+    \begin{aligned}
+    \sin\phi=\frac{e^{i\phi}-e^{-i\phi}}{2i}
+    \implies \boldsymbol{\Delta m_l=\pm1}
+    \end{aligned}
+    $$
+>2、角量子数选择定则 $\boldsymbol{\Delta l = \pm1}$
+关联勒让德函数正交性：
+    $$
+    \begin{aligned}
+    \int_{-1}^1 P_{l',m}(x) P_{l,m}(x) dx = 0 \quad (l'\neq l)
+    \end{aligned}
+    $$
+递推关系：
+    $$
+    \begin{aligned}
+    \cos\theta \cdot P_{l,m} = \frac{(l+m)P_{l-1,m} + (l-m+1)P_{l+1,m}}{2l+1}
+    \end{aligned}
+    $$
+    $$
+    \begin{aligned}
+    \sin\theta \cdot P_{l,m} \propto P_{l-1,m\pm1} + P_{l+1,m\pm1}
+    \end{aligned}
+    $$
+由递推关系，偶极矩项将$P_{l_f,m_{l_f}}$只能转化为$P_{l_f\pm1,m}$的线性组合。由正交性，积分非零要求 $l_i = l_f \pm1$，即
+    $$
+    \begin{aligned}
+    \boldsymbol{\Delta l = l_f - l_i = \pm1}
+    \end{aligned}
+    $$
+
+角向选择定则：
+- 角量子数选择定则：$\boldsymbol{\Delta l = l_f - l_i = \pm 1}$
+- 磁量子数选择定则：$\boldsymbol{\Delta m_l = m_{l_f} - m_{l_i} = 0, \pm 1}$
+
+光子是自旋为1的玻色子，电子吸收/放出一个光子时，整个体系（电子 + 光子）的角动量必须守恒。因此电子角量子数只能变化 ±1（光子的角动量可以和电子角动量同向或反向）。
+>Example: **1s→2p 跃迁**
+
+>初态 1s：$l_i = 0$，轨道角动量模长
+$$
+\begin{aligned}
+|\vec{L}_i| = \sqrt{0(0+1)}\hbar = 0
+\end{aligned}
+$$
+末态 2p：$l_f = 1$，轨道角动量模长
+$$
+\begin{aligned}
+|\vec{L}_f| = \sqrt{1(1+1)}\hbar = \sqrt{2}\hbar
+\end{aligned}
+$$
+光子的自旋角动量模长
+$$
+\begin{aligned}
+|\vec{S}| = \sqrt{1(1+1)}\hbar = \sqrt{2}\hbar
+\end{aligned}
+$$
+
 
 ---
 
-#### 径向
+#### **径向**
 径向积分非零条件（主量子数选择定则）：
 
 $$
@@ -420,7 +507,11 @@ $$
 
 径向积分对主量子数的变化无严格限制，任意主量子数差的径向积分均不会恒为零，主量子数的改变不受选择定则约束。
 
+---
 
+![alt](image/image-19.png)
+
+---
 
 ## 2.3 旋轨耦合和精细结构
 
