@@ -563,7 +563,7 @@ $$
 
 旋轨耦合作用通常较弱，用**一阶微扰法**处理。
 
-### 2.3.2 总角动量
+### 2.3.2 耦合总角动量
 
 原先$\hat{H}_0$中没有自旋轨道相互作用项，$\hat{l}$、$\hat{s}$与$\hat{H}_0$对易，对应角动量守恒（均值确定）。
 有了旋轨耦合，$l$、$s$ 不再是好量子数，总角动量 $\vec{j} = \vec{l} + \vec{s}$ 的量子数是好量子数，总角动量守恒。
@@ -595,13 +595,89 @@ $$
 
 $m_j$为总角动量的磁量子数
 
+---
+
+### 2.3.3 $p$轨道耦合
+
 以 p 电子（$l=1$）为例：
 
-- 无旋轨耦合时，$l=1$的能级是简并的；
-- 有旋轨耦合时，$j$取$1+1/2=3/2$和$|1−1/2|=1/2$两个值，原来的 1 个能级会分裂为 2 个能级；
-$j=3/2$时，$m_j$有$3/2,1/2,−1/2,−3/2$共 4 个取值；
-$j=1/2$时，$m_j$有$1/2,−1/2$共 2 个取值。
+**没有$ls$耦合的$2p$轨道**
+2p轨道$l=1$，$s=1/2$，一共6个态（简并基组）
+无耦合表象基矢（轨道-自旋直积态）：
 
+$$
+\psi_{l m_l s m_s} = |l, m_l\rangle |s, m_s\rangle
+$$
+
+6个直积态：
+$$
+\begin{aligned}
+&|l=1, m_l=1\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle, \\
+&|l=1, m_l=0\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle, \\
+&|l=1, m_l=-1\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle
+\end{aligned}
+$$
+
+**有$ls$耦合的$2p$轨道**
+耦合表象基矢：
+$$
+\big| l, s, j, m_j \big\rangle
+$$
+
+6个耦合态可由原简并态线性组合得到：
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{3}{2}, m_j=\frac{3}{2} \big\rangle, \\
+&\big| 2p, j=\frac{3}{2}, m_j=\frac{1}{2} \big\rangle, \\
+&\big| 2p, j=\frac{3}{2}, m_j=-\frac{1}{2} \big\rangle, \\
+&\big| 2p, j=\frac{3}{2}, m_j=-\frac{3}{2} \big\rangle, \\
+&\big| 2p, j=\frac{1}{2}, m_j=\frac{1}{2} \big\rangle, \\
+&\big| 2p, j=\frac{1}{2}, m_j=-\frac{1}{2} \big\rangle.
+\end{aligned}
+$$
+
+
+### 2.3.4 能量修正与能级裂分
+
+旋轨耦合哈密顿量：
+$$
+H_{SO} = A(r)\left( \vec{s} \cdot \vec{l} \right) = \frac{1}{2}A(r)\left( \vec{J}^2 - \vec{s}^2 - \vec{l}^2 \right)
+$$
+
+总角动量平方展开式
+
+$$
+\vec{J}^2 = \vec{J} \cdot \vec{J} = \vec{s}^2 + \vec{l}^2 + 2\vec{s} \cdot \vec{l}
+$$
+
+$ls$耦合微扰下能量修正
+
+$$
+\begin{aligned}
+E_{SO} &= \left\langle lsjm_j \right| H_{SO} \left| lsjm_j \right\rangle = \left\langle lsjm_j \right| A(r)\left( \vec{s} \cdot \vec{l} \right) \left| lsjm_j \right\rangle \\
+&= \frac{1}{2}\hbar^2 \left\{ j(j+1) - l(l+1) - s(s+1) \right\} \left\langle lsjm_j \right| A(r) \left| lsjm_j \right\rangle \\
+&= \frac{1}{2} hc\tilde{A} \left\{ j(j+1) - l(l+1) - s(s+1) \right\}
+\end{aligned}
+$$
+
+耦合常数单位转换为波数
+
+$$
+\begin{aligned}
+\frac{1}{2}\hbar^2 \langle A(r) \rangle = \frac{1}{2} hc \tilde{A}
+\end{aligned}
+$$
+
+原子序数越大，旋轨耦合效应越强（$\propto Z^4$）
+
+碱金属元素的旋轨耦合常数：
+$$
+\text{Li}: 0.23,\ \text{Na}: 11.5,\ \text{K}: 38.5,\ \text{Rb}: 158,\ \text{Cs}: 370
+$$
+
+![alt](image/image-21.png)
+
+裂分形成常见的碱金属光谱双线
 
 
 ## 2.4 多电子原子结构和光谱
