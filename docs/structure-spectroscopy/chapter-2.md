@@ -197,13 +197,13 @@ $$
 
 - $|L|=\sqrt{l(l+1)}\hbar$
   
-- 空间取向（z分量）：$L_z=m_l \cdot \hbar$（$m_l=-l,-l+1,...,0,...,l-1,l$，共$2l+1$个离散值）
+- 空间取向（z分量,即外磁场方向）：$L_z=m_l \cdot \hbar$（$m_l=-l,-l+1,...,0,...,l-1,l$，共$2l+1$个离散值）
 
 自旋角动量
 
 - $|S|=\sqrt{s(s+1)}\hbar$（电子$s=1/2$）
   
-- 空间取向（z分量即磁场方向）：$S_z=m_s \cdot \hbar$（$m_s=+1/2$（自旋向上）、$m_s=-1/2$（自旋向下），共2个离散值）
+- 空间取向：$S_z=m_s \cdot \hbar$（$m_s=+1/2$（自旋向上）、$m_s=-1/2$（自旋向下），共2个离散值）
 
 ---
 
@@ -514,5 +514,72 @@ $$
 ---
 
 ## 2.3 旋轨耦合和精细结构
+![alt](image/image-20.png)
+原先理论认为跃迁到的2p轨道应该是简并的，实验却发现有裂分。
+
+>[科学是一场宏大的建模](https://excitedstate.us.kg/posts/science-is-a-grand-enterprise-of-modeling/)
+
+### 2.3.1 旋轨耦合
+
+电子自旋运动产生磁偶极矩 $\vec{\mu}$，在电子绕核运动产生环形电流磁场 $\vec{B}$ 中的能量为：
+$$
+\begin{aligned}
+E = -\vec{\mu} \cdot \vec{B} \propto \vec{l} \cdot \vec{s}
+\end{aligned}
+$$
+
+自旋-轨道耦合哈密顿量
+$$
+\begin{aligned}
+\hat{H}_{\text{SO}} = A(r) \, \vec{l} \cdot \vec{s}
+\end{aligned}
+$$
+
+其中 $\vec{l}$ 为轨道角动量，$\vec{s}$ 为自旋角动量。
+
+耦合常数
+$$
+\begin{aligned}
+A(r)=\frac{1}{4\mu^{2} c^{2}}\left(\frac{Z e^{2}}{4\pi\varepsilon_{0} r^{3}}\right)
+\end{aligned}
+$$
+
+其中$Z$为原子序数
+
+考虑旋轨耦合后：
+$$
+\begin{aligned}
+(\hat{H}_0 + \hat{H}_{\text{SO}}) \psi = E \psi
+\end{aligned}
+$$
+
+旋轨耦合作用通常较弱，用**一阶微扰法**处理。
+
+### 2.3.2 总角动量
+
+有了旋轨耦合，$l$、$s$ 不再是好量子数（不和哈密顿算符对易）
+→ 总角动量 $\vec{j} = \vec{l} + \vec{s}$ 是好量子数
+
+总角动量
+$$
+\begin{aligned}
+\hat{J}^2 \Psi &= \hbar^2 j(j+1)\Psi \\
+j &= l+\frac{1}{2},\ \left|l-\frac{1}{2}\right|
+\end{aligned}
+$$
+
+s电子，$l = 0$ 无旋轨耦合
+
+沿着z方向投影
+$$
+\begin{aligned}
+\vec{J}_z \Psi &= \hbar m_j \Psi \\
+m_j &= j, j-1, \dots, -j \quad (2j+1)
+\end{aligned}
+$$
+
+
+
+
 
 ## 2.4 多电子原子结构和光谱
