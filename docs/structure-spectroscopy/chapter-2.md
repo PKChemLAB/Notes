@@ -612,8 +612,18 @@ $$
 6个直积态：
 $$
 \begin{aligned}
-&|l=1, m_l=1\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle, \\
-&|l=1, m_l=0\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle, \\
+&|l=1, m_l=1\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle,
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&|l=1, m_l=0\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
 &|l=1, m_l=-1\rangle |s=\frac{1}{2}, m_s=\pm\frac{1}{2}\rangle
 \end{aligned}
 $$
@@ -627,15 +637,40 @@ $$
 6个耦合态可由原简并态线性组合得到：
 $$
 \begin{aligned}
-&\big| 2p, j=\frac{3}{2}, m_j=\frac{3}{2} \big\rangle, \\
-&\big| 2p, j=\frac{3}{2}, m_j=\frac{1}{2} \big\rangle, \\
-&\big| 2p, j=\frac{3}{2}, m_j=-\frac{1}{2} \big\rangle, \\
-&\big| 2p, j=\frac{3}{2}, m_j=-\frac{3}{2} \big\rangle, \\
-&\big| 2p, j=\frac{1}{2}, m_j=\frac{1}{2} \big\rangle, \\
-&\big| 2p, j=\frac{1}{2}, m_j=-\frac{1}{2} \big\rangle.
+&\big| 2p, j=\frac{3}{2}, m_j=\frac{3}{2} \big\rangle
 \end{aligned}
 $$
 
+
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{3}{2}, m_j=\frac{1}{2} \big\rangle
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{3}{2}, m_j=-\frac{1}{2} \big\rangle
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{3}{2}, m_j=-\frac{3}{2} \big\rangle
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{1}{2}, m_j=\frac{1}{2} \big\rangle
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+&\big| 2p, j=\frac{1}{2}, m_j=-\frac{1}{2} \big\rangle
+\end{aligned}
+$$
 
 ### 2.3.4 能量修正与能级裂分
 
