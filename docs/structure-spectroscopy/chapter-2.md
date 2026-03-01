@@ -1,4 +1,6 @@
-# Chapter 2：原子结构和原子光谱 
+# Chapter 2：原子结构和原子光谱
+
+**能级-跃迁偶极-旋律**
 
 ## 2.1 氢原子电子结构
 ### 2.1.1 类氢原子
@@ -521,6 +523,8 @@ $$
 
 >[科学是一场宏大的建模](https://excitedstate.us.kg/posts/science-is-a-grand-enterprise-of-modeling/)
 
+---
+
 ### 2.3.1 旋轨耦合
 
 电子自旋运动产生磁偶极矩 $\vec{\mu}$，在电子绕核运动产生环形电流磁场 $\vec{B}$ 中的能量为：
@@ -562,6 +566,8 @@ $$
 $$
 
 旋轨耦合作用通常较弱，用**一阶微扰法**处理。
+
+---
 
 ### 2.3.2 耦合总角动量
 
@@ -672,6 +678,8 @@ $$
 \end{aligned}
 $$
 
+---
+
 ### 2.3.4 能量修正与能级裂分
 
 旋轨耦合哈密顿量：
@@ -715,4 +723,83 @@ $$
 裂分形成常见的碱金属光谱双线
 
 
+---
 ## 2.4 多电子原子结构和光谱
+多电子原子哈密顿算符
+
+$$
+\begin{aligned}
+\hat{H} &= \underbrace{\frac{-\hbar^2}{2m_\text{e}} \sum_i \nabla_i^2}_{\text{动能}} - \underbrace{\sum_i \frac{Ze^2}{4\pi\varepsilon_0 r_i}}_{\text{电子-原子核吸引能}} + \underbrace{\sum_{i,j>i} \frac{e^2}{4\pi\varepsilon_0 r_{ij}}}_{\text{电子互斥能}}
+\end{aligned}
+$$
+
+---
+
+### 2.4.1 单电子近似
+
+电子互斥能项较为复杂，为理论计算的研究重点（如DFT理论），简化采用单电子近似：
+
+把每个电子的运动，等效为在「原子核的库仑场 + 其他所有电子形成的平均球对称势场」中运动。这个平均势场只和当前电子的坐标ri​有关，和其他电子的坐标无关。忽略电子间排斥能，将多电子体系等效为单电子体系的加和，哈密顿算符简化为：
+$$
+\begin{aligned}
+\hat{H} &= \frac{-\hbar^2}{2m_\text{e}} \sum_i \nabla_i^2 - \sum_i \frac{Ze^2}{4\pi\varepsilon_0 r_i}
+\end{aligned}
+$$
+
+基于单电子近似，多电子体系的总波函数可表示为单电子波函数的连**乘积**形式：
+$$
+\begin{aligned}
+\psi = \prod_i \psi_i
+\end{aligned}
+$$
+
+---
+
+### 2.4.2 泡利原理与闭壳层原子总波函数
+电子为费米子，体系总波函数在交换任意两个电子的坐标时，满足交换反对称性：
+$$
+\begin{aligned}
+\psi(1,2) = -\psi(2,1)
+\end{aligned}
+$$
+
+**闭壳层原子总波函数**
+满足泡利反对称要求的N电子体系总波函数，可通过斯莱特行列式构造,修正使满足泡利原理：
+
+$$
+\begin{aligned}
+\psi = (N!)^{-1/2}
+\begin{vmatrix} 
+\phi_1(1)\alpha(1) & \phi_1(2)\alpha(2) & \cdots & \phi_1(N)\alpha(N) \\
+\phi_1(1)\beta(1) & \phi_1(2)\beta(2) & \cdots & \phi_1(N)\beta(N) \\
+\phi_2(1)\alpha(1) & \phi_2(2)\alpha(2) & \cdots & \phi_2(N)\alpha(N) \\
+\vdots & \vdots & & \vdots \\
+\phi_{N/2}(1)\beta(1) & \phi_{N/2}(2)\beta(2) & \cdots & \phi_{N/2}(N)\beta(N) \\
+\end{vmatrix}
+\end{aligned}
+$$
+
+若电子数$N$为奇数，则行列式最后一行的轨道下标为 $\boldsymbol{(N+1)/2}$
+
+>**例**：氦原子体系的总波函数
+轨道近似下的2电子总波函数：
+$$
+\phi(1)\phi(2)
+$$
+**不满足泡利原理！**
+引入自旋波函数，通过斯莱特行列式构造满足费米子交换反对称性的总波函数(不考虑旋轨耦合)：
+$$
+\frac{1}{\sqrt{2}}
+\begin{vmatrix}
+\phi(1)\alpha(1) & \phi(2)\alpha(2) \cr
+\phi(1)\beta(1) & \phi(2)\beta(2)
+\end{vmatrix}
+$$
+$$
+\begin{aligned}
+=\ &\frac{1}{\sqrt{2}}\left[\phi(1)\alpha(1)\phi(2)\beta(2) - \phi(2)\alpha(2)\phi(1)\beta(1)\right]
+\end{aligned}
+$$
+**满足泡利原理！**
+
+
