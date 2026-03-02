@@ -2,9 +2,7 @@
  
 ## 1.1 光
 
-### 1.1.1 波粒二象性
-
-由麦克斯韦方程组可得到平面波：
+光具有波粒二象性，由麦克斯韦方程组可得到平面波：
 
 $$
 \begin{aligned}
@@ -26,9 +24,7 @@ $$
 \end{aligned}
 $$
 
----
-
-### 1.1.2 复指数表示
+复指数表示
 
 $$
 \begin{aligned}
@@ -44,12 +40,8 @@ E_0\frac{e^{i(\mathbf{k}\cdot\mathbf{r}-\omega t+\phi)}+e^{-i(\mathbf{k}\cdot\ma
 \end{aligned}
 $$
 
----
 
-### 1.1.3 物理量
-
-- \(E\)（V/m）：电场强度  
-  - 方向：**偏振方向**
+- \(E\)（V/m）：电场强度，方向为**偏振方向**
 
 - \(B\)（T）：磁场强度  
 
@@ -61,7 +53,7 @@ $$
 \end{aligned}
 $$
 
-- 波数（cm\(^{-1}\)）  
+- 波数：单位长度内波的个数（cm\(^{-1}\)）  
 
 $$
 \begin{aligned}
@@ -89,11 +81,17 @@ $$
 
 ---
 
-### 1.1.4 光子
+**光子**
 
 $$
 \begin{aligned}
 E=h\nu
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+p=\frac{h}{\lambda}=k\hbar
 \end{aligned}
 $$
 
