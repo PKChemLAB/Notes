@@ -889,27 +889,24 @@ $$
 
 ---
 
-### $J-J$耦合
+#### $J-J$耦合
+对于原子序数大于57的重原子，自旋-轨道耦合远大于库伦关联。
+单电子总角动量加和：
 
-### J-J耦合：自旋-轨道耦合远大于库伦关联（原子序数大于57的重原子）
-
-#### ① 先单电子总角动量的加和
 $$
 \begin{aligned}
 \vec{j}_i = \vec{l}_i + \vec{s}_i \quad j = l+\frac{1}{2},\left|l-\frac{1}{2}\right|
 \end{aligned}
 $$
 
-#### ② 多电子总角动量
+多电子总角动量
 $$
 \begin{aligned}
 \vec{J} = \sum_i \vec{j}_i
 \end{aligned}
 $$
 
----
-
-### 例：[满壳层] $\boldsymbol{p^2}$
+例：[满壳层] $\boldsymbol{p^2}$
 | ① | ② |
 | ---- | ---- |
 | $j_1=\frac{3}{2} \quad \text{and} \quad j_2=\frac{3}{2}$ | $J=3,2,1,0$ |
@@ -917,88 +914,77 @@ $$
 | $j_1=\frac{1}{2} \quad \text{and} \quad j_2=\frac{3}{2}$ | $J=2,1$ |
 | $j_1=\frac{1}{2} \quad \text{and} \quad j_2=\frac{1}{2}$ | $J=1,0$ |
 
-![alt](image/image-25.png)
-
 ---
-## 光谱项符号（Term Symbol）
-（用途：标记角动量耦合的量子态）
 
-### 光谱项通式
+#### 光谱项符号:标记角动量耦合的量子态
+
+光谱项通式
 $$
 ^{2S+1}L_J
 $$
-- 左上角 $\boldsymbol{2S+1}$：**自旋角量子数**，对应自旋多重度
-- 中间 $\boldsymbol{L}$：**轨道角量子数**
-- 右下角 $\boldsymbol{J}$：**总角量子数**
+- $\boldsymbol{2S+1}$：**自旋角量子数**，对应自旋多重度
+- $\boldsymbol{L}$：**轨道角量子数**
+- $\boldsymbol{J}$：**总角量子数**
 
-### 轨道角量子数与符号对应表
+轨道角量子数与符号对应表
+
 | $L$ 取值 | 0 | 1 | 2 | 3 | 4 |
 |----------|---|---|---|---|---|
 | 对应符号 | S | P | D | F | G |
 
-> 补充说明：单电子原子的轨道符号使用对应小写字母（s/p/d/f/g）
+> 单电子原子的轨道符号使用对应小写字母（$s/p/d/f/g$）
 
-### 核心规则
 闭壳层角动量为零，仅需考虑开壳层电子的耦合
 
-### 自旋多重度说明
-- $2S+1$ 为自旋多重度
+$2S+1$ 为自旋多重度
   - $S=0$，$2S+1=1$，单线态
   - $S=1$，$2S+1=3$，三线态
 
----
-## 单电子角动量耦合（L-S耦合，p²组态示例）
+![alt](image/image-25.png)
+
+单电子角动量耦合（L-S耦合，p²组态示例）
 $$
 \begin{aligned}
 l_1 = l_2 = 1 \quad s_1 = s_2 = \frac{1}{2}
 \end{aligned}
 $$
 
-$\downarrow$
-
-### 总轨道角动量
+总轨道角动量
 $$
 \begin{aligned}
 L = 2,1,0
 \end{aligned}
 $$
 
-### 总自旋角动量
+总自旋角动量
 $$
 \begin{aligned}
 S = 1,0
 \end{aligned}
 $$
 
-$\downarrow$
-
-### 总角动量
+总角动量
 $$
 \begin{aligned}
 J = 3,2,1,0
 \end{aligned}
 $$
 
-### 例：[满壳层] $\boldsymbol{p^2}$
+例：[满壳层] $\boldsymbol{p^2}$
 单电子角动量：
 $$
 l_1 = l_2 = 1 \quad s_1 = s_2 = \frac{1}{2}
 $$
 
----
 
-#### $L$ 耦合：$\boldsymbol{L = 2\ (\text{D}),\ 1\ (\text{P}),\ 0\ (\text{S})}$
-#### $S$ 耦合：$\boldsymbol{S = 1,0}$
-
----
+$L$ 耦合：$\boldsymbol{L = 2\ (\text{D}),\ 1\ (\text{P}),\ 0\ (\text{S})}$
+$S$ 耦合：$\boldsymbol{S = 1,0}$
 
 根据泡利原理，总波函数（空间×自旋）必须反对称
 - $S=1$（对称自旋波函数），要求空间波函数反对称，即L为奇数（$L=1$），对应$\boldsymbol{^3\text{P}}$
 - $S=0$（反对称自旋波函数），要求空间波函数对称，即L为偶数（$L=2,0$），对应$\boldsymbol{^1\text{D}}$、$\boldsymbol{^1\text{S}}$
 
----
-
-#### $\boldsymbol{J}$ 取值
+ $\boldsymbol{J}$ 取值
 $$
 ^3\text{P}_{J=0,1,2} \quad ^1\text{D}_{J=2} \quad ^1\text{S}_{J=0}
 $$
