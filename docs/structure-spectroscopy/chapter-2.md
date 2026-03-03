@@ -1020,9 +1020,26 @@ $$\langle M_J LS \left| -\sum_i e r_i \right| J' M_J' L' S' \rangle$$
 **跃迁选择定则：**
 $$
 \begin{aligned}
-& \Delta J = 0, \pm1; \quad J=0 \nrightarrow J'=0 （角动量守恒）\\
-& \Delta L = 0, \pm1; \quad L=0 \nrightarrow L'=0 \\
-& \Delta S = 0 \\
+& \Delta J = 0, \pm1; \quad J=0 \nrightarrow J'=0 (角动量守恒)
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+& \Delta L = 0, \pm1; \quad L=0 \nrightarrow L'=0
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+& \Delta S = 0 
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
 & \Delta l = \pm1 \quad (\text{针对跃迁的单电子轨道角动量})
 \end{aligned}
 $$
@@ -1041,6 +1058,6 @@ $$
 
 ---
 
-### 原子光谱实验
+#### 原子光谱实验
 
 ![alt](image/image-29.png)
