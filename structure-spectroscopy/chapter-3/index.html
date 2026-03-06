@@ -1,0 +1,2217 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/structure-spectroscopy/chapter-3/">
+      
+      
+        <link rel="prev" href="../chapter-2/">
+      
+      
+        <link rel="next" href="../chapter-4/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.4">
+    
+    
+      
+        <title>chapter 3-转动光谱 - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK&#39;s Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              chapter 3-转动光谱
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK&#39;s Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构II:分子谱学
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构II:分子谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    chapter 1-光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    chapter 2-原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    chapter 3-转动光谱
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    chapter 3-转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 转动惯量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 转动惯量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 典型分子的转动惯量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.2 典型分子的转动惯量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性双原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性三原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        球形转子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 线性刚性转子转动能级
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 线性刚性转子转动能级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 转动哈密顿量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 转动能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 转动波函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 跃迁偶极
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5 跃迁选择定则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 线性刚性转子转动光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 线性刚性转子转动光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 光谱间隔
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 同位素效应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 包络形状
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.4 线性转子离心畸变
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 对称转子转动能级和光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 对称转子转动能级和光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 球形转子能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 对称转子能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 对称转子光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.3 对称转子光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        光谱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择定则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 不对称转子光谱
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    chapter 4-振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分析II:仪器分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分析II:仪器分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analytical-chemistry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    课程主页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    总览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 转动惯量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 转动惯量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 典型分子的转动惯量
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1.2 典型分子的转动惯量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性双原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        线性三原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        球形转子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 线性刚性转子转动能级
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 线性刚性转子转动能级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 转动哈密顿量
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 转动能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3 转动波函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.4 跃迁偶极
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.5 跃迁选择定则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 线性刚性转子转动光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 线性刚性转子转动光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 光谱间隔
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 同位素效应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 包络形状
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.4 线性转子离心畸变
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 对称转子转动能级和光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 对称转子转动能级和光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 球形转子能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 对称转子能级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 对称转子光谱
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.3 对称转子光谱">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        光谱
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选择定则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 不对称转子光谱
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-3">Chapter 3：转动光谱<a class="headerlink" href="#chapter-3" title="Permanent link">&para;</a></h1>
+<p><strong>转动</strong>: 非限域、自由空间。必须为气态，极性分子。
+<strong>波段</strong>：微波、毫米波</p>
+<ul>
+<li>
+<p>0.1mm ～ 1mm</p>
+</li>
+<li>
+<p>10GHz ～ 1THz</p>
+</li>
+</ul>
+<h2 id="31">3.1 转动惯量<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
+<h3 id="311">3.1.1 定义<a class="headerlink" href="#311" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+I = \sum_{i} m_i r_i^2
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(m_i\)</span>：第 <span class="arithmatex">\(i\)</span> 个质点的质量</p>
+</li>
+<li>
+<p><span class="arithmatex">\(r_i\)</span>：第 <span class="arithmatex">\(i\)</span> 个质点到<strong>转轴</strong>的垂直距离</p>
+</li>
+<li>
+<p>旋转轴穿过质心</p>
+</li>
+</ul>
+<p>从数学和几何角度看，存在无数条穿过质心的旋转轴，对应无数个转动惯量数值。通过对角化转动惯量这个二阶张量，我们总能找到一组特殊的坐标系（三个相互垂直的主轴），对应的三个转动惯量 <span class="arithmatex">\(I_A​,I_B​,I_C\)</span>​ 叫做主转动惯量。</p>
+<hr />
+<h3 id="312">3.1.2 典型分子的转动惯量<a class="headerlink" href="#312" title="Permanent link">&para;</a></h3>
+<h4 id="_1">线性双原子分子<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<p>$$
+\begin{aligned}
+I &amp;= \mu R^2 \
+\mu &amp;= \frac{m_A m_B}{m}
+\end{aligned}
+$$
+- <span class="arithmatex">\( \mu \)</span>：约化质量
+- <span class="arithmatex">\( R \)</span>：两原子间距
+- <span class="arithmatex">\( m = m_A + m_B \)</span>：总质量</p>
+<hr />
+<h4 id="_2">线性三原子分子<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+I = m_A R^2 + m_C R'^2 - \frac{(m_A R - m_C R')^2}{m}
+\]</div>
+<hr />
+<h4 id="_3">球形转子<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= \frac{8}{3} m_A R^2 \quad(CH_4) 
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+I &amp;= 4 m_A R^2 \quad (SF_6)
+\end{aligned}
+\]</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">分子类型</th>
+<th style="text-align: left;">主转动惯量关系</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">线性分子</td>
+<td style="text-align: left;"><span class="arithmatex">\(I_A \approx 0, \quad I_B = I_C\)</span></td>
+<td style="text-align: left;">CO₂, HCl</td>
+</tr>
+<tr>
+<td style="text-align: left;">球形转子</td>
+<td style="text-align: left;"><span class="arithmatex">\(I_A = I_B = I_C\)</span></td>
+<td style="text-align: left;">CH₄, SF₆</td>
+</tr>
+<tr>
+<td style="text-align: left;">对称转子</td>
+<td style="text-align: left;"><span class="arithmatex">\(I_A = I_B \neq I_C\)</span></td>
+<td style="text-align: left;">NH₃, 苯</td>
+</tr>
+<tr>
+<td style="text-align: left;">不对称转子</td>
+<td style="text-align: left;"><span class="arithmatex">\(I_A \neq I_B \neq I_C\)</span></td>
+<td style="text-align: left;">H₂O, 乙醇</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="32">3.2 线性刚性转子转动能级<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
+<h3 id="321">3.2.1 转动哈密顿量<a class="headerlink" href="#321" title="Permanent link">&para;</a></h3>
+<p><img alt="alt" src="../image/image-30.png" /></p>
+<p>哈密顿量为动能之和（无势阱非限域V=0）
+$$
+T_N = -\frac{\hbar^2}{2m_A}\nabla_A^2 - \frac{\hbar^2}{2m_B}\nabla_B^2
+$$</p>
+<p>分解内外运动模式为质心平动与内部转动</p>
+<div class="arithmatex">\[
+T_N = -\frac{\hbar^2}{2M}\nabla_{CM}^2 - \frac{\hbar^2}{2\mu}\nabla_{\text{int}}^2
+\]</div>
+<p>其中
+- 平动总质量
+$$
+\begin{aligned}
+M &amp;= m_A + m_B 
+\end{aligned}
+$$</p>
+<ul>
+<li>约化质量
+$$
+\begin{aligned}
+\mu &amp;= \frac{m_A m_B}{m_A + m_B}
+\end{aligned}
+$$</li>
+</ul>
+<p>转动模式球坐标变化与刚性转子化简
+$$
+\begin{aligned}
+T_N &amp;= -\frac{\hbar^2}{2\mu}\nabla_{\text{int}}^2 = -\frac{\hbar^2}{2\mu}\left( \frac{\partial^2}{\partial R^2} + \frac{2}{R}\frac{\partial}{\partial R} - \frac{\hat{L}^2}{R^2 \hbar^2} \right)
+\end{aligned}
+$$</p>
+<p>刚性转子，<span class="arithmatex">\(R\)</span>不变： 
+$$
+\begin{aligned}
+T_N &amp;= \frac{\hbar^2 \hat{L}^2}{2\mu R^2 \hbar^2} = \frac{\hat{L}^2}{2I} \quad (\text{转动哈密顿量})
+\end{aligned}
+$$</p>
+<p>其中角动量平方算符：</p>
+<div class="arithmatex">\[
+\hat{L}^2 = -\hbar^2 \left[ \frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left( \sin\theta \frac{\partial}{\partial\theta} \right) + \frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2} \right]
+\]</div>
+<hr />
+<h3 id="322">3.2.2 转动能级<a class="headerlink" href="#322" title="Permanent link">&para;</a></h3>
+<p>求解薛定谔方程，得到转动能级：</p>
+<div class="arithmatex">\[
+E_{\text{rot}} = \frac{\hbar^2}{2I}J(J+1) \quad (J=0,1,2,\dots)
+\]</div>
+<blockquote>
+<p>无外场，无限域能，最低能量可取到0。</p>
+</blockquote>
+<p>定义转动常数</p>
+<div class="arithmatex">\[
+\begin{aligned}
+B &amp;= \frac{h}{8\pi^2 I} \quad (\text{单位 } \text{s}^{-1}) \\
+\tilde{B} &amp;= \frac{h}{8\pi^2 c I} \quad (\text{单位 } \text{cm}^{-1})
+\end{aligned}
+\]</div>
+<p>转动能级表达式</p>
+<div class="arithmatex">\[
+{E_{\text{rot}} = h B J(J+1) = h c \tilde{B} J(J+1)}
+\]</div>
+<p>若以<span class="arithmatex">\(\text{cm}^{-1}\)</span>为能量单位：</p>
+<div class="arithmatex">\[
+\tilde{E}_{\text{rot}} = \tilde{B} J(J+1)
+\]</div>
+<hr />
+<h3 id="323">3.2.3 转动波函数<a class="headerlink" href="#323" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+Y(\theta, \phi) = \Theta(\theta)\Phi(\phi)
+\]</div>
+<p>球谐函数完整表达式
+$$
+Y_{Jm}(\theta, \phi) = \sqrt{\frac{2J + 1}{4\pi} \frac{(J - |m|)!}{(J + |m|)!}} P_J^{|m|}(\cos\theta) e^{im\phi}
+$$</p>
+<ul>
+<li>
+<p>转动量子数：<span class="arithmatex">\(J = 0,1,2,\dots\)</span></p>
+</li>
+<li>
+<p>磁量子数：<span class="arithmatex">\(m_j = 0,\pm1,\dots,\pm J\)</span> （简并度 <span class="arithmatex">\(2J + 1\)</span>）</p>
+</li>
+</ul>
+<p><img alt="alt" src="../image/image-31.png" /></p>
+<hr />
+<h3 id="324">3.2.4 跃迁偶极<a class="headerlink" href="#324" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\langle i | \hat{\mu} | f \rangle
+\]</div>
+<blockquote>
+<p>此处<span class="arithmatex">\(\mu\)</span>是分子的永久偶极矩，不同于（类）氢原子，原子核的正电荷和核外电子的负电荷的相对位置，偶极矩的变化来自电子在不同轨道间跃迁时，电荷空间分布的改变。</p>
+</blockquote>
+<p>电偶极矩算符
+$$
+\begin{aligned}
+\hat{\mu} &amp;= -e\vec{r}
+\end{aligned}
+$$</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mu_x &amp;= -er \sin\theta \cos\phi
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+\mu_y &amp;= -er \sin\theta \sin\phi
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+\mu_z &amp;= -er \cos\theta
+\end{aligned}
+\]</div>
+<p>转动波函数
+$$
+Y(\theta, \phi) = \Theta(\theta)\Phi(\phi)
+$$</p>
+<div class="arithmatex">\[
+= \mu \int Y_{JM}(\theta, \phi)
+\begin{pmatrix}
+\sin\theta \cos\phi \\
+\sin\theta \sin\phi \\
+\cos\theta
+\end{pmatrix}
+Y_{J'M'}(\theta, \phi) d\tau
+\]</div>
+<hr />
+<h3 id="325">3.2.5 跃迁选择定则<a class="headerlink" href="#325" title="Permanent link">&para;</a></h3>
+<ul>
+<li>必须是具有永久偶极的分子</li>
+</ul>
+<div class="arithmatex">\[
+\mu = er \neq 0
+\]</div>
+<p><img alt="alt" src="../image/image-32.png" /></p>
+<p>极性越强，跃迁越强</p>
+<ul>
+<li>相邻转动能级跃迁
+$$
+\begin{aligned}
+\Delta J &amp;= \pm1 \
+\Delta m_J &amp;= 0,\pm1
+\end{aligned}
+$$</li>
+</ul>
+<hr />
+<h2 id="33">3.3 线性刚性转子转动光谱<a class="headerlink" href="#33" title="Permanent link">&para;</a></h2>
+<h3 id="331">3.3.1 光谱间隔<a class="headerlink" href="#331" title="Permanent link">&para;</a></h3>
+<p><img alt="alt" src="../image/image-33.png" /></p>
+<p><strong>光谱谱线等间隔</strong>，间隔为<span class="arithmatex">\(2\tilde{B}\)</span>。
+同位素效应使大的等间距谱线间有小的等间距谱线。</p>
+<hr />
+<h3 id="332">3.3.2 同位素效应<a class="headerlink" href="#332" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>小峰 <span class="arithmatex">\(^{13}\text{CO}\)</span> 1.1% 天然丰度</p>
+</li>
+<li>
+<p>大峰 <span class="arithmatex">\(^{12}\text{CO}\)</span> 98.9% 天然丰度</p>
+</li>
+</ul>
+<p><img alt="alt" src="../image/image-34.png" /></p>
+<hr />
+<h3 id="333">3.3.3 包络形状<a class="headerlink" href="#333" title="Permanent link">&para;</a></h3>
+<p><img alt="alt" src="../image/image-35.png" /></p>
+<p>光谱的包络形状影响因素：</p>
+<ul>
+<li><span class="arithmatex">\(J \to J+1\)</span> 对应能级之间跃迁偶极矩大小</li>
+</ul>
+<div class="arithmatex">\[
+\left| \mu_{J+1 \leftarrow J} \right|^2 = \left( \frac{J+1}{2J+1} \right) \mu_0^2
+\]</div>
+<p>不同J差别不大</p>
+<ul>
+<li>转动能级上的分子布局数：初始有多少分子</li>
+</ul>
+<p>简并度因子：态数</p>
+<p>玻尔兹曼因子：单态分布</p>
+<div class="arithmatex">\[
+\frac{N_J}{N_0} = \frac{g_J e^{-E_J/k_B T}}{g_0 e^{-E_0/k_B T}} = g_J e^{-E_J/k_B T} = (2J+1)e^{-hc\tilde{B}J(J+1)/k_B T}
+\]</div>
+<p>对<span class="arithmatex">\(J\)</span>求导取极值：</p>
+<div class="arithmatex">\[
+\frac{d(N_J/N_0)}{dJ} = 0
+\]</div>
+<p>得到最概然转动量子数：
+$$
+{J_{\text{max}} = \sqrt{\frac{k_B T}{2hc\tilde{B}}} - \frac{1}{2}}
+$$</p>
+<p>谱线强度规律</p>
+<ul>
+<li>
+<p>强度随<span class="arithmatex">\(J\)</span>快速上升（简并度上升），然后下降（玻尔兹曼因子指数衰减）</p>
+</li>
+<li>
+<p>谱线强度分布取决于温度</p>
+</li>
+</ul>
+<hr />
+<h3 id="334">3.3.4 线性转子离心畸变<a class="headerlink" href="#334" title="Permanent link">&para;</a></h3>
+<p>离心畸变 → 增加转动惯量 → 减小转动常数 → 减小能隙</p>
+<p><strong><span class="arithmatex">\(J\)</span>越大，离心畸变越大</strong></p>
+<p>带离心畸变矫正的转动能级公式：</p>
+<div class="arithmatex">\[
+E = \tilde{B}J(J+1) - \boxed{\tilde{D}\left[J(J+1)\right]^2}
+\]</div>
+<p>方框内为离心畸变矫正项</p>
+<p>离心畸变常数
+$$
+\tilde{D} = \frac{4\tilde{B}^3}{\nu^2}
+$$
+其中：
+- <span class="arithmatex">\(\nu\)</span>：键振动频率（反映键强度）</p>
+<ul>
+<li>
+<p>C-C：<span class="arithmatex">\(\nu \sim 1000\ \text{cm}^{-1}\)</span></p>
+</li>
+<li>
+<p>C=C：<span class="arithmatex">\(\nu \sim 1600\ \text{cm}^{-1}\)</span></p>
+</li>
+<li>
+<p>C≡C：<span class="arithmatex">\(\nu \sim 2100\ \text{cm}^{-1}\)</span></p>
+</li>
+</ul>
+<p><img alt="alt" src="../image/image-36.png" /></p>
+<hr />
+<h2 id="34">3.4 对称转子转动能级和光谱<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<h3 id="341">3.4.1 球形转子能级<a class="headerlink" href="#341" title="Permanent link">&para;</a></h3>
+<p><img alt="alt" src="../image/image-37.png" /></p>
+<p>球形 <span class="arithmatex">\(I_a = I_b = I_c = I\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+H_{rot} = \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c} = \frac{L_a^2 + L_b^2 + L_c^2}{2I} = \frac{L^2}{2I}
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+E_{rot} = hBJ(J + 1) = hc\tilde{B}J(J + 1)
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+J = 0,1,2,\dots
+\end{aligned}
+\]</div>
+<p>球形转子和线性转子的能级和光谱特征一样</p>
+<hr />
+<h3 id="342">3.4.2 对称转子能级<a class="headerlink" href="#342" title="Permanent link">&para;</a></h3>
+<p>哈密顿量：可将后面一项认为是主轴方向的一个额外分量</p>
+<div class="arithmatex">\[
+\begin{aligned}
+H_{rot} &amp;= \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c} = \frac{L_a^2}{2I_a} + \frac{L_b^2 + L_c^2}{2I_b} \\
+&amp;= \frac{L_a^2}{2I_a} + \frac{L^2 - L_a^2}{2I_b} = \frac{L^2}{2I_b} + L_a^2\left(\frac{1}{2I_a} - \frac{1}{2I_b}\right)
+\end{aligned}
+\]</div>
+<p>a是分子对称主轴（偶极的方向）</p>
+<ul>
+<li>
+<p>扁平椭球：<span class="arithmatex">\(I_a &gt; I_b = I_c\)</span></p>
+<ul>
+<li><span class="arithmatex">\(\text{NH}_3\)</span></li>
+<li><span class="arithmatex">\(\text{C}_6\text{H}_6\)</span></li>
+<li><span class="arithmatex">\(\text{XeF}_4\)</span></li>
+</ul>
+</li>
+<li>
+<p>扁长椭球：<span class="arithmatex">\(I_a &lt; I_b = I_c\)</span></p>
+<ul>
+<li><span class="arithmatex">\(\text{CH}_3\text{Cl}\)</span></li>
+<li><span class="arithmatex">\(\text{CH}_3\text{C≡CH}\)</span></li>
+</ul>
+</li>
+</ul>
+<p><strong>转动能级：</strong></p>
+<div class="arithmatex">\[
+\begin{aligned}
+E_{rot} = J(J + 1)\frac{h^2}{2I_b} + K^2 h^2\left(\frac{1}{2I_a} - \frac{1}{2I_b}\right) \quad (\text{J})
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+\tilde{E}_{rot} = \tilde{B}J(J + 1) + (\tilde{A} - \tilde{B})K^2 \quad (\text{cm}^{-1})
+\end{aligned}
+\]</div>
+<p>量子数取值：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+J = 0,1,2,3\dots \\
+K = 0,\pm1,\dots,\pm J
+\end{aligned}
+\]</div>
+<p><span class="arithmatex">\(K\)</span>是<span class="arithmatex">\(J\)</span>在<strong>主轴</strong>上的投影，共<span class="arithmatex">\(2J+1\)</span>个取值，<span class="arithmatex">\(M_J\)</span>是人为外场方向</p>
+<p><img alt="alt" src="../image/image-38.png" /></p>
+<p><strong>转动常数(<span class="arithmatex">\(\text{cm}^{-1}\)</span>)：</strong></p>
+<div class="arithmatex">\[
+\begin{aligned}
+\tilde{B} = \frac{h}{8\pi^2 c I_{b(\perp)}} \quad \tilde{A} = \frac{h}{8\pi^2 c I_{a(\parallel)}}
+\end{aligned}
+\]</div>
+<hr />
+<h3 id="343">3.4.3 对称转子光谱<a class="headerlink" href="#343" title="Permanent link">&para;</a></h3>
+<h4 id="_4">光谱<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>扁长椭球</p>
+<div class="arithmatex">\[
+I_a &lt; I_b \implies A &gt; B \implies \text{Energy increases with } K^2
+\]</div>
+<p><img alt="alt" src="../image/image-39.png" /></p>
+<p>扁平椭球</p>
+<div class="arithmatex">\[
+I_a &gt; I_b \implies A &lt; B \implies \text{Energy decreases with } K^2
+\]</div>
+<p><img alt="alt" src="../image/image-40.png" /></p>
+<p><span class="arithmatex">\(K\)</span>是<span class="arithmatex">\(J\)</span>在<strong>主轴</strong>上的投影，<span class="arithmatex">\(|K|≤J\)</span>。能级高低发生改变，但不影响跃迁能量（不考虑离心畸变）。</p>
+<hr />
+<h4 id="_5">选择定则<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\begin{aligned}
+\Delta J = \pm1 \quad \Delta M_J = 0,\pm1 \quad \boxed{\Delta K = 0}
+\end{aligned}
+\]</div>
+<p>跃迁频率</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\nu_{J+1,K \leftarrow J,K} = 2B(J+1) \quad (\text{和}K\text{无关})
+\end{aligned}
+\]</div>
+<ul>
+<li>同样的<span class="arithmatex">\(J\rightarrow J+1\)</span>跃迁，不同<span class="arithmatex">\(K\)</span>对应相同的跃迁能量</li>
+<li>频率间隔和线性转子一样（虽然多了一个不同的转动惯量/常数）</li>
+</ul>
+<p><strong>如果考虑离心畸变</strong></p>
+<p>转动能级：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\tilde{E}_{JK} = \underbrace{\tilde{B}J(J+1) - \tilde{D}_J \left[J(J+1)\right]^2}_{\text{J离心修正}} + \underbrace{(\tilde{A}-\tilde{B})K^2 - \tilde{D}_K K^4 - \tilde{D}_{JK} J(J+1)K^2}_{\text{J，K离心修正}}
+\end{aligned}
+\]</div>
+<p>跃迁能量和<span class="arithmatex">\(K\)</span>相关：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\nu_{J+1,K \leftarrow J,K} = 2\tilde{B}(J+1) - 4\tilde{D}_J (J+1)^3 - 2\tilde{D}_{JK} (J+1)K^2
+\end{aligned}
+\]</div>
+<p>光谱特征：</p>
+<ul>
+<li>
+<p>转动谱线不等间隔</p>
+</li>
+<li>
+<p>相同J，不同K → 谱线裂分</p>
+</li>
+</ul>
+<p><img alt="alt" src="../image/image-41.png" /></p>
+<hr />
+<h2 id="35">3.5 不对称转子光谱<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
+<p>哈密顿量：
+$$
+\begin{aligned}
+H_{rot} = \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c}
+\end{aligned}
+$$</p>
+<p>需要三个量子数：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+J,{K_a,K_c}
+\end{aligned}
+\]</div>
+<p>分子总偶极矩 <span class="arithmatex">\(\vec{\mu}\)</span> 沿三个惯量主轴 <span class="arithmatex">\(a、b、c\)</span> 分解为分量 <span class="arithmatex">\(\mu_a、\mu_b、\mu_c\)</span>。三个偶极矩，每个产生一组可能的跃迁和对应的选律，十分复杂。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../chapter-2/" class="md-footer__link md-footer__link--prev" aria-label="上一页: chapter 2-原子结构和原子光谱">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                chapter 2-原子结构和原子光谱
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter-4/" class="md-footer__link md-footer__link--next" aria-label="下一页: chapter 4-振动光谱：双原子分子">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                chapter 4-振动光谱：双原子分子
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peikai Chen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
