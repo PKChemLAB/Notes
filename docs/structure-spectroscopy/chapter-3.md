@@ -250,9 +250,14 @@ $$
 \end{aligned}
 $$
 
+
+
+
 ---
 
-### 3.2.5 转动光谱
+## 3.3 线性刚性转子转动光谱
+
+### 3.3.1 光谱间隔
 
 ![alt](image/image-33.png)
 
@@ -260,11 +265,19 @@ $$
 同位素效应使大的等间距谱线间有小的等间距谱线。
 
 
+---
+
+### 3.3.2 同位素效应
+
 - 小峰 $^{13}\text{CO}$ 1.1% 天然丰度
 
 - 大峰 $^{12}\text{CO}$ 98.9% 天然丰度
 
 ![alt](image/image-34.png)
+
+---
+
+### 3.3.3 包络形状
 
 ![alt](image/image-35.png)
 
@@ -306,23 +319,220 @@ $$
 
 - 谱线强度分布取决于温度
 
-
-
-
-
-
 ---
 
-## 3.3 线性刚性转子转动光谱
+### 3.3.4 线性转子离心畸变
 
+离心畸变 → 增加转动惯量 → 减小转动常数 → 减小能隙
 
+**$J$越大，离心畸变越大**
 
+带离心畸变矫正的转动能级公式：
+
+$$
+E = \tilde{B}J(J+1) - \boxed{\tilde{D}\left[J(J+1)\right]^2}
+$$
+
+方框内为离心畸变矫正项
+
+离心畸变常数
+$$
+\tilde{D} = \frac{4\tilde{B}^3}{\nu^2}
+$$
+其中：
+- $\nu$：键振动频率（反映键强度）
+
+   - C-C：$\nu \sim 1000\ \text{cm}^{-1}$
+
+   - C=C：$\nu \sim 1600\ \text{cm}^{-1}$
+  
+   - C≡C：$\nu \sim 2100\ \text{cm}^{-1}$
+  
+
+![alt](image/image-36.png)
+
+---
 
 
 ## 3.4 对称转子转动能级和光谱
 
+### 3.4.1 球形转子能级
+
+![alt](image/image-37.png)
+
+球形 $I_a = I_b = I_c = I$
+
+$$
+\begin{aligned}
+H_{rot} = \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c} = \frac{L_a^2 + L_b^2 + L_c^2}{2I} = \frac{L^2}{2I}
+\end{aligned}
+$$
 
 
+$$
+\begin{aligned}
+E_{rot} = hBJ(J + 1) = hc\tilde{B}J(J + 1)
+\end{aligned}
+$$
 
+$$
+\begin{aligned}
+J = 0,1,2,\dots
+\end{aligned}
+$$
+
+球形转子和线性转子的能级和光谱特征一样
+
+---
+
+### 3.4.2 对称转子能级
+
+
+哈密顿量：可将后面一项认为是主轴方向的一个额外分量
+
+$$
+\begin{aligned}
+H_{rot} &= \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c} = \frac{L_a^2}{2I_a} + \frac{L_b^2 + L_c^2}{2I_b} \\
+&= \frac{L_a^2}{2I_a} + \frac{L^2 - L_a^2}{2I_b} = \frac{L^2}{2I_b} + L_a^2\left(\frac{1}{2I_a} - \frac{1}{2I_b}\right)
+\end{aligned}
+$$
+
+a是分子对称主轴（偶极的方向）
+
+- 扁平椭球：$I_a > I_b = I_c$
+    - $\text{NH}_3$
+    - $\text{C}_6\text{H}_6$
+    - $\text{XeF}_4$
+
+- 扁长椭球：$I_a < I_b = I_c$
+    - $\text{CH}_3\text{Cl}$
+    - $\text{CH}_3\text{C≡CH}$
+
+**转动能级：**
+
+$$
+\begin{aligned}
+E_{rot} = J(J + 1)\frac{h^2}{2I_b} + K^2 h^2\left(\frac{1}{2I_a} - \frac{1}{2I_b}\right) \quad (\text{J})
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\tilde{E}_{rot} = \tilde{B}J(J + 1) + (\tilde{A} - \tilde{B})K^2 \quad (\text{cm}^{-1})
+\end{aligned}
+$$
+
+量子数取值：
+
+$$
+\begin{aligned}
+J = 0,1,2,3\dots \\
+K = 0,\pm1,\dots,\pm J
+\end{aligned}
+$$
+
+$K$是$J$在**主轴**上的投影，共$2J+1$个取值，$M_J$是人为外场方向
+
+![alt](image/image-38.png)
+
+**转动常数($\text{cm}^{-1}$)：**
+
+$$
+\begin{aligned}
+\tilde{B} = \frac{h}{8\pi^2 c I_{b(\perp)}} \quad \tilde{A} = \frac{h}{8\pi^2 c I_{a(\parallel)}}
+\end{aligned}
+$$
+
+---
+
+### 3.4.3 对称转子光谱
+
+#### 光谱
+
+扁长椭球
+
+$$
+I_a < I_b \implies A > B \implies \text{Energy increases with } K^2
+$$
+
+![alt](image/image-39.png)
+
+扁平椭球
+
+$$
+I_a > I_b \implies A < B \implies \text{Energy decreases with } K^2
+$$
+
+![alt](image/image-40.png)
+
+$K$是$J$在**主轴**上的投影，$|K|≤J$。能级高低发生改变，但不影响跃迁能量（不考虑离心畸变）。
+
+---
+
+#### 选择定则
+
+$$
+\begin{aligned}
+\Delta J = \pm1 \quad \Delta M_J = 0,\pm1 \quad \boxed{\Delta K = 0}
+\end{aligned}
+$$
+
+跃迁频率
+
+$$
+\begin{aligned}
+\nu_{J+1,K \leftarrow J,K} = 2B(J+1) \quad (\text{和}K\text{无关})
+\end{aligned}
+$$
+
+
+- 同样的$J\rightarrow J+1$跃迁，不同$K$对应相同的跃迁能量
+- 频率间隔和线性转子一样（虽然多了一个不同的转动惯量/常数）
+
+**如果考虑离心畸变**
+
+转动能级：
+
+$$
+\begin{aligned}
+\tilde{E}_{JK} = \underbrace{\tilde{B}J(J+1) - \tilde{D}_J \left[J(J+1)\right]^2}_{\text{J离心修正}} + \underbrace{(\tilde{A}-\tilde{B})K^2 - \tilde{D}_K K^4 - \tilde{D}_{JK} J(J+1)K^2}_{\text{J，K离心修正}}
+\end{aligned}
+$$
+
+跃迁能量和$K$相关：
+
+$$
+\begin{aligned}
+\nu_{J+1,K \leftarrow J,K} = 2\tilde{B}(J+1) - 4\tilde{D}_J (J+1)^3 - 2\tilde{D}_{JK} (J+1)K^2
+\end{aligned}
+$$
+
+光谱特征：
+
+- 转动谱线不等间隔
+  
+- 相同J，不同K → 谱线裂分
+
+![alt](image/image-41.png)
+
+---
 
 ## 3.5 不对称转子光谱
+
+哈密顿量：
+$$
+\begin{aligned}
+H_{rot} = \frac{L_a^2}{2I_a} + \frac{L_b^2}{2I_b} + \frac{L_c^2}{2I_c}
+\end{aligned}
+$$
+
+需要三个量子数：
+
+$$
+\begin{aligned}
+J,{K_a,K_c}
+\end{aligned}
+$$
+
+分子总偶极矩 $\vec{\mu}$ 沿三个惯量主轴 $a、b、c$ 分解为分量 $\mu_a、\mu_b、\mu_c$。三个偶极矩，每个产生一组可能的跃迁和对应的选律，十分复杂。
+
