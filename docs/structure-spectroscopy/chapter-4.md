@@ -425,6 +425,8 @@ $$
 
 ## 4.4 振-转跃迁
 
+振动能级无需在微波区域观察，中红外也可看到。
+
 #### 4.4.1 哈密顿量与能级
 
 **刚性转子-谐振子**模型（忽略振动对转动的影响）
@@ -456,3 +458,184 @@ $$
 \tilde{S}_{v,J} = \tilde{G}_v + \tilde{F}_J = \left(v+\frac{1}{2}\right)\tilde{\nu} + J(J+1)\tilde{B}
 $$
 
+>振动能级的整体间隔（$v=0$到$v=1$的能量差），远大于同一个振动能级内不同J的转动能级间隔（振动能级差一般在数百～数千$cm^{−1}$，对应红外光；转动能级差一般在数$cm^{−1}$，对应远红外 / 微波区）。呈现出能级的两层结构：**振动主能级 + 转动精细能级**
+
+
+---
+
+### 4.4.2 选择定则
+
+![alt](image/image-52.png)
+
+*（图片下方单峰和左右应也是等间距）*
+
+红外活性前提（跃迁允许的核心条件）
+
+$$\begin{aligned}
+\left( \frac{\partial \mu}{\partial x} \right)_0 \neq 0
+\end{aligned}$$
+
+#### 跃迁选律
+
+$$\begin{aligned}
+\boldsymbol{\Delta v = \pm1},\quad \boldsymbol{\Delta J = \pm1},\quad \Delta M_J = 0,\pm1
+\end{aligned}$$
+
+*特殊情况*
+
+$\Delta J = 0$ 仅适用于**非零电子角动量（非满壳层）的分子**（示例：NO），闭壳层分子的$\Delta J=0$跃迁为禁阻跃迁。具体解释见下。
+
+---
+
+#### 振-转吸收光谱的三大分支
+
+**P分支**
+   
+$$\begin{aligned}
+\boldsymbol{\Delta J = -1}
+\end{aligned}$$
+
+- 跃迁波数：
+  
+$$\begin{aligned}
+\tilde{\nu}_\text{P}(J) &= \tilde{S}(v+1,J-1) - \tilde{S}(v,J) \\
+&= \tilde{\nu} - 2\tilde{B}J
+\end{aligned}$$
+
+- $J$为跃迁前低能级的转动量子数，取值为$J=1,2,3...$；$J=0$无对应跃迁（$J-1=-1$为不存在的量子态）。所有P分支谱线都位于振动中心波数$\tilde{\nu}$的**低波数侧**。
+
+**Q分支**
+   
+$$\begin{aligned}
+\boldsymbol{\Delta J = 0}
+\end{aligned}$$
+
+- 跃迁波数：
+  
+
+$$\begin{aligned}
+\tilde{\nu}_\text{Q}(J) &= \tilde{S}(v+1,J) - \tilde{S}(v,J) \\
+&= \tilde{\nu}
+\end{aligned}$$
+
+- 仅非满壳层、有固有电子角动量的分子可观测到该分支；绝大多数闭壳层异核双原子分子中，该跃迁为禁阻跃迁，无Q分支。理想刚性转子-谐振子模型下，所有Q分支的跃迁波数都等于振动特征波数$\tilde{\nu}$，会重合为单峰。
+
+**R分支**
+   
+$$\begin{aligned}
+\boldsymbol{\Delta J = +1}
+\end{aligned}$$
+
+- 跃迁波数：
+  
+$$\begin{aligned}
+\tilde{\nu}_\text{R}(J) &= \tilde{S}(v+1,J+1) - \tilde{S}(v,J) \\
+&= \tilde{\nu} + 2\tilde{B}(J+1)
+\end{aligned}$$
+
+- 公式中$J$为跃迁前低能级的转动量子数，取值为$J=0,1,2,3...$。所有R分支谱线都位于振动中心波数$\tilde{\nu}$的**高波数侧**。
+
+---
+
+####  $ΔJ=0$ 振转跃迁选律
+
+| 符号 | 物理意义 | 核心规则 |
+|------|----------|----------|
+| $J_{photon}$ | 红外光子角动量 | 固定为$\boldsymbol{1\hbar}$（1个单位角动量，分子吸收时必须承接） |
+| $R$ | 分子转动角动量 | 对应转动量子数$J$，分子整体绕质心转动的角动量 |
+| $J_e$ | 分子电子总角动量(来自旋轨耦合) | 闭壳层分子：$J_e\equiv0$（电子全成对，角动量完全抵消）；非满壳层分子：$J_e\neq0$（含未成对电子，有未抵消的角动量） |
+| $J_{total}$ | 分子总角动量 | 矢量和：$\boldsymbol{J_{total} = R + J_e}$，跃迁选律的$\Delta J=0$即$\Delta J_{total}=0$ |
+
+
+吸收光子的过程中，「分子+光子」系统总角动量严格守恒：
+
+$$\begin{aligned}
+\boldsymbol{J_{final,total} = J_{initial,total} + J_{photon}}
+\end{aligned}$$
+
+光子角动量固定为$1\hbar$，$\Delta J_{total}=0$能否实现，完全取决于分子是否有$J_e\neq0$这个「可调节的角动量池」。
+
+
+总角动量不变要求$\Delta J_{total} = \Delta R + \Delta J_e = 0$，即：
+
+$$\begin{aligned}
+\boldsymbol{\Delta R = -\Delta J_e}
+\end{aligned}$$
+
+转动角动量承接光子的$1\hbar$，电子角动量反向抵消增量，总角动量保持不变。
+
+**举例**：
+初始$J_{e,initial}=2\hbar$，$R_{initial}=1\hbar$；$J_{initial,total}=2\hbar+1\hbar=3\hbar$
+吸收光子（携带$1\hbar$）后：
+
+  1.  转动承接光子角动量：$R_{final}=1\hbar+1\hbar=2\hbar$，$\Delta R=+1\hbar$
+  2.  电子角动量反向抵消：$J_{e,final}=2\hbar-1\hbar=1\hbar$，$\Delta J_e=-1\hbar$
+
+  $J_{final,total}=1\hbar+2\hbar=3\hbar$，$\Delta J_{total}=0$成立，跃迁允许。
+
+
+
+闭壳层分子$J_e\equiv0$，无角动量缓冲池，总角动量完全等于转动角动量：
+
+$$\begin{aligned}
+\boldsymbol{J_{total}=R}
+\end{aligned}$$
+
+守恒公式简化为$R_{final}=R_{initial}+1\hbar$，转动角动量必须变化$\Delta R=\pm1$，$ΔJ=0$直接违背角动量守恒。
+
+---
+
+#### 非谐修正
+
+
+高振动能级（振动激发态）$\boldsymbol{\rightarrow}$ 键长变长 $\boldsymbol
+{\rightarrow}$ 
+$\begin{cases}
+\text{转动惯量变大} \\
+\text{转动常数变小}
+\end{cases}$
+
+转动常数公式：
+
+$$B = \frac{h}{8\pi^2 I}$$
+
+转动常数大小关系：
+
+$$\boldsymbol{B_{v=0} > B_{v=1}}$$
+
+**P分支**
+
+$\boldsymbol{\Delta J = -1}$
+
+跃迁波数公式（非谐修正）：
+
+$$\tilde{\nu}_P(J) = \tilde{\nu}_0 - J(\tilde{B}_0 + \tilde{B}_1) - J^2(\tilde{B}_0 - \tilde{B}_1)$$
+
+规律：$\boldsymbol{J}$越大，P分支的间隔越大
+
+**R分支**
+
+$\boldsymbol{\Delta J = +1}$
+
+跃迁波数公式（非谐修正）：
+
+$$\tilde{\nu}_R(J) = \tilde{\nu}_0 + (J + 1)(\tilde{B}_0 + \tilde{B}_1) - (J + 1)^2(\tilde{B}_0 - \tilde{B}_1)$$
+
+规律：$\boldsymbol{J}$越大，R分支的间隔越小
+
+![alt](image/image-53.png)
+
+---
+
+#### 转动常数的计算
+
+![alt](image/image-54.png)
+
+$$\tilde{\nu}_\text{R}(J) - \tilde{\nu}_\text{P}(J) = 4\tilde{B}_1\left(J+\frac{1}{2}\right)\boldsymbol{\rightarrow}\ \boldsymbol{\tilde{B}_1}$$
+
+
+$$\tilde{\nu}_\text{R}(J-1) - \tilde{\nu}_\text{P}(J+1) = 4\tilde{B}_0\left(J+\frac{1}{2}\right)\boldsymbol{\rightarrow}\ \boldsymbol{\tilde{B}_0}$$
+
+
+
+**例**：$^1\text{H}^{35}\text{Cl},\ \tilde{B}_0 = 10.440\ \text{cm}^{-1},\ \tilde{B}_1 = 10.136\ \text{cm}^{-1}$
