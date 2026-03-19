@@ -196,7 +196,7 @@ plt.show()
 
 ### Set a unit at origin of coordinate system
 
-![alt](\image\image-1.png)
+![alt](image/image-1.png)
 
 
 ### Simple sampling method
