@@ -42,6 +42,7 @@ nav:
   - 计算化学导论:
       - 课程主页: intro-computational-chem/index.md
       - 引例: intro-computational-chem/first-example.md
+      - 蒙特卡洛方法: intro-computational-chem/montecarlo.md
 
   - 结构II:分子谱学:
       - 课程主页: structure-spectroscopy/index.md
