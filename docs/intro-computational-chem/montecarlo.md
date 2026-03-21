@@ -85,6 +85,7 @@ $$
 
 
 将试验得到的频率$p=\frac{m}{n}$代入上式，变形得到$\pi$的估算公式：
+
 $$\boldsymbol{\pi = \frac{2 l n}{a m}}$$
 
 > 简化约定：为了计算方便，工程上通常取**针长$l =$ 平行线间距$a$**，此时公式可简化为：
@@ -255,6 +256,7 @@ $$
 **Step 1:** generate a random point on the surface of a sphere with radii of $a$, and make it as the end of $r_j$ and the start of $r_{j+1}$
 
 **Step 2:** calculate $R_j$
+
 $$\vec{R}_j = \vec{R}_{j-1} + \vec{r}_j$$
 
 **Step 3:** $j=j+1$, and return to step 1 until $j==n$

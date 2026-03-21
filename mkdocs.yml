@@ -54,7 +54,8 @@ nav:
 
   - 数据结构基础:
       - 课程主页: data-structures/index.md
-      - DS01: data-structures/ds01.md
+      - Algorithm Analysis: data-structures/ds01.md
+      - Lists, Stacks, and Queues: data-structures/ds02.md
 
   - 物理化学I:
       - 课程主页: physical-chem-1/index.md
