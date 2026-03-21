@@ -39,6 +39,10 @@ plugins:
 nav:
   - 首页: index.md
 
+  - Papers:
+    - 总览: papers/index.md
+    - 气液界面合成: papers/26.3.15.md
+
   - 计算化学导论:
       - 课程主页: intro-computational-chem/index.md
       - 引例: intro-computational-chem/first-example.md
@@ -46,16 +50,20 @@ nav:
 
   - 结构II:分子谱学:
       - 课程主页: structure-spectroscopy/index.md
-      - chapter 1-光与分子的相互作用: structure-spectroscopy/chapter-1.md
-      - chapter 2-原子结构和原子光谱: structure-spectroscopy/chapter-2.md
-      - chapter 3-转动光谱: structure-spectroscopy/chapter-3.md
-      - chapter 4-振动光谱：双原子分子: structure-spectroscopy/chapter-4.md
-      - chapter 5-振动光谱：多原子分子: structure-spectroscopy/chapter-5.md
+      - 光与分子的相互作用: structure-spectroscopy/chapter-1.md
+      - 原子结构和原子光谱: structure-spectroscopy/chapter-2.md
+      - 转动光谱: structure-spectroscopy/chapter-3.md
+      - 振动光谱：双原子分子: structure-spectroscopy/chapter-4.md
+      - 振动光谱：多原子分子: structure-spectroscopy/chapter-5.md
 
   - 数据结构基础:
       - 课程主页: data-structures/index.md
       - Algorithm Analysis: data-structures/ds01.md
       - Lists, Stacks, and Queues: data-structures/ds02.md
+
+  - 信息理论:
+    - 总览: information-theory/index.md
+    - 信息度量与熵: information-theory/L1.md
 
   - 物理化学I:
       - 课程主页: physical-chem-1/index.md
@@ -63,9 +71,6 @@ nav:
   - 分析II:仪器分析:
       - 课程主页: Analytical-chemistry/index.md
 
-  - Papers:
-    - 总览: papers/index.md
-    - 气液界面合成: papers/26.3.15.md
 
 copyright: Copyright &copy; 2026 Peikai Chen
 
