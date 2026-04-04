@@ -137,16 +137,3 @@ Copyright © 2026 Peikai Chen
 ---
 
 For more information, visit the [live documentation site](https://pkchemlab.github.io/Notes/).
-```
-
-This README provides:
-- Clear project overview and purpose
-- Links to the live documentation
-- Complete contents listing
-- Technology stack details
-- Setup instructions for local development
-- Project structure explanation
-- Build instructions
-- Contribution guidelines
-
-You can customize it further based on your specific needs!
