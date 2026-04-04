@@ -1,3 +1,6 @@
+Based on the repository structure and configuration, here's a comprehensive English README for your Notes repository:
+
+```markdown name=README.md url=https://github.com/PKChemLAB/Notes
 # CPK's Notes
 
 A comprehensive collection of academic notes and study materials covering chemistry, computer science, and related topics.
@@ -67,3 +70,85 @@ This repository contains organized notes on various academic subjects, built wit
 ```bash
 git clone https://github.com/PKChemLAB/Notes.git
 cd Notes
+```
+
+2. Install dependencies:
+```bash
+pip install mkdocs mkdocs-material pymdown-extensions
+```
+
+3. Serve locally:
+```bash
+mkdocs serve
+```
+
+The site will be available at `http://localhost:8000`
+
+## Building for Production
+
+Generate static site files:
+```bash
+mkdocs build
+```
+
+Output files will be in the `site/` directory.
+
+## Project Structure
+
+```
+Notes/
+├── docs/                           # Documentation source files
+│   ├── index.md                   # Homepage
+│   ├── papers/                    # Research papers summaries
+│   ├── intro-computational-chem/  # Computational chemistry notes
+│   ├── structure-spectroscopy/    # Spectroscopy course notes
+│   ├── data-structures/           # Data structures course notes
+│   ├── information-theory/        # Information theory notes
+│   ├── physical-chem-1/           # Physical chemistry I notes
+│   ├── Analytical-chemistry/      # Analytical chemistry notes
+│   ├── assets/                    # Images and media
+│   └── stylesheets/               # Custom CSS styles
+├── mkdocs.yml                      # MkDocs configuration
+└── .gitignore                      # Git ignore rules
+```
+
+## Configuration
+
+The site is configured in `mkdocs.yml`. Key settings include:
+- Site name: "CPK's Notes"
+- Theme: Material with dark/light mode support
+- Language: Chinese (with English support)
+- Search plugin enabled
+- MathJax for mathematical equations
+
+## Contributing
+
+Contributions and suggestions are welcome! Feel free to:
+- Report issues
+- Suggest improvements
+- Submit pull requests
+
+## License
+
+Copyright © 2026 Peikai Chen
+
+## Author
+
+**Peikai Chen** - [GitHub Profile](https://github.com/PKChemLAB)
+
+---
+
+For more information, visit the [live documentation site](https://pkchemlab.github.io/Notes/).
+```
+
+This README provides:
+- Clear project overview and purpose
+- Links to the live documentation
+- Complete contents listing
+- Technology stack details
+- Setup instructions for local development
+- Project structure explanation
+- Build instructions
+- Contribution guidelines
+
+You can customize it further based on your specific needs!
