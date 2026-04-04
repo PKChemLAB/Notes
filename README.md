@@ -1,6 +1,4 @@
-Based on the repository structure and configuration, here's a comprehensive English README for your Notes repository:
 
-```markdown name=README.md url=https://github.com/PKChemLAB/Notes
 # CPK's Notes
 
 A comprehensive collection of academic notes and study materials covering chemistry, computer science, and related topics.
