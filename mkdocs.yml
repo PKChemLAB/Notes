@@ -48,7 +48,6 @@ nav:
   - 计算化学导论:
       - 课程主页: intro-computational-chem/index.md
       - 引例: intro-computational-chem/first-example.md
-      - 数值方法: intro-computational-chem/Numerical-Methods.md
       - 蒙特卡洛方法: intro-computational-chem/montecarlo.md
 
   - 结构II:分子谱学:
@@ -63,6 +62,8 @@ nav:
       - 课程主页: data-structures/index.md
       - Algorithm Analysis: data-structures/ds01.md
       - Lists, Stacks, and Queues: data-structures/ds02.md
+      - Trees: data-structures/ds03.md
+
 
   - 信息理论:
     - 总览: information-theory/index.md
