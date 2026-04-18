@@ -63,6 +63,7 @@ nav:
       - Algorithm Analysis: data-structures/ds01.md
       - Lists, Stacks, and Queues: data-structures/ds02.md
       - Trees: data-structures/ds03.md
+      - Heaps and Priority Queues: data-structures/ds04.md
 
 
   - 信息理论:
