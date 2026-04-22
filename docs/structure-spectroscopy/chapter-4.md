@@ -565,6 +565,7 @@ $$\begin{aligned}
 转动角动量承接光子的$1\hbar$，电子角动量反向抵消增量，总角动量保持不变。
 
 **举例**：
+
 初始$J_{e,initial}=2\hbar$，$R_{initial}=1\hbar$；$J_{initial,total}=2\hbar+1\hbar=3\hbar$
 吸收光子（携带$1\hbar$）后：
 

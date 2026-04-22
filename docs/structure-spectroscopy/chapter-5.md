@@ -16,6 +16,47 @@
 
 ### 5.1.2 正则模式
 
+**质量矩阵 M** \quad $3N \times 3N$
+
+$$
+M = \begin{pmatrix}
+m_1 & & & & & & \\
+& m_1 & & & & & \\
+& & m_1 & & & & \\
+& & & \ddots & & & \\
+& & & & m_N & & \\
+& & & & & m_N & \\
+& & & & & & m_N
+\end{pmatrix}
+$$
+
+**力常数矩阵 F** $3N \times 3N$
+
+$$
+F_{ij} = \left( \frac{\partial^2 V}{\partial x_i \partial x_j} \right)_0
+$$
+
+$F_{ij}$表示第j个原子在第j个方向的单位位移，对第i个原子在第i个方向产生的力
+
+
+**求解广义本征值**
+
+$$
+\boldsymbol{F A} = \omega^2 \boldsymbol{M A}
+$$
+
+**本征值 $\omega_q^2$**：对应第q个正则模式的角频率平方(3N个)
+
+振动频率（波数）：
+$$
+\tilde{\nu}_q = \frac{\omega_q}{2\pi c}
+$$
+
+**本征向量 $\boldsymbol{A}_q$**：对应第q个正则模式的**原子位移向量** (3N个)
+
+* 向量的每个元素表示对应原子在x/y/z方向的位移幅度
+* 所有原子同时按这个向量运动，就是该正则模式的振动形式
+
 
 ![alt](image/image-55.png)
 
@@ -50,10 +91,12 @@
 
 对于每个正则模式$\boldsymbol{q}$（忽略非谐性），均可视为独立的谐振子。
 
-1.  正则模式的振动能级（波数形式）
+正则模式的振动能级（波数形式）
+
 $$\tilde{G}_q(v) = \left(v+\frac{1}{2}\right)\tilde{\nu}_q$$
 
-1.  正则模式的特征振动波数
+正则模式的特征振动波数
+
 $$\tilde{\nu}_q = \frac{1}{2\pi c}\left( \frac{k_q}{m_q} \right)^{1/2}$$
 
 
@@ -82,8 +125,3 @@ $$\boldsymbol{\Delta v_q = \pm1}$$
 >目前正则模式均可用Gussian计算。这里用群论判断。
 
 ![alt](image/image-56.png)
-
-
-## 5.3 特征标表
-
-## 5.4 分子振动对称性

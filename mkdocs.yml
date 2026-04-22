@@ -57,6 +57,7 @@ nav:
       - 转动光谱: structure-spectroscopy/chapter-3.md
       - 振动光谱：双原子分子: structure-spectroscopy/chapter-4.md
       - 振动光谱：多原子分子: structure-spectroscopy/chapter-5.md
+      - 分子电子光谱: structure-spectroscopy/chapter-6.md
 
   - 数据结构基础:
       - 课程主页: data-structures/index.md
