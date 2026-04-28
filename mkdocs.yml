@@ -65,6 +65,7 @@ nav:
       - Lists, Stacks, and Queues: data-structures/ds02.md
       - Trees: data-structures/ds03.md
       - Heaps and Priority Queues: data-structures/ds04.md
+      - Segment Trees: data-structures/ds05.md
 
 
   - 信息理论:
@@ -72,7 +73,8 @@ nav:
     - 信息度量与熵: information-theory/L1.md
 
   - 物理化学I:
-      - 课程主页: physical-chem-1/index.md
+      - 课程主页: physical-chem-1/index.
+      - 能量与能量量子化: physical-chem-1/chapter-1.md
 
   - 分析II:仪器分析:
       - 课程主页: Analytical-chemistry/index.md
