@@ -1,4 +1,4 @@
-# Database of Physical Chemistry
+# Databases of Physical Chemistry
 
 | 数据库 | 全称 | 简介 |
 |---|---|---|
