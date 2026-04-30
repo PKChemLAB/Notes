@@ -1,0 +1,2196 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/intro-computational-chem/FEA/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Finite Element Analysis - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finite-element-analysis" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK&#39;s Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Finite Element Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Papers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算化学导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../structure-spectroscopy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构II:光谱学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-structures/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../information-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  信息理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Analytical-chemistry/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  分析II:仪器分析
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK&#39;s Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/26.3.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    气液界面合成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../montecarlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蒙特卡洛方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../structure-spectroscopy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构II:光谱学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构II:光谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：多原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子电子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data-structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists, Stacks, and Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heaps and Priority Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segment Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../information-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information-theory/L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息度量与熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能量与能量量子化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Analytical-chemistry/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分析II:仪器分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分析II:仪器分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、有限元分析简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、有限元分析简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 应用背景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 核心概念：有限与元
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、有限元分析原理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、有限元分析原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 工程问题的数学本质：微分方程边值问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 微分方程的三类求解方法对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 加权余量法：试函数法的数学实现
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 加权余量法：试函数法的数学实现">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 残差（余量）的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 加权余量法核心思想
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-galerkin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 伽辽金法（Galerkin）：主流权函数选取方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 函数逼近：全域展开vs子域展开
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 有限元法的核心思路总结
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、计算机处理有限元问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、计算机处理有限元问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 有限元计算的完整标准流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 网格化：有限元离散的核心
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 网格化：有限元离散的核心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 网格化核心控制参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 主流网格划分方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 基函数（形函数）的选取
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 基函数（形函数）的选取">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 常用基函数类型与适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 拉格朗日基函数核心特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 有限元的数据存储
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、有限元软件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、有限元软件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-comsol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 COMSOL 核心特点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-comsol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 COMSOL 核心功能与模块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-comsol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 COMSOL 标准仿真流程（以母线板焦耳热分析为例）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        补充：物理信息神经网络PINN
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="finite-element-analysis">Finite Element Analysis<a class="headerlink" href="#finite-element-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="_1">一、有限元分析简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="11">1.1 应用背景<a class="headerlink" href="#11" title="Permanent link">&para;</a></h3>
+<p>工程与科学领域的绝大多数实际问题，最终都可抽象为<strong>特定边界条件下微分方程的定解问题</strong>，典型场景包括：
+- 航空航天：火箭发动机内的应力、压力、温度、速度多场耦合分析；
+- 生物医学：心肌补片力学效应预测、导电高分子补片电信号传导效果分析；
+- 前沿科研：微流体控制、高分子材料电荷传输、锂电池锂沉积生长仿真等。</p>
+<p>这类问题普遍存在<strong>复杂几何、多物理场耦合、非线性</strong>特征，几乎无法求得解析解，有限元法（FEM）是当前解决这类问题最核心、应用最广的数值求解方案。</p>
+<h3 id="12">1.2 核心概念：有限与元<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
+<p>有限元法的核心是<strong>离散化思想</strong>，两个基础概念必须明确：
+1. <strong>元（单元）</strong>：有限元分析的基本构件，按求解域维度分为三类：
+   - 线单元：梁、管等一维结构；
+   - 面单元：壳、膜等二维结构；
+   - 体单元：块、体等三维结构。
+2. <strong>有限</strong>：将连续的无限自由度求解域，离散为<strong>有限个单元</strong>，每个单元内包含有限个自由度。通过离散化，把无法直接求解的连续体微分方程，转化为可通过计算机求解的有限自由度线性代数方程组，同时平衡计算精度与计算量。</p>
+<h2 id="_2">二、有限元分析原理<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 工程问题的数学本质：微分方程边值问题<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>所有物理场问题，最终都可抽象为<strong>控制微分方程+边界条件</strong>的定解形式，典型物理场对应的微分方程如下：
+- 经典力学：基于牛顿第二定律的位移平衡方程，如一维拉杆的力学控制方程；
+- 物质扩散：扩散方程，可描述线性/非线性扩散、各向异性扩散，是图灵结构的数学基础；
+- 热传导：基于热力学第二定律的热传导方程，可描述物体加热、冷却、稳态温度场分布；
+- 电磁现象：麦克斯韦方程组，描述电场与磁场的分布、耦合与演化。</p>
+<p>有限元法的核心价值，就是解决这类方程在复杂场景下<strong>无解析解</strong>的痛点，通过数值方法得到满足工程精度的近似解。</p>
+<h3 id="22">2.2 微分方程的三类求解方法对比<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>以<strong>左端固定、右端自由的一维拉杆受均布载荷</strong>问题（控制方程<span class="arithmatex">\(EAu''+p=0\)</span>，边界条件<span class="arithmatex">\(u(0)=0\)</span>、<span class="arithmatex">\(u'(L)=0\)</span>）为基础，三类求解方法的核心差异如下：</p>
+<table>
+<thead>
+<tr>
+<th>求解方法</th>
+<th>核心思路</th>
+<th>技术关键</th>
+<th>难易程度</th>
+<th>求解精度</th>
+<th>方法规范性</th>
+<th>适用范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>解析法</td>
+<td>直接求解微分方程，得到全场闭合解析解</td>
+<td>寻找满足全场控制方程和边界条件的解函数</td>
+<td>极难，高度依赖数学技巧</td>
+<td>极高，为精确解</td>
+<td>不规范，无通用流程</td>
+<td>仅适用于规则几何的理想教科书问题</td>
+</tr>
+<tr>
+<td>差分法</td>
+<td>将微分转化为差商，全场离散为节点，构建线性方程组求解</td>
+<td>差分格式构建、全场离散化</td>
+<td>较简单</td>
+<td>高，但计算量大</td>
+<td>较规范</td>
+<td>较复杂问题，对规则几何适配性更好</td>
+</tr>
+<tr>
+<td>试函数法</td>
+<td>设定满足边界条件的含参试函数，最小化与原方程的残差，求解待定系数</td>
+<td>试函数选取、残差最小化处理</td>
+<td>简单</td>
+<td>较高，计算量更小</td>
+<td>高度规范，试函数确定后流程固定</td>
+<td>适用范围极广，对复杂几何适配性强</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重点讲解</strong>：
+- 解析法仅存在于理想场景，工程中99%的问题无法使用；
+- 差分法是「点离散」，对复杂边界适配性差；试函数法是「场离散」，是有限元法的核心数学基础；
+- 试函数法的核心逻辑：近似解代入控制方程会产生残差（余量），通过让残差在数学意义下最小，求解待定系数，得到满足精度的近似解。</p>
+<h3 id="23">2.3 加权余量法：试函数法的数学实现<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<p>加权余量法是有限元法的核心数学基石，实现了从微分方程到线性方程组的转化。</p>
+<h4 id="231">2.3.1 残差（余量）的定义<a class="headerlink" href="#231" title="Permanent link">&para;</a></h4>
+<p>对于通用定解问题：
+- 域<span class="arithmatex">\(\Omega\)</span>内的控制方程：<span class="arithmatex">\(L(u) - f = 0\)</span>
+- 边界<span class="arithmatex">\(\Gamma\)</span>上的边界条件：<span class="arithmatex">\(B(u) - g = 0\)</span></p>
+<p>其中<span class="arithmatex">\(L、B\)</span>为微分算子，<span class="arithmatex">\(u\)</span>为待求未知函数，<span class="arithmatex">\(f、g\)</span>为已知函数。将近似解<span class="arithmatex">\(\tilde{u}\)</span>代入方程后，因近似性无法严格满足方程，会产生残差：
+- 域内残差：<span class="arithmatex">\(R_\Omega = L(\tilde{u}) - f\)</span>
+- 边界残差：<span class="arithmatex">\(R_\Gamma = B(\tilde{u}) - g\)</span></p>
+<h4 id="232">2.3.2 加权余量法核心思想<a class="headerlink" href="#232" title="Permanent link">&para;</a></h4>
+<p>强迫残差的加权积分值等于0，构建方程组求解待定系数，核心公式：
+$<span class="arithmatex">\(\int_\Omega W_i R_\Omega d\Omega + \int_\Gamma W_i R_\Gamma d\Gamma = 0 \quad (i=1,2,...,n)\)</span>$
+其中<span class="arithmatex">\(W_i\)</span>为权函数，<span class="arithmatex">\(n\)</span>为试函数的待定系数个数。上式可生成<span class="arithmatex">\(n\)</span>阶线性方程组，求解后即可得到近似解的待定系数。</p>
+<p><strong>重点讲解</strong>：加权余量法不要求残差逐点为0，而是让残差在加权平均意义下为0，从而把连续的微分方程转化为离散的线性代数方程组，完美适配计算机的数值计算逻辑。</p>
+<h4 id="233-galerkin">2.3.3 伽辽金法（Galerkin）：主流权函数选取方案<a class="headerlink" href="#233-galerkin" title="Permanent link">&para;</a></h4>
+<p>伽辽金法是有限元软件中最常用的加权余量实现方式，核心规则为：<strong>权函数直接取试函数的基函数本身</strong>，让残差与每一个基函数正交。</p>
+<p>其核心优势在于：既保证了解的收敛性，又完美平衡了计算精度与计算量，同时可通过变分原理实现数学上的严谨推导，是现代有限元法的底层核心算法。</p>
+<h3 id="24-vs">2.4 函数逼近：全域展开vs子域展开<a class="headerlink" href="#24-vs" title="Permanent link">&para;</a></h3>
+<p>这部分是理解「有限元为什么要划分单元」的关键，两种函数逼近方式的核心差异如下：</p>
+<table>
+<thead>
+<tr>
+<th>展开方式</th>
+<th>核心逻辑</th>
+<th>核心优点</th>
+<th>核心缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>全域展开</td>
+<td>用定义在整个求解域的基底函数（如傅里叶级数）展开待求函数</td>
+<td>基底函数高次连续，少量基函数即可实现高精度逼近</td>
+<td>基底函数复杂，对复杂几何、边界适配性极差，无法工程化</td>
+</tr>
+<tr>
+<td>子域展开</td>
+<td>将全域拆分为多个子域（单元），每个子域内用简单多项式插值函数逼近，再拼接为全域解</td>
+<td>基底函数简单，对复杂几何适配性极强，流程可完全标准化，天然适配计算机求解</td>
+<td>基底函数连续性低，需足够单元数量保证精度</td>
+</tr>
+</tbody>
+</table>
+<p><strong>重点讲解</strong>：
+有限元法与传统试函数法的核心区别，就是<strong>采用基于子域展开的分片逼近</strong>。传统试函数法使用全域试函数，而有限元法将全域拆分为有限个单元，每个单元内用简单的局部试函数（形函数/基函数），既解决了复杂几何的适配问题，又让求解流程完全标准化，这是有限元法能实现工程化普及的核心原因。</p>
+<h3 id="25">2.5 有限元法的核心思路总结<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<p>有限元分析的完整逻辑分为三大核心环节：
+1. <strong>离散过程（几何离散）</strong>：将复杂连续求解域，进行分段（1D）、分片（2D）、分块（3D），拆分为有限个标准几何单元，完成求解域的网格化；
+2. <strong>单元分析与全域集成</strong>：在每个单元上构建试函数，基于伽辽金法建立单元控制方程（单元刚度矩阵），再按节点拓扑关系组装为全域线性方程组（总刚度矩阵），代入边界条件后求解，得到所有节点的场变量值；
+3. <strong>结果后处理</strong>：基于节点值，通过单元内的插值函数还原全域场变量分布，完成数据提取与可视化分析。</p>
+<h2 id="_3">三、计算机处理有限元问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 有限元计算的完整标准流程<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<p>工程中有限元分析分为三大核心阶段，其中前处理耗时占比最高，对结果影响最大：
+1. <strong>前处理</strong>
+   - 几何模型建立：通过CAD软件构建待分析的几何模型；
+   - 网格生成：对几何模型进行离散化，完成网格化（有限元分析的核心步骤）；
+   - 边界与属性定义：施加约束、载荷、初始条件，赋值材料属性。
+2. <strong>求解</strong>：通过有限元求解器，对组装好的线性方程组进行数值求解，得到各节点的场变量结果。
+3. <strong>后处理</strong>：采集、可视化求解结果，包括场变量云图、动画、时间历程曲线、关键数据提取等，全面分析场变量的分布与变化规律。</p>
+<h3 id="32">3.2 网格化：有限元离散的核心<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>网格化是有限元分析的关键步骤，直接决定计算结果的精度、计算时耗，甚至会导致计算不收敛、程序中止。</p>
+<h4 id="321">3.2.1 网格化核心控制参数<a class="headerlink" href="#321" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>网格数量</strong></li>
+<li>核心规律：网格数量增加，计算精度提升，但计算时耗呈指数级增长；网格数量较少时，增加网格可显著提升精度，时耗增长不明显；超过临界数量后，精度提升极小，时耗大幅增加。</li>
+<li>
+<p>实操原则：必须进行<strong>网格无关性验证</strong>（逐步加密网格，直到结果无显著变化），权衡精度与计算成本，确定最优网格数量。</p>
+</li>
+<li>
+<p><strong>网格密度</strong></p>
+</li>
+<li>
+<p>核心原则：<strong>梯度加密原则</strong>——在场变量变化梯度大的区域（如应力集中、孔边、尖角、材料界面），采用密集网格；在场变量变化平缓的区域，采用稀疏网格，在保证精度的同时最小化模型规模。</p>
+</li>
+<li>
+<p><strong>单元阶次</strong></p>
+</li>
+<li>分类：线性单元、二次单元、高阶单元（三次及以上）；</li>
+<li>特点：高阶单元的曲线/曲面边界能更好地逼近复杂几何，高次插值可精准捕捉复杂场函数，精度更高；但节点数更多，计算量更大；</li>
+<li>
+<p>实操选择：线性单元适合初步分析、场变化平缓的问题；二次单元是工程中最常用的平衡选择；高阶单元用于应力集中等高精度需求场景。</p>
+</li>
+<li>
+<p><strong>单元形状</strong></p>
+</li>
+<li>评价指标：边长比（以正多边形/正多面体为基准）、扭曲度（面内扭转、面外翘曲程度），形状过差的网格会导致精度暴跌，甚至计算中止；</li>
+<li>主流单元对比：
+     | 单元类型 | 网格生成难度 | 复杂几何适配性 | 同精度下计算效率 | 自适应加密能力 |
+     |----------|--------------|----------------|------------------|----------------|
+     | 四面体单元 | 容易，自动化程度高 | 极强 | 较低，需更多单元 | 优秀 |
+     | 六面体单元 | 难度高，手动工作量大 | 差，仅适合规则几何 | 高，单元数更少 | 较差 |</li>
+</ol>
+<h4 id="322">3.2.2 主流网格划分方法<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>映射法</strong>：将待划分的物理域双向映射到规则参数域，对参数域划分网格后，再反向映射回物理域；优势是网格质量高，适合规则几何。</li>
+<li><strong>基于栅格法（空间分解法）</strong>：用栅格覆盖目标区域，通过相交检测、裁剪、剖分得到网格；优势是自动化程度高，适合复杂几何。</li>
+</ol>
+<h3 id="33">3.3 基函数（形函数）的选取<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<p>基函数是单元内插值逼近场变量的核心，决定了有限元求解的精度与适用场景。</p>
+<h4 id="331">3.3.1 常用基函数类型与适用场景<a class="headerlink" href="#331" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>基函数类型</th>
+<th>连续性要求</th>
+<th>适用场类型</th>
+<th>典型应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>拉格朗日基函数</td>
+<td>C⁰（函数连续，导数可间断）</td>
+<td>标量场</td>
+<td>结构位移、温度分布、压力场</td>
+</tr>
+<tr>
+<td>Nedelec元（边元）</td>
+<td>H(curl)（切向连续）</td>
+<td>矢量场</td>
+<td>电磁场、涡流问题</td>
+</tr>
+<tr>
+<td>Raviart-Thomas元</td>
+<td>H(div)（法向连续）</td>
+<td>矢量场</td>
+<td>流体速度、磁通量</td>
+</tr>
+<tr>
+<td>Hermite元</td>
+<td>C¹（函数+导数连续）</td>
+<td>需光滑导数的场</td>
+<td>板壳弯曲问题</td>
+</tr>
+</tbody>
+</table>
+<h4 id="332">3.3.2 拉格朗日基函数核心特点<a class="headerlink" href="#332" title="Permanent link">&para;</a></h4>
+<p>拉格朗日基函数是有限元法中最常用的基函数，也是绝大多数有限元软件的默认选择，核心特点：
+- 节点插值性：基函数在对应节点处取值为1，在其他节点处取值为0；
+- 局部支撑性：每个基函数仅在相邻单元内非零，大幅提升计算效率；
+- C⁰连续性：仅保证单元边界处函数值连续，完美适配绝大多数标量场问题；
+- 灵活性：可灵活选择线性、二次、高阶多项式形式，平衡精度与计算量。</p>
+<h3 id="34">3.4 有限元的数据存储<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<p>计算机实现有限元分析，核心是对模型数据的标准化存储，关键内容包括：
+1. <strong>节点存储</strong>：存储「节点编号+节点坐标」，是模型的几何基础；
+2. <strong>单元存储</strong>：存储「单元编号+组成单元的节点编号（固定顺序，如逆时针）」，建立节点的拓扑关系；
+3. <strong>集合/面存储</strong>：对节点、单元进行分组命名（如固定约束节点集、载荷施加面），方便边界条件的施加与管理；
+4. <strong>矩阵存储</strong>：有限元的总刚度矩阵是<strong>稀疏矩阵</strong>（绝大多数元素为0，非零元集中在对角线附近），计算机仅存储非零元素的值与位置，大幅节省内存，提升计算效率。</p>
+<h2 id="_4">四、有限元软件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>本专题重点讲解<strong>COMSOL Multiphysics</strong>，这是当前多物理场耦合仿真领域的主流软件。</p>
+<h3 id="41-comsol">4.1 COMSOL 核心特点<a class="headerlink" href="#41-comsol" title="Permanent link">&para;</a></h3>
+<ul>
+<li>核心优势：<strong>原生多物理场耦合</strong>，在统一软件平台、同一工作流程下，可任意耦合两个及以上物理场，耦合方式与个数无限制，最大程度贴近真实世界的物理现象；</li>
+<li>软件特性：偏数学化，教程体系完善，灵活性极强，支持自定义物理场、控制方程，完美适配从基础科研到工程开发的全场景需求。</li>
+</ul>
+<h3 id="42-comsol">4.2 COMSOL 核心功能与模块<a class="headerlink" href="#42-comsol" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>全领域模块覆盖</strong>：包含电磁、结构&amp;声学、流体&amp;传热、化工、电化学、岩土力学等几乎所有工程物理领域的专用模块，可按需添加、灵活扩展；</li>
+<li><strong>核心开发工具</strong>：</li>
+<li>模型开发器：实现多物理场耦合设置、仿真模型全流程搭建；</li>
+<li>App开发器：将仿真模型封装为定制化仿真App，降低使用门槛，扩展仿真应用范围；</li>
+<li>模型管理器：实现仿真模型与App的高效管理；</li>
+<li><strong>第三方接口</strong>：提供与MATLAB、SolidWorks、AutoCAD等软件的LiveLink接口，支持CAD模型导入、数据交互与二次开发。</li>
+</ol>
+<h3 id="43-comsol">4.3 COMSOL 标准仿真流程（以母线板焦耳热分析为例）<a class="headerlink" href="#43-comsol" title="Permanent link">&para;</a></h3>
+<ol>
+<li>问题定义：明确分析目标（母线板焦耳热温升、热膨胀、强制冷却效应），确定所需物理场（电流场、固体传热、固体力学）；</li>
+<li>几何建模：构建母线板、螺栓的几何模型；</li>
+<li>材料赋值：为不同部件赋予对应的材料属性；</li>
+<li>物理场设置：添加对应物理场，设置多物理场耦合（电磁热、热膨胀）；</li>
+<li>边界条件施加：设置电压、接地、固定约束、固定温度等边界条件；</li>
+<li>网格划分：对几何模型进行网格剖分；</li>
+<li>研究设置：选择稳态/瞬态等研究类型，执行求解计算；</li>
+<li>结果后处理：查看温度、应力、电势、位移等结果云图，提取关键数据，完成分析。</li>
+</ol>
+<h2 id="pinn">补充：物理信息神经网络PINN<a class="headerlink" href="#pinn" title="Permanent link">&para;</a></h2>
+<p>PINN是数值计算与AI结合的前沿方向，是一种<strong>无网格</strong>的数值求解方法，核心逻辑如下：
+- 用神经网络拟合物理场的解，通过自动微分计算微分方程的残差；
+- 将物理控制方程、边界条件作为硬约束嵌入神经网络的损失函数；
+- 通过最小化损失函数，让神经网络的输出同时满足数学方程与物理规律，最终得到数值解。</p>
+<p>其核心优势是避开了有限元的网格划分环节，对复杂几何、高维问题、反问题有独特优势，是当前计算力学领域的研究热点。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peikai Chen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3127 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/data-structures/ds01/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../ds02/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Algorithm Analysis - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-1-algorithm-analysis" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK&#39;s Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algorithm Analysis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Papers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intro-computational-chem/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算化学导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../structure-spectroscopy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构II:光谱学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../information-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  信息理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Analytical-chemistry/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  分析II:仪器分析
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK&#39;s Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/26.3.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    气液界面合成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../intro-computational-chem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/montecarlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蒙特卡洛方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../structure-spectroscopy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构II:光谱学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构II:光谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：多原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子电子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、Algorithm Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Algorithm Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：选择排序(Selection Sort)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、算法分析的核心内容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法分析的核心内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析的前提假设
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1matrix-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1：矩阵加法(Matrix Addition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2iterative-summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2：数组求和的迭代实现(Iterative Summation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3recursive-summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例3：数组求和的递归实现(Recursive Summation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asymptotic-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、渐近记号(Asymptotic Notation)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、渐近记号(Asymptotic Notation)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 渐近记号的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 使用规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 渐近记号运算规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 常见复杂度的增长速度排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 时间复杂度分析规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1：矩阵加法的渐近复杂度分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2fibonacci-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2：斐波那契数列(Fibonacci Number)的递归实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、算法对比：最大子序列和问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、算法对比：最大子序列和问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-subsequence-sum-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum Subsequence Sum Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法1：三重循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法2：双层循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分治法（Divide and Conquer）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分治法（Divide and Conquer）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例推演
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在线算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四种算法的运行时间实测对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、运行时间中的对数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、运行时间中的对数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二分查找（Binary Search）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二分查找（Binary Search）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euclids-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧几里得算法（Euclid’s Algorithm）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速幂算法（Exponentiation）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、算法分析结果的检验
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、算法分析结果的检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        翻倍测试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists, Stacks, and Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heaps and Priority Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ds05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segment Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../information-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information-theory/L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息度量与熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Database
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能量与能量量子化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Analytical-chemistry/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分析II:仪器分析
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    分析II:仪器分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#algorithm-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、Algorithm Definition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Algorithm Definition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例：选择排序(Selection Sort)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、算法分析的核心内容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、算法分析的核心内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分析的前提假设
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1matrix-addition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1：矩阵加法(Matrix Addition)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2iterative-summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2：数组求和的迭代实现(Iterative Summation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3recursive-summation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例3：数组求和的递归实现(Recursive Summation)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asymptotic-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、渐近记号(Asymptotic Notation)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、渐近记号(Asymptotic Notation)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 渐近记号的定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 使用规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 渐近记号运算规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 常见复杂度的增长速度排序
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 时间复杂度分析规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例1：矩阵加法的渐近复杂度分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2fibonacci-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例2：斐波那契数列(Fibonacci Number)的递归实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、算法对比：最大子序列和问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、算法对比：最大子序列和问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-subsequence-sum-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maximum Subsequence Sum Problem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法1：三重循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法2：双层循环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#divide-and-conquer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        分治法（Divide and Conquer）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分治法（Divide and Conquer）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例推演
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复杂度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        在线算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四种算法的运行时间实测对比
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、运行时间中的对数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、运行时间中的对数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二分查找（Binary Search）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二分查找（Binary Search）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代码实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#euclids-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧几里得算法（Euclid’s Algorithm）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exponentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速幂算法（Exponentiation）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、算法分析结果的检验
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、算法分析结果的检验">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        翻倍测试
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极限验证
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-1-algorithm-analysis">Chapter-1 Algorithm Analysis<a class="headerlink" href="#chapter-1-algorithm-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="algorithm-definition">一、Algorithm Definition<a class="headerlink" href="#algorithm-definition" title="Permanent link">&para;</a></h2>
+<p>Algorithm是指令的有限集合，遵循这些指令可以完成特定的任务。此外，所有算法都必须满足以下5条核心准则：</p>
+<ol>
+<li>
+<p><strong>Input</strong>：有0个或多个由外部提供的量</p>
+</li>
+<li>
+<p><strong>Output</strong>：至少产生一个输出量</p>
+</li>
+<li>
+<p><strong>确定性（Definiteness）</strong>：每条指令都清晰、无歧义</p>
+</li>
+<li>
+<p><strong>有穷性(Finiteness)</strong>：对于算法的所有用例，在执行有限步之后必然终止</p>
+</li>
+<li>
+<p><strong>可行性(Effectiveness)</strong>：每条指令都必须足够基础，原则上可以由人仅用纸笔完成；仅满足确定性是不够的，操作还必须是可实现的</p>
+</li>
+</ol>
+<h3 id="selection-sort">示例：选择排序(Selection Sort)<a class="headerlink" href="#selection-sort" title="Permanent link">&para;</a></h3>
+<p><strong>功能</strong>：将 n ≥ 1 个整数按升序排列
+在当前未排序的整数中，找到最小值，将其放到已排序序列的下一个位置。</p>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 检查list[i]到list[n-1]，找到最小值的下标min</span>
+<span class="w">    </span><span class="n">交换</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="n">和</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">min</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+排序核心动作 = 查找未排序区间的最小值 + 与当前区间首元素交换</p>
+<h2 id="_1">二、算法分析的核心内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>分析算法核心是评估<strong>时间开销(Time Complexity)</strong>和<strong>空间开销(Space Complexity)</strong>，而非和机器、编译器绑定的具体运行时间。</p>
+<h3 id="_2">分析的前提假设<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>为了剥离机器差异，我们做3个基础假设：</p>
+<ol>
+<li>
+<p>指令按顺序执行(executed sequentially)</p>
+</li>
+<li>
+<p>每条指令都是简单操作，执行恰好花费1个时间单位</p>
+</li>
+<li>
+<p>整数大小固定，内存无限(infinite memory)</p>
+</li>
+</ol>
+<p>我们通常聚焦两个核心时间复杂度函数：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(T_{avg}(N)\)</span>：平均情况时间复杂度(Average Case Time Complexity)，输入规模为N时的平均运行时</p>
+</li>
+<li>
+<p><span class="arithmatex">\(T_{worst}(N)\)</span>：最坏情况时间复杂度(Worst Case Time Complexity)，输入规模为N时的最大运行时间</p>
+</li>
+</ul>
+<blockquote>
+<p>若算法有多个输入维度，复杂度函数可包含多个参数。</p>
+</blockquote>
+<hr />
+<h3 id="1matrix-addition">示例1：矩阵加法(Matrix Addition)<a class="headerlink" href="#1matrix-addition" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1">// 矩阵a + 矩阵b = 矩阵c，矩阵维度为rows行cols列</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cols</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rows</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">cols</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">                </span><span class="n">c</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+精确步数计算：<span class="arithmatex">\(T(rows, cols ) =  2 \times rows \times cols + 2 \times rows + 1\)</span></p>
+<blockquote>
+<p>问题：如果 rows 远大于 cols 该如何处理？</p>
+<p>回答：交换 rows 和 cols 的遍历顺序，优化内存缓存命中率。</p>
+</blockquote>
+<hr />
+<h3 id="2iterative-summation">示例2：数组求和的迭代实现(Iterative Summation)<a class="headerlink" href="#2iterative-summation" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">sum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">list</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span><span class="w">  </span><span class="cm">/* 累加数组中的所有数字 */</span>
+<span class="w">   </span><span class="kt">float</span><span class="w"> </span><span class="n">tempsum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span>
+<span class="w">   </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">       </span><span class="n">tempsum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">tempsum</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+精确步数计算：<span class="arithmatex">\(T_{sum}(n) = 2n + 3\)</span></p>
+<hr />
+<h3 id="3recursive-summation">示例3：数组求和的递归实现(Recursive Summation)<a class="headerlink" href="#3recursive-summation" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="nf">rsum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">list</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span><span class="w">  </span><span class="cm">/* 递归累加数组中的所有数字 */</span>
+<span class="w">   </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span><span class="w">    </span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="n">rsum</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+精确步数计算：<span class="arithmatex">\(T_{rsum}(n) = 2n + 2\)</span></p>
+<p>虽然递归实现的步数公式数值更小，但每一步的实际执行耗时远高于迭代。</p>
+<blockquote>
+<p>我们真的有必要精确计算每一步的执行次数吗？</p>
+<p>结论：精确计数非常繁琐，且在不同机器、编译器下无普适性。我们真正需要关注的，是<strong>运行时间随输入规模增长的趋势(Growth Trend of Runtime with Input Size)</strong>。</p>
+</blockquote>
+<hr />
+<h2 id="asymptotic-notation">三、渐近记号(Asymptotic Notation)<a class="headerlink" href="#asymptotic-notation" title="Permanent link">&para;</a></h2>
+<p>预测运行时间随输入规模N的增长趋势，从而对比两个程序的时间复杂度。真正需要关注的是时间函数<span class="arithmatex">\(T_p\)</span>的<strong>渐近行为(Asymptotic Behavior)</strong>。</p>
+<p>举个例子：假设 <span class="arithmatex">\(T_{p1}(N) = c_1N^2 + c_2N\)</span>，<span class="arithmatex">\(T_{p2}(N) = c_3N\)</span>。哪个更快？</p>
+<p>无论<span class="arithmatex">\(c_1、c_2、c_3\)</span>的取值如何，总会存在一个阈值<span class="arithmatex">\(n_0\)</span>，当所有 <span class="arithmatex">\(N &gt; n_0\)</span> 时，都有 <span class="arithmatex">\(T_{p1}(N) &gt; T_{p2}(N)\)</span>。</p>
+<blockquote>
+<p>结论：只要知道<span class="arithmatex">\(T_{p1}\)</span>的增长量级约为<span class="arithmatex">\(N^2\)</span>，<span class="arithmatex">\(T_{p2}\)</span>约为<span class="arithmatex">\(N\)</span>，那么当输入规模N足够大时，<span class="arithmatex">\(P_2\)</span>一定更快。</p>
+</blockquote>
+<hr />
+<h3 id="21">2.1 渐近记号的定义<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>大O记号（上界）(Big O Notation, Upper Bound)</strong>
+    【定义】若存在正常数<span class="arithmatex">\(c\)</span>和<span class="arithmatex">\(n_0\)</span>，使得对于所有 <span class="arithmatex">\(N ≥ n_0\)</span>，都有 <span class="arithmatex">\(T(N) ≤ c·f(N)\)</span>，则记 <span class="arithmatex">\(T(N) = O(f(N))\)</span>。</p>
+<blockquote>
+<p><span class="arithmatex">\(T(N)\)</span>的增长速度<strong>不会超过</strong><span class="arithmatex">\(f(N)\)</span>，<span class="arithmatex">\(f(N)\)</span>是<span class="arithmatex">\(T(N)\)</span>的时间上界，对应算法的最坏情况上限。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>大Ω记号（下界）(Big Omega Notation, Lower Bound)</strong>
+    【定义】若存在正常数<span class="arithmatex">\(c\)</span>和<span class="arithmatex">\(n_0\)</span>，使得对于所有 <span class="arithmatex">\(N ≥ n_0\)</span>，都有 <span class="arithmatex">\(T(N) ≥ c·g(N)\)</span>，则记 <span class="arithmatex">\(T(N) = Ω(g(N))\)</span>。</p>
+<blockquote>
+<p><span class="arithmatex">\(T(N)\)</span>的增长速度<strong>不会低于</strong><span class="arithmatex">\(g(N)\)</span>，<span class="arithmatex">\(g(N)\)</span>是<span class="arithmatex">\(T(N)\)</span>的时间下界，用于描述算法的理论性能下限。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Θ记号（紧界）(Big Theta Notation, Tight Bound)</strong>
+    【定义】当且仅当 <span class="arithmatex">\(T(N) = O(h(N))\)</span> 且 <span class="arithmatex">\(T(N) = Ω(h(N))\)</span> 时，记 <span class="arithmatex">\(T(N) = Θ(h(N))\)</span>。</p>
+<blockquote>
+<p><span class="arithmatex">\(T(N)\)</span>的增长速度<strong>与<span class="arithmatex">\(h(N)\)</span>完全相当</strong>，<span class="arithmatex">\(h(N)\)</span>是<span class="arithmatex">\(T(N)\)</span>的紧确界，说明算法的上下界一致。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>小o记号（非紧上界）(Little o Notation, Non-tight Upper Bound)</strong>
+    【定义】若 <span class="arithmatex">\(T(N) = O(p(N))\)</span> 且 <span class="arithmatex">\(T(N) ≠ Θ(p(N))\)</span>，则记 <span class="arithmatex">\(T(N) = o(p(N))\)</span>。</p>
+<blockquote>
+<p><span class="arithmatex">\(T(N)\)</span>的增长速度<strong>严格慢于</strong><span class="arithmatex">\(p(N)\)</span>，是不紧的上界。</p>
+</blockquote>
+</li>
+</ol>
+<hr />
+<h3 id="22">2.2 使用规范<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>对于大O记号，<span class="arithmatex">\(2N + 3 = O(N) = O(N^{k≥1}) = O(2^N) = ...\)</span>，我们<strong>始终取最小的<span class="arithmatex">\(f(N)\)</span></strong>，也就是最紧的上界。</p>
+</li>
+<li>
+<p>对于大Ω记号，<span class="arithmatex">\(2N + N^2 = Ω(2^N) = Ω(N^2) = Ω(N) = Ω(1) = ...\)</span>，我们<strong>始终取最大的<span class="arithmatex">\(g(N)\)</span></strong>，也就是最紧的下界。</p>
+</li>
+</ul>
+<hr />
+<h3 id="23">2.3 渐近记号运算规则<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(T_1(N) = O(f(N))\)</span> 且 <span class="arithmatex">\(T_2(N) = O(g(N))\)</span>，则：</p>
+<ul>
+<li>
+<p>(a) <span class="arithmatex">\(T_1(N) + T_2(N) = max( O(f(N)), O(g(N)) )\)</span>（加法取最高阶，低阶项可忽略）</p>
+</li>
+<li>
+<p>(b) <span class="arithmatex">\(T_1(N) * T_2(N) = O( f(N) * g(N) )\)</span>（乘法阶数相加）</p>
+</li>
+<li>若 <span class="arithmatex">\(T(N)\)</span> 是一个k次多项式，则 <span class="arithmatex">\(T(N) = Θ(N^k)\)</span>。</li>
+<li>对于任意常数k，都有 <span class="arithmatex">\(log^k N = O(N)\)</span>。这说明<strong>对数函数的增长速度极其缓慢</strong>，几乎接近常数级。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>重要注意事项：渐近对比的前提是输入规模N<strong>足够大</strong>。</p>
+<p>例如：<span class="arithmatex">\(T_{p1}(N) = 10^6 N\)</span>，<span class="arithmatex">\(T_{p2}(N) = N^2\)</span>。虽然<span class="arithmatex">\(Θ(N^2)\)</span>的增长速度比<span class="arithmatex">\(Θ(N)\)</span>快，但当 <span class="arithmatex">\(N &lt; 10^6\)</span> 时，<span class="arithmatex">\(P_2\)</span>仍然比<span class="arithmatex">\(P_1\)</span>更快。</p>
+</blockquote>
+<hr />
+<h3 id="24">2.4 常见复杂度的增长速度排序<a class="headerlink" href="#24" title="Permanent link">&para;</a></h3>
+<p>从慢到快（性能从优到差）依次为：
+<span class="arithmatex">\(log\ n\)</span> &lt; <span class="arithmatex">\(n\)</span> &lt; <span class="arithmatex">\(n\ log\ n\)</span> &lt; <span class="arithmatex">\(n^2\)</span> &lt; <span class="arithmatex">\(2^n\)</span></p>
+<hr />
+<h3 id="25">2.5 时间复杂度分析规则<a class="headerlink" href="#25" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>for循环(for Loops)</strong>：for循环的运行时间，最多为循环内语句（包括循环判断）的运行时间 × 循环迭代次数。</li>
+<li><strong>嵌套for循环(Nested for Loops)</strong>：嵌套循环内语句的总运行时间，为语句的运行时间 × 所有循环的规模乘积。</li>
+<li><strong>连续语句(Consecutive Statements)</strong>：运行时间相加（最终取最大值，即最高阶项）。</li>
+<li><strong>IF/ELSE语句(IF/ELSE Statements)</strong>：对于代码片段
+    <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Condition</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="n">S1</span><span class="p">;</span>
+<span class="k">else</span><span class="w">  </span><span class="n">S2</span><span class="p">;</span>
+</code></pre></div>
+    运行时间不超过「条件判断的运行时间 + S1和S2中运行时间的较大值」。</li>
+<li><strong>递归(Recursions)</strong>：递归的时间复杂度需通过递推式分析。</li>
+</ol>
+<hr />
+<h3 id="1">示例1：矩阵加法的渐近复杂度分析<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">[][</span><span class="w"> </span><span class="n">MAX_SIZE</span><span class="w"> </span><span class="p">],</span>
+<span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">cols</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rows</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">          </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">cols</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">                </span><span class="n">c</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">][</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div>
+- 外层循环：<span class="arithmatex">\(Θ(rows)\)</span></p>
+<ul>
+<li>
+<p>内层循环+赋值语句：<span class="arithmatex">\(Θ(rows × cols)\)</span></p>
+</li>
+<li>
+<p>整体渐近复杂度：<span class="arithmatex">\(T(rows, cols) = Θ(rows × cols)\)</span></p>
+</li>
+</ul>
+<hr />
+<h3 id="2fibonacci-number">示例2：斐波那契数列(Fibonacci Number)的递归实现<a class="headerlink" href="#2fibonacci-number" title="Permanent link">&para;</a></h3>
+<p><strong>递推定义</strong>：<span class="arithmatex">\(Fib(0) = Fib(1) = 1\)</span>，<span class="arithmatex">\(Fib(n) = Fib(n-1) + Fib(n-2)\)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">long</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Fib</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Fib</span><span class="p">(</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Fib</span><span class="p">(</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>递推式：<span class="arithmatex">\(T(N) = T(N-1) + T(N-2) + 2\)</span>
+可通过数学归纳法证明：<span class="arithmatex">\(T(N) ≥ Fib(N)\)</span>，<span class="arithmatex">\(T(N)\)</span>呈<strong>指数级增长(Exponential Growth)</strong>。</p>
+<blockquote>
+<p>为什么这个递归实现的效率极差？</p>
+<p>存在大量的重复计算，比如<span class="arithmatex">\(Fib(5)\)</span>会计算<span class="arithmatex">\(Fib(4)\)</span>和<span class="arithmatex">\(Fib(3)\)</span>，<span class="arithmatex">\(Fib(4)\)</span>又会重复计算<span class="arithmatex">\(Fib(3)\)</span>，随着N增大，重复计算量爆炸式增长。时间复杂度是指数级<span class="arithmatex">\(O(φ^n)\)</span>（φ为黄金分割比≈1.618）
+</p>
+</blockquote>
+<hr />
+<h2 id="_3">四、算法对比：最大子序列和问题<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="maximum-subsequence-sum-problem">Maximum Subsequence Sum Problem<a class="headerlink" href="#maximum-subsequence-sum-problem" title="Permanent link">&para;</a></h3>
+<p>给定N个整数（可负）<span class="arithmatex">\(A_1, A_2, …, A_N\)</span>，求子序列和 <span class="arithmatex">\(\sum_{k=i}^j A_k\)</span> 的最大值；<strong>若所有整数均为负数，规定最大和为0</strong>。</p>
+<hr />
+<h3 id="1_1">算法1：三重循环<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w">  </span><span class="nf">MaxSubsequenceSum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">ThisSum</span><span class="p">,</span><span class="w">  </span><span class="n">MaxSum</span><span class="p">,</span><span class="w">  </span><span class="n">i</span><span class="p">,</span><span class="w">  </span><span class="n">j</span><span class="p">,</span><span class="w">  </span><span class="n">k</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 1*/</span><span class="w">  </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="cm">/* 初始化最大和 */</span>
+<span class="w">    </span><span class="cm">/* 2*/</span><span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="cm">/* 子序列起点i */</span>
+<span class="w">    </span><span class="cm">/* 3*/</span><span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="cm">/* 子序列终点j */</span>
+<span class="w">    </span><span class="cm">/* 4*/</span><span class="w">          </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 5*/</span><span class="w">          </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 6*/</span><span class="w">              </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* 累加A[i]到A[j]的和 */</span>
+<span class="w">    </span><span class="cm">/* 7*/</span><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MaxSum</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 8*/</span><span class="w">              </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThisSum</span><span class="p">;</span><span class="w">  </span><span class="cm">/* 更新最大和 */</span>
+<span class="w">            </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end for-j and for-i */</span>
+<span class="w">    </span><span class="cm">/* 9*/</span><span class="w">  </span><span class="k">return</span><span class="w">  </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>
+<p><span class="arithmatex">\(T(N) = O(N^3)\)</span></p>
+</li>
+<li>
+<p>枚举所有可能的子序列起点<code>i</code>和终点<code>j</code>，通过内层循环<code>k</code>计算每个子序列的和，最终保留最大值。</p>
+</li>
+<li>
+<p>存在大量重复计算。计算<code>i=0,j=3</code>的和后，计算<code>i=0,j=4</code>时，会重复累加<code>A[0]~A[3]</code>。</p>
+</li>
+</ul>
+<hr />
+<h3 id="2">算法2：双层循环<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w">  </span><span class="nf">MaxSubsequenceSum</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">ThisSum</span><span class="p">,</span><span class="w">  </span><span class="n">MaxSum</span><span class="p">,</span><span class="w">  </span><span class="n">i</span><span class="p">,</span><span class="w">  </span><span class="n">j</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 1*/</span><span class="w">  </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">   </span><span class="cm">/* 初始化最大和 */</span>
+<span class="w">    </span><span class="cm">/* 2*/</span><span class="w">  </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w">   </span><span class="cm">/* 子序列起点i */</span>
+<span class="w">    </span><span class="cm">/* 3*/</span><span class="w">      </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 4*/</span><span class="w">      </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="cm">/* 子序列终点j */</span>
+<span class="w">    </span><span class="cm">/* 5*/</span><span class="w">          </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">];</span><span class="w">  </span><span class="cm">/* 直接累加A[j]，复用前一次的和 */</span>
+<span class="w">    </span><span class="cm">/* 6*/</span><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MaxSum</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 7*/</span><span class="w">              </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThisSum</span><span class="p">;</span><span class="w">  </span><span class="cm">/* 更新最大和 */</span>
+<span class="w">        </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end for-j */</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end for-i */</span>
+<span class="w">    </span><span class="cm">/* 8*/</span><span class="w">  </span><span class="k">return</span><span class="w">  </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p><span class="arithmatex">\(T(N) = O(N^2)\)</span></p>
+<hr />
+<h3 id="divide-and-conquer">分治法（Divide and Conquer）<a class="headerlink" href="#divide-and-conquer" title="Permanent link">&para;</a></h3>
+<p>分治法的核心是“分而治之”，将大问题拆解为规模更小的子问题，递归求解后再合并结果。对于最大子序列和问题，最大和仅存在三种可能：
+1.  完全位于数组的左半部分
+2.  完全位于数组的右半部分
+3.  跨越数组中点，同时包含左半部分的后缀和右半部分的前缀</p>
+<p>最终结果为三种情况的最大值。</p>
+<h4 id="_4">示例推演<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>以数组 <code>[4, -3, 5, -2, -1, 2, 6, -2]</code> 为例：
+1.  分：将数组拆分为左半部分<code>[4,-3,5,-2]</code>、右半部分<code>[-1,2,6,-2]</code>
+2.  治：递归求解左半部分最大和为6，右半部分最大和为8
+3.  计算跨越中点的最大和，左半部分最大后缀和为<code>4-3+5=6</code>，右半部分最大前缀和为<code>-1+2+6=7</code>，合计11
+4.  <code>max(6,8,11) = 11</code></p>
+<h4 id="_5">复杂度<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>递推式：<span class="arithmatex">\(T(N) = 2T(N/2) + cN\)</span>，其中<span class="arithmatex">\(T(1) = O(1)\)</span>
+  - <span class="arithmatex">\(2T(N/2)\)</span>：递归求解左右两个规模为N/2的子问题</p>
+<ul>
+<li><span class="arithmatex">\(cN\)</span>：线性时间内计算跨越中点的最大和</li>
+</ul>
+<p>递推展开推导：</p>
+<p>$$
+  \begin{align<em>}
+  T(N) &amp;= 2T(N/2) + cN \
+  &amp;= 2[2T(N/2^2) + cN/2] + cN = 2^2T(N/2^2) + 2cN \
+  &amp;\dots \
+  &amp;= 2^k O(1) + c k N \quad (N/2^k = 1 \implies k=log_2N) \
+  &amp;= N \cdot O(1) + cN logN \
+  &amp;= O(N logN)
+  \end{align</em>}
+  $$</p>
+<p><span class="arithmatex">\(T(N) = O(N logN)\)</span>，该结论对N不是2的整数次幂的情况同样成立。</p>
+<hr />
+<h3 id="_6">在线算法<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">MaxSubsequenceSum</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w">  </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">ThisSum</span><span class="p">,</span><span class="w"> </span><span class="n">MaxSum</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 1*/</span><span class="w">  </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 2*/</span><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 3*/</span><span class="w">      </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="p">];</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 4*/</span><span class="w">      </span><span class="k">if</span><span class="w">  </span><span class="p">(</span><span class="w"> </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">MaxSum</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 5*/</span><span class="w">       </span><span class="n">MaxSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThisSum</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 6*/</span><span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 7*/</span><span class="w">       </span><span class="n">ThisSum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end for-j */</span>
+<span class="w">    </span><span class="cm">/* 8*/</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">MaxSum</span><span class="p">;</span><span class="w"> </span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>在线算法</strong>：在任意时刻，算法都能对已读入的数据给出正确的答案，无需预知全部输入数据，也不需要回退读取历史数据。</p>
+</li>
+<li>
+<p>核心优化逻辑：</p>
+</li>
+<li>遍历数组时维护<code>ThisSum</code>和<code>MaxSum</code></li>
+<li>若<code>ThisSum</code>变为负数，直接重置为0。因为负数的前缀不可能让后续的子序列和更大，直接舍弃之前的子序列，从下一个元素重新开始累加</li>
+<li>每次累加后，若<code>ThisSum</code>大于<code>MaxSum</code>，更新全局最大值</li>
+</ul>
+<p>示例推演（数组<code>[-1,3,-2,4,-6,1,6,-1]</code>）：</p>
+<table>
+<thead>
+<tr>
+<th>遍历元素</th>
+<th>ThisSum变化</th>
+<th>MaxSum变化</th>
+<th>核心操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-1</td>
+<td>0→-1→0</td>
+<td>0</td>
+<td>和为负，重置为0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0→3</td>
+<td>3</td>
+<td>更新最大值</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>3→1</td>
+<td>3</td>
+<td>仍为正，保留</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1→5</td>
+<td>5</td>
+<td>更新最大值</td>
+</tr>
+<tr>
+<td>-6</td>
+<td>5→-1→0</td>
+<td>5</td>
+<td>和为负，重置为0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0→1</td>
+<td>5</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1→7</td>
+<td>7</td>
+<td>更新最大值</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>7→6</td>
+<td>7</td>
+<td>保留</td>
+</tr>
+</tbody>
+</table>
+<p>最终结果为7，与实际最大子序列<code>[1,6]</code>的和一致。</p>
+<p><span class="arithmatex">\(T(N) = O(N)\)</span>，数组仅需一次遍历，是该问题的理论最优解法。</p>
+<hr />
+<h3 id="_7">四种算法的运行时间实测对比<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>输入规模N</th>
+<th>算法1 O(N³)</th>
+<th>算法2 O(N²)</th>
+<th>算法3 O(N logN)</th>
+<th>算法4 O(N)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>0.00103</td>
+<td>0.00066</td>
+<td>0.00045</td>
+<td>0.00034</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0.47015</td>
+<td>0.00486</td>
+<td>0.01112</td>
+<td>0.00063</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>448.77</td>
+<td>0.05843</td>
+<td>1.1233</td>
+<td>0.00333</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>NA</td>
+<td>0.68631</td>
+<td>111.13</td>
+<td>0.03042</td>
+</tr>
+<tr>
+<td>100000</td>
+<td>NA</td>
+<td>8.0113</td>
+<td>NA</td>
+<td>0.29832</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_8">五、运行时间中的对数<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<p>若一个算法能在每一步操作中，将待处理的问题规模按固定比例削减（通常是减半），那么该算法的时间复杂度通常为<span class="arithmatex">\(O(logN)\)</span>。对数函数的增长速度极慢，在大规模数据下，对数时间算法的性能远超线性、多项式时间算法。</p>
+<h3 id="binary-search">二分查找（Binary Search）<a class="headerlink" href="#binary-search" title="Permanent link">&para;</a></h3>
+<h4 id="_9">问题定义<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>给定<strong>已升序排列</strong>的数组 <span class="arithmatex">\(A[0] ≤ A[1] ≤ … ≤ A[N-1]\)</span> 和目标值X，查找X在数组中的下标；若X不存在，返回-1。</p>
+<h4 id="_10">代码实现<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">BinarySearch</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">ElementType</span><span class="w">  </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span>
+<span class="w">                   </span><span class="n">ElementType</span><span class="w">  </span><span class="n">X</span><span class="p">,</span><span class="w">  </span><span class="kt">int</span><span class="w">  </span><span class="n">N</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="kt">int</span><span class="w">  </span><span class="n">Low</span><span class="p">,</span><span class="w"> </span><span class="n">Mid</span><span class="p">,</span><span class="w"> </span><span class="n">High</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 1*/</span><span class="w">  </span><span class="n">Low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="n">High</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="cm">/* 初始化查找区间 */</span>
+<span class="w">    </span><span class="cm">/* 2*/</span><span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Low</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">High</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 3*/</span><span class="w">      </span><span class="n">Mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">Low</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">High</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="cm">/* 取区间中点 */</span>
+<span class="w">    </span><span class="cm">/* 4*/</span><span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Mid</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 5*/</span><span class="w">          </span><span class="n">Low</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mid</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="cm">/* X在右半区间，更新左边界 */</span>
+<span class="w">            </span><span class="k">else</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 6*/</span><span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">A</span><span class="p">[</span><span class="w"> </span><span class="n">Mid</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 7*/</span><span class="w">              </span><span class="n">High</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Mid</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="cm">/* X在左半区间，更新右边界 */</span>
+<span class="w">                </span><span class="k">else</span><span class="w"> </span>
+<span class="w">    </span><span class="cm">/* 8*/</span><span class="w">              </span><span class="k">return</span><span class="w">  </span><span class="n">Mid</span><span class="p">;</span><span class="w"> </span><span class="cm">/* 找到目标，返回下标 */</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span><span class="cm">/* end while */</span>
+<span class="w">    </span><span class="cm">/* 9*/</span><span class="w">  </span><span class="k">return</span><span class="w">  </span><span class="n">NotFound</span><span class="p">;</span><span class="w"> </span><span class="cm">/* NotFound定义为-1，未找到目标 */</span>
+<span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<ul>
+<li>
+<p>最坏时间复杂度：<span class="arithmatex">\(T_{worst}(N) = O(log N)\)</span></p>
+</li>
+<li>
+<p>核心逻辑：每次通过中点<code>Mid</code>将查找区间缩小一半，最坏情况下，直到查找区间为空才结束，最多需要<span class="arithmatex">\(log_2N\)</span>次比较，因此时间复杂度为对数级。</p>
+</li>
+<li>
+<p>适用场景：<strong>静态数据、已完成排序</strong>的场景，例如字典查词、静态数据库查询等；若数据频繁增删，排序的开销会抵消二分查找的优势。</p>
+</li>
+</ul>
+<hr />
+<h3 id="euclids-algorithm">欧几里得算法（Euclid’s Algorithm）<a class="headerlink" href="#euclids-algorithm" title="Permanent link">&para;</a></h3>
+<p>求两个非负整数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 的<strong>最大公约数（Greatest Common Divisor, GCD）</strong>，即能同时整除 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 的最大正整数。</p>
+<p><strong>辗转相除法</strong>：基于数学性质 <span class="arithmatex">\(\text{gcd}(a, b) = \text{gcd}(b, a \mod b)\)</span>，不断将问题规模缩小，直到 <span class="arithmatex">\(b=0\)</span>，此时 <span class="arithmatex">\(a\)</span> 即为最大公约数。若 <span class="arithmatex">\(a &lt; b\)</span>，第一次取模后会自动交换两者位置，无需额外处理。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="c1">  // 用于abs()函数</span>
+
+<span class="cm">/* 欧几里得算法：求a和b的最大公约数 */</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">gcd</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">  </span><span class="c1">// 处理负数，取绝对值</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  </span><span class="c1">// 计算a mod b</span>
+<span class="w">        </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">         </span><span class="c1">// 将b赋值给a</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span><span class="w">      </span><span class="c1">// 将余数赋值给b，进入下一轮迭代</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// 当b=0时，a即为最大公约数</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">67890</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;gcd(%d, %d) = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">,</span><span class="w"> </span><span class="n">gcd</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="w"> </span><span class="n">num2</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><span class="arithmatex">\(O(\log \min(a,b))\)</span>。每次迭代后，问题规模至少减半，因此迭代次数为对数级。</p>
+<p>以 <span class="arithmatex">\(\text{gcd}(67890, 12345)\)</span> 为例：
+1.  <span class="arithmatex">\(67890 \mod 12345 = 6165\)</span>，问题变为 <span class="arithmatex">\(\text{gcd}(12345, 6165)\)</span>
+2.  <span class="arithmatex">\(12345 \mod 6165 = 15\)</span>，问题变为 <span class="arithmatex">\(\text{gcd}(6165, 15)\)</span>
+3.  <span class="arithmatex">\(6165 \mod 15 = 0\)</span>，此时 <span class="arithmatex">\(b=0\)</span>，返回 <span class="arithmatex">\(a=15\)</span>
+最终结果为15，与实际最大公约数一致。</p>
+<hr />
+<h3 id="exponentiation">快速幂算法（Exponentiation）<a class="headerlink" href="#exponentiation" title="Permanent link">&para;</a></h3>
+<p>高效计算 <span class="arithmatex">\(x^n\)</span>（<span class="arithmatex">\(x\)</span> 为实数，<span class="arithmatex">\(n\)</span> 为非负整数），避免直接循环相乘的 <span class="arithmatex">\(O(n)\)</span> 时间复杂度。</p>
+<p><strong>分治思想</strong>：将幂运算按指数 <span class="arithmatex">\(n\)</span> 的奇偶性拆分，减少乘法次数：
+- 若 <span class="arithmatex">\(n\)</span> 为偶数：<span class="arithmatex">\(x^n = (x^{n/2})^2\)</span>
+- 若 <span class="arithmatex">\(n\)</span> 为奇数：<span class="arithmatex">\(x^n = (x^{(n-1)/2})^2 \cdot x\)</span>
+通过递归或迭代不断拆分，直到 <span class="arithmatex">\(n=0\)</span>（返回1）或 <span class="arithmatex">\(n=1\)</span>（返回x）。</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="cm">/* 快速幂算法：计算x的n次幂，n为非负整数 */</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fast_pow</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 若n为奇数，将当前base乘到结果中</span>
+<span class="w">            </span><span class="n">result</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">base</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">base</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">base</span><span class="p">;</span><span class="w">  </span><span class="c1">// base平方，对应分治中的(x^(n/2))^2</span>
+<span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">     </span><span class="c1">// 指数减半（整数除法自动向下取整）</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%.0f^%d = %.0f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">fast_pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">));</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>时间复杂度：<span class="arithmatex">\(O(\log n)\)</span>。每次迭代指数减半，最多需要 <span class="arithmatex">\(\log_2n\)</span> 次乘法操作。</p>
+<p>以 <span class="arithmatex">\(2^{10}\)</span> 为例：
+1.  初始：<code>result=1</code>, <code>base=2</code>, <code>n=10</code>（偶数）
+    - <code>base</code> 变为 <span class="arithmatex">\(2^2=4\)</span>，<code>n</code> 变为 <span class="arithmatex">\(5\)</span>
+2.  <code>n=5</code>（奇数）：
+    - <code>result</code> 变为 <span class="arithmatex">\(1 \times 4=4\)</span>，<code>base</code> 变为 <span class="arithmatex">\(4^2=16\)</span>，<code>n</code> 变为 <span class="arithmatex">\(2\)</span>
+3.  <code>n=2</code>（偶数）：
+    - <code>base</code> 变为 <span class="arithmatex">\(16^2=256\)</span>，<code>n</code> 变为 <span class="arithmatex">\(1\)</span>
+4.  <code>n=1</code>（奇数）：
+    - <code>result</code> 变为 <span class="arithmatex">\(4 \times 256=1024\)</span>，<code>base</code> 变为 <span class="arithmatex">\(256^2\)</span>，<code>n</code> 变为 <span class="arithmatex">\(0\)</span>
+5.  循环结束，返回 <code>result=1024</code>，与 <span class="arithmatex">\(2^{10}=1024\)</span> 一致。</p>
+<hr />
+<h2 id="_11">六、算法分析结果的检验<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<p>完成算法的理论复杂度分析后，通过以下两种方法验证分析结果是否正确。</p>
+<h3 id="_12">翻倍测试<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>根据复杂度的增长特性，观察输入规模翻倍后，运行时间的增长比例是否符合理论预期。
+- 若<span class="arithmatex">\(T(N) = O(N)\)</span>，则<span class="arithmatex">\(T(2N)/T(N) ≈ 2\)</span></p>
+<ul>
+<li>
+<p>若<span class="arithmatex">\(T(N) = O(N^2)\)</span>，则<span class="arithmatex">\(T(2N)/T(N) ≈ 4\)</span></p>
+</li>
+<li>
+<p>若<span class="arithmatex">\(T(N) = O(N^3)\)</span>，则<span class="arithmatex">\(T(2N)/T(N) ≈ 8\)</span></p>
+</li>
+<li>
+<p>若<span class="arithmatex">\(T(N) = O(logN)\)</span>，则<span class="arithmatex">\(T(2N)/T(N) ≈ 1\)</span></p>
+</li>
+<li>
+<p>若<span class="arithmatex">\(T(N) = O(N logN)\)</span>，则<span class="arithmatex">\(T(2N)/T(N) ≈ 2\)</span></p>
+</li>
+</ul>
+<h3 id="_13">极限验证<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>通过极限计算，验证理论上界<span class="arithmatex">\(f(N)\)</span>的紧确性。
+若<span class="arithmatex">\(T(N) = O(f(N))\)</span>，则需满足：
+$<span class="arithmatex">\(\lim_{N \to \infty} \frac{T(N)}{f(N)} = C\)</span>$
+其中C为正的常数。</p>
+<ul>
+<li>
+<p>若极限为0：说明<span class="arithmatex">\(T(N) = o(f(N))\)</span>，<span class="arithmatex">\(f(N)\)</span>是一个非紧的上界，可找到更紧的上界</p>
+</li>
+<li>
+<p>若极限为无穷大：说明<span class="arithmatex">\(f(N)\)</span>不是<span class="arithmatex">\(T(N)\)</span>的上界，理论分析错误</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 课程主页">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                课程主页
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ds02/" class="md-footer__link md-footer__link--next" aria-label="下一页: Lists, Stacks, and Queues">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Lists, Stacks, and Queues
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peikai Chen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
