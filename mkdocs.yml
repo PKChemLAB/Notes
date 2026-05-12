@@ -50,7 +50,7 @@ nav:
       - 引例: intro-computational-chem/first-example.md
       - 蒙特卡洛方法: intro-computational-chem/montecarlo.md
 
-  - 结构II:光谱学:
+  - 结构Ⅱ:光谱学:
       - 课程主页: structure-spectroscopy/index.md
       - 光与分子的相互作用: structure-spectroscopy/chapter-1.md
       - 原子结构和原子光谱: structure-spectroscopy/chapter-2.md
@@ -58,6 +58,9 @@ nav:
       - 振动光谱：双原子分子: structure-spectroscopy/chapter-4.md
       - 振动光谱：多原子分子: structure-spectroscopy/chapter-5.md
       - 分子电子光谱: structure-spectroscopy/chapter-6.md
+
+  - 结构Ⅲ:固体物理:
+      - 课程主页: solid-state-physics/index.md
 
   - 数据结构基础:
       - 课程主页: data-structures/index.md
