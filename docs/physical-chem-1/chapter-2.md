@@ -116,16 +116,16 @@ $$
 
 热力学第二定律：孤立系统内的任一过程一定满足 $dS \ge 0$
 
+!!!NOTE
+    假设一个极小的宏观熵差：$\Delta S = 0.0001 \text{ J/K} = 10^{-4} \text{ J/K}$
 
->假设一个极小的宏观熵差：$\Delta S = 0.0001 \text{ J/K} = 10^{-4} \text{ J/K}$
+    $$\Delta S = S_1 - S_2 = k \ln W_1 - k \ln W_2 = k \ln\left(\frac{W_1}{W_2}\right)$$
+    
+    $$\frac{W_1}{W_2} = e^{\frac{\Delta S}{k}}$$
+    
+    $$\frac{\Delta S}{k} = \frac{10^{-4}}{1.38 \times 10^{-23}} \approx 0.72 \times 10^{19}$$
 
->$$\Delta S = S_1 - S_2 = k \ln W_1 - k \ln W_2 = k \ln\left(\frac{W_1}{W_2}\right)$$
-
->$$\frac{W_1}{W_2} = e^{\frac{\Delta S}{k}}$$
-
->$$\frac{\Delta S}{k} = \frac{10^{-4}}{1.38 \times 10^{-23}} \approx 0.72 \times 10^{19}$$
-
->$$\frac{W_1}{W_2} \approx e^{10^{20}}$$
+    $$\frac{W_1}{W_2} \approx e^{10^{20}}$$
 
 对于扩展的大孤立系统 (系统 + 环境)：
 
@@ -278,7 +278,8 @@ $$  \frac{1}{T_A} - \frac{1}{T_B} = 0 \implies T_A = T_B$$
 
 $$\frac{P(\varepsilon)}{P(0)} = \frac{W(\varepsilon) \cdot W_{\text{环}}(U_{\text{环}} - \varepsilon)}{W(0) \cdot W_{\text{环}}(U_{\text{环}})} = e^{\frac{S_{\text{环}}(U_{\text{环}} - \varepsilon) - S_{\text{环}}(U_{\text{环}})}{k}} = e^{-\frac{\varepsilon}{kT}}$$
 
->这里不考虑两个能级简并度，即$W(\varepsilon)$和$W(0)$为一。
+!!!TIP
+    这里不考虑两个能级简并度，即$W(\varepsilon)$和$W(0)$为一。
 
 其中对环境熵的进行了泰勒展开
 
@@ -310,7 +311,8 @@ $$\therefore 1 = P(0) \sum_{i=0}^n e^{-\frac{\varepsilon_i}{kT}} \Rightarrow P(0
 
 $$\boxed{\boldsymbol{q} \equiv \sum_{i=0}^n e^{-\frac{\varepsilon_i}{kT}}}$$
 
->$q$ 代表了在给定温度 $T$ 下，系统可以有效热占据的微观状态总数。
+!!!TIP
+    $q$ 代表了在给定温度 $T$ 下，系统可以有效热占据的微观状态总数。
 
 (1) 给定量子自由度，温度，$q$ 有定值
 

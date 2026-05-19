@@ -65,7 +65,8 @@ $$dW = dE = d(E_k + E_p)$$
 
 $$E = E_k + E_p$$
 
-> **庞加莱（Jules Henri Poincaré）指出**：尽管在理想力学模型中动能与势能区分明确，但在涉及热力学等复杂系统中，两者无法被严格界定。这是由于宏观**内能**包含了微观层面不可观测的分子动能与势能，在缺乏微观状态完全信息的条件下，无法在数学上将系统总能量绝对剥离为仅依赖速度的项与仅依赖位置的项。因此，脱离了简单的理想模型后，在真实物理系统中对动能和势能的严格划分往往具有任意性。
+!!!TIP
+     **庞加莱（Jules Henri Poincaré）指出**：尽管在理想力学模型中动能与势能区分明确，但在涉及热力学等复杂系统中，两者无法被严格界定。这是由于宏观**内能**包含了微观层面不可观测的分子动能与势能，在缺乏微观状态完全信息的条件下，无法在数学上将系统总能量绝对剥离为仅依赖速度的项与仅依赖位置的项。因此，脱离了简单的理想模型后，在真实物理系统中对动能和势能的严格划分往往具有任意性。
 
 
 ---
@@ -148,48 +149,49 @@ $$n_x, n_y, n_z=1, 2, \dots$$
 
 (2) $\Delta E_{1\rightarrow2}$ (相邻能级) $\doteq10^{-42}\text{ (J)}\doteq10^{-23}\text{ (kJ/mol)}$
 
->**回忆一下结构Ⅰ...**
+!!!NOTE
+    **回忆一下结构Ⅰ...**
 
->**1. 薛定谔方程**
-势箱内 ($V=0$) 的定态薛定谔方程为：
+    1. 薛定谔方程
+    势箱内 ($V=0$) 的定态薛定谔方程为：
 
->$$-\frac{\hbar^2}{2m} \left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \right) \psi(x,y,z) = E\psi(x,y,z)$$
+    $$-\frac{\hbar^2}{2m} \left( \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \right) \psi(x,y,z) = E\psi(x,y,z)$$
 
->**2. 分离变量**
-令 $\psi(x,y,z) = X(x)Y(y)Z(z)$，且 $E = E_x + E_y + E_z$。
-代入方程可将其分解为三个独立的一维方程，以 $x$ 方向为例：
+    2. 分离变量
+    令 $\psi(x,y,z) = X(x)Y(y)Z(z)$，且 $E = E_x + E_y + E_z$。
+    代入方程可将其分解为三个独立的一维方程，以 $x$ 方向为例：
 
->$$-\frac{\hbar^2}{2m} \frac{d^2 X(x)}{dx^2} = E_x X(x)$$
+    $$-\frac{\hbar^2}{2m} \frac{d^2 X(x)}{dx^2} = E_x X(x)$$
 
->**3. 一维求解与边界条件**
-上述方程的通解为：
+    3. 一维求解与边界条件
+    上述方程的通解为：
 
->$$X(x) = A \sin(k_x x) + B \cos(k_x x) \quad \left( k_x = \frac{\sqrt{2mE_x}}{\hbar} \right)$$
+    $$X(x) = A \sin(k_x x) + B \cos(k_x x) \quad \left( k_x = \frac{\sqrt{2mE_x}}{\hbar} \right)$$
+    
+    代入势箱边界条件 $X(0) = 0$ 且 $X(l_x) = 0$：
 
->代入势箱边界条件 $X(0) = 0$ 且 $X(l_x) = 0$：
+    *   $X(0) = B = 0$
+      
+    *   $X(l_x) = A \sin(k_x l_x) = 0$
+    要求波函数不全为零 ($A \neq 0$)，则必须满足：
 
->*   $X(0) = B = 0$
-  
->*   $X(l_x) = A \sin(k_x l_x) = 0$
-要求波函数不全为零 ($A \neq 0$)，则必须满足：
+    $$k_x l_x = n_x \pi \quad (n_x = 1, 2, 3, \dots)$$
+    
+    4. 单维能量
+    将 $k_x = \frac{\sqrt{2mE_x}}{\hbar}$ 和 $\hbar = \frac{h}{2\pi}$ 代入量子化条件：
 
->$$k_x l_x = n_x \pi \quad (n_x = 1, 2, 3, \dots)$$
+    $$\frac{\sqrt{2mE_x}}{h/2\pi} l_x = n_x \pi$$
 
->**4. 推导单维能量**
-将 $k_x = \frac{\sqrt{2mE_x}}{\hbar}$ 和 $\hbar = \frac{h}{2\pi}$ 代入量子化条件：
+    解得 $x$ 方向的平动能：
+    
+    $$E_x = \frac{n_x^2 h^2}{8m l_x^2}$$
+ 
+    5. 组合三维能量
+    同理可得 $E_y$ 和 $E_z$。总能量为三者之和：
 
->$$\frac{\sqrt{2mE_x}}{h/2\pi} l_x = n_x \pi$$
+    $$E_{n_x, n_y, n_z} = E_x + E_y + E_z = \frac{h^2}{8m}\left[\left(\frac{n_x}{l_x}\right)^2+\left(\frac{n_y}{l_y}\right)^2+\left(\frac{n_z}{l_z}\right)^2\right]$$
 
->解得 $x$ 方向的平动能：
-
->$$E_x = \frac{n_x^2 h^2}{8m l_x^2}$$
-
->**5. 组合三维能量**
-同理可得 $E_y$ 和 $E_z$。总能量为三者之和：
-
->$$E_{n_x, n_y, n_z} = E_x + E_y + E_z = \frac{h^2}{8m}\left[\left(\frac{n_x}{l_x}\right)^2+\left(\frac{n_y}{l_y}\right)^2+\left(\frac{n_z}{l_z}\right)^2\right]$$
-
->$$(n_x, n_y, n_z = 1, 2, 3, \dots)$$
+    $$(n_x, n_y, n_z = 1, 2, 3, \dots)$$
 
 ---
 
@@ -206,7 +208,8 @@ $$n_x, n_y, n_z=1, 2, \dots$$
 
 $$j_{\text{振动}}=0$$
 
->能级间隔 $\gg$ 热运动能量,常温下粒子绝大数在基态，对体系的宏观热容和内能变化没有贡献，有效自由度为0。
+!!!NOTE
+    能级间隔 $\gg$ 热运动能量,常温下粒子绝大数在基态，对体系的宏观热容和内能变化没有贡献，有效自由度为0。
 
 简谐振动，第 $j$ 个振动自由度的能级：
 
@@ -223,11 +226,13 @@ $$v=0, 1, 2, \dots$$
 
 $$\tilde{\nu}=\frac{1}{2\pi c}\sqrt{k_{\text{键}}/M_{\text{折合}}}=1302\sqrt{k_{\text{键}}/M_{\text{折合}}}$$
 
->谐振子近似在低能级区域精度高
+!!!TIP
+    谐振子近似在低能级区域精度高
 
 $$k_{\text{键}}=\frac{\partial^2 E_p}{\partial x^2}$$
 
->平衡位置一阶偏导为0，二阶偏导反应力常数。
+!!!TIP
+    平衡位置一阶偏导为0，二阶偏导反应力常数。
 
 $$M_{\text{折合}}=\frac{M_1M_2}{M_1+M_2}$$
 

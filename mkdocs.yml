@@ -80,6 +80,7 @@ nav:
       - Databases: physical-chem-1/database.md
       - 能量与能量量子化: physical-chem-1/chapter-1.md
       - 从单原子分子到多原子：熵与温度: physical-chem-1/chapter-2.md
+      - 分子结构与宏观测量: physical-chem-1/chapter-3.md
 
   - 分析II:仪器分析:
       - 课程主页: Analytical-chemistry/index.md
@@ -91,6 +92,9 @@ markdown_extensions:
   - attr_list
   - admonition
   - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - footnotes
   - md_in_html
   - toc:
