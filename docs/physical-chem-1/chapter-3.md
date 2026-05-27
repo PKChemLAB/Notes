@@ -161,6 +161,7 @@ $$E_v = \left(v + \frac{1}{2}\right)h\nu$$
 $$i = v = 0, 1, 2, \dots$$
 
 $$\varepsilon_i = i h \nu$$
+
 $$f = \sum_{i=0}^{\infty} e^{-i\frac{h\nu}{kT}}$$
 
 $kT = 200 \text{ cm}^{-1}$，与 $KT$ 较为接近了，不能转化为连续积分。考虑为一个递减等比数列。
@@ -319,6 +320,8 @@ $$Q_{\text{转动}} = \frac{3}{2}NkT = \frac{3}{2}nRT$$
 !!!QUESTION
     为什么每个自由度的贡献都是$\frac{1}{2}nRT$？
 
+    能量均分定理只在被激发的自由度上适用
+
 ---
 
 #### 振动热能
@@ -345,9 +348,260 @@ $$Q_{h\nu_j \ll kT} = \frac{Nh\nu_j}{1+h\nu_j/kT-1} = NkT = nRT$$
 
 $$Q_{h\nu_j \gg kT} = \frac{Nh\nu_j}{\infty-1} = 0$$
 
-“$kT$”和“$RT$”作为分子能级准入标度
+
 
 一个分子系统的总振动热能，等于各个振动模式热能的加和
+
+
+!!! EXAMPLE
+    分别计算在$300\text{ K}$时，$1\text{ mol}$水分子最高和最低两个振动模式（吸收波数分别为$1595\text{ cm}^{-1}$和$3756\text{ cm}^{-1}$）的热能。并将所得值与高温近似值（$RT$）进行比较。
+
+    对于红外吸收波数为$1595\text{ cm}^{-1}$的振动模式
+
+    * 基本能隙：
+  
+      $$h\nu_j = 3.2 \times 10^{-20} \text{ (J)}$$
+
+    * 摩尔振动热能：
+
+      $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 8.5 \times 10^{-3} \text{ (kJ/mol)}$$
+
+    对于红外吸收波数为$3756\text{ cm}^{-1}$的振动模式
+    * 基本能隙：
+  
+      $$h\nu_j = 7.5 \times 10^{-20} \text{ (J)}$$
+
+    * 摩尔振动热能：
+  
+      $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 6.1 \times 10^{-7} \text{ (kJ/mol)}$$
+
+    $$Q_{\text{振动}j} = RT = 2500 \text{ (J/mol)} = 2.5 \text{ (kJ/mol)}$$
+
+    水分子的这两种振动模式在$300\text{ K}$时都**不能**使用高温近似。频率越高，高温近似失效得越快。
+
+![alt](image/image-6.png)
+
+
+---
+
+#### 电子热能
+
+常温下$RT=25meV$,电子能隙一般在几个$eV$（如氧气的单线态与三线态）,都处于基态。
+
+室温下，常见分子的电子自由度对应的配分函数为常数，与温度无关。因此，配分函数对数对温度的导数等于零、其对应的热能为零。当温度特别高的时候，我们必须知道分子的电子能级结构，不同情况不同处理。
+
+
+---
+
+### 2.3 能量最低原理与能级准入标准
+
+处于能量基态的几率就是一个自由度能量最低原理的正确率:
+
+$$p_0 = \frac{g_0 e^{-\varepsilon_0 / kT}}{f}$$
+
+
+“$kT$”和“$RT$”作为分子能级准入标度。
+
+当能量用每分子为单位时，分子准入标度用kT；如果以每摩尔为单位，则用RT。
+室温条件下，kT的值大约为$25 meV$，$RT$大约相当于$2.5 kJ/mol$。
+
+
+---
+
+###　2.4 热能与热
+
+热能 $Q$ 是状态函数，热 $q$ 是热传导的“热流”。
+
+微观看，“传热”是环境和系统之间通过交换热能而达成相同的玻尔兹曼分布的过程。
+
+![alt](image/image-7.png)
+
+
+---
+
+### 2.5 热力学第一定律
+
+
+对于**封闭系统**，状态函数内能（$U$）的微小变化（全微分 $\mathrm{d}$）等于系统吸收的微小热量与环境对系统作的微小功（过程量，非全微分 $\delta$）之和：
+
+$$\underbrace{\mathrm{d}U}_{\text{系统内能变化}} \xlongequal{\text{封闭系统}} \underbrace{\delta Q + \delta W}_\text{环境与系统的能量交换}$$
+
+* $\delta Q$：传递微小热量的非全微分（过程量，与路径相关）。对于宏观过程，总热量：
+  
+  $$Q = \int_{\text{始态}}^{\text{终态}} \delta Q$$
+
+* $\delta W$：微小做功的非全微分。
+
+以体积功为例，外界对活塞的作用力为 $F$，活塞横截面积为 $S$，微小位移为 $\mathrm{d}l$：
+
+$$F = P_{\text{外}} \cdot S$$
+
+微小体积功：
+
+$$\delta W = F \cdot \mathrm{d}l = P_{\text{外}} \cdot S \cdot \mathrm{d}l$$
+
+由于系统微小体积变化 $\mathrm{d}V = -S \cdot \mathrm{d}l$（环境对系统压缩时 $\mathrm{d}V < 0$，正功），体积功：
+
+$$\delta W = -P_{\text{外}} \mathrm{d}V$$
+
+总功为该路径上的积分：
+
+$$W = \int_{\text{始态}}^{\text{终态}} \delta W = \int_{V_1}^{V_2} -P_{\text{外}} \mathrm{d}V$$
+
+---
+
+
+### 2.6 定容过程的热量和定容热容
+
+$$\delta q_V = \mathrm{d}U - \delta W = \mathrm{d}U + P_{\text{外}}\mathrm{d}V - \delta W_{\text{非}} = \mathrm{d}U$$
+
+$$U = U(V,T,n)$$
+
+一个宏观热力学系统，如果是均匀单相的纯态物质，其拥有的宏观自由度等于 3。
+
+$$PV = nRT$$
+
+1. 尽可能选择在过程中为定值的状态函数作为独立变量。这会使得微分方程减少维度，甚至从偏微分方程转化为常微分方程。
+2. 选取具体问题最感兴趣的变量。
+3. 尽量选择常见的、易于观测的量。
+
+在 $n$ 不变的条件下：
+
+$$\mathrm{d}U = \left(\frac{\partial U}{\partial V}\right)_T \mathrm{d}V + \left(\frac{\partial U}{\partial T}\right)_V \mathrm{d}T$$
+
+$$\delta q_V = \mathrm{d}U = \left(\frac{\partial U}{\partial V}\right)_T \mathrm{d}V + \left(\frac{\partial U}{\partial T}\right)_V \mathrm{d}T = \left(\frac{\partial U}{\partial T}\right)_V \mathrm{d}T$$
+
+定容热容：
+
+$$C_V \equiv \left(\frac{\partial U}{\partial T}\right)_V$$
+
+非机械功为零、物质摩尔量为常数条件下，定容热量的计算公式：
+
+$$\delta q_V = C_V \mathrm{d}T$$
+
+$$q_V = \int_{T_{\text{始}}}^{T_{\text{终}}} C_V \mathrm{d}T$$
+
+
+
+$$C_V = \left(\frac{\partial U}{\partial T}\right)_V = \left(\frac{\partial Q}{\partial T}\right)_V = \left(\frac{\partial (Q_{\text{平动}} + Q_{\text{转动}} + Q_{\text{振动}} + Q_{\text{电子}})}{\partial T}\right)_V$$
+
+**平动：**
+
+$$C_{V\text{平动}} = \left(\frac{\partial(Q_{\text{平动}})}{\partial T}\right)_V = \left(\frac{\partial(\frac{3}{2}nRT)}{\partial T}\right)_V = \frac{3}{2}nR$$
+
+**转动：**
+
+单原子分子：
+
+$$C_{V\text{转动}} = 0$$
+
+线性分子：
+
+$$C_{V\text{转动}} = \left(\frac{\partial(Q_{\text{转动}})}{\partial T}\right)_V = \left(\frac{\partial(nRT)}{\partial T}\right)_V = nR$$
+
+非线性分子：
+
+$$C_{V\text{转动}} = \left(\frac{\partial(Q_{\text{转动}})}{\partial T}\right)_V = \left(\frac{\partial(\frac{3}{2}nRT)}{\partial T}\right)_V = \frac{3}{2}nR$$
+
+
+**振动**
+
+$$C_{V\text{振动}} = \left(\frac{\partial(Q_{\text{振动}})}{\partial T}\right)_V = \frac{N(h\nu_j)^2}{kT^2} \frac{1}{\left(e^{h\nu_j/2kT} - e^{-h\nu_j/2kT}\right)^2}$$
+
+$$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1}$$
+
+* 高频低温近似： $C_{V\text{振动}} = 0 \quad (h\nu_j \gg kT)$
+  
+* 低频高温近似： $C_{V\text{振动}} = nR \quad (h\nu_j \ll kT)$
+
+一个分子可有不同振动模式，其振动等容热容需要把各个模式的贡献加起来。
+
+电子运动
+
+$$C_{V\text{电子}} = 0$$
+
+总热容
+
+$$C_V = C_{V\text{平动}} + C_{V\text{转动}} + C_{V\text{振动}} + C_{V\text{电子}}$$
+
+| | $\text{He}$ | $\text{O}_2$ | $\text{H}_2\text{O}$ |
+| :--- | :---: | :---: | :---: |
+| 高频低温 | $\frac{3}{2}nR$ | $\frac{5}{2}nR$ | $3nR$ |
+| 低频高温 | $\frac{3}{2}nR$ | $\frac{7}{2}nR$ | $6nR$ |
+
+$n$ 不变的条件下，理想气体的内能 $U=U(T)$（无分子间势能影响内能）
+
+$$\mathrm{d}U = \frac{\mathrm{d}U}{\mathrm{d}T}\mathrm{d}T = \left(\frac{\partial U}{\partial T}\right)_V \mathrm{d}T = C_V \mathrm{d}T$$
+
+
+
+---
+
+
+## 第三节 封闭系统的熵
+
+
+### 3.1 从配分函数到系统熵
+
+定域子系统和离域子系统：
+![alt](image/image-8.png)
+
+气体（离域子）通过自由平动来自由改变各自的质心相对位置。晶体（定域子）无自由平动、只有振动，分子质心位置可分辨。
+
+---
+
+#### 定域子系统的熵
+
+$$S = k \ln W = k \ln \left( \prod_{j=1}^m W_j \right) = k \sum_{j=1}^m \ln \left( \frac{N!}{\prod_i N_{ij}!} \right)$$
+
+!!!NOTE
+    这里状态数计算逻辑：第j种运动模式各个能级分布粒子，全排列除以各个能级内部全排列即为总状态数。
+
+引入斯特林近似：
+
+$$S = k \sum_{j=1}^m \sum_i (N_{ij} \ln N - N_{ij} \ln N_{ij}) = -k \sum_{j=1}^m \sum_i \left( N_{ij} \ln \frac{e^{-\varepsilon_{ij}/kT}}{f_j} \right)$$
+
+$$S = k \sum_{j=1}^m \sum_i \left( \frac{N_{ij} \varepsilon_{ij}}{kT} + N_{ij} \ln f_j \right) = k \sum_{j=1}^m \left( \frac{1}{kT} \sum_i N_{ij} \varepsilon_{ij} + \ln f_j \sum_i N_{ij} \right)$$
+
+$\sum_i N_{ij} \varepsilon_{ij}$即总能量，代入$Q_j = NkT^2 \frac{\mathrm{d} \ln f_j}{\mathrm{d}T}$，总熵：
+
+$$S_{\text{定域}} = \sum_{j=1}^m \left( \frac{Q_j}{T} + Nk \ln f_j \right) = Nk \left( T \frac{\mathrm{d}(\ln \prod_{j=1}^m f_j)}{\mathrm{d}T} + \ln \prod_{j=1}^m f_j \right) = Nk \frac{\mathrm{d}(T \ln f_{\text{总}})}{\mathrm{d}T}$$
+
+$$S_{\text{定域}} = \frac{Q}{T} + Nk \ln f_{\text{总}}$$
+
+某种运动形式熵
+$$S_j = \frac{Q_j}{T} + Nk \ln f_j = Nk \frac{\mathrm{d}(T \ln f_j)}{\mathrm{d}T}$$
+
+
+---
+
+### 离域子系统的熵
+
+当考虑离域子系统的总权重计算时，不能简单地把离域子系统总权重等同于各种权重乘积，而是要把各种权重的乘积除以$N!$才能得到系统的总权重。
+
+$$S = k \ln W = k \ln \frac{\prod_{j=1}^m W_j}{N!} = k \left( \sum_{j=1}^m \ln \left( \frac{N!}{\prod_i N_{ij}!} \right) - \ln N! \right)$$
+
+$$S_{\text{离域}} = \frac{Q}{T} + Nk \ln f_{\text{总}} - Nk \ln N + Nk = \frac{Q}{T} + Nk \ln \frac{e f_{\text{总}}}{N}$$
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
