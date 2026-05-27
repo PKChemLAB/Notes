@@ -570,12 +570,13 @@ $$S_{\text{定域}} = \sum_{j=1}^m \left( \frac{Q_j}{T} + Nk \ln f_j \right) = N
 $$S_{\text{定域}} = \frac{Q}{T} + Nk \ln f_{\text{总}}$$
 
 某种运动形式熵
+
 $$S_j = \frac{Q_j}{T} + Nk \ln f_j = Nk \frac{\mathrm{d}(T \ln f_j)}{\mathrm{d}T}$$
 
 
 ---
 
-### 离域子系统的熵
+#### 离域子系统的熵
 
 当考虑离域子系统的总权重计算时，不能简单地把离域子系统总权重等同于各种权重乘积，而是要把各种权重的乘积除以$N!$才能得到系统的总权重。
 
@@ -583,8 +584,252 @@ $$S = k \ln W = k \ln \frac{\prod_{j=1}^m W_j}{N!} = k \left( \sum_{j=1}^m \ln \
 
 $$S_{\text{离域}} = \frac{Q}{T} + Nk \ln f_{\text{总}} - Nk \ln N + Nk = \frac{Q}{T} + Nk \ln \frac{e f_{\text{总}}}{N}$$
 
+!!!TIP
+    定域子系统每个粒子位置固定，相当于为这 $N$ 个粒子的全排列（共有 $N!$ 种方式）代表了 $N!$ 个不同的微观状态。但这里它们是不可分辨的“全同粒子”，这 $N!$ 种排列在物理上完全是同一种状态。
+
 
 ---
+
+### 3.2 不同类型量子自由度的熵
+
+#### 平动熵
+
+$$S_{\text{平动}} = \frac{Q_{\text{平动}}}{T} + Nk \ln \frac{e f_{\text{平动}}}{N} = \frac{5}{2}Nk + Nk \ln \frac{f_{\text{平动}}}{N}$$
+
+!!!NOTE
+    5/2来自于3/2加上$lne$.
+
+
+!!!EXAMPLE
+    计算，$300\text{ K}$时，$2\text{ mol}$氩气（理想气体）从 $1\text{ m}^3$ 收缩到 $0.1\text{ m}^3$ 的熵变。以此判断该过程的自发可能性。
+
+    $$\Delta S = Nk \ln \frac{(2\pi mkT)^{3/2}V_{\text{终}}}{Nh^3} - Nk \ln \frac{(2\pi mkT)^{3/2}V_{\text{始}}}{Nh^3} = nR \ln \frac{V_{\text{终}}}{V_{\text{始}}}$$
+
+    $$\Delta S = nR \ln\left(\frac{V_{\text{终}}}{V_{\text{始}}}\right) = 2 \times 8.31 \times \ln(0.1) = -38.3 \text{ (J/K)}$$
+
+    在孤立系统中，气体分子自动收缩不是自发事件
+
+
+---
+
+
+#### 转动熵
+
+对于离域子，转动运动是一种实际存在的运动形式，而严格意义上的定域子（如晶体）不存在分子转动。但是，转动是分子绕质心的内部运动，其不存在空间位置重复计数的问题。因此，转动熵的计算应该从定域子公式出发。
+
+线性分子
+$$S_{\text{转动}} = Nk + Nk \ln\left(\frac{kT}{hcB\alpha}\right) = Nk \ln\left(\frac{ekT}{hcB\alpha}\right)$$
+
+非线性分子
+$$S_{\text{转动}} = Nk \ln \left(\frac{\pi e^3 k^3 T^3}{ABCh^3c^3\alpha^2}\right)^{1/2}$$
+
+转动熵计算式要求比较高的温度，在较低温度下，需要用非连续方法算出相应的配分函数，进而算得转动熵。
+
+!!!NOTE
+    处理完平动以后，各个粒子相当于确定了坐标，故从定域子角度处理。$N!$的修正已经由平动承担了。
+
+---
+
+#### 振动熵
+
+振动熵的计算对于离域子和定域子没有区别。
+
+$$S_{\text{振动}j} = \frac{Nkh\nu_j}{kT\left(e^{h\nu_j/kT} - 1\right)} + Nk \ln \frac{1}{1 - e^{-h\nu_j/kT}}$$
+
+如果 $h\nu_j \ll kT$，给定振动自由度可做高温低频近似。
+
+$$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \frac{ekT}{h\nu_j}$$
+
+---
+
+#### 电子熵
+
+
+通常温度下，电子运动的热能等于零，电子运动对应的熵取决于电子基态的简并度。如果简并度等于1，则熵等于零，否则，将是一个常数。
+
+
+!!!EXAMPLE
+
+    在 $298\text{ K}$ 时，二噁吩分子的两个噻吩环顺反异构体之间的能量差是 $2510\text{ J/mol}$。
+    （1）计算这个二能级系统的电子配分函数，（2）计算该二能级系统的摩尔电子热能，（3）计算该二能级系统的摩尔电子熵。
+
+    （1）电子配分函数：
+
+    $$f_{\text{电子}} = e^{-\frac{0}{RT}} + e^{-\frac{E}{RT}} = 1 + e^{-\frac{302}{T}} = 1.36$$
+
+    （2）摩尔电子热能：
+
+    $$Q_{\text{电子}} = NkT^2 \frac{\mathrm{d}(\ln f_{\text{电子}})}{\mathrm{d}T} = nR \frac{302}{1 + e^{302/T}} = 0.668 \text{ (kJ/mol)}$$
+
+    （3）摩尔电子熵：
+
+    $$S_{\text{电子}} = \frac{Q_{\text{电子}}}{T} + Nk \ln f_{\text{电子}} = \frac{668}{298} + R \ln 1.36 = 4.8 \text{ (J}\cdot\text{K}^{-1}\cdot\text{mol}^{-1}\text{)}$$
+
+
+
+---
+
+
+
+
+!!! EXAMPLE
+    1 mol 氧气分子（O2）理想气体，T = 300 K，V = 1.00 m3
+    * 键长 $r_e = 1.2075\text{ \AA}$
+    * 振动波数 $\tilde{\nu} = 1580\text{ cm}^{-1}$
+    * 电子基态 $^3\Sigma_g^-$，$g_0 = 3$
+    * 电子能隙 0.98 eV
+
+    求：配分函数、热能、定容热容、熵，并讨论各自由度贡献。
+
+    ---
+
+    * 分子质量：
+
+      $$m = \frac{0.03200}{6.022 \times 10^{23}} = 5.314 \times 10^{-26}\text{ kg}$$
+
+    * 约化质量：
+
+      $$\mu = \frac{16.00 \times 16.00}{32.00} \times 1.6605 \times 10^{-27} = 1.3284 \times 10^{-26}\text{ kg}$$
+
+    * 转动惯量与转动常数：
+
+      $$I = \mu r_e^2 = 1.3284 \times 10^{-26} \times (1.2075 \times 10^{-10})^2 = 1.938 \times 10^{-46}\text{ kg}\cdot\text{m}^2$$
+
+      $$B = \frac{h}{8\pi^2 c I} = \frac{6.626 \times 10^{-34}}{8\pi^2 \times 2.998 \times 10^{10} \times 1.938 \times 10^{-46}} = 1.445\text{ cm}^{-1}$$
+
+    * 振动特征温度：
+
+      $$\frac{h\nu}{k} = \frac{hc\tilde{\nu}}{k} = 1.439 \times 1580 = 2272\text{ K}$$
+
+    ---
+
+    1. 配分函数计算
+    * 平动配分函数（离域子）：
+
+      $$f_{\text{平动}} = \frac{(2\pi mkT)^{3/2}}{h^3} V$$
+
+      $$2\pi mkT = 2\pi \times 5.314 \times 10^{-26} \times 1.381 \times 10^{-23} \times 300 = 1.382 \times 10^{-45}$$
+
+      $$h^3 = (6.626 \times 10^{-34})^3 = 2.91 \times 10^{-100}$$
+
+      $$f_{\text{平动}} = 1.77 \times 10^{32}$$
+
+    * 转动配分函数：
+
+      $$f_{\text{转动}} = \frac{kT}{\sigma hcB}, \quad \sigma = 2$$
+
+      $$\frac{kT}{hc} = \frac{300}{1.439} = 208.5\text{ cm}^{-1}$$
+
+      $$f_{\text{转动}} = \frac{208.5}{2 \times 1.445} = \frac{208.5}{2.890} = 72.1$$
+
+    * 振动配分函数：
+
+      $$x = \frac{h\nu}{kT} = \frac{2272}{300} = 7.57$$
+
+      $$f_{\text{振动}} = \frac{1}{1 - e^{-7.57}} = \frac{1}{1 - 0.00052} = 1.0005$$
+
+    * 电子配分函数：
+
+      $$e^{-\Delta E_1 / kT} = e^{-11360/300} = e^{-37.9} \approx 3.5 \times 10^{-17} \approx 0$$
+
+      $$f_{\text{电子}} = g_0 = 3$$
+
+    * 总配分函数：
+
+      $$f_{\text{总}} = f_{\text{平动}} \cdot f_{\text{转动}} \cdot f_{\text{振动}} \cdot f_{\text{电子}} = (1.77 \times 10^{32}) \times 72.1 \times 1.0005 \times 3 = 3.83 \times 10^{34}$$
+
+    ---
+
+    2. 热能计算
+    * 平动热能：
+
+      $$Q_{\text{平动}} = \frac{3}{2}RT = 1.5 \times 8.314 \times 300 = 3741\text{ J/mol}$$
+
+    * 转动热能：
+
+      $$Q_{\text{转动}} = RT = 8.314 \times 300 = 2494\text{ J/mol}$$
+
+    * 振动热能：
+
+      $$Q_{\text{振动}} = \frac{R \cdot (h\nu/k)}{e^{h\nu/kT} - 1} = \frac{8.314 \times 2272}{e^{7.57} - 1} = 9.74\text{ J/mol}$$
+
+    * 电子热能：
+
+      $$Q_{\text{电子}} \approx 0$$
+
+    * 总热能：
+
+      $$Q_{\text{总}} = 3741 + 2494 + 9.7 = 6245\text{ J/mol}$$
+
+    ---
+
+    3. 定容热容计算
+    * 平动热容：
+
+      $$C_{V,\text{平动}} = \frac{3}{2}R = 12.47\text{ J/(K}\cdot\text{mol)}$$
+
+    * 转动热容：
+
+      $$C_{V,\text{转动}} = R = 8.31\text{ J/(K}\cdot\text{mol)}$$
+
+    * 振动热容：
+
+      $$C_{V,\text{振动}} = R \cdot x^2 \cdot \frac{e^{-x}}{(1 - e^{-x})^2}, \quad x = 7.57$$
+
+      $$x^2 = 57.3, \quad e^{-x} = 0.00052, \quad (1 - e^{-x})^2 \approx 1$$
+
+      $$C_{V,\text{振动}} = 8.31 \times 57.3 \times 0.00052 = 0.247\text{ J/(K}\cdot\text{mol)}$$
+
+    * 电子热容：
+
+      $$C_{V,\text{电子}} \approx 0$$
+
+    * 总热容：
+
+      $$C_{V,\text{总}} = 12.47 + 8.31 + 0.25 = 21.03\text{ J/(K}\cdot\text{mol)}$$ （实验值约 21.0 J/(K·mol)）
+
+    ---
+
+    4. 熵计算
+    * 平动熵：
+
+      $$S_{\text{平动}} = R \left[ \frac{5}{2} + \ln \left( \frac{(2\pi mkT)^{3/2}}{N_A h^3} \cdot \frac{V}{n} \right) \right]$$
+
+      当 V/n = 1.00 m3/mol 时，S_平动 = 182.9 J/(K·mol)
+      在 300 K, 1 bar 条件下，V/n = 0.0248 m3/mol，S_平动 = 152.1 J/(K·mol)
+
+    * 转动熵：
+
+      $$S_{\text{转动}} = R \left[ 1 + \ln \left( \frac{kT}{\sigma hcB} \right) \right] = R[1 + \ln f_{\text{转动}}] = 43.9\text{ J/(K}\cdot\text{mol)}$$
+
+    * 振动熵：
+
+      $$S_{\text{振动}} = R \left[ \frac{x}{e^x - 1} - \ln(1 - e^{-x}) \right] = 0.0368\text{ J/(K}\cdot\text{mol)}$$
+
+    * 电子熵：
+
+      $$S_{\text{电子}} = R \ln g_0 = 8.314 \times \ln 3 = 8.314 \times 1.099 = 9.14\text{ J/(K}\cdot\text{mol)}$$
+
+    * 总熵：
+
+      $$S_{\text{总}} = 152.1 + 43.9 + 0.04 + 9.14 = 205.2\text{ J/(K}\cdot\text{mol)}$$ （实验值 205 J/(K·mol)）
+
+    ---
+
+    各自由度贡献占比（300 K）
+    | 自由度 | 配分函数（数量级） | 热能 (J/mol) | 热容 (J/K·mol) | 熵 (J/K·mol) |
+    | :--- | :---: | :---: | :---: | :---: |
+    | 平动 | 10^32 | 3741 (60%) | 12.47 (59%) | 152 (74%) |
+    | 转动 | 10^2 | 2494 (40%) | 8.31 (40%) | 44 (21%) |
+    | 振动 | 1 | 10 (<1%) | 0.25 (1%) | 0.04 (<1%) |
+    | 电子 | 3 | 0 | 0 | 9 (4%) |
+    | 总计 | 10^34 | 6245 | 21.03 | 205 |
+
+    1. 平动主导配分函数、热能和熵，因能级极密。
+    2. 转动贡献次之，与平动共同决定 $C_V \approx 2.5R$ 的实验事实。
+    3. 振动在 300 K 时几乎“冻结”，但对热容有微小贡献。
+    4. 电子基态简并度 3，贡献 9 J/(K·mol) 的熵，不可忽略；但热容为零。
+    
 
 
 
