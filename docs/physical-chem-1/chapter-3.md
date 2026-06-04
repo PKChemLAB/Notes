@@ -272,9 +272,12 @@ $$U(T) = \sum_{j=1}^{m} NkT^2 \frac{\mathrm{d}(\ln f_j)}{\mathrm{d}T} + Nu(0) = 
 **热能（$Q$）**
 
 第 $j$ 个量子自由度求得的热能
+
 $$Q_j = U_j(T) - U_j(0) = NkT^2 \frac{\mathrm{d}(\ln f_j)}{\mathrm{d}T}$$
 
+
 系统总热能
+
 $$Q = U(T) - U(0) = NkT^2 \frac{\mathrm{d}(\ln f_{\text{总}})}{\mathrm{d}T}$$
 
 
@@ -360,20 +363,20 @@ $$Q_{h\nu_j \gg kT} = \frac{Nh\nu_j}{\infty-1} = 0$$
 
     * 基本能隙：
   
-      $$h\nu_j = 3.2 \times 10^{-20} \text{ (J)}$$
+    $$h\nu_j = 3.2 \times 10^{-20} \text{ (J)}$$
 
     * 摩尔振动热能：
 
-      $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 8.5 \times 10^{-3} \text{ (kJ/mol)}$$
+    $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 8.5 \times 10^{-3} \text{ (kJ/mol)}$$
 
     对于红外吸收波数为$3756\text{ cm}^{-1}$的振动模式
     * 基本能隙：
   
-      $$h\nu_j = 7.5 \times 10^{-20} \text{ (J)}$$
+    $$h\nu_j = 7.5 \times 10^{-20} \text{ (J)}$$
 
     * 摩尔振动热能：
   
-      $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 6.1 \times 10^{-7} \text{ (kJ/mol)}$$
+    $$Q_{\text{振动}j} = \frac{N h\nu_j}{e^{h\nu_j/kT} - 1} = 6.1 \times 10^{-7} \text{ (kJ/mol)}$$
 
     $$Q_{\text{振动}j} = RT = 2500 \text{ (J/mol)} = 2.5 \text{ (kJ/mol)}$$
 
@@ -685,134 +688,134 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
 
     * 分子质量：
 
-      $$m = \frac{0.03200}{6.022 \times 10^{23}} = 5.314 \times 10^{-26}\text{ kg}$$
+    $$m = \frac{0.03200}{6.022 \times 10^{23}} = 5.314 \times 10^{-26}\text{ kg}$$
 
     * 约化质量：
 
-      $$\mu = \frac{16.00 \times 16.00}{32.00} \times 1.6605 \times 10^{-27} = 1.3284 \times 10^{-26}\text{ kg}$$
+    $$\mu = \frac{16.00 \times 16.00}{32.00} \times 1.6605 \times 10^{-27} = 1.3284 \times 10^{-26}\text{ kg}$$
 
     * 转动惯量与转动常数：
 
-      $$I = \mu r_e^2 = 1.3284 \times 10^{-26} \times (1.2075 \times 10^{-10})^2 = 1.938 \times 10^{-46}\text{ kg}\cdot\text{m}^2$$
+    $$I = \mu r_e^2 = 1.3284 \times 10^{-26} \times (1.2075 \times 10^{-10})^2 = 1.938 \times 10^{-46}\text{ kg}\cdot\text{m}^2$$
 
-      $$B = \frac{h}{8\pi^2 c I} = \frac{6.626 \times 10^{-34}}{8\pi^2 \times 2.998 \times 10^{10} \times 1.938 \times 10^{-46}} = 1.445\text{ cm}^{-1}$$
+    $$B = \frac{h}{8\pi^2 c I} = \frac{6.626 \times 10^{-34}}{8\pi^2 \times 2.998 \times 10^{10} \times 1.938 \times 10^{-46}} = 1.445\text{ cm}^{-1}$$
 
     * 振动特征温度：
 
-      $$\frac{h\nu}{k} = \frac{hc\tilde{\nu}}{k} = 1.439 \times 1580 = 2272\text{ K}$$
+    $$\frac{h\nu}{k} = \frac{hc\tilde{\nu}}{k} = 1.439 \times 1580 = 2272\text{ K}$$
 
     ---
 
     1. 配分函数计算
     * 平动配分函数（离域子）：
 
-      $$f_{\text{平动}} = \frac{(2\pi mkT)^{3/2}}{h^3} V$$
+    $$f_{\text{平动}} = \frac{(2\pi mkT)^{3/2}}{h^3} V$$
 
-      $$2\pi mkT = 2\pi \times 5.314 \times 10^{-26} \times 1.381 \times 10^{-23} \times 300 = 1.382 \times 10^{-45}$$
+    $$2\pi mkT = 2\pi \times 5.314 \times 10^{-26} \times 1.381 \times 10^{-23} \times 300 = 1.382 \times 10^{-45}$$
 
-      $$h^3 = (6.626 \times 10^{-34})^3 = 2.91 \times 10^{-100}$$
+    $$h^3 = (6.626 \times 10^{-34})^3 = 2.91 \times 10^{-100}$$
 
-      $$f_{\text{平动}} = 1.77 \times 10^{32}$$
+    $$f_{\text{平动}} = 1.77 \times 10^{32}$$
 
     * 转动配分函数：
 
-      $$f_{\text{转动}} = \frac{kT}{\sigma hcB}, \quad \sigma = 2$$
+    $$f_{\text{转动}} = \frac{kT}{\sigma hcB}, \quad \sigma = 2$$
 
-      $$\frac{kT}{hc} = \frac{300}{1.439} = 208.5\text{ cm}^{-1}$$
+    $$\frac{kT}{hc} = \frac{300}{1.439} = 208.5\text{ cm}^{-1}$$
 
-      $$f_{\text{转动}} = \frac{208.5}{2 \times 1.445} = \frac{208.5}{2.890} = 72.1$$
+    $$f_{\text{转动}} = \frac{208.5}{2 \times 1.445} = \frac{208.5}{2.890} = 72.1$$
 
     * 振动配分函数：
 
-      $$x = \frac{h\nu}{kT} = \frac{2272}{300} = 7.57$$
+    $$x = \frac{h\nu}{kT} = \frac{2272}{300} = 7.57$$
 
-      $$f_{\text{振动}} = \frac{1}{1 - e^{-7.57}} = \frac{1}{1 - 0.00052} = 1.0005$$
+    $$f_{\text{振动}} = \frac{1}{1 - e^{-7.57}} = \frac{1}{1 - 0.00052} = 1.0005$$
 
     * 电子配分函数：
 
-      $$e^{-\Delta E_1 / kT} = e^{-11360/300} = e^{-37.9} \approx 3.5 \times 10^{-17} \approx 0$$
+    $$e^{-\Delta E_1 / kT} = e^{-11360/300} = e^{-37.9} \approx 3.5 \times 10^{-17} \approx 0$$
 
-      $$f_{\text{电子}} = g_0 = 3$$
+    $$f_{\text{电子}} = g_0 = 3$$
 
     * 总配分函数：
 
-      $$f_{\text{总}} = f_{\text{平动}} \cdot f_{\text{转动}} \cdot f_{\text{振动}} \cdot f_{\text{电子}} = (1.77 \times 10^{32}) \times 72.1 \times 1.0005 \times 3 = 3.83 \times 10^{34}$$
+    $$f_{\text{总}} = f_{\text{平动}} \cdot f_{\text{转动}} \cdot f_{\text{振动}} \cdot f_{\text{电子}} = (1.77 \times 10^{32}) \times 72.1 \times 1.0005 \times 3 = 3.83 \times 10^{34}$$
 
     ---
 
     2. 热能计算
     * 平动热能：
 
-      $$Q_{\text{平动}} = \frac{3}{2}RT = 1.5 \times 8.314 \times 300 = 3741\text{ J/mol}$$
+    $$Q_{\text{平动}} = \frac{3}{2}RT = 1.5 \times 8.314 \times 300 = 3741\text{ J/mol}$$
 
     * 转动热能：
 
-      $$Q_{\text{转动}} = RT = 8.314 \times 300 = 2494\text{ J/mol}$$
+    $$Q_{\text{转动}} = RT = 8.314 \times 300 = 2494\text{ J/mol}$$
 
     * 振动热能：
 
-      $$Q_{\text{振动}} = \frac{R \cdot (h\nu/k)}{e^{h\nu/kT} - 1} = \frac{8.314 \times 2272}{e^{7.57} - 1} = 9.74\text{ J/mol}$$
+    $$Q_{\text{振动}} = \frac{R \cdot (h\nu/k)}{e^{h\nu/kT} - 1} = \frac{8.314 \times 2272}{e^{7.57} - 1} = 9.74\text{ J/mol}$$
 
     * 电子热能：
 
-      $$Q_{\text{电子}} \approx 0$$
+    $$Q_{\text{电子}} \approx 0$$
 
     * 总热能：
 
-      $$Q_{\text{总}} = 3741 + 2494 + 9.7 = 6245\text{ J/mol}$$
+    $$Q_{\text{总}} = 3741 + 2494 + 9.7 = 6245\text{ J/mol}$$
 
     ---
 
     3. 定容热容计算
     * 平动热容：
 
-      $$C_{V,\text{平动}} = \frac{3}{2}R = 12.47\text{ J/(K}\cdot\text{mol)}$$
+    $$C_{V,\text{平动}} = \frac{3}{2}R = 12.47\text{ J/(K}\cdot\text{mol)}$$
 
     * 转动热容：
 
-      $$C_{V,\text{转动}} = R = 8.31\text{ J/(K}\cdot\text{mol)}$$
+    $$C_{V,\text{转动}} = R = 8.31\text{ J/(K}\cdot\text{mol)}$$
 
     * 振动热容：
 
-      $$C_{V,\text{振动}} = R \cdot x^2 \cdot \frac{e^{-x}}{(1 - e^{-x})^2}, \quad x = 7.57$$
+    $$C_{V,\text{振动}} = R \cdot x^2 \cdot \frac{e^{-x}}{(1 - e^{-x})^2}, \quad x = 7.57$$
 
-      $$x^2 = 57.3, \quad e^{-x} = 0.00052, \quad (1 - e^{-x})^2 \approx 1$$
+    $$x^2 = 57.3, \quad e^{-x} = 0.00052, \quad (1 - e^{-x})^2 \approx 1$$
 
-      $$C_{V,\text{振动}} = 8.31 \times 57.3 \times 0.00052 = 0.247\text{ J/(K}\cdot\text{mol)}$$
+    $$C_{V,\text{振动}} = 8.31 \times 57.3 \times 0.00052 = 0.247\text{ J/(K}\cdot\text{mol)}$$
 
     * 电子热容：
 
-      $$C_{V,\text{电子}} \approx 0$$
+    $$C_{V,\text{电子}} \approx 0$$
 
     * 总热容：
 
-      $$C_{V,\text{总}} = 12.47 + 8.31 + 0.25 = 21.03\text{ J/(K}\cdot\text{mol)}$$ （实验值约 21.0 J/(K·mol)）
+    $$C_{V,\text{总}} = 12.47 + 8.31 + 0.25 = 21.03\text{ J/(K}\cdot\text{mol)}$$ （实验值约 21.0 J/(K·mol)）
 
     ---
 
     4. 熵计算
     * 平动熵：
 
-      $$S_{\text{平动}} = R \left[ \frac{5}{2} + \ln \left( \frac{(2\pi mkT)^{3/2}}{N_A h^3} \cdot \frac{V}{n} \right) \right]$$
+    $$S_{\text{平动}} = R \left[ \frac{5}{2} + \ln \left( \frac{(2\pi mkT)^{3/2}}{N_A h^3} \cdot \frac{V}{n} \right) \right]$$
 
-      当 V/n = 1.00 m3/mol 时，S_平动 = 182.9 J/(K·mol)
-      在 300 K, 1 bar 条件下，V/n = 0.0248 m3/mol，S_平动 = 152.1 J/(K·mol)
+    当 V/n = 1.00 m3/mol 时，S_平动 = 182.9 J/(K·mol)
+    在 300 K, 1 bar 条件下，V/n = 0.0248 m3/mol，S_平动 = 152.1 J/(K·mol)
 
     * 转动熵：
 
-      $$S_{\text{转动}} = R \left[ 1 + \ln \left( \frac{kT}{\sigma hcB} \right) \right] = R[1 + \ln f_{\text{转动}}] = 43.9\text{ J/(K}\cdot\text{mol)}$$
+    $$S_{\text{转动}} = R \left[ 1 + \ln \left( \frac{kT}{\sigma hcB} \right) \right] = R[1 + \ln f_{\text{转动}}] = 43.9\text{ J/(K}\cdot\text{mol)}$$
 
     * 振动熵：
 
-      $$S_{\text{振动}} = R \left[ \frac{x}{e^x - 1} - \ln(1 - e^{-x}) \right] = 0.0368\text{ J/(K}\cdot\text{mol)}$$
+    $$S_{\text{振动}} = R \left[ \frac{x}{e^x - 1} - \ln(1 - e^{-x}) \right] = 0.0368\text{ J/(K}\cdot\text{mol)}$$
 
     * 电子熵：
 
-      $$S_{\text{电子}} = R \ln g_0 = 8.314 \times \ln 3 = 8.314 \times 1.099 = 9.14\text{ J/(K}\cdot\text{mol)}$$
+    $$S_{\text{电子}} = R \ln g_0 = 8.314 \times \ln 3 = 8.314 \times 1.099 = 9.14\text{ J/(K}\cdot\text{mol)}$$
 
     * 总熵：
 
-      $$S_{\text{总}} = 152.1 + 43.9 + 0.04 + 9.14 = 205.2\text{ J/(K}\cdot\text{mol)}$$ （实验值 205 J/(K·mol)）
+    $$S_{\text{总}} = 152.1 + 43.9 + 0.04 + 9.14 = 205.2\text{ J/(K}\cdot\text{mol)}$$ （实验值 205 J/(K·mol)）
 
     ---
 

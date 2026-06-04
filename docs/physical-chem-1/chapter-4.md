@@ -61,6 +61,8 @@ $$\mathrm{d}U = \mathrm{d}W + \mathrm{d}Q$$
 
 - 状态由状态函数来描述，包括广度性质和强度性质
 
+---
+
 
 ### 2.2 热力学第一定律
 
@@ -90,10 +92,204 @@ $$\delta W = -P_{\text{外}} \mathrm{d}V$$
 
 $$W = \int_{\text{始态}}^{\text{终态}} \delta W = \int_{V_1}^{V_2} -P_{\text{外}} \mathrm{d}V$$
 
+---
+
 ### 2.3 可逆过程热力学
+
+容器顶活塞上有沙子：$p^\circ = 2\text{ bar}$，$\text{Ar } 300\text{K}$
+
+① 一次性移走沙子
+
+原先
+
+$$p_{\text{外}}^\circ = p^\circ = 2\text{ bar}$$
+
+现在
+
+$$p_{\text{外}} = \frac{1}{2} p_{\text{外}}^\circ$$
+
+
+不可逆自发膨胀（$P$不是定值，$P$分布状态无非“逆序复制”）
+
+
+$$dW = -p_{\text{外}} dV$$
+
+$$W = -\int P_{\text{外}} dV = -\frac{P_{\text{外}}^\circ}{2} \cdot \Delta V = -nRT \frac{\Delta V}{2V}$$
+
+② 一粒一粒拿沙子：准静态过程，可逆自发膨胀
+
+准静态（$P_{\text{外}} = P + dp, dp \to 0$）：系统压强 $P$ 与环境外压 $P_{\text{外}}$ 的差值无穷小。过程进行得无限缓慢，系统无限接近于力学平衡状态。
+
+过程可反转（$P$ 在 $P+|dp|$ 与 $P-|dp|$ 之间切换）：由于内外压差极其微小，只需对环境施加一个无穷小的改变，就能改变整个热力学过程的方向。
+
+$$P = \frac{nRT}{V} + （dp \to 0）$$
+
+$$P_{\text{外}} = P + dp \quad \left(\text{终，} P_{\text{外}} = \frac{P_{\text{外}}^\circ}{2}\right)$$
+
+$$W = -\int P_{\text{外}} dV \approx -\int P dV = -\int \frac{nRT}{V} dV$$
 
 
 ---
+
+## 第三节 热量计算
+
+基于封闭系统，无相变，无化学反应
+
+### 3.1 定容热量
+
+$$dV \equiv 0, \quad dW_{\text{体}} \equiv 0$$
+
+$$\therefore \delta q = dU$$
+
+!!!TIP
+    $\delta q$ 不是全微分（没有“热函数”“攻函数”），写成$\delta$，与路径相关。
+
+
+$$U = f(n, T, V) \quad $$
+
+$$dU = \left(\frac{\partial U}{\partial n}\right)_{T,V} dn + \left(\frac{\partial U}{\partial V}\right)_{n,T} dV + \left(\frac{\partial U}{\partial T}\right)_{n,V} dT$$
+
+$$\therefore dU = C_V$$
+
+$$\Delta U = \int_{\text{初}}^{\text{终}} C_V dT$$
+
+$$\text{đ}q_V = dU = C_V dT \quad (dn \equiv 0, dV \equiv 0, dW_{\text{非}} \equiv 0)$$
+
+等容热效应
+
+$$q_V = \int_{\text{初}}^{\text{终}} C_V dT$$
+
+其中
+
+$$C_V \equiv \left(\frac{\partial U}{\partial T}\right)_{n,V} = \left(\frac{\delta Q}{\partial T}\right)_{n,V}$$
+
+
+!!!NOTE
+    $C_V$是一个状态函数
+
+---
+
+### 3.2 定压热量
+
+($dn \equiv 0$, $P \equiv P_{\text{外}} = const.$, $dW_{\text{非}} = 0$)
+
+$$\text{đ}q_p = dU - dW$$
+
+$$= dU + P dV = dU + P dV + V dP$$
+
+$$= d(U + PV) = dH$$
+
+焓：能量类状态函数
+
+$$H \equiv U + PV$$
+
+
+$$H = f(n, T, P)$$
+
+$$dH = \left(\frac{\partial H}{\partial n}\right)_{T,P} dn + \left(\frac{\partial H}{\partial P}\right)_{n,T} dP + \left(\frac{\partial H}{\partial T}\right)_{n,P} dT$$
+
+定压热容：
+
+$$C_p \equiv \left(\frac{\partial H}{\partial T}\right)_{n,P}$$
+
+$$\left(\frac{\partial H}{\partial T}\right)_{n,p} = \left(\frac{\partial (U+PV)}{\partial T}\right)_{n,p} = \left(\frac{\partial U}{\partial T}\right)_{n,p} + \left(\frac{\partial (PV)}{\partial T}\right)_{n,p}$$
+
+$$\therefore dH = C_p dT $$
+
+$$\therefore \Delta H = \int_{T_1}^{T_2} C_p dT$$若：$dn \equiv 0, dp \equiv 0, dW_{\text{非}} \equiv 0$$$q_p = \int_{T_1}^{T_2} C_p dT$$
+
+
+---
+
+### 3.3 焓 - 内能 $C_p - C_V$
+
+焓的定义有方便的成分
+
+
+孤立系统：$dU \equiv 0$,
+
+$$dH = \cancel{dU}^0 + d(pV) \xlongequal{\text{理气}} d(nRT) = \cancel{RTdn}^0 + nRdT$$
+
+$$U + pV = H > U$$
+
+$$C_V \equiv \left(\frac{\partial U}{\partial T}\right)_{n,V} \quad \text{状态函数}$$
+
+$$C_p = \left(\frac{\partial H}{\partial T}\right)_{n,p} = \left(\frac{\partial U}{\partial T}\right)_{n,p} + \left(\frac{\partial (pV)}{\partial T}\right)_{n,p}$$
+
+不再是热能容量，还是状态函数
+
+对理想气体：
+
+$$C_p = C_V + 0 + \left(\frac{\partial (nRT)}{\partial T}\right)_{n,p}$$
+
+$$\therefore C_p = C_V + nR$$
+
+!!!NOTE
+    $$C_p = \left(\frac{\partial U}{\partial T}\right)_{n,p} + \left(\frac{\partial (pV)}{\partial T}\right)_{n,p}$$
+
+    通过全微分展开为两部分：
+
+    $$dU = \left(\frac{\partial U}{\partial T}\right)_V dT + \left(\frac{\partial U}{\partial V}\right)_T dV$$
+
+    边同除以 $dT$（引入恒压条件）：
+
+    
+    $$\left(\frac{\partial U}{\partial T}\right)_p = \left(\frac{\partial U}{\partial T}\right)_V + \left(\frac{\partial U}{\partial V}\right)_T \left(\frac{\partial V}{\partial T}\right)_p$$
+
+    $\left(\frac{\partial U}{\partial V}\right)_T$ 对于理想气体，分子间不存在相互作用力，其内能只受温度影响。 $\left(\frac{\partial U}{\partial V}\right)_T = 0$。
+
+    $$\left(\frac{\partial (pV)}{\partial T}\right)_{n,p} = \left(\frac{\partial (nRT)}{\partial T}\right)_{n,p} = nR$$
+
+    $$\therefore C_{p,m} - C_{V,m} = R$$
+
+
+---
+
+## 第四节 绝热过程
+
+### 4.1 绝热过程与系统温度
+
+$$\text{đ}q \equiv 0$$
+
+$$dU = \cancel{\text{đ}q}^0 + dW = -P_{\text{外}} dV + \cancel{dW_{\text{非}}}^0$$
+
+$$dn \equiv 0, \quad dW_{\text{非}} \equiv 0$$
+
+$$dU = C_V dT + \left(\frac{\partial U}{\partial V}\right)_{n,T} dV$$
+
+
+理想气体：
+
+$$\left(\frac{\partial U}{\partial V}\right)_{n,T} = 0 \quad $$
+
+$$\therefore C_V dT = -P_{\text{外}} dV$$
+
+绝热且只做体积功时，内能变化等于环境对系统做的功（热功转化），温度发生改变。
+
+!!!EXAMPLE
+    考虑一个可逆膨胀过程。
+
+    $$\begin{cases}
+    P_{\text{外}} = P + dP
+    P \in (P+|dP|, P-|dP|)
+    \end{cases}$$
+    
+    $$\therefore C_V dT = -P_{\text{外}} dV = -P dV = -\frac{nRT}{V} dV$$
+
+    $$-\frac{C_V}{nR} \int \frac{dT}{T} = \int \frac{dV}{V}$$
+    
+    $$-\frac{C_V}{nR} \ln \frac{T}{T_{\text{初}}} = \ln \frac{V}{V_{\text{初}}}$$
+    
+    $$\frac{T}{T_{\text{初}}} = \left(\frac{V}{V_{\text{初}}}\right)^{-\frac{nR}{C_V}}$$
+
+
+---
+
+### 4.2
+
+
+
+
 
 
 
