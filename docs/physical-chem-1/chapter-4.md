@@ -142,7 +142,7 @@ $$dV \equiv 0, \quad dW_{\text{体}} \equiv 0$$
 $$\therefore \delta q = dU$$
 
 !!!TIP
-    $\delta q$ 不是全微分（没有“热函数”“攻函数”），写成$\delta$，与路径相关。
+    $\delta q$ 不是全微分（没有“热函数”“功函数”），写成$\delta$，与路径相关。
 
 
 $$U = f(n, T, V) \quad $$
@@ -270,7 +270,9 @@ $$\therefore C_V dT = -P_{\text{外}} dV$$
     考虑一个可逆膨胀过程。
 
     $$\begin{cases}
-    P_{\text{外}} = P + dP
+    P_{\text{外}} = P + dP\\
+
+
     P \in (P+|dP|, P-|dP|)
     \end{cases}$$
     
@@ -285,7 +287,38 @@ $$\therefore C_V dT = -P_{\text{外}} dV$$
 
 ---
 
-### 4.2
+### 4.2 绝热过程的量子统计热力学分析
+
+
+$$\varepsilon_{n_x, n_y, n_z} = \frac{h^2}{8m} \left( \frac{n_x^2}{L^2} + \frac{n_y^2}{L^2} + \frac{n_z^2}{L^2} \right)$$
+
+各向同时，
+
+$$\varepsilon_n = \frac{h^2}{8m} (n_x^2 + n_y^2 + n_z^2) \cdot V^{-2/3}$$
+
+体积 $V$ 膨胀，所有的平动能级 $\varepsilon_n$ 都会同比例下降。
+
+
+① 给定能级上的分子能量随体积膨胀而下降（能级密度上升）
+
+② 膨胀等价于改变平动自由度的能级能隙。沿 Z 轴膨胀情况下，$\varepsilon_z \downarrow$，$T_z \downarrow$
+
+③ 热(能)驰豫：气体内部不同平动自由度之间的能量流动
+
+$$\because T_z < T_x = T_y$$
+
+$$\therefore Q_x = Q_y \downarrow, Q_z \uparrow$$
+
+导致 $T_x = T_y = T_z$
+
+与等温膨胀过程相比较，等温膨胀过程补充了能量，能级结构变化与绝热膨胀相同。
+
+
+![alt](image/image-9.png)
+
+
+
+
 
 
 

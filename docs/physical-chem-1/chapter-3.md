@@ -8,6 +8,8 @@
 
 $$f = \sum_{i=1}^{\infty} e^{-\frac{\varepsilon_i}{kT}}$$
 
+波尔兹曼因子相当于是一个未归一化的权重。
+
 如果在给定的能量类别中，第 $i$ 个能级的简并度为 $g_i$
 
 $$f = \sum_{i=1}^{n} g_i e^{-\frac{\varepsilon_i}{kT}}$$
