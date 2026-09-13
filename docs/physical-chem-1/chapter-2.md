@@ -227,7 +227,7 @@ $$B \Leftrightarrow C, \quad T_B = T_C$$
 
 $$A \Leftrightarrow C, \quad T_A = T_C$$
 
-一个矩形容器被中间的隔板分为左右两个部分，标记为 $A$ 和 $B$。
+一个矩形容器被中间的隔板分为左右两个部分，标记为 $A$ 和 $B$。平衡态熵极大，一阶导数为零。
 
 
 $$\left( \frac{\partial (S_A + S_B)}{\partial \theta} \right)_{n, V} = 0$$
@@ -281,7 +281,7 @@ $$\frac{P(\varepsilon)}{P(0)} = \frac{W(\varepsilon) \cdot W_{\text{环}}(U_{\te
 !!!TIP
     这里不考虑两个能级简并度，即$W(\varepsilon)$和$W(0)$为一。
 
-其中对环境熵的进行了泰勒展开
+其中对环境熵的进行了泰勒展开（能级差视为小量）
 
 $$S_{\text{环}}(U_{\text{环}} - \varepsilon) \approx S_{\text{环}}(U_{\text{环}}) - \left( \frac{\partial S}{\partial U} \right)_{n,V} \varepsilon$$
 
@@ -298,6 +298,9 @@ $$dS_{\text{环}} = S_{\text{环}}(U_{\text{环}} - \varepsilon) - S_{\text{环}
 任选能级 $i$ 和 $0$，有：
 
 $$\frac{P(i)}{P(0)} = e^{-\frac{\varepsilon_i}{kT}}$$
+
+!!!NOTE
+    理解玻尔兹曼分布：关于i($\varepsilon_i$)的函数，温度确定，函数图像确定。具体能量怎么取，取决于各自由度能级公式。
 
 
 

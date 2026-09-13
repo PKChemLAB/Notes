@@ -216,7 +216,7 @@ $$C_V \equiv \left(\frac{\partial U}{\partial T}\right)_{n,V} \quad \text{状态
 
 $$C_p = \left(\frac{\partial H}{\partial T}\right)_{n,p} = \left(\frac{\partial U}{\partial T}\right)_{n,p} + \left(\frac{\partial (pV)}{\partial T}\right)_{n,p}$$
 
-不再是热能容量，还是状态函数
+不再是热能容量，还是状态函数--包含了做功部分，已经不是纯粹的"装热的容器"
 
 对理想气体：
 
@@ -271,8 +271,6 @@ $$\therefore C_V dT = -P_{\text{外}} dV$$
 
     $$\begin{cases}
     P_{\text{外}} = P + dP\\
-
-
     P \in (P+|dP|, P-|dP|)
     \end{cases}$$
     

@@ -679,9 +679,13 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
 
 !!! EXAMPLE
     1 mol 氧气分子（O2）理想气体，T = 300 K，V = 1.00 m3
+
     * 键长 $r_e = 1.2075\text{ \AA}$
+  
     * 振动波数 $\tilde{\nu} = 1580\text{ cm}^{-1}$
+  
     * 电子基态 $^3\Sigma_g^-$，$g_0 = 3$
+  
     * 电子能隙 0.98 eV
 
     求：配分函数、热能、定容热容、熵，并讨论各自由度贡献。
@@ -745,7 +749,7 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
 
     ---
 
-    2. 热能计算
+    1. 热能计算
     * 平动热能：
 
     $$Q_{\text{平动}} = \frac{3}{2}RT = 1.5 \times 8.314 \times 300 = 3741\text{ J/mol}$$
@@ -768,7 +772,7 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
 
     ---
 
-    3. 定容热容计算
+    1. 定容热容计算
     * 平动热容：
 
     $$C_{V,\text{平动}} = \frac{3}{2}R = 12.47\text{ J/(K}\cdot\text{mol)}$$
@@ -795,7 +799,7 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
 
     ---
 
-    4. 熵计算
+    1. 熵计算
     * 平动熵：
 
     $$S_{\text{平动}} = R \left[ \frac{5}{2} + \ln \left( \frac{(2\pi mkT)^{3/2}}{N_A h^3} \cdot \frac{V}{n} \right) \right]$$
