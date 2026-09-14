@@ -69,24 +69,153 @@ code, pre {
 }
 
 /* ==========================================================================
-   3. 卡片样式 (保留你原来的 + 微调适配深色)
+   3. 浅色模式：低饱和钢蓝 + 青绿色强调色
+   ========================================================================== */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #315a74;
+  --md-primary-fg-color--light: #4f7690;
+  --md-primary-fg-color--dark: #244457;
+  --md-primary-bg-color: #ffffff;
+
+  --md-accent-fg-color: #0f766e;
+  --md-accent-fg-color--transparent: rgba(15, 118, 110, 0.1);
+  --md-typeset-a-color: #2f6788;
+
+  --md-default-bg-color: #f7f9fb;
+  --md-default-fg-color: #263442;
+  --md-default-fg-color--light: #526273;
+  --md-default-fg-color--lighter: #7a8998;
+  --md-default-fg-color--lightest: #dfe6ec;
+
+  --md-code-fg-color: #26384a;
+  --md-code-bg-color: #edf2f6;
+
+  --md-footer-fg-color: #34495a;
+  --md-footer-fg-color--light: #526273;
+  --md-footer-fg-color--lighter: #6d7c8a;
+  --md-footer-bg-color: #e8eef3;
+  --md-footer-bg-color--dark: #dfe7ed;
+}
+
+[data-md-color-scheme="default"] .md-header,
+[data-md-color-scheme="default"] .md-tabs {
+  background-color: #315a74;
+}
+
+[data-md-color-scheme="default"] .md-header {
+  box-shadow: 0 2px 10px rgba(29, 57, 74, 0.18);
+}
+
+[data-md-color-scheme="default"] .md-tabs__link {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+[data-md-color-scheme="default"] .md-tabs__link:hover,
+[data-md-color-scheme="default"] .md-tabs__link--active {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-search__form {
+  background-color: rgba(20, 45, 61, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+[data-md-color-scheme="default"] .md-search__input::placeholder {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+[data-md-color-scheme="default"] .md-main {
+  background:
+    linear-gradient(180deg, rgba(226, 234, 240, 0.42), transparent 13rem),
+    var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="default"] .md-typeset h1,
+[data-md-color-scheme="default"] .md-typeset h2,
+[data-md-color-scheme="default"] .md-typeset h3 {
+  color: #20384a;
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #0f766e;
+}
+
+[data-md-color-scheme="default"] .md-nav__link--active,
+[data-md-color-scheme="default"] .md-nav__link:hover {
+  color: #0f766e;
+}
+
+[data-md-color-scheme="default"] .md-typeset blockquote {
+  background-color: #eef4f6;
+  border-left-color: #6f9aaa;
+  color: #435466;
+  padding: 0.35rem 0.8rem;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) {
+  background-color: rgba(255, 255, 255, 0.72);
+  border-color: #d6e0e7;
+  box-shadow: 0 1px 3px rgba(38, 52, 66, 0.06);
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th {
+  background-color: #e8eff4;
+  color: #29485c;
+}
+
+[data-md-color-scheme="default"] .md-typeset table:not([class]) td {
+  border-top-color: #dfe6ec;
+}
+
+[data-md-color-scheme="default"] .md-footer {
+  background-color: #e8eef3;
+  border-top: 1px solid #d4dee6;
+  color: #34495a;
+}
+
+[data-md-color-scheme="default"] .md-footer__link,
+[data-md-color-scheme="default"] .md-footer__title,
+[data-md-color-scheme="default"] .md-footer__direction {
+  color: #34495a;
+}
+
+[data-md-color-scheme="default"] .md-footer__link:hover {
+  color: #0f766e;
+}
+
+[data-md-color-scheme="default"] .md-footer-meta {
+  background-color: #dfe7ed;
+  color: #5a6977;
+}
+
+/* ==========================================================================
+   4. 卡片样式
    ========================================================================== */
 .grid.cards > ul > li {
   border-radius: 14px;
   padding: 16px;
-  
-  /* 边框：原有的 0.08 在深色下可能太暗，稍微调亮到 0.1 */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  
-  /* 背景：保留你的半透明设计，但在深色底上稍微增加一点不透明度 */
-  background: rgba(255, 255, 255, 0.04);
-  
-  /* 添加平滑过渡效果 */
-  transition: border-color 0.25s, background-color 0.25s;
+  transition: border-color 0.25s, background-color 0.25s, box-shadow 0.25s;
 }
 
-/* 鼠标悬停时的高亮效果 */
-.grid.cards > ul > li:hover {
+[data-md-color-scheme="slate"] .grid.cards > ul > li {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+[data-md-color-scheme="slate"] .grid.cards > ul > li:hover {
   border-color: rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="default"] .grid.cards > ul > li {
+  background-color: rgba(255, 255, 255, 0.78);
+  border: 1px solid #d9e3e9;
+  box-shadow: 0 3px 12px rgba(38, 52, 66, 0.05);
+}
+
+[data-md-color-scheme="default"] .grid.cards > ul > li:hover {
+  background-color: #ffffff;
+  border-color: #8aabb8;
+  box-shadow: 0 6px 18px rgba(38, 52, 66, 0.1);
 }
