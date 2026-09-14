@@ -52,6 +52,11 @@ nav:
 
   - 结构Ⅲ:固体物理:
       - 课程主页: solid-state-physics/index.md
+      - 晶体学基础: solid-state-physics/chapter-1.md
+      - 晶体的 X 射线衍射: solid-state-physics/chapter-2.md
+      - 固体能带理论基础: solid-state-physics/chapter-3.md
+      - 固体光谱基础: solid-state-physics/chapter-4.md
+      - 金属晶体和离子晶体: solid-state-physics/chapter-5.md
 
   - 物理化学I:
       - 课程主页: physical-chem-1/index.md
