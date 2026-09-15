@@ -19,53 +19,116 @@ code, pre {
 }
 
 /* ==========================================================================
-   2. 深色模式 (Slate) 深度定制 - 适配 Hugo PaperMod 风格
+   2. 深色模式：深蓝灰 + 雾蓝链接 + 青绿色强调色
    ========================================================================== */
 [data-md-color-scheme="slate"] {
-  /* --- 核心背景色 --- */
-  /* 页面背景：PaperMod 标志性的深炭灰 */
-  --md-default-bg-color: #1d1e20;
-  
-  /* 侧边栏/遮罩层背景：与页面背景一致，实现沉浸感 */
-  --md-default-fg-color--lightest: #1d1e20;
-  
-  /* 内容区域/卡片背景 */
-  --md-default-bg-color--light: #1d1e20;
-  
-  /* 代码块背景：稍微亮一点的灰色，与 PaperMod 保持一致 */
-  --md-code-bg-color: #2e2e33;
-  
-  /* --- 顶部导航栏关键设置 (修复文字消失问题) --- */
-  /* 1. 顶栏的背景色变量 (设为深炭灰) */
-  --md-primary-fg-color: #1d1e20;
-  
-  /* 2. 顶栏的“前景色”(即文字和图标颜色) -> 必须是白色 */
-  --md-primary-bg-color: #ffffff;
-  
-  /* --- 细节微调 --- */
-  /* 分割线颜色：调暗，避免刺眼 */
-  --md-default-fg-color--lighter: #353b45;
-  
-  /* 正文文字颜色：灰白色，阅读舒适 */
-  --md-text-color: #e5e5e5;
+  --md-primary-fg-color: #182a3a;
+  --md-primary-fg-color--light: #223a4f;
+  --md-primary-fg-color--dark: #101c28;
+  --md-primary-bg-color: #f4f8fb;
+
+  --md-accent-fg-color: #63c7bb;
+  --md-accent-fg-color--transparent: rgba(99, 199, 187, 0.12);
+  --md-typeset-a-color: #79b8dc;
+
+  --md-default-bg-color: #121a24;
+  --md-default-bg-color--light: #182330;
+  --md-default-bg-color--lighter: #1e2b39;
+  --md-default-bg-color--lightest: #253443;
+  --md-default-fg-color: #d7e0e8;
+  --md-default-fg-color--light: #aebdcc;
+  --md-default-fg-color--lighter: #8294a6;
+  --md-default-fg-color--lightest: #2b3c4b;
+
+  --md-code-fg-color: #d6e5ef;
+  --md-code-bg-color: #1b2836;
+
+  --md-footer-fg-color: #c8d5df;
+  --md-footer-fg-color--light: #a6b7c5;
+  --md-footer-fg-color--lighter: #7f93a5;
+  --md-footer-bg-color: #162330;
+  --md-footer-bg-color--dark: #0f1923;
 }
 
-/* --- 强制覆盖顶部导航栏和标签栏背景 --- */
-/* 确保 Header 和 Tabs 即使在滚动时也保持深色背景 */
-[data-md-color-scheme="slate"] .md-header, 
+[data-md-color-scheme="slate"] .md-header,
 [data-md-color-scheme="slate"] .md-tabs {
-  background-color: #1d1e20;
+  background-color: #182a3a;
 }
 
-/* --- 搜索框优化 --- */
-/* 搜索框背景变深，融入顶栏 */
-[data-md-color-scheme="slate"] .md-search__input {
-  background-color: #2e2e33;
-  border-color: #2e2e33;
+[data-md-color-scheme="slate"] .md-header {
+  box-shadow: 0 2px 12px rgba(2, 8, 15, 0.32);
 }
-/* 搜索框内的占位符文字颜色 */
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: rgba(235, 243, 248, 0.72);
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover,
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #f4f8fb;
+}
+
+[data-md-color-scheme="slate"] .md-search__form {
+  background-color: #101d29;
+  border: 1px solid #2a4152;
+  border-radius: 8px;
+}
+
 [data-md-color-scheme="slate"] .md-search__input::placeholder {
-  color: #a0a0a0;
+  color: #8fa2b2;
+}
+
+[data-md-color-scheme="slate"] .md-main {
+  background:
+    linear-gradient(180deg, rgba(33, 53, 69, 0.42), transparent 15rem),
+    var(--md-default-bg-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: #e7eff5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: #79b8dc;
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover,
+[data-md-color-scheme="slate"] .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: #63c7bb;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  background-color: #172735;
+  border-left-color: #4f8795;
+  color: #b9c8d3;
+  padding: 0.35rem 0.8rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+  background-color: #162330;
+  border-color: #2b3f4f;
+  box-shadow: 0 2px 8px rgba(2, 8, 15, 0.16);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) th {
+  background-color: #1c3040;
+  color: #dce8f0;
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-top-color: #2b3f4f;
+}
+
+[data-md-color-scheme="slate"] .md-footer {
+  background-color: #162330;
+  border-top: 1px solid #263949;
+}
+
+[data-md-color-scheme="slate"] .md-footer-meta {
+  background-color: #0f1923;
 }
 
 /* ==========================================================================
@@ -199,13 +262,15 @@ code, pre {
 }
 
 [data-md-color-scheme="slate"] .grid.cards > ul > li {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.04);
+  background-color: #182430;
+  border: 1px solid #2c3f4e;
+  box-shadow: 0 3px 14px rgba(2, 8, 15, 0.18);
 }
 
 [data-md-color-scheme="slate"] .grid.cards > ul > li:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.08);
+  background-color: #1c2b39;
+  border-color: #568b96;
+  box-shadow: 0 6px 20px rgba(2, 8, 15, 0.28);
 }
 
 [data-md-color-scheme="default"] .grid.cards > ul > li {
