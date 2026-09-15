@@ -1,0 +1,3895 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/physical-chem-2/chapter-7/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../chapter-8/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>分子间相互作用 - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#7" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK&#39;s Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              分子间相互作用
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../structure-spectroscopy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅱ:光谱学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solid-state-physics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅲ:固体物理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学II
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-structures/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../information-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  信息理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intro-computational-chem/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算化学导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Papers
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK&#39;s Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../structure-spectroscopy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅱ:光谱学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅱ:光谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：多原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子电子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solid-state-physics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅲ:固体物理
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅲ:固体物理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体的 X 射线衍射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体能带理论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体光谱基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    金属晶体和离子晶体
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能量与能量量子化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从单原子分子到多原子：熵与温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子结构与宏观测量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    热力学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可逆过程热力学与第二定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子间相互作用
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子间相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 分子间相互作用研究
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 分子间相互作用研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 概论
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 概论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 图像演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 分子间相互作用与化学键
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 分子间相互作用与自由度追踪
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 分子间相互作用与自由度追踪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 量子统计热力学与自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 分子整体自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 分子内振动自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 分子间相互作用标度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 分子间相互作用标度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 分子-分子电磁相互作用与电子基态能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 分子集体振动自由度的热能和熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 分子间相互作用的实验标度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 分子间相互作用能(1):电磁相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 分子间相互作用能(1):电磁相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 电偶极矩与静电相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 电偶极矩与静电相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 点电荷相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 偶极-偶极相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 偶极吸引+排斥的双分子模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 溶液中分子集体振动势阱
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 分子电子极化率
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 分子电子极化率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 分子瞬间偶极与电子云变形性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 作为介质的分子集合体电磁相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 作为介质的分子集合体电磁相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 介质的分子间相互作用的重要性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 介质的静电介电常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 介质的折射率与光频介电常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 分子间相互作用频率特征与频率匹配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 分子间相互作用频率特征与频率匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 分子间相互作用选律
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 分子永久偶极矩与低频相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 分子结构与分子电子云变形性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4 电子云变形性与超高频相互作用在选律中的决定性意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 分子间相互作用能(2)：分子结构与相态
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 分子间相互作用能(2)：分子结构与相态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 分子集体振动与分子间相互作用能
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 分子集体振动与分子间相互作用能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 分子集体振动典型频率特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 分子集体振动基态能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 分子集体振动热能及分子间相互作用热能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 分子间相互作用分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 分子间相互作用分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 离子-离子静电相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 离子-永久偶极相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 永久偶极-永久偶极相互作用与 F 原子效应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 氢键与分子电子极化率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 分子间瞬间偶极相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 分子间相互作用熵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 分子间相互作用熵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 分子间相互作用熵标度方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 分子间相互作用熵标度方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 气态分子相互作用熵设为零
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 液态中分子相互作用熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 固态中分子相互作用熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 分子结构与分子间相互作用熵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 分子结构与分子间相互作用熵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 单原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 直链柔性分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 不同构型的柔性分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纯物质体相性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液的基本性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液与多相混合物
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data-structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists, Stacks, and Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heaps and Priority Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segment Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../information-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information-theory/L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息度量与熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../intro-computational-chem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/montecarlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蒙特卡洛方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/26.3.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    气液界面合成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 分子间相互作用研究
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 分子间相互作用研究">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 概论
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 概论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 图像演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 分子间相互作用与化学键
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 分子间相互作用与自由度追踪
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 分子间相互作用与自由度追踪">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 量子统计热力学与自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 分子整体自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 分子内振动自由度演化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 分子间相互作用标度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 分子间相互作用标度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 分子-分子电磁相互作用与电子基态能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 分子集体振动自由度的热能和熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 分子间相互作用的实验标度
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 分子间相互作用能(1):电磁相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 分子间相互作用能(1):电磁相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 电偶极矩与静电相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 电偶极矩与静电相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 点电荷相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 偶极-偶极相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 偶极吸引+排斥的双分子模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.4 溶液中分子集体振动势阱
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 分子电子极化率
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 分子电子极化率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#322" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 分子瞬间偶极与电子云变形性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 作为介质的分子集合体电磁相互作用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 作为介质的分子集合体电磁相互作用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 介质的分子间相互作用的重要性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 介质的静电介电常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 介质的折射率与光频介电常数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 分子间相互作用频率特征与频率匹配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 分子间相互作用频率特征与频率匹配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 分子间相互作用选律
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 分子永久偶极矩与低频相互作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 分子结构与分子电子云变形性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4 电子云变形性与超高频相互作用在选律中的决定性意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 分子间相互作用能(2)：分子结构与相态
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 分子间相互作用能(2)：分子结构与相态">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 分子集体振动与分子间相互作用能
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 分子集体振动与分子间相互作用能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 分子集体振动典型频率特征
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 分子集体振动基态能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 分子集体振动热能及分子间相互作用热能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 分子间相互作用分类
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 分子间相互作用分类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 离子-离子静电相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 离子-永久偶极相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 永久偶极-永久偶极相互作用与 F 原子效应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 氢键与分子电子极化率
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.5 分子间瞬间偶极相互作用能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 分子间相互作用熵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 分子间相互作用熵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 分子间相互作用熵标度方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 分子间相互作用熵标度方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 气态分子相互作用熵设为零
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 液态中分子相互作用熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.3 固态中分子相互作用熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 分子结构与分子间相互作用熵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 分子结构与分子间相互作用熵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 单原子分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 直链柔性分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 不同构型的柔性分子
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="7">第7章 分子间相互作用<a class="headerlink" href="#7" title="Permanent link">&para;</a></h1>
+<h2 id="2">2 分子间相互作用研究<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 概论<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<h4 id="211">2.1.1 意义<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<p>化学反应：①分子内相互作用能与分子间相互作用能的转换 ②分子间相互作用熵：平动熵损失--&gt;分子集体振动熵损失（且紧密接触的液态介质可以增加熵而弥补反应的熵损失）</p>
+<p>重点关注：超多分子系统热分布带来的<strong>热能和熵</strong></p>
+<h4 id="212">2.1.2 图像演化<a class="headerlink" href="#212" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中性分子：电偶极</li>
+<li>无永久偶极分子：电极化率--&gt;诱导偶极</li>
+</ul>
+<h4 id="213">2.1.3 分子间相互作用与化学键<a class="headerlink" href="#213" title="Permanent link">&para;</a></h4>
+<ul>
+<li>分子内：涉及分子/原子间电子重新分配（改变分子结构）</li>
+<li>分子间：不改变已存分配，只对已存电子分配与运动形式产生微扰（微扰分子结构）</li>
+</ul>
+<p>较弱相互作用--&gt;较小能隙--&gt;分子在分子间相互作用的较高能级上会形成可观的热分布</p>
+<ul>
+<li>分子间相互作用的<strong>热能贡献大多不可忽略</strong></li>
+<li>分子间相互作用<strong>自由度的熵</strong>是系统熵的一个重要贡献者</li>
+<li>分子间相互作用自由度：本质上是一类量子自由度</li>
+</ul>
+<p>①增加接触面积②减小接触距离--&gt;分子间相互作用能的<strong>绝对值</strong>可获得相当可观的增加</p>
+<h3 id="22">2.2 分子间相互作用与自由度追踪<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="221">2.2.1 量子统计热力学与自由度演化<a class="headerlink" href="#221" title="Permanent link">&para;</a></h4>
+<p>确立系统完备正交量子自由度：在分子水平考察分子间相互作用过程，追踪自由度演化。</p>
+<p>微扰带来的电磁能改变--&gt;分子间相互作用<strong>电子基态能</strong></p>
+<p>气相：分子间相互作用能=0（分子间彼此孤立）</p>
+<p>分子自由度：①分子内自由度：振动 ②分子整体自由度：自由平动、自由转动</p>
+<h4 id="222">2.2.2 分子整体自由度演化<a class="headerlink" href="#222" title="Permanent link">&para;</a></h4>
+<p>分子间<strong>电磁微扰</strong>相互作用改变：①系统的电子基态能 ②给分子的整体运动提供势阱</p>
+<p>每个分子都处于其他分子提供的分子间相互作用势阱中（液相、固相）</p>
+<p>自由平动/转动转化的振动自由度：多分子协同的共同振动（周期性改变相对空间位置）</p>
+<p>分子集体振动：①固态：晶格集体振动 ②液态：类振动（流体特性，势阱不那么对称）</p>
+<p>分子集体振动模式：整个分子作为一个刚体</p>
+<p>从自由平动/转动转化为分子集体振动：</p>
+<div class="arithmatex">\[
+\Delta F=3+F_{转}
+\]</div>
+<p>分子集体振动自由度--&gt;低频振动：①振动基团折合质量大 ②势阱浅（分子间相互作用能绝对值较小） ③势阱开口大（正比于振动基团平衡间距）</p>
+<p>分子间平衡位置的电势能--&gt;分子间相互作用的基态能</p>
+<h4 id="223">2.2.3 分子内振动自由度演化<a class="headerlink" href="#223" title="Permanent link">&para;</a></h4>
+<p>分子内振动的转化--&gt;液态与固态会出现质的差别</p>
+<p>分子内振动自由度：①分子构象不变：键振动（伸缩、弯曲） ②改变构象：构象振动（旋转（柔性分子））</p>
+<ul>
+<li>键振动：频率高于相应的构象振动--&gt;受其他分子的影响较小，在分子间相互作用过程中变化较小</li>
+<li>构象振动：处于低频区<ul>
+<li>对系统热能和熵有明显贡献（一定会热激发）</li>
+<li>在晶体内不可能实现（分子运动空间远超键长范围）</li>
+</ul>
+</li>
+<li>①气相到液相：构象振动频率改变不大</li>
+<li>②液态到晶态：分子内旋转被禁止</li>
+</ul>
+<p>分子内振动自由度的变化：</p>
+<div class="arithmatex">\[
+\Delta F_{振动,液}=0
+\]</div>
+<div class="arithmatex">\[
+\Delta F_{振动,固}=F_{构象}
+\]</div>
+<ul>
+<li>转化为分子集体振动的分子自由度：①分子整体自由度（平动、转动） ②分子内构象振动</li>
+</ul>
+<h3 id="23">2.3 分子间相互作用标度<a class="headerlink" href="#23" title="Permanent link">&para;</a></h3>
+<h4 id="231-">2.3.1 分子-分子电磁相互作用与电子基态能<a class="headerlink" href="#231-" title="Permanent link">&para;</a></h4>
+<p>气态可作为分子间电磁相互作用基态能的零点</p>
+<p>分子间相互作用基态能的主要部分：分子间相互作用电子基态能</p>
+<div class="arithmatex">\[
+E^0_{电子}&lt;0
+\]</div>
+<ul>
+<li>经典电磁学处理：电子基态能、分子间相互作用势阱</li>
+<li>量子统计热力学：分子间相互作用热能和熵</li>
+</ul>
+<h4 id="232">2.3.2 分子集体振动自由度的热能和熵<a class="headerlink" href="#232" title="Permanent link">&para;</a></h4>
+<p>只要是由分子间相互作用转化的自由度--&gt;<strong>运动模式</strong>全为<strong>振动自由度</strong></p>
+<p>振动自由度--&gt;热能、熵--&gt;频率--&gt;基本能隙</p>
+<p><strong>(A) 分子整体自由度</strong></p>
+<p>转化后的集体振动（低频振动）--&gt;<strong>能隙远大于</strong>平动/转动</p>
+<blockquote>
+<p>转化而来的分子集体振动的频率明显升高</p>
+</blockquote>
+<div class="arithmatex">\[
+E^0_{振动}=\frac{1}{2}E_{能隙};\qquad E^0_{振动}&gt;0
+\]</div>
+<div class="arithmatex">\[
+Q_{液态集体振动}=2Q_{理想气体,平/转}
+\]</div>
+<div class="arithmatex">\[
+Q_{晶态集体振动}&lt;Q_{液态集体振动}
+\]</div>
+<blockquote>
+<p>自由平动/转动：只有动能贡献--&gt;分子集体振动：<strong>动能+势能</strong> 晶态：集体振动频率高于液态，<strong>能隙大热能小</strong>（晶态提供确定的完整势阱）</p>
+</blockquote>
+<p>平动/转动转化为集体振动：一个自由度的熵会<strong>明显减小</strong>，在晶态中进一步减小（其实能隙还是增大了）</p>
+<blockquote>
+<p>熵对能隙的改变比热能更为敏感</p>
+</blockquote>
+<p><strong>(B) 分子内构象振动</strong></p>
+<blockquote>
+<p>只有<strong>晶态</strong>发生转化</p>
+</blockquote>
+<div class="arithmatex">\[
+E^0_{振动}=\frac{1}{2}E_{能隙};\qquad E^0_{振动}&gt;0
+\]</div>
+<blockquote>
+<p>转化而来的分子集体振动的频率明显升高（基本能隙&gt;<span class="arithmatex">\(kT\)</span>）</p>
+</blockquote>
+<p>由<strong>内构象振动转化</strong>而来的集体振动<strong>热能大大减小</strong>，在室温附近基本对晶体热能、熵<strong>没有贡献</strong></p>
+<div class="arithmatex">\[
+E^0_{分子}=E^0_{电子}+E^0_{振动};\qquad E^0_{振动}=E_{V=0}-E^0_{电子}
+\]</div>
+<p><img alt="分子间相互作用势阱与振动能级" src="../image/interaction-energy-levels.png" /></p>
+<h4 id="233">2.3.3 分子间相互作用的实验标度<a class="headerlink" href="#233" title="Permanent link">&para;</a></h4>
+<p>1bar条件下的理想气体作为标准参考态：</p>
+<ul>
+<li>
+<p>气态：</p>
+<div class="arithmatex">\[
+E^\circ_{m,分子/气}=0
+\]</div>
+<div class="arithmatex">\[
+S^\circ_{m,分子/气}=0
+\]</div>
+</li>
+<li>
+<p>液态：</p>
+<div class="arithmatex">\[
+E_{m,分子/液}=-\Delta U_{m,蒸发}=-(\Delta H_{m,蒸发}-RT)
+\]</div>
+<div class="arithmatex">\[
+S_{m,分子/液}=-\Delta S_{m,蒸发}
+\]</div>
+</li>
+<li>
+<p>固态：</p>
+<div class="arithmatex">\[
+E_{m,分子/固}=-\Delta U_{m,升华}=-(\Delta H_{m,升华}-RT)
+\]</div>
+<div class="arithmatex">\[
+S_{m,分子/固}=-\Delta S_{m,升华}
+\]</div>
+</li>
+</ul>
+<p><strong>分子间相互作用越强</strong>，相互作用能和相互作用熵越负（<strong>绝对值越大</strong>）</p>
+<p>分子间相互作用减少了系统能量，同时也降低了系统多样性</p>
+<h2 id="3-1">3 分子间相互作用能(1):电磁相互作用<a class="headerlink" href="#3-1" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 电偶极矩与静电相互作用<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h4 id="311">3.1.1 点电荷相互作用<a class="headerlink" href="#311" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+E=\frac{q_1q_2}{4\pi\varepsilon\varepsilon_0d}
+\]</div>
+<h4 id="312-">3.1.2 偶极-偶极相互作用<a class="headerlink" href="#312-" title="Permanent link">&para;</a></h4>
+<p>电偶极矩（方向从负到正）：</p>
+<div class="arithmatex">\[
+\vec\varphi=\vec r\delta
+\]</div>
+<p><strong>永久偶极</strong>相互作用（偶极取向定向）：</p>
+<div class="arithmatex">\[
+E=-\frac{\varphi_1\varphi_2}{2\pi\varepsilon\varepsilon_0d^3}
+\]</div>
+<p><strong>瞬间偶极</strong>相互作用（各种不同取向之后的平均结果）：</p>
+<div class="arithmatex">\[
+E=-\frac{B}{\varepsilon d^6}
+\]</div>
+<h4 id="313">3.1.3 偶极吸引+排斥的双分子模型<a class="headerlink" href="#313" title="Permanent link">&para;</a></h4>
+<p>排斥相互作用（<strong>泡利排斥</strong>）：电子云重叠，若不满足成键条件，产生排斥（泡利不相容原理）</p>
+<p>势阱：阱底能量为 <span class="arithmatex">\(E^0_{电子}\)</span></p>
+<p><img alt="偶极吸引与排斥势能曲线" src="../image/lennard-jones-potential.png" /></p>
+<p>分子间偶极相互作用电势能 <span class="arithmatex">\(E_{电子}\)</span>：</p>
+<div class="arithmatex">\[
+E_{电子}=\frac{A}{d^{12}}-\frac{B}{d^6}
+\]</div>
+<div class="arithmatex">\[
+A=-E^0_{电子}(d^0)^{12};\qquad B=-2E^0_{电子}(d^0)^6
+\]</div>
+<div class="arithmatex">\[
+\frac{E_{电子}}{E^0_{电子}}=2\left(\frac{d}{d^0}\right)^{-6}-\left(\frac{d}{d^0}\right)^{-12}
+\]</div>
+<h4 id="314">3.1.4 溶液中分子集体振动势阱<a class="headerlink" href="#314" title="Permanent link">&para;</a></h4>
+<p>液态分子：短程有序</p>
+<p>液态中被考察分子的左右<strong>两侧同时存在一个分子</strong>，平均说来它们离被考察分子的距离相等</p>
+<p>势能曲线拟合为抛物线：分子集体振动是简谐振动</p>
+<div class="arithmatex">\[
+\frac{E_{电子/液}}{E^0_{电子}}
+=2\left[\left(\frac{d}{d^0}\right)^{-6}+\left(\frac{2d^0-d}{d^0}\right)^{-6}\right]
+-\left[\left(\frac{d}{d^0}\right)^{-12}+\left(\frac{2d^0-d}{d^0}\right)^{-12}\right]
+\]</div>
+<div class="arithmatex">\[
+E^0_{电子/液}=2E^0_{电子}
+\]</div>
+<ul>
+<li>随着温度升高，液态分子间距增加</li>
+<li>分子间相互作用势阱：①取决于紧邻分子电磁相互作用 ②对称性突出 ③满足简谐振动 ④势阱很浅</li>
+</ul>
+<h3 id="32">3.2 分子电子极化率<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<p>分子极化率 <span class="arithmatex">\(\alpha\)</span>：一个分子对外电场的响应能力（价电子云变形性）</p>
+<p>诱导电偶极：</p>
+<div class="arithmatex">\[
+\vec\varphi^*=\alpha\vec E
+\]</div>
+<p>极化率体积：</p>
+<div class="arithmatex">\[
+\alpha'=\frac{\alpha}{4\pi\varepsilon_0}
+\]</div>
+<ul>
+<li>诱导偶极：外电场诱导产生，一般很小，对分子间相互作用贡献小</li>
+<li>瞬间偶极：任何分子的价电子云都处在高速变换状态，相互作用很强</li>
+<li>极化率：分子的固有性质，价电子云变形性，瞬间偶极相互作用的标度</li>
+</ul>
+<p>极化率：①取向极化：分子转动--&gt;外电场使永久偶极特定取向 ②形变极化：分子振动--&gt;外电场使正负中心变化 ③电子极化：分子内价电子云变形运动--&gt;外电场使价电子云形变（瞬间偶极）</p>
+<h4 id="322">3.2.2 分子瞬间偶极与电子云变形性<a class="headerlink" href="#322" title="Permanent link">&para;</a></h4>
+<p>瞬间偶极出现的频率与大小决定于分子内电子云变形性，定量反映为分子电子极化率</p>
+<p>中性分子的价电子瞬间偶极矩绝大多数时候都不等于零</p>
+<p>分子间瞬间偶极相互作用电势能：①分子电子极化率 ②分子间距</p>
+<h3 id="33">3.3 作为介质的分子集合体电磁相互作用<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<h4 id="331">3.3.1 介质的分子间相互作用的重要性<a class="headerlink" href="#331" title="Permanent link">&para;</a></h4>
+<ul>
+<li>水：主要为永久偶极相互作用</li>
+<li>有机溶剂：主要为瞬间偶极相互作用</li>
+</ul>
+<h4 id="332">3.3.2 介质的静电介电常数<a class="headerlink" href="#332" title="Permanent link">&para;</a></h4>
+<p>透电率 <span class="arithmatex">\(\varepsilon\)</span>：衡量两个点电荷相互作用受介质的影响情况</p>
+<ul>
+<li>真空的 <span class="arithmatex">\(\varepsilon=1\)</span></li>
+</ul>
+<p>相对静电介电常数 <span class="arithmatex">\(\varepsilon_{静电}\)</span></p>
+<div class="arithmatex">\[
+\varepsilon=\varepsilon_{静电}
+\]</div>
+<div class="arithmatex">\[
+\frac{\varepsilon-1}{\varepsilon+2}=\frac{N_A\rho_m}{3\varepsilon_0}\left(\alpha+\frac{\varphi^2}{3kT}\right)
+\]</div>
+<div class="arithmatex">\[
+\varepsilon\propto\rho_m,\alpha,\varphi,\frac{1}{T}
+\]</div>
+<p>液态水是最典型的高静电介电常数溶剂</p>
+<h4 id="333">3.3.3 介质的折射率与光频介电常数<a class="headerlink" href="#333" title="Permanent link">&para;</a></h4>
+<p>光频介电常数 <span class="arithmatex">\(\varepsilon_{光频}\)</span>：</p>
+<div class="arithmatex">\[
+\varepsilon_{光频}=n^2
+\]</div>
+<div class="arithmatex">\[
+\varepsilon_{光频}\leq\varepsilon_{静电}
+\]</div>
+<div class="arithmatex">\[
+\frac{\varepsilon_{光频}-1}{\varepsilon_{光频}+2}=\frac{N_A\rho_m}{3\varepsilon_0}\cdot\alpha
+\]</div>
+<div class="arithmatex">\[
+\varepsilon_{光频}\propto\rho_m,\alpha
+\]</div>
+<p>液态介质中，<span class="arithmatex">\(\varepsilon_{光频}\)</span> 对极性分子 <span class="arithmatex">\(\varepsilon_{静电}\)</span> 的作用可忽略不计</p>
+<h3 id="34">3.4 分子间相互作用频率特征与频率匹配<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<h4 id="341">3.4.1 分子间相互作用选律<a class="headerlink" href="#341" title="Permanent link">&para;</a></h4>
+<p>介质分子提供的外电场：</p>
+<ul>
+<li>离子和永久偶极：低频段（微波段）</li>
+<li>瞬间偶极：光频段（超高频段）</li>
+</ul>
+<p>分子间相互作用第一选律（频率匹配原理）：</p>
+<p>一个分子（或者分子内一个片段）总是倾向于选择与自身本征电场能够形成共振的分子（或者分子片段） ①不同分子相互作用频率匹配 ②分子内部不同片段之间的相互选择</p>
+<ul>
+<li>低频静电场：取向极化</li>
+<li>高频交变电场：形变极化</li>
+<li>超高频（光频）电场：电子极化</li>
+</ul>
+<p>低频和超高频分子间相互作用在一个分子内彼此牵制</p>
+<h4 id="342">3.4.2 分子永久偶极矩与低频相互作用<a class="headerlink" href="#342" title="Permanent link">&para;</a></h4>
+<p>氧和氟是共价化合物中对电子云约束最强的两个负电中心原子，氟原子比氧原子还要强，具体体现为它们特别小的中性原子电子极化率。一个分子结合多个<strong>氟原子</strong>会大大削弱其电子云变形性。</p>
+<h4 id="343">3.4.3 分子结构与分子电子云变形性<a class="headerlink" href="#343" title="Permanent link">&para;</a></h4>
+<p>原子核对价电子的约束能力越弱，分子瞬间偶极越活跃，对分子极化率的贡献越大</p>
+<p>有机分子：需要分成一个个基元片段，电子极化率等于各片段加和</p>
+<h4 id="344">3.4.4 电子云变形性与超高频相互作用在选律中的决定性意义<a class="headerlink" href="#344" title="Permanent link">&para;</a></h4>
+<p>液态分子间相互作用基态能：<span class="arithmatex">\(E^0_{分子/液}=E^0_{电子/液}+E^0_{振动/液}\)</span></p>
+<div class="arithmatex">\[
+E^0_{m,分子/液}=-(\Delta U_{m,蒸发}-\Delta Q_{m,蒸发})
+=-\Delta H_{m,蒸发}-\frac{1+F_{转}}{2}RT
+\]</div>
+<p>中性分子电子极化率是光频相互作用的定量分子标度，且为线性标度： 极化率 <span class="arithmatex">\(\alpha\)</span> 越大，分子间相互作用基态能 <span class="arithmatex">\(E^0_{分子/液}\)</span> 的绝对值越大</p>
+<p>只要分子电子极化率不特别小，液态极性分子间相互作用的<strong>主要贡献者</strong>常常是<strong>瞬间偶极</strong>相互作用</p>
+<p>随着分子的电子极化率增加，永久偶极相互作用被瞬间偶极压制变得越来越明显</p>
+<p>分子电子<strong>极化率对外电场</strong>的响应与<strong>分子间电场</strong>相互作用有明显不同： ①对外电场：很小的诱导偶极 ②对频率匹配的超高频分子间相互作用：表现为即时偶极矩很大的瞬间偶极</p>
+<p><img alt="分子电子极化率与分子间相互作用基态能" src="../image/polarizability-interaction-energy.png" /></p>
+<ul>
+<li>非极性分子：在瞬间偶极相互作用直线上</li>
+<li>极性分子：偏离直线的值为分子永久偶极矩对相互作用基态能的贡献</li>
+<li>氢键分子：大大偏离，主要反映了氢键的贡献，也有较小的永久偶极贡献</li>
+</ul>
+<h2 id="4-2">4 分子间相互作用能(2)：分子结构与相态<a class="headerlink" href="#4-2" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 分子集体振动与分子间相互作用能<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<h4 id="411">4.1.1 分子集体振动典型频率特征<a class="headerlink" href="#411" title="Permanent link">&para;</a></h4>
+<h4 id="412">4.1.2 分子集体振动基态能<a class="headerlink" href="#412" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+E^0_{分子/液}=E^0_{电子/液}+E^0_{振动/液}
+=-|E^0_{电子/液}|+|E^0_{振动/液}|
+\]</div>
+<p>具体计算基态能数值时，需要把三个受限平动和 <span class="arithmatex">\(F_{转}\)</span> 个受限转动自由度的分子集体振动基态能加和。</p>
+<h4 id="413">4.1.3 分子集体振动热能及分子间相互作用热能<a class="headerlink" href="#413" title="Permanent link">&para;</a></h4>
+<p>对于任意一个可做<strong>高温低频近似</strong>的分子集体振动自由度 <span class="arithmatex">\(j\)</span>，其<strong>摩尔振动热能</strong>：</p>
+<div class="arithmatex">\[
+Q_{m,j}=RT
+\]</div>
+<p><strong>液态</strong>摩尔热能（自由平动/转动转化为分子集体振动）：</p>
+<div class="arithmatex">\[
+Q_{m,液}=(3+F_{转})RT
+\]</div>
+<blockquote>
+<p>分子自由平动/转动转化而来的分子集体振动的<strong>基态能不大</strong>，但相应的<strong>振动热能</strong>可能很可观。</p>
+</blockquote>
+<p>液态<strong>分子间相互作用</strong>摩尔热能（液态摩尔热能的一半）：</p>
+<div class="arithmatex">\[
+Q_{m,分子/液}=Q_{m,液}-Q_{m,气}=\frac{3+F_{转}}{2}RT
+\]</div>
+<blockquote>
+<p>即一个分子集体振动自由度对<strong>分子间相互作用</strong>摩尔热能的贡献可近似为 <span class="arithmatex">\(\frac{1}{2}RT\)</span>（也就是比气态多的摩尔热能）</p>
+</blockquote>
+<p><strong>晶态分子</strong>：</p>
+<ul>
+<li>平动/转动转化：热能贡献于气态分子相当，分子间相互作用热能的贡献接近零</li>
+<li>分子内构象振动转化：能隙大，对热能几乎无贡献，分子间相互作用热能等于气态分子对应自由度贡献的热能的负值</li>
+</ul>
+<h3 id="42">4.2 分子间相互作用分类<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<h4 id="421-">4.2.1 离子-离子静电相互作用能<a class="headerlink" href="#421-" title="Permanent link">&para;</a></h4>
+<h4 id="422-">4.2.2 离子-永久偶极相互作用能<a class="headerlink" href="#422-" title="Permanent link">&para;</a></h4>
+<p>离子-永久偶极相互作用能也与相对空间取向有关</p>
+<div class="arithmatex">\[
+E=\frac{q\varphi_1}{4\pi\varepsilon\varepsilon_0d^2}
+\]</div>
+<p>水合离子：在水溶液中，以离子为中心、围绕数层水分子，形成有确定大小且相对稳定的离子-水簇状结构称为水合离子</p>
+<ul>
+<li>离子晶体摩尔解离能 <span class="arithmatex">\(\Delta U^∘_{解离}&gt;0\)</span></li>
+<li>离子摩尔水合能 <span class="arithmatex">\(\Delta U^∘_{水合}&lt;0\)</span></li>
+</ul>
+<p>水合能绝对值平均看稍大于晶体解离能，这才是离子晶体在水中拥有很大溶解度、且可能少量释放能量的主要原因</p>
+<div class="arithmatex">\[
+\frac{r_{水合}}{r_{晶格}}=\frac{6\pi}{7\sqrt{3}\alpha}&gt;1
+\]</div>
+<p>水合作用随离子电子极化率快速衰减源于离子的瞬间偶极对净电荷电场的干扰</p>
+<h4 id="423-f">4.2.3 永久偶极-永久偶极相互作用与 F 原子效应<a class="headerlink" href="#423-f" title="Permanent link">&para;</a></h4>
+<p>考察永久偶极-永久偶极相互作用应该聚焦于小原子分子</p>
+<p>主要的负电中心原子是 F 和 O</p>
+<p>F 原子效应与分子是否极性无关</p>
+<p>F 原子对分子的电子极化率有明显的压制作用，对分子瞬间偶极的压制作用源于对价电子云的极强约束作用</p>
+<p>氟原子对分子瞬间偶极的压制作用有明显的局域性，即对小分子量分子影响更大</p>
+<p>从分子间相互作用频率匹配角度看，全氟烷烃与常见极性溶剂和非极性溶剂都不匹配（永久偶极、瞬间偶极都很小）</p>
+<h4 id="424">4.2.4 氢键与分子电子极化率<a class="headerlink" href="#424" title="Permanent link">&para;</a></h4>
+<p>能够形成氢键的分子表现超出瞬间偶极相互作用的分子间相互作用基态能</p>
+<p>氢键相互作用摩尔基态能相比于摩尔键能很小</p>
+<h4 id="425">4.2.5 分子间瞬间偶极相互作用能<a class="headerlink" href="#425" title="Permanent link">&para;</a></h4>
+<p>瞬间偶极相互作用--&gt;色散相互作用（伦敦相互作用）</p>
+<p><strong>(A) 原子-分子尺寸与电子极化率</strong></p>
+<p>多原子中性共价分子的电子极化率（或瞬间偶极矩）需要且可以分片段加和，分子电子极化率间接地决定于其几何尺寸</p>
+<p><strong>(B) 分子间相互作用第二选律：接触构型匹配</strong></p>
+<p>分子间相互作用第二选律：瞬间偶极相互作用能在接触面构型匹配的分子间达到最大。</p>
+<h2 id="5">5 分子间相互作用熵<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>分子间相互作用：宏观物质系统的聚集状态转变</p>
+<p>超多分子系统聚集状态的变化决定于熵：系统内熵+环境熵</p>
+<h3 id="51">5.1 分子间相互作用熵标度方法<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<h4 id="511">5.1.1 气态分子相互作用熵设为零<a class="headerlink" href="#511" title="Permanent link">&para;</a></h4>
+<p>分子间相互作用诱导的三种可能自由度演化都导致基本能隙明显上升</p>
+<p>以理想气态为分子间相互作用熵的零点，凝聚态分子间相互作用熵恒为负值</p>
+<h4 id="512">5.1.2 液态中分子相互作用熵<a class="headerlink" href="#512" title="Permanent link">&para;</a></h4>
+<p>相平衡条件下标准液态分子间相互作用熵：</p>
+<div class="arithmatex">\[
+S^∘_{m,分子/液}=-\Delta_{tr}S^∘_{m(bp)}=-\frac{\Delta_{tr}H^∘_{m(bp)}}{T_{bp}}
+\]</div>
+<p>特鲁顿规则：</p>
+<div class="arithmatex">\[
+S^∘_{m,分子/液}=-\frac{\Delta_{tr}H^∘_{m(bp)}}{T_{bp}}
+=-98.5\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}
+\]</div>
+<p>分子间相互作用诱导气液相变遵守依数性（与物质的化学性质没有那么密切）</p>
+<p>相比于气态平动自由度转化的熵改变，转动的熵改变相对较小可忽略</p>
+<div class="arithmatex">\[
+S^∘_{m,分子/液}=-\Delta_{tr}S^∘_{m(bp)}=S_{m,平动}-S_{m,集体振动}
+\]</div>
+<h4 id="513">5.1.3 固态中分子相互作用熵<a class="headerlink" href="#513" title="Permanent link">&para;</a></h4>
+<p>分子晶体才与分子间相互作用熵密切相关</p>
+<p>分子内振动所需自由空间：</p>
+<ul>
+<li>①明显小于分子间距：几乎不改变系统熵</li>
+<li>②达到或者超过晶体内分子间距：其振动频率将发生剧烈变化，对晶态分子间相互作用熵做出重要贡献</li>
+</ul>
+<h3 id="52">5.2 分子结构与分子间相互作用熵<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<p>分子间相互作用熵直接标度分子在转化后的分子集体振动（或晶格整体振动）自由度能级上的分布。</p>
+<h4 id="521">5.2.1 单原子分子<a class="headerlink" href="#521" title="Permanent link">&para;</a></h4>
+<p>单原子分子模型对球形分子和离子化合物也适用（注意熔融过程1mol晶体释放2mol离子）</p>
+<p>只有由自由平动转化而来的类振动和晶格振动</p>
+<p>标准相平衡条件下，<span class="arithmatex">\(\Delta_{tr}S^∘_{m(bp)}\)</span> 实际上与标准沸点大致正相关</p>
+<p>单原子分子的标准相平衡熔融熵也接近一个常数，约为 <span class="arithmatex">\(11.5\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}\)</span>。</p>
+<h4 id="522">5.2.2 直链柔性分子<a class="headerlink" href="#522" title="Permanent link">&para;</a></h4>
+<ul>
+<li>液态分子间相互作用熵 <span class="arithmatex">\(\Delta_{tr}S^∘_{m(bp)}\)</span> 近似与分子结构无关（主要源于分子平动自由度演化，且其值随标准沸点增加稍有上升）</li>
+<li>固态分子间相互作用熵 <span class="arithmatex">\(\Delta_{tr}S^∘_{m(mp)}\)</span> 对分子结构过于敏感（强烈的结构相关性）</li>
+</ul>
+<p>碳氢长链的 C-C 内旋转和 C-C-C 骨架变形振动在熔融过程中被激活，而在晶态中则被转化为晶格集体振动。前者对系统熵有很大贡献，后者在室温或更低温度几乎对系统熵没有贡献。</p>
+<p>每一个单键内旋转自由度所带来的熵变：</p>
+<div class="arithmatex">\[
+\Delta_{tr}S^∘_{m,单片段}
+=\left[\frac{Rh\nu}{RT(e^{h\nu/kT}-1)}+R\ln\frac{1}{1-e^{-h\nu/kT}}\right]_{固}^{液}
+=11.8\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}
+\]</div>
+<p><span class="arithmatex">\(\Delta_{tr}S^∘_{m(mp)}\)</span> 数据在小分子水平偏离较大： 在标准熔点附近，小分子烷烃的一些构象自由度就可能已经被激活（构象旋转不需要太多空间）--&gt;导致熵较小</p>
+<p>奇数碳偏离直线： 中等碳数的奇数碳正烷烃的晶格堆砌无法像偶数碳那样规整，导致其熔融过程中熵增加明显小于基于偶数碳的预期。</p>
+<h4 id="523">5.2.3 不同构型的柔性分子<a class="headerlink" href="#523" title="Permanent link">&para;</a></h4>
+<p>不同构型分子的分子间相互作用熵对相态特别敏感</p>
+<p>比较液态和固态分子间相互作用熵：</p>
+<ul>
+<li><span class="arithmatex">\(\Delta_{tr}S^∘_{m(bp)}\)</span> 几乎没有差别：分子构型不影响液态分子间相互作用熵</li>
+<li><span class="arithmatex">\(\Delta_{tr}S^∘_{m(mp)}\)</span> 每组数据随构型变化而发生巨大变化：直链烷烃在熔融后会释放低频构象分子内振动，产生很大的熔融熵</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 课程主页">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                课程主页
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter-8/" class="md-footer__link md-footer__link--next" aria-label="下一页: 纯物质体相性质">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                纯物质体相性质
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Peikai Chen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
