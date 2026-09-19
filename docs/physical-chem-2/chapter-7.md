@@ -93,7 +93,9 @@ $1 Debye$：相距 $0.1nm$ 的一对电荷中心的带电量为 $0.208e$
     HCl: $1.11 D$
 
 
-![永久偶极作用](image/image-1.png)
+![](image/image-1.png){: .center width="300"}
+
+
 
 $$
 E = \frac{q_1 q_2}{4\pi\varepsilon\varepsilon_0} \left( \frac{1}{d} - \frac{1}{d-r} - \frac{1}{d+r} + \frac{1}{d} \right)
@@ -211,7 +213,7 @@ $$
 
 **$α$ 价电子云变形**性决定瞬间偶极。
 
-- 超高频，$ 10^15 Hz$
+- 超高频，$10^{15} Hz$
   
 - 为分子的**本征性质**
 
@@ -222,7 +224,8 @@ $$
   
 
 对于长链分子电子极化率随原子数近乎线性增加，意味着长链分子分析瞬间偶极可以做**片段化处理**
-![](image/image-2.png)
+
+![](image/image-2.png){: .center width="270"}
 
 偶极相互作用能（两分子）：
 
@@ -254,7 +257,7 @@ $$
 
 ### 2.5 偶极吸引与排斥相互作用的双分子模型
 
-![偶极吸引与排斥势能曲线](image/lennard-jones-potential.png)
+![偶极吸引与排斥势能曲线](image/lennard-jones-potential.png){: .center width="290"}
 
 分子间偶极相互作用电势能**L-J势**：
 
@@ -272,7 +275,7 @@ $$
 
 考虑一维情况：
 
-![](image/image-3.png)
+![](image/image-3.png){: .center width="250"}
 
 
 $$E_{\text{电子/液}}=E_{\text{电子/液}}^{0}\exp\left[-55E_{\text{电子/液}}^{0}\left(\frac{d-d^{0}}{d^{0}}\right)^{2}\right] $$
@@ -281,7 +284,7 @@ $$E_{\text{电子/液}}^{0}=2E^{0} $$
 
 该势阱接近完美抛物线势能曲线，意味着分子集体振动是**简谐振动**。
 
-![](image/interaction-energy-levels.png)
+![](image/interaction-energy-levels.png){: .center width="270"}
 
 液体中摩尔分子的热运动能量：
 

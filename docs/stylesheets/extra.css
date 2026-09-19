@@ -284,3 +284,8 @@ code, pre {
   border-color: #8aabb8;
   box-shadow: 0 6px 18px rgba(38, 52, 66, 0.1);
 }
+
+img.center {
+  display: block;
+  margin: 0 auto;
+}
