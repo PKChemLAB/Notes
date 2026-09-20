@@ -324,10 +324,9 @@ $$
 - $\rho_m$： 摩尔密度（单位体积分子数），摩尔体积的倒数
 
 - $\varepsilon$：
-  
-  - $φ$为主导，但非极性分子只有$\alpha$的贡献
+    - $φ$为主导，但非极性分子只有$\alpha$的贡献
 
-  - $\varepsilon \propto \rho_m = \dfrac{1}{V_m}$（$V_m$ 为摩尔体积）
+    - $\varepsilon \propto \rho_m = \dfrac{1}{V_m}$（$V_m$ 为摩尔体积）
 
 水的静电介电常数极大
 
