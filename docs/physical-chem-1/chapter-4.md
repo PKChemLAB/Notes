@@ -312,7 +312,7 @@ $$\therefore Q_x = Q_y \downarrow, Q_z \uparrow$$
 与等温膨胀过程相比较，等温膨胀过程补充了能量，能级结构变化与绝热膨胀相同。
 
 
-![alt](image/image-9.png)
+![alt](image/image-9.png){: .center }
 
 
 

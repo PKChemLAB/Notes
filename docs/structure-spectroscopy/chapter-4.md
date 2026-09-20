@@ -63,7 +63,7 @@ $$
 
 双原子势能曲线
 
-![alt](image/image-42.png)
+![alt](image/image-42.png){: .center }
 
 $\boldsymbol{x = R - R_e}$（相对于平衡位置的核位移）
 
@@ -147,7 +147,7 @@ $$
 $$
 
 
-![alt](image/image-43.png)
+![alt](image/image-43.png){: .center }
  
 - 振动零点能，在绝对零度也有振动（不确定原理：若静止则位置和动量可同时确定）
   
@@ -183,7 +183,7 @@ $$
 | 5               | $32y^5 - 160y^3 + 120y$ |
 | 6               | $64y^6 - 480y^4 + 720y^2 - 120$ |
 
-![alt](image/image-44.png)
+![alt](image/image-44.png){: .center }
 
 
 ---
@@ -201,7 +201,7 @@ $$
 
 偶极矩随核位移的变化：原子间距离改变的同时影响了电荷的空间分布，偶极随核位移变化非线性。
 
-![alt](image/image-45.png)
+![alt](image/image-45.png){: .center }
 
 电偶极$\vec{\mu}$是$x$的函数，在平衡位置附近做泰勒展开：
 
@@ -277,7 +277,7 @@ $$
 
 
 
-![alt](image/image-46.png)
+![alt](image/image-46.png){: .center }
 
 - 谐振近似下振动能级等间距
     能级公式：
@@ -311,7 +311,7 @@ $$
 曲线右侧开口，能量较高时键断裂，更接近真实势能曲线。
 
 
-![alt](image/image-47.png)
+![alt](image/image-47.png){: .center }
 
 **只有在平衡位置附近的低能级振动满足简谐振子模型**
 
@@ -367,7 +367,7 @@ $$
 \end{aligned}
 $$
 
-![alt](image/image-48.png)
+![alt](image/image-48.png){: .center }
 
 与谐振子近似不同，平衡位置向右移动，化学键变长。
 
@@ -416,9 +416,9 @@ $$
 简谐近似下，所有$\Delta v=+1$的跃迁能量相同，基带与热带谱线完全重合。非谐性下，振动能级间隔随$v$升高逐渐减小，不同初始态的$\Delta v=+1$跃迁能量不同，**基带与热带跃迁的谱线不再重合**，热带跃迁峰向低波数方向偏移。
 
 
-![alt](image/image-49.png)
+![alt](image/image-49.png){: .center }
 
-![alt](image/image-50.png)
+![alt](image/image-50.png){: .center }
 
 
 ---
@@ -465,7 +465,7 @@ $$
 
 ### 4.4.2 选择定则
 
-![alt](image/image-52.png)
+![alt](image/image-52.png){: .center }
 
 *（图片下方单峰和左右应也是等间距）*
 
@@ -624,13 +624,13 @@ $$\tilde{\nu}_R(J) = \tilde{\nu}_0 + (J + 1)(\tilde{B}_0 + \tilde{B}_1) - (J + 1
 
 规律：$\boldsymbol{J}$越大，R分支的间隔越小
 
-![alt](image/image-53.png)
+![alt](image/image-53.png){: .center }
 
 ---
 
 #### 转动常数的计算
 
-![alt](image/image-54.png)
+![alt](image/image-54.png){: .center }
 
 $$\tilde{\nu}_\text{R}(J) - \tilde{\nu}_\text{P}(J) = 4\tilde{B}_1\left(J+\frac{1}{2}\right)\boldsymbol{\rightarrow}\ \boldsymbol{\tilde{B}_1}$$
 

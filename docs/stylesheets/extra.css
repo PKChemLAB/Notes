@@ -14,6 +14,8 @@
   font-family: var(--md-text-font);
 }
 
+
+
 code, pre {
   font-family: var(--md-code-font);
 }
@@ -285,7 +287,43 @@ code, pre {
   box-shadow: 0 6px 18px rgba(38, 52, 66, 0.1);
 }
 
+/* ==========================================================================
+   5. 图片与表格居中
+   ========================================================================== */
+
+/* 图片居中：Markdown 中使用 ![](xxx.png){: .center } */
 img.center {
   display: block;
   margin: 0 auto;
+}
+
+/* 表格整体水平居中：
+   Material 主题 JS 会把表格包进 .md-typeset__table 并强制表格 width:100%。
+   改为 flex 列布局 + 表格 auto 外边距：窄表格收缩居中、宽表格占满，
+   超宽表格从左侧开始并可横向滚动（首列不被裁切）。 */
+.md-typeset .md-typeset__table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.md-typeset .md-typeset__table table:not([class]) {
+  width: auto;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 未被 JS 包裹的表格兜底 */
+.md-typeset table:not([class]) {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 所有表格单元格内容水平居中、垂直居中（覆盖列对齐设置与默认顶部对齐） */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  text-align: center !important;
+  vertical-align: middle !important;
 }

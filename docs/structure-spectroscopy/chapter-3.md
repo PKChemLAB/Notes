@@ -75,7 +75,7 @@ $$
 
 ### 3.2.1 转动哈密顿量
 
-![alt](image/image-30.png)
+![alt](image/image-30.png){: .center }
 
 
 哈密顿量为动能之和（无势阱非限域V=0）
@@ -175,7 +175,7 @@ $$
 
 - 磁量子数：$m_j = 0,\pm1,\dots,\pm J$ （简并度 $2J + 1$）
 
-![alt](image/image-31.png)
+![alt](image/image-31.png){: .center }
 
 ---
 
@@ -238,7 +238,7 @@ $$
 \mu = er \neq 0
 $$
 
-![alt](image/image-32.png)
+![alt](image/image-32.png){: .center }
 
 极性越强，跃迁越强
 
@@ -259,7 +259,7 @@ $$
 
 ### 3.3.1 光谱间隔
 
-![alt](image/image-33.png)
+![alt](image/image-33.png){: .center }
 
 **光谱谱线等间隔**，间隔为$2\tilde{B}$。
 同位素效应使大的等间距谱线间有小的等间距谱线。
@@ -273,13 +273,13 @@ $$
 
 - 大峰 $^{12}\text{CO}$ 98.9% 天然丰度
 
-![alt](image/image-34.png)
+![alt](image/image-34.png){: .center }
 
 ---
 
 ### 3.3.3 包络形状
 
-![alt](image/image-35.png)
+![alt](image/image-35.png){: .center }
 
 光谱的包络形状影响因素：
 
@@ -349,7 +349,7 @@ $$
    - C≡C：$\nu \sim 2100\ \text{cm}^{-1}$
   
 
-![alt](image/image-36.png)
+![alt](image/image-36.png){: .center }
 
 ---
 
@@ -358,7 +358,7 @@ $$
 
 ### 3.4.1 球形转子能级
 
-![alt](image/image-37.png)
+![alt](image/image-37.png){: .center }
 
 球形 $I_a = I_b = I_c = I$
 
@@ -433,7 +433,7 @@ $$
 
 $K$是$J$在**主轴**上的投影，共$2J+1$个取值，$M_J$是人为外场方向
 
-![alt](image/image-38.png)
+![alt](image/image-38.png){: .center }
 
 **转动常数($\text{cm}^{-1}$)：**
 
@@ -455,7 +455,7 @@ $$
 I_a < I_b \implies A > B \implies \text{Energy increases with } K^2
 $$
 
-![alt](image/image-39.png)
+![alt](image/image-39.png){: .center }
 
 扁平椭球
 
@@ -463,7 +463,7 @@ $$
 I_a > I_b \implies A < B \implies \text{Energy decreases with } K^2
 $$
 
-![alt](image/image-40.png)
+![alt](image/image-40.png){: .center }
 
 $K$是$J$在**主轴**上的投影，$|K|≤J$。能级高低发生改变，但不影响跃迁能量（不考虑离心畸变）。
 
@@ -513,7 +513,7 @@ $$
   
 - 相同J，不同K → 谱线裂分
 
-![alt](image/image-41.png)
+![alt](image/image-41.png){: .center }
 
 ---
 

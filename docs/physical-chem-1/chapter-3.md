@@ -201,7 +201,7 @@ $$T \to 0, f = 1$$
     
     红外吸收波数为 $3756 \text{ cm}^{-1}$， $h\nu = 7.5 \times 10^{-20} \text{ (J)}$ ， $f_{\text{振动}3} = 1.004$$$f_{\text{振动}} = \prod_{j=1}^{m} f_{\text{振动}j} = 1.005 \times 1.112 \times 1.004 = 1.1223$$
 
-![alt](image/image-5.png)
+![alt](image/image-5.png){: .center }
 
 配分函数即是蓝线加和。
 
@@ -384,7 +384,7 @@ $$Q_{h\nu_j \gg kT} = \frac{Nh\nu_j}{\infty-1} = 0$$
 
     水分子的这两种振动模式在$300\text{ K}$时都**不能**使用高温近似。频率越高，高温近似失效得越快。
 
-![alt](image/image-6.png)
+![alt](image/image-6.png){: .center }
 
 
 ---
@@ -419,7 +419,7 @@ $$p_0 = \frac{g_0 e^{-\varepsilon_0 / kT}}{f}$$
 
 微观看，“传热”是环境和系统之间通过交换热能而达成相同的玻尔兹曼分布的过程。
 
-![alt](image/image-7.png)
+![alt](image/image-7.png){: .center }
 
 
 ---
@@ -549,7 +549,7 @@ $$\mathrm{d}U = \frac{\mathrm{d}U}{\mathrm{d}T}\mathrm{d}T = \left(\frac{\partia
 ### 3.1 从配分函数到系统熵
 
 定域子系统和离域子系统：
-![alt](image/image-8.png)
+![alt](image/image-8.png){: .center }
 
 气体（离域子）通过自由平动来自由改变各自的质心相对位置。晶体（定域子）无自由平动、只有振动，分子质心位置可分辨。
 
@@ -826,6 +826,7 @@ $$S_{\text{振动}j, \text{ 高温}} = Nk + Nk \ln \frac{kT}{h\nu_j} = Nk \ln \f
     ---
 
     各自由度贡献占比（300 K）
+
     | 自由度 | 配分函数（数量级） | 热能 (J/mol) | 热容 (J/K·mol) | 熵 (J/K·mol) |
     | :--- | :---: | :---: | :---: | :---: |
     | 平动 | 10^32 | 3741 (60%) | 12.47 (59%) | 152 (74%) |

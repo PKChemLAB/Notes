@@ -241,7 +241,7 @@ $$M_{\text{折合}}=\frac{M_1M_2}{M_1+M_2}$$
 
 ③ 离子键，$k_{\text{键}}$ 更小
 
-![alt](image/image-1.png)
+![alt](image/image-1.png){: .center }
 
 
 **转动自由度**

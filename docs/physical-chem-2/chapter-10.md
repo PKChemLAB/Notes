@@ -47,7 +47,7 @@ $p$个相中的$C$个组分，上式一共有 $C\times(p-1)$ 个等式
 
 用吉布斯相律确定的**最大相自由度**能够用于**判断相图的维度**
 
-![纯物质相图区、线、点与相自由度关系](image/phase-rule.png)
+![纯物质相图区、线、点与相自由度关系](image/phase-rule.png){: .center }
 
 ## 3 混合物相图
 
@@ -81,7 +81,7 @@ $$
 - 在给定压强的平衡条件下，气-液平衡下溶液态的$\chi_1$和饱和蒸气相的$\tau_1$不可能相等。
 - 气-液平衡条件下，气态和液态的边界线不重合
 
-![二元混合物的P-z相图](image/pressure-composition.png)
+![二元混合物的P-z相图](image/pressure-composition.png){: .center }
 
 - 只要 $P_1^*\ne P_2^*$，气-液两相平衡态就不是一条线，而是一个区，两相区的溶液边界线是一条直线，气相混合物边界线是一条下凹曲线，两条边界线相交点为两个纯态
 
@@ -115,34 +115,34 @@ $$
 l_{(左)}n_{(左)}=l_{(右)}n_{(右)}
 $$
 
-![杠杆规则](image/lever-rule.png)
+![杠杆规则](image/lever-rule.png){: .center }
 
 #### 3.1.3 二元混合物的 $T-z_i$ 相图
 
 - 第一类：混合物沸点没有极值
 
-    ![沸点没有极值的二元混合物T-z相图](image/temperature-composition.png)
+    ![沸点没有极值的二元混合物T-z相图](image/temperature-composition.png){: .center }
 
 - 第二类：共沸物-->混合物沸点有极值（极小值/极大值）（共沸点 $T_{共沸}$）
 
-    ![共沸物的T-z相图](image/azeotrope.png)
+    ![共沸物的T-z相图](image/azeotrope.png){: .center }
 
 #### 3.1.4 溶液蒸馏
 
 示意图如下：
 
-![典型恒压精馏装置与蒸馏过程的相图描述](image/distillation.png)
+![典型恒压精馏装置与蒸馏过程的相图描述](image/distillation.png){: .center }
 
 ### 3.2 液-液相图
 
 - 所有的不完全互溶溶液都不可能是理想溶液
 - 位于两相平衡区的系统将同时拥有两种溶液
 
-![一定压强下拥有最高共溶点系统液-液两相图](image/liquid-liquid-phase-diagram.png)
+![一定压强下拥有最高共溶点系统液-液两相图](image/liquid-liquid-phase-diagram.png){: .center }
 
 ### 3.3 液-固相图
 
-![固定压强下液-固平衡相图](image/liquid-solid-phase-diagram.png)
+![固定压强下液-固平衡相图](image/liquid-solid-phase-diagram.png){: .center }
 
 出现共熔点
 

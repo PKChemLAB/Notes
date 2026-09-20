@@ -23,7 +23,7 @@ $$
 
 光子动量相对于 Brillouin 区尺度很小，因此单光子跃迁近似满足 $\Delta\mathbf k=0$。直接带隙允许电子只吸收光子完成带间跃迁；间接带隙还需要声子补偿晶格动量。
 
-![直接带隙与间接带隙](image/courseware/spectra-011.png)
+![直接带隙与间接带隙](image/courseware/spectra-011.png){: .center }
 
 ## 4.2 固体的本征光吸收
 
@@ -97,7 +97,7 @@ $$
 
 由线性外推估计允许直接带隙。
 
-![允许直接跃迁的吸收边](image/courseware/spectra-012.png)
+![允许直接跃迁的吸收边](image/courseware/spectra-012.png){: .center }
 
 ### 4.2.3 禁戒直接跃迁
 
@@ -138,7 +138,7 @@ $$
 
 间接吸收需要二阶过程，通常弱于允许直接吸收，并具有更明显的温度依赖。
 
-![声子参与的间接跃迁](image/courseware/spectra-018.png)
+![声子参与的间接跃迁](image/courseware/spectra-018.png){: .center }
 
 ## 4.3 带间跃迁的量子力学描述
 
@@ -160,7 +160,7 @@ $$
 
 $\delta$ 函数保证能量守恒，矩阵元给出偏振依赖和选择定则。对所有占据初态与空末态求和，才能得到宏观吸收功率和吸收系数。
 
-![带间跃迁矩阵元](image/courseware/spectra-023.png)
+![带间跃迁矩阵元](image/courseware/spectra-023.png){: .center }
 
 ### 4.3.2 联合态密度与 van Hove 奇点
 
@@ -187,7 +187,7 @@ $$
 
 时，联合态密度可能出现非解析结构，即光谱中的 van Hove 奇点。固体吸收谱中的峰不一定对应单个局域能级，也可能来自能带临界点处的大联合态密度。
 
-![联合态密度与临界点](image/courseware/spectra-028.png)
+![联合态密度与临界点](image/courseware/spectra-028.png){: .center }
 
 ## 4.4 光生载流子的弛豫与复合
 
@@ -204,7 +204,7 @@ $$
 
 在准热平衡近似下，光致发光谱不仅受发射矩阵元控制，还受电子与空穴的占据以及光子态密度影响；因此 PL 峰位、线宽和强度不能简单等同于吸收谱。
 
-![载流子弛豫和复合路径](image/courseware/spectra-034.png)
+![载流子弛豫和复合路径](image/courseware/spectra-034.png){: .center }
 
 ## 4.5 激子
 
@@ -212,7 +212,7 @@ $$
 
 光激发产生的导带电子与价带空穴通过库仑作用相互吸引，可形成电中性的束缚态——激子。激子峰通常位于带隙以下，其与连续吸收边的能量差给出束缚能。
 
-![带边吸收中的激子精细结构](image/courseware/spectra-037.png)
+![带边吸收中的激子精细结构](image/courseware/spectra-037.png){: .center }
 
 ### 4.5.2 Frenkel 激子
 
@@ -224,7 +224,7 @@ $$
 
 适用于分子晶体和局域性较强的绝缘体。
 
-![Frenkel 激子的局域图像](image/courseware/spectra-040.png)
+![Frenkel 激子的局域图像](image/courseware/spectra-040.png){: .center }
 
 ### 4.5.3 Wannier–Mott 激子
 
@@ -259,7 +259,7 @@ $$
 
 较大的介电常数削弱库仑吸引，较小的约化质量增大激子半径；二者都会降低束缚能。
 
-![Wannier 激子模型](image/courseware/spectra-042.png)
+![Wannier 激子模型](image/courseware/spectra-042.png){: .center }
 
 ## 4.6 本章逻辑链
 

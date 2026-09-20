@@ -48,7 +48,7 @@ $$ \text{始态} \xrightarrow{\text{作用}} \text{终态 (变化)} $$
 
 超多分子系统：对微观足够大，宏观足够小~$10^6$
 
-![alt](image/image-3.png)
+![alt](image/image-3.png){: .center }
 
 (1)最概然分布：宏观上均匀的状态，对应了**最多的微观状态数**。
 (2)统计涨落：宏观测量的偏差，小。
@@ -242,7 +242,7 @@ $$\frac{1}{T_A} - \frac{1}{T_B} = 0$$
 
 **熵极大原理与热平衡**
 
-![alt](image/image-4.png)
+![alt](image/image-4.png){: .center }
 
 将总熵微商表示为对热交换量 $\theta$ 的导数：
 
@@ -272,7 +272,7 @@ $$  \frac{1}{T_A} - \frac{1}{T_B} = 0 \implies T_A = T_B$$
 
 ### 4.2 一个只有两个能级的自由度的分布
 
-![alt](image/image-2.png)
+![alt](image/image-2.png){: .center }
 
 小系统 + 环境 $\rightarrow$ 大孤立系统
 

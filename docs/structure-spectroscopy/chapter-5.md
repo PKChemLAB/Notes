@@ -58,7 +58,7 @@ $$
 * 所有原子同时按这个向量运动，就是该正则模式的振动形式
 
 
-![alt](image/image-55.png)
+![alt](image/image-55.png){: .center }
 
 
 **局域耦合振动** $\xrightarrow{\text{原子位移的线性组合}}$ **正则振动模式**
@@ -124,4 +124,4 @@ $$\boldsymbol{\Delta v_q = \pm1}$$
 
 >目前正则模式均可用Gussian计算。这里用群论判断。
 
-![alt](image/image-56.png)
+![alt](image/image-56.png){: .center }

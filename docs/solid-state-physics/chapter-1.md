@@ -14,7 +14,7 @@
 
 准晶的 Penrose 拼接可用有限种结构单元产生非周期长程有序；它说明“有序”并不等同于“周期”。
 
-![准晶的结构与对称性](image/courseware/supp-quasi-004.png)
+![准晶的结构与对称性](image/courseware/supp-quasi-004.png){: .center }
 
 ## 1.2 点阵与结构基元
 
@@ -29,7 +29,7 @@ $$
 
 点阵点不是某一种具体原子。只要每个结构基元都选取同一等价位置作为点阵点，所得到的点阵相同。
 
-![从晶体结构抽象出点阵和结构基元](image/courseware/crystal-a-020.png)
+![从晶体结构抽象出点阵和结构基元](image/courseware/crystal-a-020.png){: .center }
 
 ### 1.2.2 平移群
 
@@ -61,7 +61,7 @@ $$
 
 二维点阵只有 5 种 Bravais 格子；三维空间点阵只有 7 种晶系、14 种 Bravais 格子。晶系由点阵的度量关系和对称性确定，而 Bravais 格子还区分简单、底心、体心和面心等点阵型式。
 
-![三维 Bravais 点阵示意](image/courseware/crystal-a-038.png)
+![三维 Bravais 点阵示意](image/courseware/crystal-a-038.png){: .center }
 
 ## 1.3 晶胞与分数坐标
 
@@ -97,7 +97,7 @@ $$
 
 也可看作两个沿体对角线相对位移 $(1/4,1/4,1/4)$ 的面心立方子点阵。
 
-![金刚石结构的晶胞与结构基元](image/courseware/crystal-b-010.png)
+![金刚石结构的晶胞与结构基元](image/courseware/crystal-b-010.png){: .center }
 
 ## 1.4 晶向与晶面
 
@@ -114,7 +114,7 @@ $$
 - $[uvw]$ 表示一个具体晶向；
 - $\langle uvw\rangle$ 表示由晶体对称性联系的一族等效晶向。
 
-![晶向指数的确定](image/courseware/crystal-b-014.png)
+![晶向指数的确定](image/courseware/crystal-b-014.png){: .center }
 
 ### 1.4.2 晶面指数
 
@@ -130,7 +130,7 @@ $$
 - $\{hkl\}$ 表示由对称性联系的一族等效晶面；
 - 同一晶面族中距原点最近的晶面在三轴上的截距分别为 $a/h,b/k,c/l$。
 
-![晶面指数与晶面族](image/courseware/crystal-b-019.png)
+![晶面指数与晶面族](image/courseware/crystal-b-019.png){: .center }
 
 ### 1.4.3 晶面间距
 
@@ -199,7 +199,7 @@ $$
 
 三维晶体共有 32 个晶体学点群。Hermann–Mauguin 国际符号按各晶系的特征方向依次列出对称元素，比 Schönflies 符号更直接地反映晶体方向。
 
-![32 个晶体学点群](image/courseware/crystal-c-015.png)
+![32 个晶体学点群](image/courseware/crystal-c-015.png){: .center }
 
 ### 1.5.2 微观对称性与空间群
 
@@ -210,9 +210,9 @@ $$
 - **螺旋轴** $n_m$：绕轴旋转 $2\pi/n$，再沿轴平移晶格周期的 $m/n$；
 - **滑移面**：先关于平面反射，再沿平面内方向平移半个或四分之一个晶格周期。常见记号有 $a,b,c,n,d$。
 
-![螺旋轴操作](image/courseware/crystal-c-023.png)
+![螺旋轴操作](image/courseware/crystal-c-023.png){: .center }
 
-![滑移面操作](image/courseware/crystal-c-026.png)
+![滑移面操作](image/courseware/crystal-c-026.png){: .center }
 
 空间群符号先给出 Bravais 点阵类型，再给出特征方向上的对称元素。例如 $P2_1/c$ 表示简单单斜点阵，包含 $2_1$ 螺旋轴和 $c$ 滑移面等操作。
 

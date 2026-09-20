@@ -251,13 +251,13 @@ $$
   2) **自发发射（spontaneous emission）**  
      发射方向、相位、偏振随机  
 
-![alt](image/image-0.png)
+![alt](image/image-0.png){: .center }
 
-![alt](image/image-1.png)
+![alt](image/image-1.png){: .center }
 
 - 非弹性散射反映分子振动信息  
 
-![alt](image/image-2.png)
+![alt](image/image-2.png){: .center }
 
 ---
 
@@ -521,7 +521,7 @@ $$
 - \(\omega_{10}\)：两态能量差对应频率
 - \(\omega_R\)：拉比频率  
 
-![alt](image/image-3.png)
+![alt](image/image-3.png){: .center }
 
 （忽略碰撞散射过程和衰减通道，如自发辐射）
 
@@ -582,7 +582,7 @@ $$
 - \(\Delta\neq 0\)：最大激发概率降低  
 - 失谐越大：振荡更快（\(\Omega\) 更大），振幅更小（\(\omega_R^2/\Omega^2\) 更小）
 
-![alt](image/image-4.png)
+![alt](image/image-4.png){: .center }
 
 ---
 
@@ -606,7 +606,7 @@ $$
 
 系统的退相干速率 $\boldsymbol{(\gamma)}$，阻尼比 $\boldsymbol{\xi = \gamma / \omega_R}$
 
-![alt](image/image-51.png)
+![alt](image/image-51.png){: .center }
 
 不同阻尼比的演化特性
 
@@ -626,7 +626,7 @@ $$
 
 
 
-![alt](image/image-5.png)
+![alt](image/image-5.png){: .center }
 
 | 场景 | 强场（\(\Omega \gg \Gamma\)） | 弱场（\(\Omega \ll \Gamma\)） |
 |---|---|---|
@@ -720,7 +720,7 @@ $$
 
 有限作用时间导致 **\(\mathrm{sinc}^2\)** 线形（衍射函数）
 
-![alt](image/image-6.png)
+![alt](image/image-6.png){: .center }
 
 ---
 
@@ -872,7 +872,7 @@ $$
 
 ## 1.4 多分子系统的吸收和发射
 
-![alt](image/image-7.png)
+![alt](image/image-7.png){: .center }
 
 ### 1.4.1 二能级系统玻尔兹曼分布
 
@@ -1348,7 +1348,7 @@ $$
 \end{aligned}
 $$
 
-![alt](image/image-8.png)
+![alt](image/image-8.png){: .center }
 
 自然展宽随跃迁频率的增加而增大，因此振动跃迁的自然展宽大于转动跃迁。
 
@@ -1376,7 +1376,7 @@ $$
   
 - 相位随机中断（碰撞）→ 更宽  
 
-![alt](image/image-9.png)
+![alt](image/image-9.png){: .center }
 
 碰撞相干时间 \(T_2\)（两次碰撞的平均间隔时间）对应的半高全宽：
 
@@ -1411,7 +1411,7 @@ $$
 例：NH\(_3\) 在 \(\sim 10\,\mu\text{m}\) 吸收峰：压力越大谱线越宽（液相 \(\gg\) 气相）。  
 本征性质需在真空中测量。
 
-![alt](image/image-11.png)
+![alt](image/image-11.png){: .center }
 
 ---
 
@@ -1419,7 +1419,7 @@ $$
 
 由气相分子的热运动速度差异导致的多普勒频移引起（各自乱跑，跑胖了）。运动的粒子与入射光场发生相对运动时，在实验室坐标系下，粒子感受到的光频率会发生多普勒偏移；不同速度的粒子频移量不同，最终叠加形成非均匀展宽的谱线。
 
-![alt](image/image-13.png)
+![alt](image/image-13.png){: .center }
 
 多普勒频移：沿光场波矢 $k$ 方向的速度分量为 $v$ 的粒子，感受到的共振频率为
 
@@ -1440,7 +1440,7 @@ p_v\,dv=
 \end{aligned}
 $$
 
-![alt](image/image-12.png)
+![alt](image/image-12.png){: .center }
 
 归一化多普勒线形（高斯）：
 
@@ -1478,7 +1478,7 @@ $$
 
 非均匀展宽为主，多普勒展宽最常见。
 
-![alt](image/image-15.png)
+![alt](image/image-15.png){: .center }
 
 红线为无多普勒展宽的谱线。
 
@@ -1490,7 +1490,7 @@ $$
 
 非均匀展宽的谱线，本质上是大量具有不同中心频率的均匀展宽子谱线的叠加，最终的总谱线为高斯分布权重的洛伦兹线形的卷积。
 
-![alt](image/image-14.png)
+![alt](image/image-14.png){: .center }
                                     
 Voigt 线形：             
 
@@ -1505,4 +1505,4 @@ $$
   
 - $g_L$​：均匀展宽的洛伦兹线形函数
 
-![alt](image/image-16.png)
+![alt](image/image-16.png){: .center }

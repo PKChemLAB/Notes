@@ -78,7 +78,7 @@ $$
 
 布洛赫波不是完全自由的平面波，而是被晶格周期函数调制的平面波。量子数 $n$ 标记能带，$\mathbf k$ 标记同一能带中的不同平移本征态。
 
-![布洛赫波与晶格周期调制](image/courseware/bands-a-009.png)
+![布洛赫波与晶格周期调制](image/courseware/bands-a-009.png){: .center }
 
 ## 3.2 波矢、周期性边界条件与 Brillouin 区
 
@@ -114,7 +114,7 @@ $$
 
 相差倒易格矢的波矢等价，只需研究第一 Brillouin 区。
 
-![第一 Brillouin 区中的波矢取值](image/courseware/bands-a-014.png)
+![第一 Brillouin 区中的波矢取值](image/courseware/bands-a-014.png){: .center }
 
 ## 3.3 近自由电子近似
 
@@ -170,13 +170,13 @@ $$
 
 周期势使原本相交的自由电子能级发生避免交叉并打开禁带。其物理图像是：满足 Bragg 条件的电子波形成两个驻波，一个在离子实附近概率密度大，另一个在离子实之间概率密度大；二者势能不同，简并被解除。
 
-![近自由电子能带与区边界带隙](image/courseware/bands-b-018.png)
+![近自由电子能带与区边界带隙](image/courseware/bands-b-018.png){: .center }
 
 ### 3.3.3 三维能带
 
 三维中每个 Brillouin 区对应一支能带。通常沿高对称路径绘制 $E_n(\mathbf k)$，例如立方晶格中的 $\Gamma$、$X$、$L$ 等点。能带图只是高对称线上的截面，不代表完整三维色散。
 
-![Brillouin 区及高对称点](image/courseware/bands-b-024.png)
+![Brillouin 区及高对称点](image/courseware/bands-b-024.png){: .center }
 
 ## 3.4 紧束缚近似
 
@@ -209,7 +209,7 @@ $$
 
 轨道越扩展、相邻原子距离越短，重叠越强，$|\beta|$ 越大，能带越宽。因此内层轨道通常形成窄带，价层轨道形成较宽能带。
 
-![紧束缚近似中的原子轨道组合](image/courseware/bands-b-030.png)
+![紧束缚近似中的原子轨道组合](image/courseware/bands-b-030.png){: .center }
 
 ### 3.4.3 多原子基元与轨道杂化
 
@@ -225,7 +225,7 @@ $$
 
 材料是否导电不能只数价电子，还要判断能带简并、不同能带是否重叠以及实际占据情况。
 
-![导体、半导体和绝缘体的能带占据](image/courseware/bands-b-045.png)
+![导体、半导体和绝缘体的能带占据](image/courseware/bands-b-045.png){: .center }
 
 ## 3.6 能带对称性
 
@@ -251,7 +251,7 @@ $$
 
 因此只需计算第一 Brillouin 区中的不可约部分。高对称点和高对称线上，波矢的小群较大，能带可按不可约表示分类；只有对称性相同的能带通常才会避免交叉。
 
-![二维正方晶格 Brillouin 区的对称等价点](image/courseware/bands-c-007.png)
+![二维正方晶格 Brillouin 区的对称等价点](image/courseware/bands-c-007.png){: .center }
 
 ### 3.6.2 有效质量
 
@@ -301,7 +301,7 @@ $$
 
 当 $\nabla_{\mathbf k}E=0$ 时可能出现 van Hove 奇点。
 
-![周期势场中的能态密度](image/courseware/bands-d-010.png)
+![周期势场中的能态密度](image/courseware/bands-d-010.png){: .center }
 
 ## 3.8 费米能与费米面
 
@@ -323,7 +323,7 @@ $$
 
 在第一 Brillouin 区中的等能面。它的形状由周期势对自由电子球面的畸变决定，并控制低温电子热容、电导、磁响应等性质。
 
-![近自由电子费米面与 Brillouin 区](image/courseware/bands-d-020.png)
+![近自由电子费米面与 Brillouin 区](image/courseware/bands-d-020.png){: .center }
 
 只有当某条能带被部分占据时才存在费米面。理想绝缘体和本征半导体在 $T=0$ 时的化学势位于带隙中，没有穿过能带的费米面。
 

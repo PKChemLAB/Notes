@@ -30,7 +30,7 @@ $$
 \approx0.7405
 $$
 
-![立方最密堆积](image/courseware/bonding-006.png)
+![立方最密堆积](image/courseware/bonding-006.png){: .center }
 
 ### 5.1.3 六方最密堆积
 
@@ -54,7 +54,7 @@ $$
 
 因此 ccp 与 hcp 的局域配位数和占有率相同，区别在密堆层的堆垛顺序。
 
-![六方最密堆积](image/courseware/bonding-008.png)
+![六方最密堆积](image/courseware/bonding-008.png){: .center }
 
 ### 5.1.4 体心立方堆积
 
@@ -75,7 +75,7 @@ $$
 
 bcc 中每个原子有 8 个最近邻。
 
-![体心立方堆积](image/courseware/bonding-009.png)
+![体心立方堆积](image/courseware/bonding-009.png){: .center }
 
 ## 5.2 密堆积空隙
 
@@ -88,7 +88,7 @@ bcc 中每个原子有 8 个最近邻。
 
 在 ccp 常规晶胞中有 4 个八面体空隙和 8 个四面体空隙。八面体空隙由 6 个球包围，四面体空隙由 4 个球包围。
 
-![最密堆积中的空隙](image/courseware/bonding-010.png)
+![最密堆积中的空隙](image/courseware/bonding-010.png){: .center }
 
 ### 5.2.2 空隙半径
 
@@ -126,7 +126,7 @@ $$
 
 金属单质最常见的三类结构是 fcc、hcp 和 bcc。fcc、hcp 的配位数为 12，bcc 为 8。不同温度或压力下，同一金属可能发生结构相变，说明稳定结构由自由能而不是单纯占有率决定。
 
-![金属单质的常见晶体结构](image/courseware/bonding-022.png)
+![金属单质的常见晶体结构](image/courseware/bonding-022.png){: .center }
 
 ### 5.3.2 金属键的两种互补图像
 
@@ -160,7 +160,7 @@ $$
 
 三维晶体的求和是条件收敛的，必须按保持电中性的方式取极限；不能任意改变求和顺序。
 
-![Madelung 求和的空间层次](image/courseware/bonding-030.png)
+![Madelung 求和的空间层次](image/courseware/bonding-030.png){: .center }
 
 ### 5.4.2 Born–Landé 方程
 
@@ -238,7 +238,7 @@ CsCl 的常规立方晶胞中虽然看见角点与体心两种离子，但其 Br
 
 半径比规则只能作为几何趋势。离子并非不可变形硬球，配位数还受共价性、极化、压力和电子结构影响。
 
-![离子半径与配位几何](image/courseware/bonding-047.png)
+![离子半径与配位几何](image/courseware/bonding-047.png){: .center }
 
 ### 5.6.2 离子极化
 
@@ -260,7 +260,7 @@ $$
 
 金刚石结构可视为一半碳原子形成 fcc 骨架，另一半占据一半四面体位置；但其稳定性来自定向 $sp^3$ 共价键，而不是硬球密堆积。
 
-![金刚石结构与四面体连接](image/courseware/bonding-053.png)
+![金刚石结构与四面体连接](image/courseware/bonding-053.png){: .center }
 
 ## 5.8 本章逻辑链
 

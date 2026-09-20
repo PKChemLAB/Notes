@@ -39,7 +39,7 @@ $$
 \mathbf G_{hkl}=h\mathbf b_1+k\mathbf b_2+l\mathbf b_3
 $$
 
-![倒易格矢与晶面族的关系](image/courseware/xrd-a-012.png)
+![倒易格矢与晶面族的关系](image/courseware/xrd-a-012.png){: .center }
 
 ### 2.1.3 倒易格矢的方向与模长
 
@@ -71,7 +71,7 @@ $$
 
 第一 Brillouin 区是倒易空间中以原点为中心的 Wigner–Seitz 原胞，即所有比其他倒易格点更接近原点的点的集合。它既是衍射几何的自然区域，也是能带中不等价波矢的基本区域。
 
-![面心立方倒格和第一 Brillouin 区](image/courseware/supp-bz-006.png)
+![面心立方倒格和第一 Brillouin 区](image/courseware/supp-bz-006.png){: .center }
 
 ## 2.2 X 射线与晶体散射
 
@@ -136,7 +136,7 @@ $$
 \boxed{2d_{hkl}\sin\theta=n\lambda}
 $$
 
-![Bragg 衍射几何](image/courseware/xrd-b-013.png)
+![Bragg 衍射几何](image/courseware/xrd-b-013.png){: .center }
 
 Bragg 方程的关键含义：
 
@@ -169,7 +169,7 @@ $$
 \mathbf k-\mathbf k_0=\mathbf G
 $$
 
-![Ewald 球与倒易点阵](image/courseware/xrd-b-021.png)
+![Ewald 球与倒易点阵](image/courseware/xrd-b-021.png){: .center }
 
 单晶转动法通过转动倒易点阵使更多格点与 Ewald 球相交；粉末中各晶粒取向随机，同一 $|\mathbf G|$ 的倒易点形成球壳，与 Ewald 球相交后形成 Debye–Scherrer 圆锥。
 
@@ -199,7 +199,7 @@ $$
 f=f_0+f'+if''
 $$
 
-![原子散射因子随散射角变化](image/courseware/xrd-c-013.png)
+![原子散射因子随散射角变化](image/courseware/xrd-c-013.png){: .center }
 
 ### 2.4.2 晶胞结构因子
 
@@ -238,9 +238,9 @@ $$
 
 只有 $h,k,l$ 全奇或全偶时允许衍射。
 
-![体心点阵系统消光](image/courseware/xrd-c-024.png)
+![体心点阵系统消光](image/courseware/xrd-c-024.png){: .center }
 
-![面心点阵系统消光](image/courseware/xrd-c-026.png)
+![面心点阵系统消光](image/courseware/xrd-c-026.png){: .center }
 
 ### 2.4.4 结构基元引起的消光
 

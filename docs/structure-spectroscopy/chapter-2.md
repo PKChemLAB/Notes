@@ -192,7 +192,7 @@ $$
 
 ### 2.1.3 电子自旋与斯特恩-盖拉赫实验*
 **自旋是电子的内禀属性，独立于环境，不依赖 $r,\theta,\phi$，纯粹的量子现象**
-![alt](image/image-17.png)
+![alt](image/image-17.png){: .center }
 
 #### **单电子的角动量与量子数**
 轨道角动量
@@ -257,7 +257,7 @@ $L_z$,$L_x$,$L_y$互相对易，不能同时有确定值。
 
 ### 2.2.1 跃迁偶极
 
-![alt](image/image-18.png)
+![alt](image/image-18.png){: .center }
 
 根据跃迁速率
 $$
@@ -517,12 +517,12 @@ $$
 
 ---
 
-![alt](image/image-19.png)
+![alt](image/image-19.png){: .center }
 
 ---
 
 ## 2.3 旋轨耦合和精细结构
-![alt](image/image-20.png)
+![alt](image/image-20.png){: .center }
 原先理论认为跃迁到的2p轨道应该是简并的，实验却发现有裂分。
 
 >[科学是一场宏大的建模](https://excitedstate.us.kg/posts/science-is-a-grand-enterprise-of-modeling/)
@@ -723,7 +723,7 @@ $$
 \text{Li}: 0.23,\ \text{Na}: 11.5,\ \text{K}: 38.5,\ \text{Rb}: 158,\ \text{Cs}: 370
 $$
 
-![alt](image/image-21.png)
+![alt](image/image-21.png){: .center }
 
 裂分形成常见的碱金属光谱双线
 
@@ -813,7 +813,7 @@ $$
 
 多电子原子中，电子的轨道由于径向分布不同，感受到不同的电子屏蔽程度而不简并。内层电子屏蔽效应使外层电子能量升高。
 
-![alt](image/image-22.png)
+![alt](image/image-22.png){: .center }
 
 
 $Li$原子的斯莱特行列式：
@@ -863,10 +863,10 @@ $$
 
 
 - 单线态$S=0$:两个电子自旋相反，波函数反对称性
-![alt](image/image-23.png)
+![alt](image/image-23.png){: .center }
 
 - 三线态$S=1$：两个电子自旋相同，波函数满足对称性
-![alt](image/image-24.png)
+![alt](image/image-24.png){: .center }
 
 「三线态自旋平行、单态自旋反平行」，自旋 z 轴投影都朝上 / 都朝下：
 
@@ -948,7 +948,7 @@ $2S+1$ 为自旋多重度
 
   - $S=1$，$2S+1=3$，三线态
 
-![alt](image/image-25.png)
+![alt](image/image-25.png){: .center }
 
 单电子角动量耦合（$L-S$耦合，$p²$组态示例）
 $$
@@ -1009,7 +1009,7 @@ $$
 
 - 未半满壳层，$J$ 最小的能量最低; 过半满壳层，$J$ 最大的能量最低
 
-![alt](image/image-26.png)
+![alt](image/image-26.png){: .center }
 
 ---
 
@@ -1055,13 +1055,13 @@ $$
 #### 光谱举例
 
 钠 $3s^1$ 单电子，光谱黄双线：
-![alt](image/image-28.png)
+![alt](image/image-28.png){: .center }
 
 碳 $2p^2$ 双电子：
-![alt](image/image-27.png)
+![alt](image/image-27.png){: .center }
 
 ---
 
 #### 原子光谱实验
 
-![alt](image/image-29.png)
+![alt](image/image-29.png){: .center }

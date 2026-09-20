@@ -3,7 +3,7 @@
 
 >欢迎来到我的笔记。我将这里作为自己的电子知识库。我会不定时更新笔记内容，欢迎发送邮件或在[Issue](https://github.com/PKChemLAB/Notes/issues)中和我讨论！
 
->欢迎添加Wechat：**david_cpk**，请备注来意哦！
+>欢迎添加Wechat：**david_cpk**，请备注来意！
 
 >推荐阅读：
 
