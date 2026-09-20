@@ -112,6 +112,10 @@ $$ T \equiv \left(\frac{\partial U}{\partial S}\right)_{n,V}$$
 
 $$\therefore dU = -P dV + TdS$$
 
+dU=−PdV+TdS 是纯状态量之间的恒等关系，对任意过程都成立，不限可逆。它从可逆过程推出，但因为结论只含状态量，就摆脱了对路径的依赖。可逆与不可逆的区别不在式子成不成立，而在于：可逆时 TdSTdS
+TdS 和 −PdV-PdV
+−PdV 分别是真实的热和功；不可逆时它们只是状态量组合，不再等于真实交换的热和功
+
 
 ---
 
@@ -239,7 +243,18 @@ $$A = f(n_1, n_2, \cdots, n_c, V, T)$$
 
 ### 3.2 霍姆赫兹自由能
 
-给定
+给定 V, T 条件，A 是系统稳定性判据。平衡态的
+A 为系统最小值。
+
+若 $dW_{\text{非}} \neq 0$，
+
+$$dS_{\text{总}} = dS + dS_{\text{环}}$$
+
+$$= dS - \frac{dQ}{T}$$
+
+$$= -\frac{1}{T}(-TdS + dU - dW_{\text{非}})$$
+
+$$-TdS_{\text{总}} = dA - dW_{\text{非}} \le 0 \quad (\because -TdS_{\text{总}} \le 0)$$
 
 
 

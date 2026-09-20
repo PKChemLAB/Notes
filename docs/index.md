@@ -6,5 +6,7 @@
 >欢迎添加Wechat：**david_cpk**，请备注来意哦！
 
 >推荐阅读：
-    - [结构与谱学Ⅱ](https://pkchemlab.github.io/Notes/structure-spectroscopy/)：主要内容为光谱学（已完结）
-    - [结构与谱学Ⅲ](https://pkchemlab.github.io/Notes/solid-state-physics/)：主要内容为固体物理（已完结，有几张图片还要改一下）
+
+>    - [结构与谱学Ⅱ](https://pkchemlab.github.io/Notes/structure-spectroscopy/)：主要内容为光谱学（已完结）
+  
+>    - [结构与谱学Ⅲ](https://pkchemlab.github.io/Notes/solid-state-physics/)：主要内容为固体物理（已完结，有几张图片还要改一下）
