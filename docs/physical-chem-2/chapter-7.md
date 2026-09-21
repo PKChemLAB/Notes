@@ -361,7 +361,10 @@ $$ε_{光频} = n^2$$
 
 - $Ar,N_2,Cl_2$非极性分子：
   
-  $$E^0_{m,分子/液}=-3.31\alpha$$
+
+$$E^0_{m,分子/液}=-3.31\alpha$$
+
+
 
 - 极性分子：小分子部分有一定贡献，$\alpha$ 大的分子几乎完全压制极性相互作用
   
@@ -439,7 +442,9 @@ $$
 
 !!!EXAMPLE
     同周期$Na^+$、$Mg^{2+}$ 的水合半径$Mg^{2+}$大；
+
     同周期$F^-$、$O^{2-}$ 的水合半径$F^-$大；
+
     同族水合半径$Li^{+}$、$F^-$最大；
 
 
@@ -490,56 +495,7 @@ $$
 
 ---
 
-### 3.3 作为介质的分子集合体电磁相互作用
 
-#### 3.3.1 介质的分子间相互作用的重要性
-
-- 水：主要为永久偶极相互作用
-- 有机溶剂：主要为瞬间偶极相互作用
-
-#### 3.3.2 介质的静电介电常数
-
-透电率 $\varepsilon$：衡量两个点电荷相互作用受介质的影响情况
-
-- 真空的 $\varepsilon=1$
-
-相对静电介电常数 $\varepsilon_{静电}$
-
-$$
-\varepsilon=\varepsilon_{静电}
-$$
-
-$$
-\frac{\varepsilon-1}{\varepsilon+2}=\frac{N_A\rho_m}{3\varepsilon_0}\left(\alpha+\frac{\varphi^2}{3kT}\right)
-$$
-
-$$
-\varepsilon\propto\rho_m,\alpha,\varphi,\frac{1}{T}
-$$
-
-液态水是最典型的高静电介电常数溶剂
-
-#### 3.3.3 介质的折射率与光频介电常数
-
-光频介电常数 $\varepsilon_{光频}$：
-
-$$
-\varepsilon_{光频}=n^2
-$$
-
-$$
-\varepsilon_{光频}\leq\varepsilon_{静电}
-$$
-
-$$
-\frac{\varepsilon_{光频}-1}{\varepsilon_{光频}+2}=\frac{N_A\rho_m}{3\varepsilon_0}\cdot\alpha
-$$
-
-$$
-\varepsilon_{光频}\propto\rho_m,\alpha
-$$
-
-液态介质中，$\varepsilon_{光频}$ 对极性分子 $\varepsilon_{静电}$ 的作用可忽略不计
 
 ### 3.4 分子间相互作用频率特征与频率匹配
 
