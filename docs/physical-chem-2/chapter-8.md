@@ -1,4 +1,76 @@
-# 第8章 纯物质体相性质
+# 第8章 纯物质的体相性质
+
+## 第一节 经典气体理论
+
+### 1.1 定性模型
+
+- $r_{分子}<<d_{分子}$
+
+- 无分子间相互作用，弹性碰撞
+
+- 气体分子处于无休止运动
+
+理想气体状态方程：
+
+$$
+PV=nRT
+$$
+
+---
+
+### 1.2 定量模型
+
+![](image/image-10.png){: .center }
+
+根据牛顿定律：
+
+$$
+F=\frac{\Delta(m\vec{v})}{\Delta t}
+$$
+
+单个分子碰撞器壁产生的压强：
+
+$$
+P_1=\frac{F_x}{a}=\frac{2m\overline{v}_x}{\Delta t\cdot a}
+$$
+
+
+在 $\Delta t$ 时间内，撞击面积 $a$ 的分子数为：
+
+$$
+N_{\text{撞}}=\frac{1}{2}\big(\overline{v}_x\Delta t\cdot a\big)\cdot \frac{nN_{\text{A}}}{V}
+$$
+
+
+总压强等于单个分子压强乘以撞击分子数：
+
+$$
+\therefore P = P_1 \cdot N_{\text{撞}}
+$$
+
+
+$$
+P=\frac{N_{\text{A}}m\overline{v}_x^2}{V}\cdot n
+$$
+
+
+$$
+\therefore PV = n\cdot \big(N_{\text{A}}m\overline{v}_x^2\big)=n\cdot 2E_{\text{k(平)}}
+$$
+
+与理想气体状态方程对比
+
+$$
+E_{\text{k(平)}}=\frac{1}{2} RT = E_{\text{k(1)}} = E_{\text{k(总)}}
+$$
+
+**能量均分定理**：每一个能量二阶项热能贡献为 $\frac{1}{2}RT$
+
+
+
+
+
+---
 
 ## 1 本章提要
 
