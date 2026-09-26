@@ -1,0 +1,3002 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/solid-state-physics/chapter-2/">
+      
+      
+        <link rel="prev" href="../chapter-1/">
+      
+      
+        <link rel="next" href="../chapter-3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>晶体的 X 射线衍射 - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css?v=2026.09.26.2044">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-x" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK's Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              晶体的 X 射线衍射
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../structure-spectroscopy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅱ:光谱学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅲ:固体物理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学II
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-structures/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../information-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  信息理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intro-computational-chem/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算化学导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Papers
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK's Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../structure-spectroscopy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅱ:光谱学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅱ:光谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：多原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子电子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅲ:固体物理
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅲ:固体物理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体的 X 射线衍射
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体的 X 射线衍射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 倒易点阵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 倒易点阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 为什么引入倒易空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 倒易基矢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 倒易格矢的方向与模长
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-brillouin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4 立方点阵的倒易关系与第一 Brillouin 区
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 X 射线与晶体散射
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 衍射几何条件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 衍射几何条件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-laue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Laue 方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-bragg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 Bragg 方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 三种表述的等价性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234-ewald" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.4 Ewald 作图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 衍射强度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 衍射强度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 电子与原子散射
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2 晶胞结构因子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3 点阵消光
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4 结构基元引起的消光
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.5 有限晶体干涉函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 从衍射图样获得结构信息
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 从衍射图样获得结构信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 峰位：晶胞参数与指标化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 峰强：原子种类与位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 峰宽和峰形：尺度与缺陷
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 本章逻辑链
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体能带理论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体光谱基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    金属晶体和离子晶体
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能量与能量量子化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从单原子分子到多原子：熵与温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子结构与宏观测量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    热力学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可逆过程热力学与第二定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可逆过程热力学基本框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-2/chapter-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子间相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-2/chapter-8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纯物质体相性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-2/chapter-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液的基本性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-2/chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液与多相混合物
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data-structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists, Stacks, and Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heaps and Priority Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segment Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../information-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information-theory/L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息度量与熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../intro-computational-chem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/montecarlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蒙特卡洛方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/26.3.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    气液界面合成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 倒易点阵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 倒易点阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 为什么引入倒易空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 倒易基矢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 倒易格矢的方向与模长
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#214-brillouin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4 立方点阵的倒易关系与第一 Brillouin 区
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 X 射线与晶体散射
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 衍射几何条件
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 衍射几何条件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-laue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Laue 方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-bragg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 Bragg 方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.3 三种表述的等价性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#234-ewald" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.4 Ewald 作图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 衍射强度
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 衍射强度">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 电子与原子散射
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2 晶胞结构因子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3 点阵消光
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4 结构基元引起的消光
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.5 有限晶体干涉函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 从衍射图样获得结构信息
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 从衍射图样获得结构信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 峰位：晶胞参数与指标化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 峰强：原子种类与位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 峰宽和峰形：尺度与缺陷
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 本章逻辑链
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="chapter-2-x">Chapter 2：晶体的 X 射线衍射<a class="headerlink" href="#chapter-2-x" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约 2159 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> 7 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间 11 分钟</p>
+</div>
+<p>本章的逻辑链是：<strong>实空间周期性 → 倒易点阵 → 衍射条件 → 结构因子 → 衍射图样 → 结构信息</strong>。衍射峰的位置主要由晶胞参数决定，峰强主要由晶胞内原子的种类和位置决定，峰宽还包含晶粒尺寸和微应变信息。</p>
+<h2 id="21">2.1 倒易点阵<a class="headerlink" href="#21" title="Permanent link">¶</a></h2>
+<h3 id="211">2.1.1 为什么引入倒易空间<a class="headerlink" href="#211" title="Permanent link">¶</a></h3>
+<p>衍射图样不是原子位置的直接照片，而是晶体周期性在波矢空间中的表现。实空间中的一族晶面需要同时描述其方向和间距；倒易格矢正好把这两项信息编码为一个矢量：</p>
+<ul>
+<li><span class="arithmatex">\(\mathbf G_{hkl}\)</span> 的方向垂直于 <span class="arithmatex">\((hkl)\)</span> 晶面；</li>
+<li><span class="arithmatex">\(|\mathbf G_{hkl}|\)</span> 与晶面间距 <span class="arithmatex">\(d_{hkl}\)</span> 成反比。</li>
+</ul>
+<h3 id="212">2.1.2 倒易基矢<a class="headerlink" href="#212" title="Permanent link">¶</a></h3>
+<p>实空间基矢为 <span class="arithmatex">\(\mathbf a_1,\mathbf a_2,\mathbf a_3\)</span>，原胞体积为</p>
+<div class="arithmatex">\[
+\Omega=\mathbf a_1\cdot(\mathbf a_2\times\mathbf a_3)
+\]</div>
+<p>倒易基矢定义为</p>
+<div class="arithmatex">\[
+\mathbf b_1=2\pi\frac{\mathbf a_2\times\mathbf a_3}{\Omega},\qquad
+\mathbf b_2=2\pi\frac{\mathbf a_3\times\mathbf a_1}{\Omega},\qquad
+\mathbf b_3=2\pi\frac{\mathbf a_1\times\mathbf a_2}{\Omega}
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+\mathbf a_i\cdot\mathbf b_j=2\pi\delta_{ij}
+\]</div>
+<p>任意倒易格矢为</p>
+<div class="arithmatex">\[
+\mathbf G_{hkl}=h\mathbf b_1+k\mathbf b_2+l\mathbf b_3
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-a-012.png" data-desc-position="bottom"><img alt="倒易格矢与晶面族的关系" class="center" src="../image/courseware/xrd-a-012.png"></a></p>
+<h3 id="213">2.1.3 倒易格矢的方向与模长<a class="headerlink" href="#213" title="Permanent link">¶</a></h3>
+<p>对 <span class="arithmatex">\((hkl)\)</span> 晶面内任意平移矢量 <span class="arithmatex">\(\mathbf t\)</span>，都有</p>
+<div class="arithmatex">\[
+\mathbf G_{hkl}\cdot\mathbf t=0
+\]</div>
+<p>故 <span class="arithmatex">\(\mathbf G_{hkl}\)</span> 垂直于该晶面。沿法向跨过一个晶面间距时相位增加 <span class="arithmatex">\(2\pi\)</span>，所以</p>
+<div class="arithmatex">\[
+|\mathbf G_{hkl}|d_{hkl}=2\pi
+\]</div>
+<p>即</p>
+<div class="arithmatex">\[
+d_{hkl}=\frac{2\pi}{|\mathbf G_{hkl}|}
+\]</div>
+<p>这使几何晶面问题可以转化为倒易空间中的矢量问题。</p>
+<h3 id="214-brillouin">2.1.4 立方点阵的倒易关系与第一 Brillouin 区<a class="headerlink" href="#214-brillouin" title="Permanent link">¶</a></h3>
+<ul>
+<li>简单立方的倒格仍为简单立方，倒易晶格常数为 <span class="arithmatex">\(2\pi/a\)</span>；</li>
+<li>面心立方的倒格是体心立方；</li>
+<li>体心立方的倒格是面心立方。</li>
+</ul>
+<p>第一 Brillouin 区是倒易空间中以原点为中心的 Wigner–Seitz 原胞，即所有比其他倒易格点更接近原点的点的集合。它既是衍射几何的自然区域，也是能带中不等价波矢的基本区域。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/supp-bz-006.png" data-desc-position="bottom"><img alt="面心立方倒格和第一 Brillouin 区" class="center" src="../image/courseware/supp-bz-006.png"></a></p>
+<h2 id="22-x">2.2 X 射线与晶体散射<a class="headerlink" href="#22-x" title="Permanent link">¶</a></h2>
+<p>X 射线波长约为 <span class="arithmatex">\(10^{-10}\ \mathrm m\)</span>，与晶面间距同量级，因此晶体可作为三维衍射光栅。设入射和散射波矢分别为</p>
+<div class="arithmatex">\[
+\mathbf k_0=\frac{2\pi}{\lambda}\mathbf s_0,qquad
+\mathbf k=\frac{2\pi}{\lambda}\mathbf s
+\]</div>
+<p>弹性散射满足</p>
+<div class="arithmatex">\[
+|\mathbf k|=|\mathbf k_0|=\frac{2\pi}{\lambda}
+\]</div>
+<p>定义散射矢量</p>
+<div class="arithmatex">\[
+\mathbf q=\mathbf k-\mathbf k_0
+\]</div>
+<p>衍射只在 <span class="arithmatex">\(\mathbf q\)</span> 与某个倒易格矢相等时发生。</p>
+<h2 id="23">2.3 衍射几何条件<a class="headerlink" href="#23" title="Permanent link">¶</a></h2>
+<h3 id="231-laue">2.3.1 Laue 方程<a class="headerlink" href="#231-laue" title="Permanent link">¶</a></h3>
+<p>相隔晶格矢量 <span class="arithmatex">\(\mathbf R\)</span> 的两个格点产生的散射波相位差为</p>
+<div class="arithmatex">\[
+\Delta\varphi=(\mathbf k-\mathbf k_0)\cdot\mathbf R
+\]</div>
+<p>对所有晶格矢量都相干增强，要求 <span class="arithmatex">\(\Delta\varphi=2\pi m\)</span>。分别取 <span class="arithmatex">\(\mathbf R=\mathbf a_1,\mathbf a_2,\mathbf a_3\)</span>，得到</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf q\cdot\mathbf a_1&amp;=2\pi h\\
+\mathbf q\cdot\mathbf a_2&amp;=2\pi k\\
+\mathbf q\cdot\mathbf a_3&amp;=2\pi l
+\end{aligned}
+\]</div>
+<p>等价地写成衍射矢量方程</p>
+<div class="arithmatex">\[
+\boxed{\mathbf k-\mathbf k_0=\mathbf G_{hkl}}
+\]</div>
+<h3 id="232-bragg">2.3.2 Bragg 方程<a class="headerlink" href="#232-bragg" title="Permanent link">¶</a></h3>
+<p>把晶体看作平行晶面族，相邻晶面散射波的光程差为</p>
+<div class="arithmatex">\[
+\Delta L=2d_{hkl}\sin\theta
+\]</div>
+<p>相长干涉条件为 <span class="arithmatex">\(\Delta L=n\lambda\)</span>，所以</p>
+<div class="arithmatex">\[
+\boxed{2d_{hkl}\sin\theta=n\lambda}
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-b-013.png" data-desc-position="bottom"><img alt="Bragg 衍射几何" class="center" src="../image/courseware/xrd-b-013.png"></a></p>
+<p>Bragg 方程的关键含义：</p>
+<ul>
+<li>给定 <span class="arithmatex">\(\lambda\)</span> 时，衍射角决定晶面间距；</li>
+<li>只有 <span class="arithmatex">\(\lambda\le 2d_{hkl}\)</span> 时才可能衍射；</li>
+<li>通常把 <span class="arithmatex">\(n\)</span> 级衍射改写成 <span class="arithmatex">\((nh,nk,nl)\)</span> 晶面的一阶衍射。</li>
+</ul>
+<h3 id="233">2.3.3 三种表述的等价性<a class="headerlink" href="#233" title="Permanent link">¶</a></h3>
+<p>由 Ewald 几何</p>
+<div class="arithmatex">\[
+|\mathbf q|=2|\mathbf k_0|\sin\theta
+=\frac{4\pi}{\lambda}\sin\theta
+\]</div>
+<p>而</p>
+<div class="arithmatex">\[
+|\mathbf G_{hkl}|=\frac{2\pi n}{d_{hkl}}
+\]</div>
+<p>令 <span class="arithmatex">\(\mathbf q=\mathbf G_{hkl}\)</span> 即得到 Bragg 方程。因此 Laue 方程、衍射矢量方程和 Bragg 方程是同一相干条件在代数、倒易空间和晶面几何中的三种表达。</p>
+<h3 id="234-ewald">2.3.4 Ewald 作图<a class="headerlink" href="#234-ewald" title="Permanent link">¶</a></h3>
+<p>以入射波矢末端为球心、<span class="arithmatex">\(2\pi/\lambda\)</span> 为半径作球。倒易格点落在球面上时，连接原点与该格点的矢量即满足</p>
+<div class="arithmatex">\[
+\mathbf k-\mathbf k_0=\mathbf G
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-b-021.png" data-desc-position="bottom"><img alt="Ewald 球与倒易点阵" class="center" src="../image/courseware/xrd-b-021.png"></a></p>
+<p>单晶转动法通过转动倒易点阵使更多格点与 Ewald 球相交；粉末中各晶粒取向随机，同一 <span class="arithmatex">\(|\mathbf G|\)</span> 的倒易点形成球壳，与 Ewald 球相交后形成 Debye–Scherrer 圆锥。</p>
+<h2 id="24">2.4 衍射强度<a class="headerlink" href="#24" title="Permanent link">¶</a></h2>
+<p>衍射几何决定“在哪些方向出现峰”，衍射强度决定“峰有多强”。强度的层次依次是：单电子散射 → 原子散射 → 晶胞内相干叠加 → 有限晶体中晶胞间相干叠加。</p>
+<h3 id="241">2.4.1 电子与原子散射<a class="headerlink" href="#241" title="Permanent link">¶</a></h3>
+<p>经典 Thomson 散射中，电子受电场驱动加速并辐射同频电磁波。单电子散射强度包含偏振和几何因子。</p>
+<p>原子由空间分布的电子云组成，各处电子的散射存在相位差。原子散射振幅与单电子散射振幅之比定义为原子散射因子</p>
+<div class="arithmatex">\[
+f(\mathbf q)=\int\rho_e(\mathbf r)e^{i\mathbf q\cdot\mathbf r}\,\mathrm d^3r
+\]</div>
+<p>在前向散射极限 <span class="arithmatex">\(\mathbf q=0\)</span> 时</p>
+<div class="arithmatex">\[
+f(0)=Z
+\]</div>
+<p>散射角增大时，电子云不同部分相消增强，<span class="arithmatex">\(f\)</span> 通常减小。接近原子吸收边时还需加入反常色散修正</p>
+<div class="arithmatex">\[
+f=f_0+f'+if''
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-c-013.png" data-desc-position="bottom"><img alt="原子散射因子随散射角变化" class="center" src="../image/courseware/xrd-c-013.png"></a></p>
+<h3 id="242">2.4.2 晶胞结构因子<a class="headerlink" href="#242" title="Permanent link">¶</a></h3>
+<p>晶胞中第 <span class="arithmatex">\(j\)</span> 个原子的分数坐标为 <span class="arithmatex">\((x_j,y_j,z_j)\)</span>，原子散射因子为 <span class="arithmatex">\(f_j\)</span>。晶胞的复散射振幅为</p>
+<div class="arithmatex">\[
+\boxed{F_{hkl}=\sum_j f_j
+e^{2\pi i(hx_j+ky_j+lz_j)}}
+\]</div>
+<p>对应强度</p>
+<div class="arithmatex">\[
+I_{hkl}\propto |F_{hkl}|^2
+\]</div>
+<p>结构因子表明：峰强同时取决于原子种类 <span class="arithmatex">\(f_j\)</span> 和原子位置 <span class="arithmatex">\((x_j,y_j,z_j)\)</span>。</p>
+<h3 id="243">2.4.3 点阵消光<a class="headerlink" href="#243" title="Permanent link">¶</a></h3>
+<p>简单点阵只有一个阵点，不产生点阵消光。</p>
+<p>体心点阵的阵点为 <span class="arithmatex">\((0,0,0)\)</span> 和 <span class="arithmatex">\((1/2,1/2,1/2)\)</span>：</p>
+<div class="arithmatex">\[
+F_{hkl}=f\left[1+(-1)^{h+k+l}\right]
+\]</div>
+<p>故 <span class="arithmatex">\(h+k+l\)</span> 为偶数时允许，为奇数时消光。</p>
+<p>面心点阵的四个阵点给出</p>
+<div class="arithmatex">\[
+F_{hkl}=f\left[1+(-1)^{h+k}+(-1)^{h+l}+(-1)^{k+l}\right]
+\]</div>
+<p>只有 <span class="arithmatex">\(h,k,l\)</span> 全奇或全偶时允许衍射。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-c-024.png" data-desc-position="bottom"><img alt="体心点阵系统消光" class="center" src="../image/courseware/xrd-c-024.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/courseware/xrd-c-026.png" data-desc-position="bottom"><img alt="面心点阵系统消光" class="center" src="../image/courseware/xrd-c-026.png"></a></p>
+<h3 id="244">2.4.4 结构基元引起的消光<a class="headerlink" href="#244" title="Permanent link">¶</a></h3>
+<p>金刚石结构是在面心点阵上附加</p>
+<div class="arithmatex">\[
+(0,0,0),\qquad\left(\frac14,\frac14,\frac14\right)
+\]</div>
+<p>二原子基元，因此</p>
+<div class="arithmatex">\[
+F_{hkl}^{\mathrm{diamond}}
+=F_{hkl}^{\mathrm{fcc}}
+\left[1+e^{\frac{\pi i}{2}(h+k+l)}\right]
+\]</div>
+<p>在面心点阵选择定则之外，当 <span class="arithmatex">\(h,k,l\)</span> 全偶且 <span class="arithmatex">\(h+k+l=4n+2\)</span> 时还会消光。这说明相同 Bravais 点阵可以因结构基元不同而具有不同衍射强度。</p>
+<h3 id="245">2.4.5 有限晶体干涉函数<a class="headerlink" href="#245" title="Permanent link">¶</a></h3>
+<p>沿某方向有 <span class="arithmatex">\(N\)</span> 个等间距晶胞，相邻晶胞散射相位差为 <span class="arithmatex">\(\varphi\)</span>。振幅为等比级数</p>
+<div class="arithmatex">\[
+A=A_1\sum_{m=0}^{N-1}e^{im\varphi}
+=A_1e^{i(N-1)\varphi/2}
+\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
+I\propto\left[\frac{\sin(N\varphi/2)}{\sin(\varphi/2)}\right]^2
+\]</div>
+<p><span class="arithmatex">\(N\)</span> 越大，主峰越尖锐；晶粒变小会使峰展宽。</p>
+<p>Scherrer 方程为</p>
+<div class="arithmatex">\[
+\boxed{D=\frac{K\lambda}{\beta\cos\theta}}
+\]</div>
+<p>其中 <span class="arithmatex">\(D\)</span> 为相干晶粒尺寸，<span class="arithmatex">\(K\)</span> 为形状因子，<span class="arithmatex">\(\beta\)</span> 是扣除仪器宽化后的峰宽（弧度）。若微应变也造成明显展宽，不能把全部峰宽都归因于晶粒尺寸。</p>
+<h2 id="25">2.5 从衍射图样获得结构信息<a class="headerlink" href="#25" title="Permanent link">¶</a></h2>
+<h3 id="251">2.5.1 峰位：晶胞参数与指标化<a class="headerlink" href="#251" title="Permanent link">¶</a></h3>
+<p>立方晶系中</p>
+<div class="arithmatex">\[
+d_{hkl}=\frac{a}{\sqrt{h^2+k^2+l^2}}
+\]</div>
+<p>与 Bragg 方程联立得到</p>
+<div class="arithmatex">\[
+\sin^2\theta_{hkl}=\frac{\lambda^2}{4a^2}(h^2+k^2+l^2)
+\]</div>
+<p>因此同一立方物相的峰序可按 <span class="arithmatex">\(h^2+k^2+l^2\)</span> 指标化，并结合 bcc、fcc 的消光规则判断点阵类型。高角度峰对晶格常数更敏感，适合精修晶胞参数。</p>
+<h3 id="252">2.5.2 峰强：原子种类与位置<a class="headerlink" href="#252" title="Permanent link">¶</a></h3>
+<p>整组峰强由 <span class="arithmatex">\(|F_{hkl}|^2\)</span> 控制。改变占位、化学有序度或原子种类会改变结构因子，因此超结构峰可以区分有序与无序固溶体，反常散射还能提高相近元素的区分能力。</p>
+<h3 id="253">2.5.3 峰宽和峰形：尺度与缺陷<a class="headerlink" href="#253" title="Permanent link">¶</a></h3>
+<ul>
+<li>有限晶粒尺寸产生约与 <span class="arithmatex">\(1/D\)</span> 成正比的展宽；</li>
+<li>微应变使不同晶面间距出现分布，展宽通常随 <span class="arithmatex">\(\tan\theta\)</span> 增大；</li>
+<li>仪器函数也会展宽峰形，定量分析前必须校正。</li>
+</ul>
+<p>物相鉴定依赖整组峰位和峰强的组合，而不是把单个峰简单对应到某个结构单元。</p>
+<h2 id="26">2.6 本章逻辑链<a class="headerlink" href="#26" title="Permanent link">¶</a></h2>
+<div class="arithmatex">\[
+\text{晶体周期性}
+\Rightarrow \mathbf G_{hkl}
+\Rightarrow \mathbf k-\mathbf k_0=\mathbf G_{hkl}
+\Rightarrow 2d\sin\theta=n\lambda
+\]</div>
+<div class="arithmatex">\[
+\text{晶胞原子分布}
+\Rightarrow F_{hkl}
+\Rightarrow I_{hkl}\propto|F_{hkl}|^2
+\]</div>
+<p>前一条链决定峰位，后一条链决定峰强；有限尺寸、应变和仪器函数进一步决定峰宽与峰形。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../chapter-1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 晶体学基础">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                晶体学基础
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter-3/" class="md-footer__link md-footer__link--next" aria-label="下一页: 固体能带理论基础">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                固体能带理论基础
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Peikai Chen
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
