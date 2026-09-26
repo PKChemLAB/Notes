@@ -69,7 +69,8 @@ nav:
       - 从单原子分子到多原子：熵与温度: physical-chem-1/chapter-2.md
       - 分子结构与宏观测量: physical-chem-1/chapter-3.md
       - 热力学基础: physical-chem-1/chapter-4.md
-      - 可逆过程热力学与第二定律: physical-chem-1/chapter-5.md
+      - 可逆过程热力学与第二定律: physical-chem-1/chapter-5.md
+      - 可逆过程热力学基本框架: physical-chem-1/chapter-6.md
 
   - 物理化学II:
       - 课程主页: physical-chem-2/index.md
@@ -134,5 +135,5 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - stylesheets/extra.css?v=2026.09.22.2229
+  - stylesheets/extra.css?v=2026.09.26.2044
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
