@@ -14,7 +14,7 @@
 
 ### 1.2 定量模型
 
-![](image/image-10.png){: .center }
+![](image/image-10.png){: .center width="280"}
 
 根据牛顿定律：
 
@@ -66,18 +66,10 @@ $$
 
 ### 2.1 理想气体状态方程
 
+!!!NOTE
+    $$dU=TdS-PdV$$
 
-$$
-PV=nRT
-$$
-
-
-
----
-
-### 2.3 气体的量子统计热力学
-
-#### 2.3.1 从配分函数到理想气体状态方程
+    $$dA=-SdT-PdV$$
 
 $$
 P=-\left(\frac{\partial A}{\partial V}\right)_{T,n}
@@ -87,16 +79,96 @@ P=-\left(\frac{\partial A}{\partial V}\right)_{T,n}
 =\frac{nRT}{V}
 $$
 
-#### 2.3.2 气体摩尔热容
+!!!NOTE
+    $$U = U(0) + Q$$
+
+    $$A = U - TS = U(0) + Q - TS$$
+
+    热运动内能：
+
+    $$Q = NkT^2 \left(\frac{\partial \ln f_{\text{总}}}{\partial T}\right)_V$$
+    
+    熵：
+
+    $$S = Nk \ln f_{\text{总}} + \frac{Q}{T}$$
+
+    $$
+    \begin{aligned}
+    A &= U(0) + Q - T\left(Nk \ln f_{\text{总}} + \frac{Q}{T}\right) \\
+    &= U(0) + Q - NkT \ln f_{\text{总}} - Q \\
+    &= U(0) - NkT \ln f_{\text{总}}
+    \end{aligned}
+    $$
+    
+    $$\boxed{A = U(0) - nRT \ln f_{\text{总}}}$$
+
+只要气体行为满足量子力学则必然得到理想气体状态方程。
+
+---
+
+### 2.2 定压摩尔热容
+
+$$C_{m,p} = C_{m,V} + R = \frac{5 + F_{\text{转}}}{2}R + \sum_j f_j(u, k_{键})$$
+
+$u$ 为折合质量
+
+振动频率：
+
+$$\tilde{\nu} = 1302\sqrt{\frac{k}{u}} \quad (\mathrm{cm^{-1}})$$
+
+
+![](image/image-11.png){: .center width="300"}
+
+- 单原子分子：$C_{m,p} = \frac{5}{2}R$
+
+- 双原子分子：$C_{m,p} = 3.5R + f(u, k)$
+
+    - 含氢分子：$u \approx 0$,$f \approx 0$
+
+    - 其它双原子分子：$f$ 随 $u$ 增而增，例如 $\mathrm{N_2}$、$\mathrm{O_2}$、$\mathrm{I_2}$（分子量越大，振动越易激发，$f$ 越大）
+
+    - 活泼$ⅠA$族金属双原子分子金属键结合，$k_{键}$很小，更快接近**低频高温近似**值。
+
+- 多原子分子：$\mathrm{H_2O}$、$\mathrm{H_2S}$、$\mathrm{H_2Se}$、$\mathrm{NH_3}$，均在$4R$附近。
+
+- 有机多原子分子
+  
+    - 碳氢伸缩振动可忽略
+
+    - 构象振动与变形振动不可忽略。如放热反应找溶剂可以找直链。
+
+    - 氢被取代：杂原子取代化合物气态标准定压摩尔热容明显高于取代前的碳氢分子。
+
+![](image/image-12.png){: .center width="300"}
+
+两个线性关系的斜率相等，在 $20\ \mathrm{J \cdot mol^{-1} \cdot K^{-1}}$ 。该值说明每个单键片段贡献 $2.5R$ 。
+
+---
+
+### 2.3 理想气体标准态摩尔熵
+
+标准态：$1bar，300K $
+
+不同理想气体之间摩尔体积相同，不同的只有摩尔质量。重分子平动能级密，可及量子态多。
+
+标准摩尔**平动**熵：
 
 $$
-C_{P,m}=C_{V,m}+R
+S_{m(气)}^\circ=109+\frac{3R}{2}\ln M \mathrm{J\cdot mol^{-1}\cdot K^{-1}}
 $$
 
-- 单原子分子：各个平动自由度贡献 $\frac{1}{2}R$ 的摩尔热容
-- 有机分子：低频振动模式对气态定压摩尔热容有贡献
-    - 每个**单键片段**贡献2.5个充分热布局的振动自由度
-- **杂原子**取代：$C_{P,m}$ **高于**取代前的CH分子（取代导致振动频率减小）
+![](image/image-13.png){: .center width="280"}
+
+- 单原子实际高出一些，因为存在电子熵（电子层未满即有简并度）
+
+
+
+
+
+
+
+
+---
 
 #### 2.3.3 气体摩尔熵
 
