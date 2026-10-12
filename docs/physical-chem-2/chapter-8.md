@@ -117,7 +117,7 @@ $u$ 为折合质量
 $$\tilde{\nu} = 1302\sqrt{\frac{k}{u}} \quad (\mathrm{cm^{-1}})$$
 
 
-![](image/image-11.png){: .center width="300"}
+![](image/image-11.png){: .center width="290"}
 
 - 单原子分子：$C_{m,p} = \frac{5}{2}R$
 
@@ -161,38 +161,47 @@ $$
 
 - 单原子实际高出一些，因为存在电子熵（电子层未满即有简并度）
 
+- 双原子氢卤化物：比直线高约 $33\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$，基本由转动贡献
+  
+- 无机多原子分子：比直线高约 $45\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$
 
+![](image/image-14.png){: .center width="280"}
 
+- 有机多原子分子：柔性分子**每个片段构象振动**对应4~5个小分子转动自由度
 
-
-
-
+- 杂原子取代：三类标准摩尔熵**均增加**（平动、转动、振动能隙都明显减小）
 
 ---
 
-#### 2.3.3 气体摩尔熵
+### 2.4 气体的化学势
 
-标准摩尔**平动**熵：
-
-$$
-S_{m(气)}^\circ=109+\frac{3R}{2}\ln M
-$$
-
-标准摩尔**转动**熵：平均每个转动自由度贡献 $(7\sim)8\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$
-
-**构象振动熵**：柔性分子**每个片段构象振动**对应4~5个小分子转动自由度
-
-- **杂原子**取代：三类标准摩尔熵**均增加**（平动、转动、振动能隙都明显减小）
-
-**摩尔熵**相比**摩尔热容**对自由度基本能隙**更敏感**
-
-#### 2.3.4 气体化学势与实际气体
+纯态：$\mu = G_m= U_m + (PV)_m - T S_m=U_m - T S_m + RT$
 
 理想气体：
 
 $$
 \mu=\mu^\circ+RT\ln P
 $$
+
+!!!NOTE
+    $$
+    \mathrm{d}\mu = \mathrm{d}G_m = V_m \mathrm{d}P
+    $$
+
+    理想气体 $V_m = \dfrac{RT}{P}$，积分：
+
+    $$
+    \int_{\mu^\circ}^{\mu} \mathrm{d}\mu = \int_{P^\circ}^{P} \frac{RT}{P}\,\mathrm{d}P
+    $$
+
+    $$
+    \mu - \mu^\circ = RT \ln\frac{P}{P^\circ}
+    $$
+
+    $$
+    \boxed{\mu = \mu^\circ + RT\ln\frac{P}{P^\circ}}
+    $$
+
 
 实际气体（气体逸度 $\alpha$；逸度系数 $\gamma$）：
 
@@ -204,85 +213,171 @@ $$
 \alpha=\gamma P
 $$
 
-## 3 纯物质相变的可逆过程热力学
 
-### 3.1 相变过程的可逆热力学
+--- 
 
-#### 3.1.1 相平衡与相平衡条件
+## 第三节 纯物质相变热力学
 
-沸腾：液体的蒸气压等于外压强
+### 3.1 相平衡
 
-相：系统某个宏观部分的化学和物理性质连续且平滑
-
-推导：$(dT=0,dP=0;d\xi=dn_1=-dn_2)$
+**定温定压封闭系统**相平衡条件：
 
 $$
-dG=-S\,dT+V\,dP+\mu_1dn_1+\mu_2dn_2
+\left(\frac{\partial G}{\partial\xi}\right)_{T,P}=0
 $$
 
-$$
-\left(\frac{\partial G}{\partial\xi}\right)_{T,P}
-=\mu_1\left(\frac{\partial n_1}{\partial\xi}\right)_{T,P}
-+\mu_2\left(\frac{\partial n_2}{\partial\xi}\right)_{T,P}
-=\mu_1-\mu_2
-$$
+定义（摩尔）相变吉布斯自由能
 
-相平衡条件（定温定压，物质在相-相之间交换的摩尔数 $\xi$）：
+$$\Delta_{\text{tr}}G \equiv \left(\frac{\partial G}{\partial \xi}\right)_{T,P}$$
 
-- 封闭两相处于平衡态：
+-  与摩尔数无关
+-  是一个状态函数
+-  $\Delta G \neq \Delta_{\text{trs}}G$（绝大多数情况下成立）
 
-    $$
-    \left(\frac{\partial G}{\partial\xi}\right)_{T,P}=0
-    $$
+$$G = n_1 G_{m,1} + n_2 G_{m,2}$$
 
-    $$
-    \mu_1=\mu_2
-    $$
+$$\mathrm{d}\xi = \mathrm{d}n_2 = -\mathrm{d}n_1$$
 
-- 从平衡态偏离：
-
-    $$
-    \left(\frac{\partial G}{\partial\xi}\right)_{T,P}d\xi=(\mu_1-\mu_2)d\xi=dG>0
-    $$
-
-#### 3.1.2 相变自发方向
-
-- 自发不可逆相变：从高到低
-- 可逆相变：$\mu_1=\mu_2+d\mu$
-
-#### 3.1.3 可逆相变热力学参量
-
-摩尔相变吉布斯自由能：
+$$\mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}P$$
 
 $$
-\Delta_{tr}G_m\equiv G_{m,1}-G_{m,2}=\mu_1-\mu_2
+\therefore \left(\frac{\partial G}{\partial \xi}\right)_{T,P}
+=\left(\frac{\partial(n_1 G_{m,1}+n_2 G_{m,2})}{\partial \xi}\right)_{T,P}
+=G_{m,2}-G_{m,1}=\mu_2-\mu_1
 $$
 
-摩尔相变焓：
+平衡时：
+
+$$\Delta_{\text{tr}}G_\text{平衡}=\mu_2-\mu_1=0$$
+
+$$\therefore \mu_2=\mu_1$$
+
+摩尔相变焓、摩尔相变熵均为**状态函数**，强度性质，三者符合如下（$G=H-TS$同时偏导）：
+
+$$\Delta_\text{tr}G =0= \Delta_\text{tr}H - T_\text{tr}\Delta_\text{tr}S$$
+
+平衡时取得：
 
 $$
-\Delta_{tr}H_m\equiv H_{m,1}-H_{m,2}
+\Delta_{tr}S_{m}=\frac{\Delta_{tr}H_{m}}{T_{tr}}=-S_{m,分子/液}
 $$
 
-相平衡：
 
-$$
-\Delta_{tr}G_{m(平衡)}=\Delta_{tr}H_{m(平衡)}-T\Delta_{tr}S_{m(平衡)}=0
-$$
+---
 
-相变的G、H、S均为状态函数，随温度的变化：
+### 3.2 相变数据计算
+
+![](image/image-15.png){: .center width="280"}
+
+$$\int_{T_2}^{T_1} C_{p,m}(\text{始}) \, dT + \Delta_{\mathrm{tr}} H_m(T_1) + \int_{T_1}^{T_2} C_{p,m}(\text{终}) \, dT - \Delta_{\mathrm{tr}} H_m(T_2) = 0$$
 
 $$
 \Delta_{tr}H_m(T_2)=\Delta_{tr}H_m(T_1)+\int_{T_1}^{T_2}\Delta C_{P,m}\,dT
 \approx\Delta_{tr}H_m(T_1)+\Delta C_{P,m}\cdot\Delta T
 $$
 
+
+!!!NOTE
+    $$\Delta_{\mathrm{tr}} H_m(T) = H_{m,\beta}(T) - H_{m,\alpha}(T)$$
+
+    $$\frac{d\,\Delta_{\mathrm{tr}} H_m}{dT} = \frac{dH_{m,\beta}}{dT} - \frac{dH_{m,\alpha}}{dT}$$
+
+    $$\frac{d\,\Delta_{\mathrm{tr}} H_m}{dT} = C_{p,m}(\beta) - C_{p,m}(\alpha) = \Delta C_{p,m}$$
+
+    $\Delta C_{p,m}$为两相定压摩尔热容差。
+
+
+!!!NOTE
+    状态函数法使得某个不可测的相变过程（可以是假想的）变得可以计算。
+
+
+同理：
+
 $$
 \Delta_{tr}S_m(T_2)=\Delta_{tr}S_m(T_1)+\int_{T_1}^{T_2}\frac{\Delta C_{P,m}}{T}\,dT
 \approx\Delta_{tr}S_m(T_1)+\Delta C_{P,m}\cdot\ln\frac{T_1}{T_2}
 $$
 
-### 3.2 纯物质相图
+!!!NOTE
+    定压熵变：
+
+    $$
+    \Delta S=\int_{T_1}^{T_2}\frac{dH}{T}\,
+    $$
+
+对于蒸发（远离临界点的温度区间），如果$T_1 - T_2$ 改变不太大， $\Delta C_{P,m}$为常数，上面两式中可以提出。
+
+![](image/image-16.png){: .center width="280"}
+
+
+---
+
+### 3.3 纯物质相图
+
+任意相：
+
+$$\mu=f(P,T)$$
+
+![](image/image-17.png){: .center width="280"}
+
+- 单相区
+
+- 两相平衡线：$\mu _1=\mu_2$
+
+- 三相点：$\mu _1=\mu_2=\mu_3$
+
+- 临界与超临界（非相变、非热力学性质，流体性质），无黏度，完整均匀充盈整个容器
+
+
+---
+
+### 3.4 相区的相对位置
+
+**气态总是在凝聚态下方**
+
+**证明**：
+
+$$
+\Delta_{\text{tr}} G = \mu_{\text{凝聚}} - \mu_{\text{气}}
+$$
+
+平衡点 $p = p^*$：
+
+$$
+\Delta_{\text{tr}} G = 0
+$$
+
+!!!NOTE
+    $$dG=-SdT+VdP$$
+
+
+$$
+\left(\frac{\partial \Delta_{\text{tr}} G}{\partial p}\right)_T = V_{m,\text{凝聚}} - V_{m,\text{气}}
+$$
+
+
+$$
+\because V_{m,\text{气}} \gg V_{m,\text{凝聚}} \quad \therefore \left(\frac{\partial \Delta_{\text{tr}} G}{\partial p}\right)_T < 0
+$$
+
+- $p > p^*$， $ \Delta_{\text{tr}} G< 0$ ，凝聚态 
+
+- $p = p^*$， $ \Delta_{\text{tr}} G= 0$ ，相平衡
+
+- $p < p^*$， $ \Delta_{\text{tr}} G> 0$ ，气态
+
+
+**固态总是在液态的左方**
+
+考虑等压融化过程
+
+$$
+\left(\frac{\partial \Delta_{\text{tr}} G}{\partial T}\right)_p = S_{m,\text{液}} - S_{m,\text{凝聚}} > 0
+$$
+
+---
+
+
 
 $$
 \left(\frac{\partial\mu}{\partial T}\right)_{P,n}

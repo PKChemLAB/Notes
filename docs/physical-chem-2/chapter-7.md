@@ -398,7 +398,8 @@ $$E\propto \frac{1}{d}$$
 
 ### 3.2 离子-永久偶极相互作用
 
-![](image/image-4.png){: .center }
+![](image/image-4.png){: .center width="290"}
+
 
 离子和偶极相互作用能：
 
@@ -429,7 +430,8 @@ $$
   
 - 离子-水相互作用很**强**，如下与离子解离能相等甚至稍大
 
-![](image/image-5.png){: .center }
+![](image/image-5.png){: .center width="310"}
+
 
 - $r_{晶格}<r_{水合}$，形成稳定水合离子。增大程度与晶格半径负相关。
 
@@ -497,7 +499,8 @@ $$
 
 #### 3.4.1 线性法
 
-![](image/image-6.png){: .center }
+![](image/image-6.png){: .center width="300"}
+
 
 如图羧酸二聚体，随着$R-$碳链不断增长，$\alpha$ 趋向于线性增加，根据$E^0_{m,分子/液}=-3.31\alpha$ 知分子间相互作用能最终也近似线性增加，与能量轴的截距即体现**非瞬间偶极的贡献**。
 
@@ -550,7 +553,8 @@ $I$ 为电离能，基于定态描述。极化率的二次方实验结果。$\fr
 
 作用能同时受电子极化率与**距离（接触形式）**影响
 
-![](image/image-7.png){: .center }
+![](image/image-7.png){: .center width="290"}
+
 
 **第二选律：接触构型匹配**
 
@@ -564,7 +568,7 @@ $$
 S^∘_{m,分子/理想气体}=0
 $$
 
-气液转换
+气液转换，**以气体零点定义液态分子间相互作用熵**
 
 $$
 S^∘_{m,分子/液}=-\Delta_{tr}S^∘_{m(bp)}=-\frac{\Delta_{tr}H^∘_{m(bp)}}{T_{bp}}
@@ -583,11 +587,13 @@ $$
 
 由气体（平动主要贡献）到液体（类振动主要贡献），熵有很大改变
 
-![](image/image-8.png){: .center }
+![](image/image-8.png){: .center width="290"}
+
 
 室温附近常见液体
 
-![](image/image-9.png){: .center }
+![](image/image-9.png){: .center width="290"}
+
 
 
 ---

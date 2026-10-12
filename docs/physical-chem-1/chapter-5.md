@@ -98,7 +98,7 @@ $$\Downarrow$$
 $$dS \propto \delta q_{rev} \longrightarrow \boxed{dS \equiv \frac{\delta q_{rev}}{T}}$$
 
 
-!!!CAUTION
+!!!NOTE
     此处必须为可逆热：熵是状态函数，系统从状态 A 变到状态 B 时，$\Delta S$ 的值是唯一确定的，与具体经历的路径无关。$q$是一个过程量。在相同的初末状态 A 和 B 之间，系统经历不同的过程，吸收或放出的热量 $\delta q$ 是不同的。如果不限定一条特定的路径，积分 $\int_A^B \frac{\delta q}{T}$ 将会有无数个不同的结果，无法用来定义一个具有唯一值的状态函数 $\Delta S$。
 
     在可逆过程中，系统内部及系统与环境之间时刻保持准平衡，且没有任何耗散（如摩擦生热、有限温差传热等）。系统状态的每一步变化都可以用明确的状态参数完全描述。只有在这种理想极限下，系统交换的热量 $\delta q_{rev}$ 才是由初末状态唯一决定的
@@ -109,6 +109,7 @@ $$dS \propto \delta q_{rev} \longrightarrow \boxed{dS \equiv \frac{\delta q_{rev
 封闭系统，$dn \equiv 0$ ，$\delta W_{非} \equiv 0$
 
 可逆传热
+
  $$\delta q_{rev} = T \cdot dS \longrightarrow [ 系 统 ] \longleftarrow \delta W_{rev} = -P dV$$
  
 都是强度性质乘以广度性质微分
@@ -116,6 +117,8 @@ $$dS \propto \delta q_{rev} \longrightarrow \boxed{dS \equiv \frac{\delta q_{rev
 可逆过程：
 
 $$dU = \delta W_{rev} + \delta q_{rev} $$
+
+$$\therefore dU = -P dV + TdS$$
 
 $$U = f(n, V, S)$$
 
@@ -127,18 +130,15 @@ $$\left(\frac{\partial U}{\partial V}\right)_{n,S} = -P$$
 
 $$ T \equiv \left(\frac{\partial U}{\partial S}\right)_{n,V}$$
 
-$$\therefore dU = -P dV + TdS$$
 
-dU=−PdV+TdS 是纯状态量之间的恒等关系，对任意过程都成立，不限可逆。它从可逆过程推出，但因为结论只含状态量，就摆脱了对路径的依赖。可逆与不可逆的区别不在式子成不成立，而在于：可逆时 TdSTdS
-TdS 和 −PdV-PdV
-−PdV 分别是真实的热和功；不可逆时它们只是状态量组合，不再等于真实交换的热和功
+dU=−PdV+TdS 是纯状态量之间的恒等关系，对任意过程都成立，不限可逆。它从可逆过程推出，但因为结论只含状态量，就摆脱了对路径的依赖。可逆时 TdS和 −PdV分别是真实的热和功；不可逆时它们只是状态量组合，不再等于真实交换的热和功。
 
 
 ---
 
 ### 2.5 状态熵与过程熵变计算
 
-**基本方法。** 这一部分计算一定要注意下标！！！
+**基本方法。** 
 
 $$dS_{环} = \frac{dq_{可逆,环}}{T_{环}} = -\frac{dq}{T_{环}} = -\frac{dU-dw}{T_{环}}$$
 
