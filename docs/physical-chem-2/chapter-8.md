@@ -360,11 +360,11 @@ $$
 \because V_{m,\text{气}} \gg V_{m,\text{凝聚}} \quad \therefore \left(\frac{\partial \Delta_{\text{tr}} G}{\partial p}\right)_T < 0
 $$
 
-- $p > p^*$， $ \Delta_{\text{tr}} G< 0$ ，凝聚态 
+- $p > p^*$， $\Delta_{\text{tr}} G< 0$ ，凝聚态 
 
-- $p = p^*$， $ \Delta_{\text{tr}} G= 0$ ，相平衡
+- $p = p^*$， $\Delta_{\text{tr}} G= 0$ ，相平衡
 
-- $p < p^*$， $ \Delta_{\text{tr}} G> 0$ ，气态
+- $p < p^*$， $\Delta_{\text{tr}} G> 0$ ，气态
 
 
 **固态总是在液态的左方**
