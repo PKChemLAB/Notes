@@ -147,7 +147,7 @@ $$\tilde{\nu} = 1302\sqrt{\frac{k}{u}} \quad (\mathrm{cm^{-1}})$$
 
 ### 2.3 理想气体标准态摩尔熵
 
-标准态：$1bar，300K $
+标准态：$1bar，300K$
 
 不同理想气体之间摩尔体积相同，不同的只有摩尔质量。重分子平动能级密，可及量子态多。
 
@@ -184,6 +184,10 @@ $$
 $$
 
 !!!NOTE
+    $$dG=Vdp-SdT$$
+
+    恒温下：
+
     $$
     \mathrm{d}\mu = \mathrm{d}G_m = V_m \mathrm{d}P
     $$
@@ -377,33 +381,67 @@ $$
 
 ---
 
+### 3.5 相图的斜率
 
 
-$$
-\left(\frac{\partial\mu}{\partial T}\right)_{P,n}
-=\left(\frac{\partial G_m}{\partial T}\right)_{P,n}
-=-S_m
-$$
 
-由相平衡 $\mu_1=\mu_2$，可得两相边界斜率（克拉伯龙方程）：
+在$P$–$T$ 相图，相 1 与相 2 之间的相平衡线上，取两点 $(P,T)$ 与 $(P+dP,\,T+dT)$
 
-$$
-\frac{dP}{dT}=\frac{\Delta_{tr}S_{m(平衡)}}{\Delta_{tr}V_{m(平衡)}}
-=\frac{\Delta_{tr}H_{m(平衡)}}{T_{平衡}\Delta_{tr}V_{m(平衡)}}
-$$
 
-对气-液相变，可变化为（$P^*$：饱和蒸气压）：
+
+$$\Delta_{\mathrm{tr}}G=0$$
 
 $$
-\frac{dP^*}{dT}=\frac{\Delta_{tr}H_{m(平衡)}}{T_{平衡}\Delta_{tr}V_{m(平衡)}}
-=\frac{P^*\Delta_{tr}H_{m(平衡)}}{R(T_{平衡})^2}
+\begin{cases}
+d\mu_1=-S_{m(1)}\,dT+V_{m(1)}\,dP\\[4pt]
+d\mu_2=-S_{m(2)}\,dT+V_{m(2)}\,dP
+\end{cases}
 $$
 
-### 3.3 沸点、熔点与临界点
+$$d\mu_1+d\mu_2=0$$
 
-#### 3.3.1 标准沸点与分子结构
+代入两式相减：
 
-由相变过程中 $\Delta_{tr}G_{m(平衡)}=0$，得
+$$
+-(\underbrace{S_{m(1)}-S_{m(2)}}_{\Delta_{\mathrm{tr}}S})\,dT+(\underbrace{V_{m(1)}-V_{m(2)}}_{\Delta_{\mathrm{tr}}V})\,dP=0
+$$
+
+即：
+
+$$-\Delta_{\mathrm{tr}}S\,dT+\Delta_{\mathrm{tr}}V\,dP=0$$
+
+**克拉伯龙方程**：
+
+$$\boxed{\dfrac{dP^*}{dT}=\dfrac{\Delta_{\mathrm{tr}}S}{\Delta_{\mathrm{tr}}V}=\dfrac{\Delta_{\mathrm{tr}}H}{T_{\mathrm{tr}}\,\Delta_{\mathrm{tr}}V}}$$
+
+$dP^*$:饱和蒸汽压，液或固体与上方蒸汽达到**相平衡**时，该蒸汽所具有的压力。
+
+#### 气 → 凝聚
+
+$$\Delta_{\mathrm{tr}}V_{\text{气}\to\text{凝}}=-V_{m(\text{气})}=-\dfrac{RT_{\mathrm{tr}}}{P^{*}}$$
+
+克拉伯龙-克劳修斯方程
+
+$$\dfrac{dP}{dT}=\dfrac{P^{*}\left|\Delta_{\mathrm{tr}}H\right|}{RT_{\mathrm{tr}}^{2}}$$
+
+**斜率为正且较缓**
+
+#### 固 → 液
+
+$$
+\frac{dP}{dT}=\frac{\Delta_{trs}S}{\Delta_{trs}V}
+$$
+
+其中$\Delta_{trs}S$较大。$\Delta_{trs}V$对于水小于0接近0。除水外$\Delta_{trs}V$大于0接近0。故**相变斜率极大**。
+
+---
+
+
+### 3.6 相变点
+
+#### 标准态沸点
+
+由相变平衡 $\Delta_{tr}G_{m}=0$，得
 
 $$
 T_{bp}=\frac{\Delta_{tr}H_{m(bp)}}{\Delta_{tr}S_{m(bp)}}
@@ -411,17 +449,58 @@ T_{bp}=\frac{\Delta_{tr}H_{m(bp)}}{\Delta_{tr}S_{m(bp)}}
 =\frac{E^0_{m,分子/液}}{-\frac{1+F_{转}}{2}R-\Delta_{tr}S_{m(bp)}}
 $$
 
-**非氢键多原子分子**（$\Delta_{tr}S^\circ_{m(bp)}=84.4\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$）：
+
+!!!NOTE
+    认为是理想气体，且液体摩尔体积可忽略：
+
+    $$
+    \Delta_{tr}H_m=\Delta_{tr}U_m+\Delta(pV)_m
+    =-E_{m,\text{分子/液}}+RT
+    $$
+
+    沸点处 $\Delta_{tr}G_m=0$，即：
+
+    $$
+    -E_{m,\text{分子/液}}+RT_{bp}
+    =T_{bp}\Delta_{tr}S_m
+    $$
+
+    $$
+    \boxed{T_{bp}=\frac{E_{m,\text{分子/液}}}{R-\Delta_{tr}S_m}}
+    $$
+
+    由第7章
+
+    $$
+    E_{m,\text{分子/液}}
+    \approx E^0_{m,\text{分子/液}}
+    +(Q_{m,\text{液}}-Q_{m,\text{气}})
+    =E^0_{m,\text{分子/液}}+\frac{3+F_{\text{转}}}{2}RT
+    $$
+
+    $$
+    T_{bp}(R-\Delta_{tr}S_m)
+    =E^0_{m,\text{分子/液}}+\frac{3+F_{\text{转}}}{2}RT_{bp}
+    $$
+
+    $$
+    \boxed{T_{bp}=\frac{E^0_{m,\text{分子/液}}}{-\frac{1+F_{\text{转}}}{2}R-\Delta_{tr}S_m}}
+    $$
+
+其中，$\Delta_{tr}S^\circ_{m(bp)}=85\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$：
 
 $$
 T_{bp}(K)=-10.0E^0_{m,分子/液}(\mathrm{kJ\cdot mol^{-1}})
 $$
 
-**氢键分子**的 $\Delta_{tr}S^\circ_{m(bp)}$ 会明显大于 $84.4\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$
+![](image/image-18.png){: .center width="280"}
 
-#### 3.3.2 标准熔点与分子结构
+- 单原子误差来自转动自由度
+  
+- 氢键误差来自氢键的熵
 
-标准熔点：
+
+#### 标准态熔点
 
 $$
 T_{mp}=\frac{\Delta_{tr}H_{m(mp)}}{\Delta_{tr}S_{m(mp)}}
@@ -429,144 +508,500 @@ T_{mp}=\frac{\Delta_{tr}H_{m(mp)}}{\Delta_{tr}S_{m(mp)}}
 {\Delta_{tr}S_{(类振动)}+\Delta_{tr}S_{(定向)}+\Delta_{tr}S_{(分子内振动)}}
 $$
 
-- $\Delta_{tr}S_{(类振动)}$：两种类振动自由度的摩尔熵在液态与晶态的差别
-- $\Delta_{tr}S_{(定向)}$：从晶态变成液态所造成的分子摩尔空间取向熵改变
-- $\Delta_{tr}S_{(分子内振动)}$：熔融过程中发生明显运动模式改变的分子内振动自由度的摩尔变化
-- 接近球形的四面体分子：
+其中：
 
-    $$
-    T_{mp}\approx-100\times(E_{m,分子/液}-E_{m,分子/固})(K)
-    $$
+- $\Delta_{tr}S_{(类振动)}$：类振动自由度变为转动和振动自由度
 
-- 随着碳原子数增加：
-    - 蒸发过程的标准摩尔蒸发熵改变不大，满足特鲁顿规则
-    - 熔融过程大量激发分子内旋转等构象熵，其熔融熵随碳原子数增加快速增加
-- 随碳原子数增加，正烷烃的标准熔点增加速率应该大大慢于标准沸点的增加速率。但图8.17揭示，标准熔点增加速率只是稍慢于标准沸点的增加速率。
-- 熔融过程在释放大量的构象熵的同时，通过热布居分子内构象振动自由度而大大增加了液态的热能，两个效应部分相抵消
+- $\Delta_{tr}S_{(定向)}$：晶体中分子取向受到晶格限制，熔化后分子有更多空间取向
 
-## 4 纯物质的凝聚态
+单原子/接近球形的四面体分子（如$CH_4$）,无定向熵和分子内振动熵（内振动基本不激发），刚性多原子不考虑分子内振动熵，柔性分子三项均考虑。
 
-### 4.1 凝聚态纯物质的化学势
+---
 
-液态：（$\mu^*$：**纯液态化学势=饱和蒸气化学势**；$P^*$：饱和蒸气压）
+### 3.7 凝聚态的化学势
+
+凝聚态与气态相平衡：
 
 $$
-\mu_{液}=\mu^*=\mu^\circ+RT\ln P^*
+\mu_{凝}=\mu_{气}=\mu^\circ+RT\ln P^*
 $$
 
-固态：
+---
 
-$$
-\mu_{固}=\mu^\circ+RT\ln P^*
-$$
+## 第四节 液态的量子统计热力学
 
-### 4.2 液态的量子统计热力学性质
+### 4.1 摩尔热能
 
-#### 4.2.1 液态定压热容与自由度转化
-
-分子内振动不活跃的**液态热容原理**：
-
-$$
-C_{P,m(液)}=1.9(C_{P,m(气)}-R)
-$$
-
-#### 4.2.2 液态标准定压热容与分子间相互作用基态能
-
-由：
+追踪自由度：
 
 $$
 Q_{m(液)}=Q_{m(气)}+\frac{3+F_{转}}{2}RT
 $$
 
-得：
+
+
+
+---
+
+### 4.2 液体的定压摩尔热容
+
+假设势阱最低能量（基态能）不随温度变化：
 
 $$
-C_{V,m(液)}=C_{V,m(气)}+\frac{3+F_{转}}{2}R
+C_{V,m}=\left(\frac{\partial U_m}{\partial T}\right)_V
 $$
 
-且由：
 
 $$
-C_{P,m(液)}=C_{V,m(液)}+\frac{V_mT(\alpha_P)^2}{\pi_T}
+\boxed{C_{p,m,\text{液}}\approx C_{V,m,\text{液}}=C_{V,m,\text{气}}+\frac{3+F_{\text{转}}}{2}R}
 $$
 
-热膨胀系数 $\alpha_P\equiv\frac{1}{V_m}\left(\frac{\partial V_m}{\partial T}\right)_P$，定温压缩系数 $\pi_T\equiv-\frac{1}{V_m}\left(\frac{\partial V_m}{\partial P}\right)_T$
 
-非氢键分子的**液态热容原理**：
+![](image/image-19.png){: .center width="280"}
 
-$$
-C_{P,m(液)}=C_{V,m(气)}+\frac{3+F_{转}}{2}R+\frac{V_mT(\alpha_P)^2}{\pi_T}
-$$
 
-氢键分子：
+上式对于气体高频低温成立，对于液体而言，需满足：
 
 $$
-C_{P,m(液)}=C_{V,m(气)}+C_{V,m(氢键)}+\frac{3+F_{转}}{2}R+\frac{V_mT(\alpha_P)^2}{\pi_T}
+H_m=U_m+PV_m\approx U_m= U(0)_m+Q_m
 $$
 
-#### 4.2.3 液态单位体积比热
-
-体积比热：单位体积定压热容
+其中：
 
 $$
-\nu=\frac{C_P}{V}=\frac{C_{P,m}}{V_m}
+\frac{\partial U(0)_m}{\partial T}=0
 $$
 
-对化学过程影响最大的是体积比热，液态介质是化学反应非常强有力的推动剂（反应空间无法散热）
+并不合理，需要建立更加精确的关系。
 
-#### 4.2.4 液态熵补偿
 
-液态介质能够有效地捕获反应产生的热量
+#### 热力学恒等式
 
-#### 4.2.6 液态体积
 
-- 凝聚态体积：分子间相互作用
-- 气态体积：系统分子的集体行为：系统的多样性或熵
-    - 气体体积反映的不是物质本身的相互作用性质，取决于环境提供的**边界条件**（容器大小）
-
-### 4.3 固态的量子统计热力学性质简论
-
-#### 4.3.1 固态分子图像
-
-- 含N个原子的晶体：
-    - 3个平动自由度
-    - 3个转动自由度
-    - **振动自由度无限接近3N。**
-- 讨论晶体性质，晶体的振动自由度一般就当作 3N，而完全忽略平动和转动自由度
-
-#### 4.3.2 固态定压热容
-
-固体中核运动的量子自由度全部是**振动自由度**
+**一般简单可压缩体系**的**热力学恒等式**：
 
 $$
-C_{P,m(固)}=\left(\frac{\partial U_{m(固)}}{\partial T}\right)_P(+PV_m\alpha_P)
-=\sum_{j=1}^{3A}\frac{k(j/kT)^2}{(e^{j/2kT}-e^{-j/2kT})^2}
-+\left(\frac{\partial E^0_{m,分子/固}}{\partial T}\right)_P
+\boxed{C_{P,m}-C_{V,m}=\frac{TV_m\alpha_P^2}{\kappa_T}}
 $$
 
-- 第一项：分子在所有**振动自由度摩尔热容**的总值（极限值为 $3R$）
-- 第二项：分子间相互作用基态能对温度的依赖性，反映固体中分子间距随温度的变化（$>0$）
+
+
+!!!NOTE
+    $$
+    C_V=\left(\frac{\partial U}{\partial T}\right)_V,\qquad
+    C_P=\left(\frac{\partial H}{\partial T}\right)_P
+    $$
+
+    $$
+    C_P=\left(\frac{\partial U}{\partial T}\right)_P
+    +P\left(\frac{\partial V}{\partial T}\right)_P
+    $$
+
+    链式法则：
+
+    $$
+    \left(\frac{\partial U}{\partial T}\right)_P
+    =\left(\frac{\partial U}{\partial T}\right)_V
+    +\left(\frac{\partial U}{\partial V}\right)_T
+    \left(\frac{\partial V}{\partial T}\right)_P
+    $$
+
+
+    $$
+    C_P-C_V=
+    \left[\left(\frac{\partial U}{\partial V}\right)_T+P\right]
+    \left(\frac{\partial V}{\partial T}\right)_P
+    $$
+
+    由热力学基本方程 $dU=TdS-PdV$，以及 Maxwell 关系：
+
+    $$
+    \left(\frac{\partial S}{\partial V}\right)_T
+    =\left(\frac{\partial P}{\partial T}\right)_V
+    $$
+
+    得：
+
+    $$
+    \left(\frac{\partial U}{\partial V}\right)_T
+    =T\left(\frac{\partial P}{\partial T}\right)_V-P
+    $$
+
+    即：
+
+    $$
+    \boxed{
+    C_P-C_V=
+    T\left(\frac{\partial P}{\partial T}\right)_V
+    \left(\frac{\partial V}{\partial T}\right)_P
+    }
+    $$
+
+    利用体膨胀系数和等温压缩率：
+
+    $$
+    \alpha_P=\frac1V\left(\frac{\partial V}{\partial T}\right)_P,\qquad
+    \kappa_T=-\frac1V\left(\frac{\partial V}{\partial P}\right)_T
+    $$
+
+    由 $d（lnV）=\alpha_PdT-\kappa_TdP$，恒容时有：
+
+    $$
+    \left(\frac{\partial P}{\partial T}\right)_V
+    =\frac{\alpha_P}{\kappa_T}
+    $$
+
+    $$
+    \boxed{C_P-C_V=\frac{TV\alpha_P^2}{\kappa_T}}
+    $$
+
+    对于**理想气体**，$\alpha_P=1/T$、$\kappa_T=1/P$，故 $C_P-C_V=nR$，摩尔热容满足 $C_{P,m}-C_{V,m}=R$。
+
+
+
+**液体定压摩尔热容**：
 
 $$
-\left(\frac{\partial E^0_{m,分子/固}}{\partial T}\right)_P
-=-\frac{1}{3}\alpha_PE^0_{m,分子/固}
+\boxed{
+C_{P,m,\text{液}}
+=C_{V,m,\text{气}}
++\frac{3+F_{\text{转}}}{2}R
++\frac{TV_m\alpha_P^2}{\kappa_T}
++C_{p,m,\text{氢键}}
+}
 $$
 
-**(A) 单原子或单原子离子构成的固体**
+其中三项依次为气相热运动贡献、液相受限振动的额外贡献、恒压膨胀修正。
 
-只有分子集体振动自由度
 
-**(B) 含局域共价键的分子晶体**
+![](image/image-20.png){: .center width="280"}
 
-除平动转化的集体振动外，还应加上转动转化
 
-#### 4.3.3 固态熵
+
+#### 氢键校正
+
+氢键分子以水为例：
+
+单个水分子最多形成4个氢键
+
+![](image/image-21.png){: .center width="280"}
+
+$$q_{\mathrm{氢键}}=\sum_{n=0}^{4}g_n e^{-\frac{n\Delta E}{RT}}$$
+
+
+!!!MOTE
+    **只要有自由度就一定有分布，一定有热能**。
+
+
+中子散射确定，室温水分子平均氢键个数为 $\mathrm{3.6}$ 个。
+
+平均氢键数为各状态氢键数的概率加权平均：
 
 $$
-S_{m(固)}(T)=\int_0^T\frac{C_{P,m(固)}}{T}\,dT
-=\int_0^T\frac{C_{V,m(固)}}{T}\,dT
-+\int_0^T\frac{(\partial E^0_{m,分子/固}/\partial T)_P}{T}\,dT
+\overline N_{\text{氢键}}
+=\sum_{n=0}^4(4-n)\frac{g_i e^{-n\Delta E/(RT)}}{q_{\text{氢键}}}
+=\frac{4}{1+e^{-\Delta E/(RT)}}
 $$
 
-- 第一项：固态每个**振动自由度的摩尔熵**
-- 第二项：分子间电磁相互作用带来的摩尔熵
+$$
+3.6=\frac{4}{1+e^{-\Delta E/(RT)}}
+$$
+
+
+$$
+\Delta E\approx5.4\ \mathrm{kJ/mol}
+$$
+
+
+
+!!!NOTE
+
+    由配分函数可求得氢键对摩尔内能的贡献：
+
+    $$
+    U_{m,\text{氢键}}
+    =RT^2\left(\frac{\partial\ln q}{\partial T}\right)_V
+    =\frac{4\Delta E}{1+e^{\Delta E/(RT)}}
+    $$
+    
+    对温度求导，得到氢键热容修正：
+
+    $$
+    C_{V,m,\text{氢键}}
+    =4R\left(\frac{\Delta E}{RT}\right)^2
+    \frac{e^{\Delta E/(RT)}}{(1+e^{\Delta E/(RT)})^2}
+    $$
+
+$$
+C_{V,m,\text{氢键}}\approx14.5\ \mathrm{J\,mol^{-1}K^{-1}}
+$$
+
+课堂上给出的是$21.3\mathrm{J\,mol^{-1}K^{-1}}$
+
+
+液态水室温下的定压摩尔热容约为：
+
+$$
+C_{P,m}(\text{水})\approx75.3\ \mathrm{J\,mol^{-1}K^{-1}}
+$$
+
+
+---
+
+### 4.3 液体的体积摩尔比热
+
+单位体积物质升高单位温度所需要的热量：
+
+$$
+\Gamma_V=\frac{C_{P,m}}{V_m}
+$$
+
+
+液体的摩尔体积远小于气体：
+
+$$
+\Gamma_{V,\text{气}}\sim\frac{1}{1000}\Gamma_{V,\text{液}}
+$$
+
+溶剂吸收反应释放的热量，产生正的熵变，从而补偿反应物结合所造成的熵减。
+
+
+---
+
+
+### 4.4 体积
+
+$$
+V_m=\left(\frac{\partial G_m}{\partial P}\right)_{T,n}=\left(\frac{\partial H_m}{\partial P}\right)_{T,n}
+-T\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+$$
+
+对于**理想气体**，焓仅与温度有关：
+
+$$
+\left(\frac{\partial H_m}{\partial P}\right)_{T,n}=0
+$$
+
+
+$$
+\boxed{
+V_m=-T\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+}
+$$
+
+对于**液体**，根据 Maxwell 关系：
+
+$$
+\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+=-\left(\frac{\partial V_m}{\partial T}\right)_{P,n}
+$$
+
+由于凝聚态物质的热膨胀通常较小，近似：
+
+$$
+\left(\frac{\partial V_m}{\partial T}\right)_{P,n}\approx0
+$$
+
+$$
+\boxed{
+V_m\approx\left(\frac{\partial H_m}{\partial P}\right)_{T,n}\approx\left(\frac{\partial U_m}{\partial P}\right)_{T,n}
+}
+$$
+
+---
+
+## 第五节 固体的量子统计热力学
+
+!!!CAUTION
+    经典能量均分定理认为能量连续，必要条件如下：
+
+    $$
+    \boxed{k_BT\gg\Delta E}
+    $$
+
+    此时级数和才能近似为积分，能量均分成立，每个二次型能量项平均贡献 $\frac12 k_BT$。
+
+    然而对于低温高频的情况能量均分无法解释，而量子统计则可以通过级数求和的方式给出精确热能贡献。
+
+
+### 5.1 摩尔热能、摩尔内能与爱因斯坦关系式
+
+固体的摩尔内能：
+
+$$
+U_{m,\text{固}}=Q_{m,\text{固}}+U_m(0)
+$$
+
+对于$\mathrm{1mol}$ **原子**共有 $3N_A$ 个振动模式：
+
+$$
+U_{m,\text{固}}=\sum_{j=1}^{3N_A}Q_j+U_m(0)
+$$
+
+
+**爱因斯坦模型**假设所有原子均以相同频率 $\nu_E$ 进行独立简谐振动（**均为低频，室温下高温低频近似**）
+
+振动热能：
+
+$$
+\overline Q=\frac{h\nu_E}{e^{h\nu_E/(k_BT)}-1}
+$$
+
+固体摩尔内能为：
+
+$$
+U_{m,\text{固}}
+=U_m(0)+\frac{3N_Ah\nu_E}{e^{h\nu_E/(k_BT)}-1}
+$$
+
+
+爱因斯坦方程：
+
+$$
+\boxed{
+C_{V,m}
+=3R\left[
+\frac{h\nu_E/(k_BT)}
+{e^{h\nu_E/(2k_BT)}-e^{-h\nu_E/(2k_BT)}}
+\right]^2
+}
+$$
+
+
+
+$$
+C_{V,m}
+=3R\frac{x^2e^x}{(e^x-1)^2},
+\qquad
+x=\frac{h\nu_E}{k_BT}
+$$
+
+**高温极限**（$k_BT\gg h\nu_E$）：
+
+$$
+C_{V,m}\longrightarrow3R=25\mathrm{J/mol·K}
+$$
+
+
+**低温极限**（$k_BT\ll h\nu_E$）：
+
+$$
+C_{V,m}\approx3Rx^2e^{-x}
+$$
+
+$$
+C_{V,m}\longrightarrow0
+$$
+
+---
+
+### 5.2 固体的定压摩尔热容
+
+$$
+C_{P,m,\text{固}}
+=\sum_{j=1}^{3N_A}
+\frac{
+k_B\left(\frac{h\nu_j}{k_BT}\right)^2
+}{
+\left(e^{\frac{h\nu_j}{2k_BT}}-e^{-\frac{h\nu_j}{2k_BT}}\right)^2
+}
++\left(\frac{\partial U_m(0)}{\partial T}\right)_P
+$$
+
+$$
+C_{P,m,\text{固}}
+=\sum_{j=1}^{3N_A}
+\frac{
+k_B\left(\frac{h\nu_j}{k_BT}\right)^2
+}{
+\left(e^{\frac{h\nu_j}{2k_BT}}-e^{-\frac{h\nu_j}{2k_BT}}\right)^2
+}
++\frac{V_mT\alpha_P^2}{\kappa_T}
+$$
+
+
+!!!NOTE
+    **键力常数 $k$ 越大** → 势阱底部曲率越大（更陡峭、狭窄） → 振动频率 $\omega=\sqrt{k/\mu}$ 越高 → 振动能级间隔 $\Delta E=\hbar\omega$ 越大 → 相同温度下越难被热激发 → 量子冻结越明显，振动热容越小。
+
+
+
+| 物质 | $C_{P,m}$ / ($\mathrm{J\cdot mol^{-1}\cdot K^{-1}}$) |
+|:---:|:---:|
+|$\mathrm{C}$ | 6.1 |
+|  $\mathrm{Cs}$ | 32.2 |
+| $\mathrm{BaCO_3}$ | 86 |
+
+
+#### 单原子固体
+
+**低频高温近似**：对多数单原子金属和离子晶体成立，对力常数较大的小原子误差大（如碳单晶）。
+
+#### 共价分子或基团
+
+
+$$
+C_{P,m}(\mathrm{BaCO_3})\neq 3R\times5
+$$
+
+其中碳酸根共价部分存在误差
+
+---
+
+### 5.3 固体的摩尔熵
+
+**热力学第三定律**，完美晶体在绝对零度时熵为零：
+
+$$
+\lim_{T\to0}S_m=0
+$$
+
+由可逆过程的熵定义及恒压摩尔热容：
+
+$$
+dS_m=\frac{\delta Q_{\mathrm{rev},m}}{T},
+\qquad
+\delta Q_{\mathrm{rev},m}=C_{P,m}\,dT
+$$
+
+
+$$
+dS_m=\frac{C_{P,m}}{T}\,dT
+$$
+
+
+$$
+S_m(T)-S_m(0)=\int_0^T\frac{C_{P,m}(T')}{T'}\,dT'
+$$
+
+$$
+\boxed{
+S_m(T)=\int_0^T\frac{C_{P,m}(T')}{T'}\,dT'
+}
+$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

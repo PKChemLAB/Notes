@@ -200,7 +200,7 @@ nav:
 
 
 
-copyright: Copyright &copy; 2026 Peikai Chen.All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+copyright: Copyright &copy; 2026 Peikai Chen. All rights, including for text and data mining, AI training, and similar technologies, are reserved.
 
 
 
@@ -264,7 +264,7 @@ extra_javascript:
 
 extra_css:
 
-  - stylesheets/extra.css?v=2026.10.12.2001
+  - stylesheets/extra.css?v=2026.10.17.1809
 
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
