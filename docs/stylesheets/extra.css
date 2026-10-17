@@ -342,3 +342,34 @@ img.center {
   text-align: center !important;
   vertical-align: middle !important;
 }
+
+/* ============================================================================
+   6. 回到页面顶部按钮
+   ============================================================================ */
+[data-md-color-scheme="slate"] .md-top {
+  background-color: #223a4f;
+  border: 1px solid #4f768f;
+  box-shadow: 0 4px 14px rgba(2, 8, 15, 0.36);
+  color: #d6e5ef;
+}
+
+[data-md-color-scheme="slate"] .md-top:focus,
+[data-md-color-scheme="slate"] .md-top:hover {
+  background-color: #63c7bb;
+  border-color: #8bddd3;
+  color: #10252d;
+}
+
+[data-md-color-scheme="default"] .md-top {
+  background-color: #e2ebf0;
+  border: 1px solid #82a6b6;
+  box-shadow: 0 4px 14px rgba(38, 52, 66, 0.16);
+  color: #315a74;
+}
+
+[data-md-color-scheme="default"] .md-top:focus,
+[data-md-color-scheme="default"] .md-top:hover {
+  background-color: #0f766e;
+  border-color: #0f766e;
+  color: #ffffff;
+}
