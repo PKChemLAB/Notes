@@ -82,7 +82,9 @@ plugins:
 
   - statistics:
 
-      words_per_minute: 200
+      words_per_minute: 67
+
+      codelines_per_minute: 27
 
 
 
