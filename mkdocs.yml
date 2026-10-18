@@ -266,7 +266,7 @@ extra_javascript:
 
 extra_css:
 
-  - stylesheets/extra.css?v=2026.10.17.1809
+  - stylesheets/extra.css?v=2026.10.18.2227
 
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
