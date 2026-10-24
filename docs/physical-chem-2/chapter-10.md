@@ -8,9 +8,8 @@
 考虑 A 相和 B 相，其中物种 $i$ 平衡分布：
 
 $$
-i_{(A)}\xrightleftharpoons[T,P]{}i_{(B)}
+i_{(A)}\overset{T,P}{\rightleftharpoons}i_{(B)}
 $$
-
 
 设
 
