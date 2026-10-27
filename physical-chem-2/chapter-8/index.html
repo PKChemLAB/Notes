@@ -1,0 +1,3807 @@
+<!DOCTYPE html><html lang="zh" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pkchemlab.github.io/Notes/physical-chem-2/chapter-8/">
+      
+      
+        <link rel="prev" href="../chapter-7/">
+      
+      
+        <link rel="next" href="../chapter-9/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>纯物质体相性质 - CPK's Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css?v=2026.10.27.2108">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="CPK's Notes" class="md-header__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CPK's Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              纯物质体相性质
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo" aria-label="切换到浅色模式" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="切换到深色模式" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../structure-spectroscopy/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅱ:光谱学
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solid-state-physics/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  结构Ⅲ:固体物理
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../physical-chem-1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学I
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  物理化学II
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../data-structures/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  数据结构基础
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../information-theory/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  信息理论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../intro-computational-chem/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  计算化学导论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../papers/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Papers
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CPK's Notes" class="md-nav__button md-logo" aria-label="CPK's Notes" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CPK's Notes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pkchemlab/Notes" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    pkchemlab/Notes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../structure-spectroscopy/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅱ:光谱学
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅱ:光谱学
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光与分子的相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子结构和原子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    转动光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：双原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    振动光谱：多原子分子
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../structure-spectroscopy/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子电子光谱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solid-state-physics/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    结构Ⅲ:固体物理
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    结构Ⅲ:固体物理
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    晶体的 X 射线衍射
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体能带理论基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    固体光谱基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solid-state-physics/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    金属晶体和离子晶体
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../physical-chem-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学I
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学I
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/database/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Databases
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    能量与能量量子化
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从单原子分子到多原子：熵与温度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子结构与宏观测量
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    热力学基础
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可逆过程热力学与第二定律
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../physical-chem-1/chapter-6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    可逆过程热力学基本框架
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    物理化学II
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    物理化学II
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分子间相互作用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纯物质体相性质
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    纯物质体相性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一节 经典气体理论
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一节 经典气体理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 定性模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 定量模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二节 气体的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二节 气体的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 理想气体状态方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 定压摩尔热容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 理想气体标准态摩尔熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 气体的化学势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三节 纯物质相变热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三节 纯物质相变热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 相平衡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 相变数据计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 纯物质相图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 相区的相对位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 相图的斜率
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 相图的斜率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        气 → 凝聚
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固 → 液
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 相变点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 相变点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标准态沸点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标准态熔点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 凝聚态的化学势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四节 液态的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四节 液态的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 摩尔热能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 液体的定压摩尔热容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 液体的定压摩尔热容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        热力学恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        氢键校正
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 液体的体积摩尔比热
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 体积
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五节 固体的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五节 固体的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 摩尔热能、摩尔内能与爱因斯坦关系式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 固体的定压摩尔热容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 固体的定压摩尔热容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单原子固体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        共价分子或基团
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 固体的摩尔熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液的基本性质
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    溶液与多相混合物
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../data-structures/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数据结构基础
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数据结构基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithm Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lists, Stacks, and Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds03/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Heaps and Priority Queues
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-structures/ds05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Segment Trees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../information-theory/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息理论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    信息理论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../information-theory/L1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    信息度量与熵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../intro-computational-chem/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算化学导论
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    计算化学导论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/first-example/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    引例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../intro-computational-chem/montecarlo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    蒙特卡洛方法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9">
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../papers/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Papers
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Papers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../papers/26.3.15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    气液界面合成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一节 经典气体理论
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一节 经典气体理论">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 定性模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 定量模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二节 气体的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二节 气体的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 理想气体状态方程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 定压摩尔热容
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 理想气体标准态摩尔熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 气体的化学势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三节 纯物质相变热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三节 纯物质相变热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 相平衡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 相变数据计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 纯物质相图
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 相区的相对位置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 相图的斜率
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 相图的斜率">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        气 → 凝聚
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        固 → 液
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 相变点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.6 相变点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标准态沸点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        标准态熔点
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 凝聚态的化学势
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四节 液态的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四节 液态的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 摩尔热能
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 液体的定压摩尔热容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 液体的定压摩尔热容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        热力学恒等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        氢键校正
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 液体的体积摩尔比热
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 体积
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五节 固体的量子统计热力学
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五节 固体的量子统计热力学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 摩尔热能、摩尔内能与爱因斯坦关系式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 固体的定压摩尔热容
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 固体的定压摩尔热容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单原子固体
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        共价分子或基团
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 固体的摩尔熵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="8">第8章 纯物质的体相性质<a class="headerlink" href="#8" title="Permanent link">¶</a></h1>
+<div style="margin-top: -30px; font-size: 0.75em; opacity: 0.7;">
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10h-2a8 8 0 0 1-8 8 8 8 0 0 1-8-8 8 8 0 0 1 8-8zm6.78 1a.7.7 0 0 0-.48.2l-1.22 1.21 2.5 2.5L20.8 5.7c.26-.26.26-.7 0-.95L19.25 3.2c-.13-.13-.3-.2-.47-.2m-2.41 2.12L9 12.5V15h2.5l7.37-7.38z"></path></svg></span> 约 2559 个字 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 17H7V3h14m0-2H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2M3 5H1v16a2 2 0 0 0 2 2h16v-2H3m12.96-10.71-2.75 3.54-1.96-2.36L8.5 15h11z"></path></svg></span> 12 张图片 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8m0-18c5.5 0 10 4.5 10 10s-4.5 10-10 10C6.47 22 2 17.5 2 12S6.5 2 12 2m.5 11H11V7h1.5v4.26l3.7-2.13.75 1.3z"></path></svg></span> 预计阅读时间 38 分钟</p>
+</div>
+<h2 id="_1">第一节 经典气体理论<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<h3 id="11">1.1 定性模型<a class="headerlink" href="#11" title="Permanent link">¶</a></h3>
+<ul>
+<li>
+<p><span class="arithmatex">\(r_{分子}&lt;&lt;d_{分子}\)</span></p>
+</li>
+<li>
+<p>无分子间相互作用，弹性碰撞</p>
+</li>
+<li>
+<p>气体分子处于无休止运动</p>
+</li>
+</ul>
+<hr>
+<h3 id="12">1.2 定量模型<a class="headerlink" href="#12" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-10.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-10.png" width="280"></a></p>
+<p>根据牛顿定律：</p>
+<div class="arithmatex">\[
+F=\frac{\Delta(m\vec{v})}{\Delta t}
+\]</div>
+<p>单个分子碰撞器壁产生的压强：</p>
+<div class="arithmatex">\[
+P_1=\frac{F_x}{a}=\frac{2m\overline{v}_x}{\Delta t\cdot a}
+\]</div>
+<p>在 <span class="arithmatex">\(\Delta t\)</span> 时间内，撞击面积 <span class="arithmatex">\(a\)</span> 的分子数为：</p>
+<div class="arithmatex">\[
+N_{\text{撞}}=\frac{1}{2}\big(\overline{v}_x\Delta t\cdot a\big)\cdot \frac{nN_{\text{A}}}{V}
+\]</div>
+<p>总压强等于单个分子压强乘以撞击分子数：</p>
+<div class="arithmatex">\[
+\therefore P = P_1 \cdot N_{\text{撞}}
+\]</div>
+<div class="arithmatex">\[
+P=\frac{N_{\text{A}}m\overline{v}_x^2}{V}\cdot n
+\]</div>
+<div class="arithmatex">\[
+\therefore PV = n\cdot \big(N_{\text{A}}m\overline{v}_x^2\big)=n\cdot 2E_{\text{k(平)}}
+\]</div>
+<p>与理想气体状态方程对比</p>
+<div class="arithmatex">\[
+E_{\text{k(平)}}=\frac{1}{2} RT = E_{\text{k(1)}} = E_{\text{k(总)}}
+\]</div>
+<p><strong>能量均分定理</strong>：每一个能量二阶项热能贡献为 <span class="arithmatex">\(\frac{1}{2}RT\)</span></p>
+<hr>
+<h2 id="_2">第二节 气体的量子统计热力学<a class="headerlink" href="#_2" title="Permanent link">¶</a></h2>
+<h3 id="21">2.1 理想气体状态方程<a class="headerlink" href="#21" title="Permanent link">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[dU=TdS-PdV\]</div>
+<div class="arithmatex">\[dA=-SdT-PdV\]</div>
+</div>
+<div class="arithmatex">\[
+P=-\left(\frac{\partial A}{\partial V}\right)_{T,n}
+=nRT\left[\frac{\partial(\ln f_{\text{总}})}{\partial V}\right]_{T,n}
+=nRT\left[\frac{\partial(\ln f_{\text{平动}})}{\partial V}\right]_{T,n}
+=nRT\left[\frac{\partial(\ln V)}{\partial V}\right]_{T,n}
+=\frac{nRT}{V}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[U = U(0) + Q\]</div>
+<div class="arithmatex">\[A = U - TS = U(0) + Q - TS\]</div>
+<p>热运动内能：</p>
+<div class="arithmatex">\[Q = NkT^2 \left(\frac{\partial \ln f_{\text{总}}}{\partial T}\right)_V\]</div>
+<p>熵：</p>
+<div class="arithmatex">\[S = Nk \ln f_{\text{总}} + \frac{Q}{T}\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+A &amp;= U(0) + Q - T\left(Nk \ln f_{\text{总}} + \frac{Q}{T}\right) \\
+&amp;= U(0) + Q - NkT \ln f_{\text{总}} - Q \\
+&amp;= U(0) - NkT \ln f_{\text{总}}
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[\boxed{A = U(0) - nRT \ln f_{\text{总}}}\]</div>
+</div>
+<p>只要气体行为满足量子力学则必然得到理想气体状态方程。</p>
+<hr>
+<h3 id="22">2.2 定压摩尔热容<a class="headerlink" href="#22" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[C_{m,p} = C_{m,V} + R = \frac{5 + F_{\text{转}}}{2}R + \sum_j f_j(u, k_{键})\]</div>
+<p><span class="arithmatex">\(u\)</span> 为折合质量</p>
+<p>振动频率：</p>
+<div class="arithmatex">\[\tilde{\nu} = 1302\sqrt{\frac{k}{u}} \quad (\mathrm{cm^{-1}})\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-11.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-11.png" width="290"></a></p>
+<ul>
+<li>
+<p>单原子分子：<span class="arithmatex">\(C_{m,p} = \frac{5}{2}R\)</span></p>
+</li>
+<li>
+<p>双原子分子：<span class="arithmatex">\(C_{m,p} = 3.5R + f(u, k)\)</span></p>
+<ul>
+<li>
+<p>含氢分子：<span class="arithmatex">\(u \approx 0\)</span>,<span class="arithmatex">\(f \approx 0\)</span></p>
+</li>
+<li>
+<p>其它双原子分子：<span class="arithmatex">\(f\)</span> 随 <span class="arithmatex">\(u\)</span> 增而增，例如 <span class="arithmatex">\(\mathrm{N_2}\)</span>、<span class="arithmatex">\(\mathrm{O_2}\)</span>、<span class="arithmatex">\(\mathrm{I_2}\)</span>（分子量越大，振动越易激发，<span class="arithmatex">\(f\)</span> 越大）</p>
+</li>
+<li>
+<p>活泼<span class="arithmatex">\(ⅠA\)</span>族金属双原子分子金属键结合，<span class="arithmatex">\(k_{键}\)</span>很小，更快接近<strong>低频高温近似</strong>值。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>多原子分子：<span class="arithmatex">\(\mathrm{H_2O}\)</span>、<span class="arithmatex">\(\mathrm{H_2S}\)</span>、<span class="arithmatex">\(\mathrm{H_2Se}\)</span>、<span class="arithmatex">\(\mathrm{NH_3}\)</span>，均在<span class="arithmatex">\(4R\)</span>附近。</p>
+</li>
+<li>
+<p>有机多原子分子</p>
+<ul>
+<li>
+<p>碳氢伸缩振动可忽略</p>
+</li>
+<li>
+<p>构象振动与变形振动不可忽略。如放热反应找溶剂可以找直链。</p>
+</li>
+<li>
+<p>氢被取代：杂原子取代化合物气态标准定压摩尔热容明显高于取代前的碳氢分子。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-12.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-12.png" width="300"></a></p>
+<p>两个线性关系的斜率相等，在 <span class="arithmatex">\(20\ \mathrm{J \cdot mol^{-1} \cdot K^{-1}}\)</span> 。该值说明每个单键片段贡献 <span class="arithmatex">\(2.5R\)</span> 。</p>
+<hr>
+<h3 id="23">2.3 理想气体标准态摩尔熵<a class="headerlink" href="#23" title="Permanent link">¶</a></h3>
+<p>标准态：<span class="arithmatex">\(1bar，300K\)</span></p>
+<p>不同理想气体之间摩尔体积相同，不同的只有摩尔质量。重分子平动能级密，可及量子态多。</p>
+<p>标准摩尔<strong>平动</strong>熵：</p>
+<div class="arithmatex">\[
+S_{m(气)}^\circ=109+\frac{3R}{2}\ln M \mathrm{J\cdot mol^{-1}\cdot K^{-1}}
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-13.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-13.png" width="280"></a></p>
+<ul>
+<li>
+<p>单原子实际高出一些，因为存在电子熵（电子层未满即有简并度）</p>
+</li>
+<li>
+<p>双原子氢卤化物：比直线高约 <span class="arithmatex">\(33\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}\)</span>，基本由转动贡献</p>
+</li>
+<li>
+<p>无机多原子分子：比直线高约 <span class="arithmatex">\(45\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}\)</span></p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-14.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-14.png" width="280"></a></p>
+<ul>
+<li>
+<p>有机多原子分子：柔性分子<strong>每个片段构象振动</strong>对应4~5个小分子转动自由度</p>
+</li>
+<li>
+<p>杂原子取代：三类标准摩尔熵<strong>均增加</strong>（平动、转动、振动能隙都明显减小）</p>
+</li>
+</ul>
+<hr>
+<h3 id="24">2.4 气体的化学势<a class="headerlink" href="#24" title="Permanent link">¶</a></h3>
+<p>纯态：<span class="arithmatex">\(\mu = G_m= U_m + (PV)_m - T S_m=U_m - T S_m + RT\)</span></p>
+<p>理想气体：</p>
+<div class="arithmatex">\[
+\mu=\mu^\circ+RT\ln P
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[dG=Vdp-SdT\]</div>
+<p>恒温下：</p>
+<div class="arithmatex">\[
+\mathrm{d}\mu = \mathrm{d}G_m = V_m \mathrm{d}P
+\]</div>
+<p>理想气体 <span class="arithmatex">\(V_m = \dfrac{RT}{P}\)</span>，积分：</p>
+<div class="arithmatex">\[
+\int_{\mu^\circ}^{\mu} \mathrm{d}\mu = \int_{P^\circ}^{P} \frac{RT}{P}\,\mathrm{d}P
+\]</div>
+<div class="arithmatex">\[
+\mu - \mu^\circ = RT \ln\frac{P}{P^\circ}
+\]</div>
+<div class="arithmatex">\[
+\boxed{\mu = \mu^\circ + RT\ln\frac{P}{P^\circ}}
+\]</div>
+</div>
+<p>实际气体（气体逸度 <span class="arithmatex">\(\alpha\)</span>；逸度系数 <span class="arithmatex">\(\gamma\)</span>）：</p>
+<div class="arithmatex">\[
+\mu=\mu^\circ+RT\ln\alpha
+\]</div>
+<div class="arithmatex">\[
+\alpha=\gamma P
+\]</div>
+<hr>
+<h2 id="_3">第三节 纯物质相变热力学<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
+<h3 id="31">3.1 相平衡<a class="headerlink" href="#31" title="Permanent link">¶</a></h3>
+<p><strong>定温定压封闭系统</strong>相平衡条件：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial G}{\partial\xi}\right)_{T,P}=0
+\]</div>
+<p>定义（摩尔）相变吉布斯自由能</p>
+<div class="arithmatex">\[\Delta_{\text{tr}}G \equiv \left(\frac{\partial G}{\partial \xi}\right)_{T,P}\]</div>
+<ul>
+<li>与摩尔数无关</li>
+<li>是一个状态函数</li>
+<li><span class="arithmatex">\(\Delta G \neq \Delta_{\text{trs}}G\)</span>（绝大多数情况下成立）</li>
+</ul>
+<div class="arithmatex">\[G = n_1 G_{m,1} + n_2 G_{m,2}\]</div>
+<div class="arithmatex">\[\mathrm{d}\xi = \mathrm{d}n_2 = -\mathrm{d}n_1\]</div>
+<div class="arithmatex">\[\mathrm{d}G = -S\mathrm{d}T + V\mathrm{d}P\]</div>
+<div class="arithmatex">\[
+\therefore \left(\frac{\partial G}{\partial \xi}\right)_{T,P}
+=\left(\frac{\partial(n_1 G_{m,1}+n_2 G_{m,2})}{\partial \xi}\right)_{T,P}
+=G_{m,2}-G_{m,1}=\mu_2-\mu_1
+\]</div>
+<p>平衡时：</p>
+<div class="arithmatex">\[\Delta_{\text{tr}}G_\text{平衡}=\mu_2-\mu_1=0\]</div>
+<div class="arithmatex">\[\therefore \mu_2=\mu_1\]</div>
+<p>摩尔相变焓、摩尔相变熵均为<strong>状态函数</strong>，强度性质，三者符合如下（<span class="arithmatex">\(G=H-TS\)</span>同时偏导）：</p>
+<div class="arithmatex">\[\Delta_\text{tr}G =0= \Delta_\text{tr}H - T_\text{tr}\Delta_\text{tr}S\]</div>
+<p>平衡时取得：</p>
+<div class="arithmatex">\[
+\Delta_{tr}S_{m}=\frac{\Delta_{tr}H_{m}}{T_{tr}}=-S_{m,分子/液}
+\]</div>
+<hr>
+<h3 id="32">3.2 相变数据计算<a class="headerlink" href="#32" title="Permanent link">¶</a></h3>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-15.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-15.png" width="280"></a></p>
+<div class="arithmatex">\[\int_{T_2}^{T_1} C_{p,m}(\text{始}) \, dT + \Delta_{\mathrm{tr}} H_m(T_1) + \int_{T_1}^{T_2} C_{p,m}(\text{终}) \, dT - \Delta_{\mathrm{tr}} H_m(T_2) = 0\]</div>
+<div class="arithmatex">\[
+\Delta_{tr}H_m(T_2)=\Delta_{tr}H_m(T_1)+\int_{T_1}^{T_2}\Delta C_{P,m}\,dT
+\approx\Delta_{tr}H_m(T_1)+\Delta C_{P,m}\cdot\Delta T
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[\Delta_{\mathrm{tr}} H_m(T) = H_{m,\beta}(T) - H_{m,\alpha}(T)\]</div>
+<div class="arithmatex">\[\frac{d\,\Delta_{\mathrm{tr}} H_m}{dT} = \frac{dH_{m,\beta}}{dT} - \frac{dH_{m,\alpha}}{dT}\]</div>
+<div class="arithmatex">\[\frac{d\,\Delta_{\mathrm{tr}} H_m}{dT} = C_{p,m}(\beta) - C_{p,m}(\alpha) = \Delta C_{p,m}\]</div>
+<p><span class="arithmatex">\(\Delta C_{p,m}\)</span>为两相定压摩尔热容差。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>状态函数法使得某个不可测的相变过程（可以是假想的）变得可以计算。</p>
+</div>
+<p>同理：</p>
+<div class="arithmatex">\[
+\Delta_{tr}S_m(T_2)=\Delta_{tr}S_m(T_1)+\int_{T_1}^{T_2}\frac{\Delta C_{P,m}}{T}\,dT
+\approx\Delta_{tr}S_m(T_1)+\Delta C_{P,m}\cdot\ln\frac{T_1}{T_2}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>定压熵变：</p>
+<div class="arithmatex">\[
+\Delta S=\int_{T_1}^{T_2}\frac{dH}{T}\,
+\]</div>
+</div>
+<p>对于蒸发（远离临界点的温度区间），如果<span class="arithmatex">\(T_1 - T_2\)</span> 改变不太大， <span class="arithmatex">\(\Delta C_{P,m}\)</span>为常数，上面两式中可以提出。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-16.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-16.png" width="280"></a></p>
+<hr>
+<h3 id="33">3.3 纯物质相图<a class="headerlink" href="#33" title="Permanent link">¶</a></h3>
+<p>任意相：</p>
+<div class="arithmatex">\[\mu=f(P,T)\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-17.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-17.png" width="280"></a></p>
+<ul>
+<li>
+<p>单相区</p>
+</li>
+<li>
+<p>两相平衡线：<span class="arithmatex">\(\mu _1=\mu_2\)</span></p>
+</li>
+<li>
+<p>三相点：<span class="arithmatex">\(\mu _1=\mu_2=\mu_3\)</span></p>
+</li>
+<li>
+<p>临界与超临界（非相变、非热力学性质，流体性质），无黏度，完整均匀充盈整个容器</p>
+</li>
+</ul>
+<hr>
+<h3 id="34">3.4 相区的相对位置<a class="headerlink" href="#34" title="Permanent link">¶</a></h3>
+<p><strong>气态总是在凝聚态下方</strong></p>
+<p><strong>证明</strong>：</p>
+<div class="arithmatex">\[
+\Delta_{\text{tr}} G = \mu_{\text{凝聚}} - \mu_{\text{气}}
+\]</div>
+<p>平衡点 <span class="arithmatex">\(p = p^*\)</span>：</p>
+<div class="arithmatex">\[
+\Delta_{\text{tr}} G = 0
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[dG=-SdT+VdP\]</div>
+</div>
+<div class="arithmatex">\[
+\left(\frac{\partial \Delta_{\text{tr}} G}{\partial p}\right)_T = V_{m,\text{凝聚}} - V_{m,\text{气}}
+\]</div>
+<div class="arithmatex">\[
+\because V_{m,\text{气}} \gg V_{m,\text{凝聚}} \quad \therefore \left(\frac{\partial \Delta_{\text{tr}} G}{\partial p}\right)_T &lt; 0
+\]</div>
+<ul>
+<li>
+<p><span class="arithmatex">\(p &gt; p^*\)</span>， <span class="arithmatex">\(\Delta_{\text{tr}} G&lt; 0\)</span> ，凝聚态 </p>
+</li>
+<li>
+<p><span class="arithmatex">\(p = p^*\)</span>， <span class="arithmatex">\(\Delta_{\text{tr}} G= 0\)</span> ，相平衡</p>
+</li>
+<li>
+<p><span class="arithmatex">\(p &lt; p^*\)</span>， <span class="arithmatex">\(\Delta_{\text{tr}} G&gt; 0\)</span> ，气态</p>
+</li>
+</ul>
+<p><strong>固态总是在液态的左方</strong></p>
+<p>考虑等压融化过程</p>
+<div class="arithmatex">\[
+\left(\frac{\partial \Delta_{\text{tr}} G}{\partial T}\right)_p = S_{m,\text{液}} - S_{m,\text{凝聚}} &gt; 0
+\]</div>
+<hr>
+<h3 id="35">3.5 相图的斜率<a class="headerlink" href="#35" title="Permanent link">¶</a></h3>
+<p>在<span class="arithmatex">\(P\)</span>–<span class="arithmatex">\(T\)</span> 相图，相 1 与相 2 之间的相平衡线上，取两点 <span class="arithmatex">\((P,T)\)</span> 与 <span class="arithmatex">\((P+dP,\,T+dT)\)</span></p>
+<div class="arithmatex">\[\Delta_{\mathrm{tr}}G=0\]</div>
+<div class="arithmatex">\[
+\begin{cases}
+d\mu_1=-S_{m(1)}\,dT+V_{m(1)}\,dP\\[4pt]
+d\mu_2=-S_{m(2)}\,dT+V_{m(2)}\,dP
+\end{cases}
+\]</div>
+<div class="arithmatex">\[d\mu_1+d\mu_2=0\]</div>
+<p>代入两式相减：</p>
+<div class="arithmatex">\[
+-(\underbrace{S_{m(1)}-S_{m(2)}}_{\Delta_{\mathrm{tr}}S})\,dT+(\underbrace{V_{m(1)}-V_{m(2)}}_{\Delta_{\mathrm{tr}}V})\,dP=0
+\]</div>
+<p>即：</p>
+<div class="arithmatex">\[-\Delta_{\mathrm{tr}}S\,dT+\Delta_{\mathrm{tr}}V\,dP=0\]</div>
+<p><strong>克拉伯龙方程</strong>：</p>
+<div class="arithmatex">\[\boxed{\dfrac{dP^*}{dT}=\dfrac{\Delta_{\mathrm{tr}}S}{\Delta_{\mathrm{tr}}V}=\dfrac{\Delta_{\mathrm{tr}}H}{T_{\mathrm{tr}}\,\Delta_{\mathrm{tr}}V}}\]</div>
+<p><span class="arithmatex">\(dP^*\)</span>:饱和蒸汽压，液或固体与上方蒸汽达到<strong>相平衡</strong>时，该蒸汽所具有的压力。</p>
+<h4 id="_4">气 → 凝聚<a class="headerlink" href="#_4" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[\Delta_{\mathrm{tr}}V_{\text{气}\to\text{凝}}=-V_{m(\text{气})}=-\dfrac{RT_{\mathrm{tr}}}{P^{*}}\]</div>
+<p>克拉伯龙-克劳修斯方程</p>
+<div class="arithmatex">\[\dfrac{dP}{dT}=\dfrac{P^{*}\left|\Delta_{\mathrm{tr}}H\right|}{RT_{\mathrm{tr}}^{2}}\]</div>
+<p><strong>斜率为正且较缓</strong></p>
+<h4 id="_5">固 → 液<a class="headerlink" href="#_5" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+\frac{dP}{dT}=\frac{\Delta_{trs}S}{\Delta_{trs}V}
+\]</div>
+<p>其中<span class="arithmatex">\(\Delta_{trs}S\)</span>较大。<span class="arithmatex">\(\Delta_{trs}V\)</span>对于水小于0接近0。除水外<span class="arithmatex">\(\Delta_{trs}V\)</span>大于0接近0。故<strong>相变斜率极大</strong>。</p>
+<hr>
+<h3 id="36">3.6 相变点<a class="headerlink" href="#36" title="Permanent link">¶</a></h3>
+<h4 id="_6">标准态沸点<a class="headerlink" href="#_6" title="Permanent link">¶</a></h4>
+<p>由相变平衡 <span class="arithmatex">\(\Delta_{tr}G_{m}=0\)</span>，得</p>
+<div class="arithmatex">\[
+T_{bp}=\frac{\Delta_{tr}H_{m(bp)}}{\Delta_{tr}S_{m(bp)}}
+=\frac{E_{m,分子/液}}{R-\Delta_{tr}S_{m(bp)}}
+=\frac{E^0_{m,分子/液}}{-\frac{1+F_{转}}{2}R-\Delta_{tr}S_{m(bp)}}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>认为是理想气体，且液体摩尔体积可忽略：</p>
+<div class="arithmatex">\[
+\Delta_{tr}H_m=\Delta_{tr}U_m+\Delta(pV)_m
+=-E_{m,\text{分子/液}}+RT
+\]</div>
+<p>沸点处 <span class="arithmatex">\(\Delta_{tr}G_m=0\)</span>，即：</p>
+<div class="arithmatex">\[
+-E_{m,\text{分子/液}}+RT_{bp}
+=T_{bp}\Delta_{tr}S_m
+\]</div>
+<div class="arithmatex">\[
+\boxed{T_{bp}=\frac{E_{m,\text{分子/液}}}{R-\Delta_{tr}S_m}}
+\]</div>
+<p>由第7章</p>
+<div class="arithmatex">\[
+E_{m,\text{分子/液}}
+\approx E^0_{m,\text{分子/液}}
++(Q_{m,\text{液}}-Q_{m,\text{气}})
+=E^0_{m,\text{分子/液}}+\frac{3+F_{\text{转}}}{2}RT
+\]</div>
+<div class="arithmatex">\[
+T_{bp}(R-\Delta_{tr}S_m)
+=E^0_{m,\text{分子/液}}+\frac{3+F_{\text{转}}}{2}RT_{bp}
+\]</div>
+<div class="arithmatex">\[
+\boxed{T_{bp}=\frac{E^0_{m,\text{分子/液}}}{-\frac{1+F_{\text{转}}}{2}R-\Delta_{tr}S_m}}
+\]</div>
+</div>
+<p>其中，<span class="arithmatex">\(\Delta_{tr}S^\circ_{m(bp)}=85\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}\)</span>：</p>
+<div class="arithmatex">\[
+T_{bp}(K)=-10.0E^0_{m,分子/液}(\mathrm{kJ\cdot mol^{-1}})
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-18.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-18.png" width="280"></a></p>
+<ul>
+<li>
+<p>单原子误差来自转动自由度</p>
+</li>
+<li>
+<p>氢键误差来自氢键的熵</p>
+</li>
+</ul>
+<h4 id="_7">标准态熔点<a class="headerlink" href="#_7" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+T_{mp}=\frac{\Delta_{tr}H_{m(mp)}}{\Delta_{tr}S_{m(mp)}}
+=\frac{E_{m,分子/液}-E_{m,分子/固}}
+{\Delta_{tr}S_{(类振动)}+\Delta_{tr}S_{(定向)}+\Delta_{tr}S_{(分子内振动)}}
+\]</div>
+<p>其中：</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(\Delta_{tr}S_{(类振动)}\)</span>：类振动自由度变为转动和振动自由度</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Delta_{tr}S_{(定向)}\)</span>：晶体中分子取向受到晶格限制，熔化后分子有更多空间取向</p>
+</li>
+</ul>
+<p>单原子/接近球形的四面体分子（如<span class="arithmatex">\(CH_4\)</span>）,无定向熵和分子内振动熵（内振动基本不激发），刚性多原子不考虑分子内振动熵，柔性分子三项均考虑。</p>
+<hr>
+<h3 id="37">3.7 凝聚态的化学势<a class="headerlink" href="#37" title="Permanent link">¶</a></h3>
+<p>凝聚态与气态相平衡：</p>
+<div class="arithmatex">\[
+\mu_{凝}=\mu_{气}=\mu^\circ+RT\ln P^*
+\]</div>
+<hr>
+<h2 id="_8">第四节 液态的量子统计热力学<a class="headerlink" href="#_8" title="Permanent link">¶</a></h2>
+<h3 id="41">4.1 摩尔热能<a class="headerlink" href="#41" title="Permanent link">¶</a></h3>
+<p>追踪自由度：</p>
+<div class="arithmatex">\[
+Q_{m(液)}=Q_{m(气)}+\frac{3+F_{转}}{2}RT
+\]</div>
+<hr>
+<h3 id="42">4.2 液体的定压摩尔热容<a class="headerlink" href="#42" title="Permanent link">¶</a></h3>
+<p>假设势阱最低能量（基态能）不随温度变化：</p>
+<div class="arithmatex">\[
+C_{V,m}=\left(\frac{\partial U_m}{\partial T}\right)_V
+\]</div>
+<div class="arithmatex">\[
+\boxed{C_{p,m,\text{液}}\approx C_{V,m,\text{液}}=C_{V,m,\text{气}}+\frac{3+F_{\text{转}}}{2}R}
+\]</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-19.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-19.png" width="280"></a></p>
+<p>上式对于气体高频低温成立，对于液体而言，需满足：</p>
+<div class="arithmatex">\[
+H_m=U_m+PV_m\approx U_m= U(0)_m+Q_m
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+\frac{\partial U(0)_m}{\partial T}=0
+\]</div>
+<p>并不合理，需要建立更加精确的关系。</p>
+<h4 id="_9">热力学恒等式<a class="headerlink" href="#_9" title="Permanent link">¶</a></h4>
+<p><strong>一般简单可压缩体系</strong>的<strong>热力学恒等式</strong>：</p>
+<div class="arithmatex">\[
+\boxed{C_{P,m}-C_{V,m}=\frac{TV_m\alpha_P^2}{\kappa_T}}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="arithmatex">\[
+C_V=\left(\frac{\partial U}{\partial T}\right)_V,\qquad
+C_P=\left(\frac{\partial H}{\partial T}\right)_P
+\]</div>
+<div class="arithmatex">\[
+C_P=\left(\frac{\partial U}{\partial T}\right)_P
++P\left(\frac{\partial V}{\partial T}\right)_P
+\]</div>
+<p>链式法则：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial U}{\partial T}\right)_P
+=\left(\frac{\partial U}{\partial T}\right)_V
++\left(\frac{\partial U}{\partial V}\right)_T
+\left(\frac{\partial V}{\partial T}\right)_P
+\]</div>
+<div class="arithmatex">\[
+C_P-C_V=
+\left[\left(\frac{\partial U}{\partial V}\right)_T+P\right]
+\left(\frac{\partial V}{\partial T}\right)_P
+\]</div>
+<p>由热力学基本方程 <span class="arithmatex">\(dU=TdS-PdV\)</span>，以及 Maxwell 关系：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial S}{\partial V}\right)_T
+=\left(\frac{\partial P}{\partial T}\right)_V
+\]</div>
+<p>得：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial U}{\partial V}\right)_T
+=T\left(\frac{\partial P}{\partial T}\right)_V-P
+\]</div>
+<p>即：</p>
+<div class="arithmatex">\[
+\boxed{
+C_P-C_V=
+T\left(\frac{\partial P}{\partial T}\right)_V
+\left(\frac{\partial V}{\partial T}\right)_P
+}
+\]</div>
+<p>利用体膨胀系数和等温压缩率：</p>
+<div class="arithmatex">\[
+\alpha_P=\frac1V\left(\frac{\partial V}{\partial T}\right)_P,\qquad
+\kappa_T=-\frac1V\left(\frac{\partial V}{\partial P}\right)_T
+\]</div>
+<p>由 <span class="arithmatex">\(d（lnV）=\alpha_PdT-\kappa_TdP\)</span>，恒容时有：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial P}{\partial T}\right)_V
+=\frac{\alpha_P}{\kappa_T}
+\]</div>
+<div class="arithmatex">\[
+\boxed{C_P-C_V=\frac{TV\alpha_P^2}{\kappa_T}}
+\]</div>
+<p>对于<strong>理想气体</strong>，<span class="arithmatex">\(\alpha_P=1/T\)</span>、<span class="arithmatex">\(\kappa_T=1/P\)</span>，故 <span class="arithmatex">\(C_P-C_V=nR\)</span>，摩尔热容满足 <span class="arithmatex">\(C_{P,m}-C_{V,m}=R\)</span>。</p>
+</div>
+<p><strong>液体定压摩尔热容</strong>：</p>
+<div class="arithmatex">\[
+\boxed{
+C_{P,m,\text{液}}
+=C_{V,m,\text{气}}
++\frac{3+F_{\text{转}}}{2}R
++\frac{TV_m\alpha_P^2}{\kappa_T}
++C_{p,m,\text{氢键}}
+}
+\]</div>
+<p>其中三项依次为气相热运动贡献、液相受限振动的额外贡献、恒压膨胀修正。</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-20.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-20.png" width="280"></a></p>
+<h4 id="_10">氢键校正<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>氢键分子以水为例：</p>
+<p>单个水分子最多形成4个氢键</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image/image-21.png" data-desc-position="bottom"><img alt="" class="center" src="../image/image-21.png" width="280"></a></p>
+<div class="arithmatex">\[q_{\mathrm{氢键}}=\sum_{n=0}^{4}g_n e^{-\frac{n\Delta E}{RT}}\]</div>
+<div class="admonition mote">
+<p class="admonition-title">Mote</p>
+<p><strong>只要有自由度就一定有分布，一定有热能</strong>。</p>
+</div>
+<p>中子散射确定，室温水分子平均氢键个数为 <span class="arithmatex">\(\mathrm{3.6}\)</span> 个。</p>
+<p>平均氢键数为各状态氢键数的概率加权平均：</p>
+<div class="arithmatex">\[
+\overline N_{\text{氢键}}
+=\sum_{n=0}^4(4-n)\frac{g_i e^{-n\Delta E/(RT)}}{q_{\text{氢键}}}
+=\frac{4}{1+e^{-\Delta E/(RT)}}
+\]</div>
+<div class="arithmatex">\[
+3.6=\frac{4}{1+e^{-\Delta E/(RT)}}
+\]</div>
+<div class="arithmatex">\[
+\Delta E\approx5.4\ \mathrm{kJ/mol}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>由配分函数可求得氢键对摩尔内能的贡献：</p>
+<div class="arithmatex">\[
+U_{m,\text{氢键}}
+=RT^2\left(\frac{\partial\ln q}{\partial T}\right)_V
+=\frac{4\Delta E}{1+e^{\Delta E/(RT)}}
+\]</div>
+<p>对温度求导，得到氢键热容修正：</p>
+<div class="arithmatex">\[
+C_{V,m,\text{氢键}}
+=4R\left(\frac{\Delta E}{RT}\right)^2
+\frac{e^{\Delta E/(RT)}}{(1+e^{\Delta E/(RT)})^2}
+\]</div>
+</div>
+<div class="arithmatex">\[
+C_{V,m,\text{氢键}}\approx14.5\ \mathrm{J\,mol^{-1}K^{-1}}
+\]</div>
+<p>课堂上给出的是<span class="arithmatex">\(21.3\mathrm{J\,mol^{-1}K^{-1}}\)</span></p>
+<p>液态水室温下的定压摩尔热容约为：</p>
+<div class="arithmatex">\[
+C_{P,m}(\text{水})\approx75.3\ \mathrm{J\,mol^{-1}K^{-1}}
+\]</div>
+<hr>
+<h3 id="43">4.3 液体的体积摩尔比热<a class="headerlink" href="#43" title="Permanent link">¶</a></h3>
+<p>单位体积物质升高单位温度所需要的热量：</p>
+<div class="arithmatex">\[
+\Gamma_V=\frac{C_{P,m}}{V_m}
+\]</div>
+<p>液体的摩尔体积远小于气体：</p>
+<div class="arithmatex">\[
+\Gamma_{V,\text{气}}\sim\frac{1}{1000}\Gamma_{V,\text{液}}
+\]</div>
+<p>溶剂吸收反应释放的热量，产生正的熵变，从而补偿反应物结合所造成的熵减。</p>
+<hr>
+<h3 id="44">4.4 体积<a class="headerlink" href="#44" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[
+V_m=\left(\frac{\partial G_m}{\partial P}\right)_{T,n}=\left(\frac{\partial H_m}{\partial P}\right)_{T,n}
+-T\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+\]</div>
+<p>对于<strong>理想气体</strong>，焓仅与温度有关：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial H_m}{\partial P}\right)_{T,n}=0
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+V_m=-T\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+}
+\]</div>
+<p>对于<strong>液体</strong>，根据 Maxwell 关系：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial S_m}{\partial P}\right)_{T,n}
+=-\left(\frac{\partial V_m}{\partial T}\right)_{P,n}
+\]</div>
+<p>由于凝聚态物质的热膨胀通常较小，近似：</p>
+<div class="arithmatex">\[
+\left(\frac{\partial V_m}{\partial T}\right)_{P,n}\approx0
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+V_m\approx\left(\frac{\partial H_m}{\partial P}\right)_{T,n}\approx\left(\frac{\partial U_m}{\partial P}\right)_{T,n}
+}
+\]</div>
+<hr>
+<h2 id="_11">第五节 固体的量子统计热力学<a class="headerlink" href="#_11" title="Permanent link">¶</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>经典能量均分定理认为能量连续，必要条件如下：</p>
+<div class="arithmatex">\[
+\boxed{k_BT\gg\Delta E}
+\]</div>
+<p>此时级数和才能近似为积分，能量均分成立，每个二次型能量项平均贡献 <span class="arithmatex">\(\frac12 k_BT\)</span>。</p>
+<p>然而对于低温高频的情况能量均分无法解释，而量子统计则可以通过级数求和的方式给出精确热能贡献。</p>
+</div>
+<h3 id="51">5.1 摩尔热能、摩尔内能与爱因斯坦关系式<a class="headerlink" href="#51" title="Permanent link">¶</a></h3>
+<p>固体的摩尔内能：</p>
+<div class="arithmatex">\[
+U_{m,\text{固}}=Q_{m,\text{固}}+U_m(0)
+\]</div>
+<p>对于<span class="arithmatex">\(\mathrm{1mol}\)</span> <strong>原子</strong>共有 <span class="arithmatex">\(3N_A\)</span> 个振动模式：</p>
+<div class="arithmatex">\[
+U_{m,\text{固}}=\sum_{j=1}^{3N_A}Q_j+U_m(0)
+\]</div>
+<p><strong>爱因斯坦模型</strong>假设所有原子均以相同频率 <span class="arithmatex">\(\nu_E\)</span> 进行独立简谐振动（<strong>均为低频，室温下高温低频近似</strong>）</p>
+<p>振动热能：</p>
+<div class="arithmatex">\[
+\overline Q=\frac{h\nu_E}{e^{h\nu_E/(k_BT)}-1}
+\]</div>
+<p>固体摩尔内能为：</p>
+<div class="arithmatex">\[
+U_{m,\text{固}}
+=U_m(0)+\frac{3N_Ah\nu_E}{e^{h\nu_E/(k_BT)}-1}
+\]</div>
+<p>爱因斯坦方程：</p>
+<div class="arithmatex">\[
+\boxed{
+C_{V,m}
+=3R\left[
+\frac{h\nu_E/(k_BT)}
+{e^{h\nu_E/(2k_BT)}-e^{-h\nu_E/(2k_BT)}}
+\right]^2
+}
+\]</div>
+<div class="arithmatex">\[
+C_{V,m}
+=3R\frac{x^2e^x}{(e^x-1)^2},
+\qquad
+x=\frac{h\nu_E}{k_BT}
+\]</div>
+<p><strong>高温极限</strong>（<span class="arithmatex">\(k_BT\gg h\nu_E\)</span>）：</p>
+<div class="arithmatex">\[
+C_{V,m}\longrightarrow3R=25\mathrm{J/mol·K}
+\]</div>
+<p><strong>低温极限</strong>（<span class="arithmatex">\(k_BT\ll h\nu_E\)</span>）：</p>
+<div class="arithmatex">\[
+C_{V,m}\approx3Rx^2e^{-x}
+\]</div>
+<div class="arithmatex">\[
+C_{V,m}\longrightarrow0
+\]</div>
+<hr>
+<h3 id="52">5.2 固体的定压摩尔热容<a class="headerlink" href="#52" title="Permanent link">¶</a></h3>
+<div class="arithmatex">\[
+C_{P,m,\text{固}}
+=\sum_{j=1}^{3N_A}
+\frac{
+k_B\left(\frac{h\nu_j}{k_BT}\right)^2
+}{
+\left(e^{\frac{h\nu_j}{2k_BT}}-e^{-\frac{h\nu_j}{2k_BT}}\right)^2
+}
++\left(\frac{\partial U_m(0)}{\partial T}\right)_P
+\]</div>
+<div class="arithmatex">\[
+C_{P,m,\text{固}}
+=\sum_{j=1}^{3N_A}
+\frac{
+k_B\left(\frac{h\nu_j}{k_BT}\right)^2
+}{
+\left(e^{\frac{h\nu_j}{2k_BT}}-e^{-\frac{h\nu_j}{2k_BT}}\right)^2
+}
++\frac{V_mT\alpha_P^2}{\kappa_T}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>键力常数 <span class="arithmatex">\(k\)</span> 越大</strong> → 势阱底部曲率越大（更陡峭、狭窄） → 振动频率 <span class="arithmatex">\(\omega=\sqrt{k/\mu}\)</span> 越高 → 振动能级间隔 <span class="arithmatex">\(\Delta E=\hbar\omega\)</span> 越大 → 相同温度下越难被热激发 → 量子冻结越明显，振动热容越小。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">物质</th>
+<th style="text-align: center;"><span class="arithmatex">\(C_{P,m}\)</span> / (<span class="arithmatex">\(\mathrm{J\cdot mol^{-1}\cdot K^{-1}}\)</span>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{C}\)</span></td>
+<td style="text-align: center;">6.1</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{Cs}\)</span></td>
+<td style="text-align: center;">32.2</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(\mathrm{BaCO_3}\)</span></td>
+<td style="text-align: center;">86</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_12">单原子固体<a class="headerlink" href="#_12" title="Permanent link">¶</a></h4>
+<p><strong>低频高温近似</strong>：对多数单原子金属和离子晶体成立，对力常数较大的小原子误差大（如碳单晶）。</p>
+<h4 id="_13">共价分子或基团<a class="headerlink" href="#_13" title="Permanent link">¶</a></h4>
+<div class="arithmatex">\[
+C_{P,m}(\mathrm{BaCO_3})\neq 3R\times5
+\]</div>
+<p>其中碳酸根共价部分存在误差</p>
+<hr>
+<h3 id="53">5.3 固体的摩尔熵<a class="headerlink" href="#53" title="Permanent link">¶</a></h3>
+<p><strong>热力学第三定律</strong>，完美晶体在绝对零度时熵为零：</p>
+<div class="arithmatex">\[
+\lim_{T\to0}S_m=0
+\]</div>
+<p>由可逆过程的熵定义及恒压摩尔热容：</p>
+<div class="arithmatex">\[
+dS_m=\frac{\delta Q_{\mathrm{rev},m}}{T},
+\qquad
+\delta Q_{\mathrm{rev},m}=C_{P,m}\,dT
+\]</div>
+<div class="arithmatex">\[
+dS_m=\frac{C_{P,m}}{T}\,dT
+\]</div>
+<div class="arithmatex">\[
+S_m(T)-S_m(0)=\int_0^T\frac{C_{P,m}(T')}{T'}\,dT'
+\]</div>
+<div class="arithmatex">\[
+\boxed{
+S_m(T)=\int_0^T\frac{C_{P,m}(T')}{T'}\,dT'
+}
+\]</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚">
+        
+          
+          <a href="../chapter-7/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 分子间相互作用">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                分子间相互作用
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../chapter-9/" class="md-footer__link md-footer__link--next" aria-label="下一页: 溶液的基本性质">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                溶液的基本性质
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Peikai Chen. All rights, including for text and data mining, AI training, and similar technologies, are reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.tabs", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
