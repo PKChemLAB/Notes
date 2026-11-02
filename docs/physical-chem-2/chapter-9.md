@@ -732,42 +732,80 @@ $$
 A(\mathrm{液})\rightleftharpoons A(\mathrm{气})
 $$
 
+
 非理想溶液的化学势：
 
 $$
-\mu_A(\mathrm{液})=\mu_A^*+RT\ln a_A
+\mu_A(\mathrm{液})=\mu_A^*+RT\ln\alpha_A
 =\mu_A^*+RT\ln(\gamma_A\chi_A)
 $$
 
 气相视为理想气体：
 
 $$
-\mu_A(\mathrm{气})=\mu_A^\circ+RT\ln\frac{P_A}{P^\circ}=\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}+RT\ln\frac{P_A}{P^\circ}
+\begin{aligned}
+\mu_A(\mathrm{气})
+&=\mu_A^\circ+RT\ln\frac{P_A}{P^\circ}\\
+&=\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}
++RT\ln\frac{P_A}{P_A^*}
+\end{aligned}
 $$
-
-
 
 气液平衡条件：
 
 $$
 \begin{aligned}
-\mu_A^*+RT\ln a_A
+\mu_A^*+RT\ln\alpha_A
 &=\mu_A^\circ+RT\ln\frac{P_A}{P^\circ}\\
-\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}+RT\ln a_A
-&=\mu_A^\circ+RT\ln\frac{P_A}{P^\circ}
+\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}
++RT\ln\alpha_A
+&\approx\mu_A^\circ+RT\ln\frac{P_A}{P^\circ}
 \end{aligned}
 $$
 
 
-$$
-\ln(a_AP_A^*)=\ln P_A
-$$
+!!!NOTE
+
+    在纯物质气液平衡时：
+
+    $$
+    \mu_A^{(l)}(T,P_A^*)
+    =\mu_A^{(g)}(T,P_A^*)
+    =\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}
+    $$
+
+    恒温下：
+
+    $$
+    \left(\frac{\partial\mu_A^{(l)}}{\partial P}\right)_T
+    =V_{m,A}^{(l)}
+    $$
+
+    由于液体摩尔体积较小，忽略化学势随压力的变化：
+
+    $$
+    \mu_A^*(T,P)\approx\mu_A^{(l)}(T,P_A^*)
+    $$
+
+    因此：
+
+    $$
+    \boxed{
+    \mu_A^*\approx\mu_A^\circ+RT\ln\frac{P_A^*}{P^\circ}
+    }
+    $$
+
+    此处 $P$ 为液相总压力，$P_A^*$ 为纯液态溶质的饱和蒸气压。
 
 
 $$
-\boxed{a_A=\frac{P_A}{P_A^*}}
+\ln\frac{\alpha_A P_A^*}{P^\circ}
+=\ln\frac{P_A}{P^\circ}
 $$
 
+$$
+\boxed{\alpha_A=\frac{P_A}{P_A^*}}
+$$
 
 $$
 \boxed{\gamma_A=\frac{P_A}{P_A^*\chi_A}}
