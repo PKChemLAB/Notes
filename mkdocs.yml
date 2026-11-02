@@ -140,19 +140,19 @@ nav:
 
 
 
-#  - 物理化学II:
+  - 物理化学II:
 
-#      - 课程主页: physical-chem-2/index.md
+      - 课程主页: physical-chem-2/index.md
 
-#      - 分子间相互作用: physical-chem-2/chapter-7.md
+      - 分子间相互作用: physical-chem-2/chapter-7.md
 
-#      - 纯物质体相性质: physical-chem-2/chapter-8.md
+      - 纯物质体相性质: physical-chem-2/chapter-8.md
 
-#      - 溶液的基本性质: physical-chem-2/chapter-9.md
+      - 溶液的基本性质: physical-chem-2/chapter-9.md
 
-#      - 溶液与多相混合物: physical-chem-2/chapter-10.md
+      - 溶液与多相混合物: physical-chem-2/chapter-10.md
 
-#      - 表界面与胶体（1）: physical-chem-2/chapter-11.md
+      - 表界面与胶体（1）: physical-chem-2/chapter-11.md
 
 
   - 数据结构基础:
@@ -267,7 +267,7 @@ extra_javascript:
 
 extra_css:
 
-  - stylesheets/extra.css?v=2026.11.02.1658
+  - stylesheets/extra.css?v=2026.11.02.1701
 
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
