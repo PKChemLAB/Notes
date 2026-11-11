@@ -1,4 +1,5 @@
-# 第十一章 表面与胶体：表界面
+# 第十一章 表界面 & 第十二章 胶体溶液 
+
 
 ## 第一节 表界面的性质
 
@@ -446,20 +447,21 @@ $$
 
 **Langmuir 吸附模型的基本假设**
 
-1. 固体表面吸附位点数量固定
+- 固体表面吸附位点数量固定
 
-2. 每个位点最多吸附一个分子，形成**单分子层**吸附。
+- 每个位点最多吸附一个分子，形成**单分子层**吸附。
 
-3. 所有吸附位点等价，具有相同的吸附能力。
+- 所有吸附位点等价，具有相同的吸附能力。
 
-4. 吸附分子之间不存在相互作用。
+- 吸附分子之间不存在相互作用。
 
-5. 吸附和脱附过程均为基元步骤：
-   - 吸附速率与气体浓度 $C$ 和自由位点数 $N_{\text{自由}}$ 成正比。
+- 吸附和脱附过程均为基元步骤：
 
-   - 脱附速率仅与已占据位点数 $N_{\text{吸附}}$ 成正比。
+    - 吸附速率与气体浓度 $C$ 和自由位点数 $N_{\text{自由}}$ 成正比。
 
-6. 吸附和脱附在**恒定温度**下进行，速率常数 $k_{\text{吸附}}$ 和 $k_{\text{脱附}}$ 保持不变。
+    - 脱附速率仅与已占据位点数 $N_{\text{吸附}}$ 成正比。
+
+- 吸附和脱附在**恒定温度**下进行，速率常数 $k_{\text{吸附}}$ 和 $k_{\text{脱附}}$ 保持不变。
 
 
 ---
@@ -484,11 +486,347 @@ $$
 ---
 
 
-# 第十二章 胶体溶液
-
 ## 第一节 胶体及其物理性质
 
 ### 1.1 胶体
 
 
 定义：纳米尺寸粒子相对稳定分散在介质中，结构成分相对固定
+
+---
+
+### 1.2 胶体纳米晶的物化性质
+
+#### 半导体纳米晶
+
+半导体纳米晶电子和空穴受到有限空间限制，能级量子化。光学跃迁能量：
+
+1. 体相半导体的带隙能量；
+2. 电子和空穴的量子限域（势阱）动能；
+3. 电子–空穴之间的静电相互作用能（激子结合能，负值）。
+
+**Brus 公式：**
+
+$$
+\varepsilon\approx
+\varepsilon_{g,\text{体相}}
++\varepsilon_{\text{激子}}
++\frac{h^2}{8r^2}
+\left(
+\frac{1}{m_{\text{电子}}}
++\frac{1}{m_{\text{空穴}}}
+\right)
+$$
+
+激子有效质量：
+
+$$
+\frac{1}{m_{\text{激子}}}
+=
+\frac{1}{m_{\text{电子}}}
++\frac{1}{m_{\text{空穴}}}
+$$
+
+
+$$
+m_{\text{激子}}
+=
+\frac{m_{\text{电子}}m_{\text{空穴}}}
+{m_{\text{电子}}+m_{\text{空穴}}}
+$$
+
+
+- 量子限域能量项与 $1/r^2$ 成正比，纳米晶尺寸越小，限域效应越显著，光学跃迁能量增大，吸收峰向短波长方向移动，称为**蓝移**。
+  
+- 激子静电相互作用能为负值，与纳米晶半径近似成反比。
+
+#### 金属纳米晶
+
+![](image/image-38.png){: .center width="290"}
+
+光场使表面等离子体振动，吸收短波（520nm），呈酒红色
+
+#### 磁性纳米晶
+
+![](image/image-39.png){: .center width="290"}
+
+#### 化学性质
+
+- 表面催化
+
+- 热力学性质：纳米尺寸下，熔点下降
+
+---
+
+## 第二节 单个纳米晶的热力学性质
+
+### 2.1 溶液中单个纳米晶的热力学性质
+
+平衡时：
+
+$$
+\mu_r=\mu_{\text{单体}}
+$$
+
+纳米晶的吉布斯自由能：
+
+$$
+G=n\mu_{(\infty)}+a\sigma
+$$
+
+**纳米晶单体**的化学势：
+
+$$
+\begin{aligned}
+\mu_r
+&=\left(\frac{\partial G}{\partial n}\right)_{T,P}\\
+&=\left(
+\frac{\partial(n\mu_{(\infty)}+a\sigma)}
+{\partial n}
+\right)_{T,P}\\
+&=\mu_{(\infty)}
++\sigma\left(\frac{\partial a}{\partial n}\right)_{T,P}
++a\left(\frac{\partial\sigma}{\partial n}\right)_{T,P}
+\end{aligned}
+$$
+
+链式法则：
+
+$$
+\begin{aligned}
+\mu_r
+=\mu_{(\infty)}
+&+\sigma\left(\frac{\partial a}{\partial r}\right)
+\left(\frac{\partial r}{\partial n}\right)\\
+&+a\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+\left(\frac{\partial r}{\partial n}\right)
+\end{aligned}
+$$
+
+对于**球形**纳米晶：
+
+$$
+a=4\pi r^2
+$$
+
+$$
+n=\frac{4\pi r^3}{3V_m}
+$$
+
+因此：
+
+$$
+\frac{\partial n}{\partial r}
+=\frac{4\pi r^2}{V_m}
+$$
+
+$$
+\frac{\partial r}{\partial n}
+=\frac{V_m}{4\pi r^2}
+$$
+
+代入得：
+
+$$
+\begin{aligned}
+\mu_r
+=\mu_{(\infty)}
+&+\sigma\cdot 8\pi r
+\frac{V_m}{4\pi r^2}\\
+&+4\pi r^2
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+\frac{V_m}{4\pi r^2}
+\end{aligned}
+$$
+
+$$
+\boxed{
+\mu_r
+=\mu_{(\infty)}
++\frac{2\sigma V_m}{r}
++V_m\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+}
+$$
+
+第二项表面贡献与半径呈反比。纳米晶越小，化学势越高
+
+宏观晶体对应的饱和溶液和纳米晶体对应的饱和溶液，分别有：
+
+$$
+\begin{cases}
+\mu_{(\infty)}
+=\mu_{(\infty,\text{饱和})}
+=\mu°+RT\ln\alpha_{(\infty,\text{饱和})}
+\\[8pt]
+\mu_r
+=\mu_{(r,\text{饱和})}
+=\mu°+RT\ln\alpha_{(r,\text{饱和})}
+\end{cases}
+$$
+
+二者对应相同的单体，参考态相同。
+
+$$
+\boxed{
+\alpha_{(r,\text{饱和})}
+=
+\alpha_{(\infty,\text{饱和})}
+\exp\left(\frac{2\sigma V_m}{rRT}\right)
+\exp\left[
+\frac{V_m}{RT}
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+\right]
+}
+$$
+
+若表面势不随半径变化：
+
+$$
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}\approx 0
+$$
+
+**吉布斯-开尔文公式**：
+
+
+$$
+\boxed{
+\alpha_{(r,\text{饱和})}
+=
+\alpha_{(\infty,\text{饱和})}
+\exp\left(\frac{2\sigma V_m}{rRT}\right)
+}
+$$
+
+随着离子尺寸变小，饱和活度增大
+
+
+半径趋于零，活度发散不合理，故表面势应该随着半径变化：
+
+$$
+r\rightarrow 0,\qquad
+\alpha_{(r,\text{饱和})}\rightarrow\infty
+$$
+
+$$
+\therefore\quad
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}<0
+$$
+
+---
+
+
+### 2.2 气相中的小液滴
+
+小液滴与宏观平液面的化学势：
+
+$$
+\begin{cases}
+\mu_{(\infty)}
+=\mu^\circ+RT\ln P^\ast_{(\infty)}
+\\[8pt]
+\mu_r
+=\mu^\circ+RT\ln P^\ast_r
+\end{cases}
+$$
+
+因此：
+
+$$
+\boxed{
+P^\ast_r
+=
+P^\ast_{(\infty)}
+\exp\left(\frac{2\sigma V_m}{rRT}\right)
+\exp\left[
+\frac{V_m}{RT}
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+\right]
+}
+$$
+
+液滴半径越小，化学势越高，与之平衡的饱和蒸汽压越大
+
+---
+
+### 2.3 溶液中纳米晶溶解度
+
+$$
+\alpha_{(\infty)}=1
+$$
+
+$$
+\chi_{(r,\text{饱和})}
+=
+\frac{1}{\gamma_{(r,\text{饱和})}}
+\exp\left(\frac{2\sigma V_m}{rRT}\right)
+\exp\left[
+\frac{V_m}{RT}
+\left(\frac{\partial\sigma}{\partial r}\right)_{T,P}
+\right]
+$$
+
+奥斯瓦尔德熟化：小晶体溶解度更高，小晶体溶解，大晶体生长
+
+---
+
+### 2.4 成核理论
+
+溶液过饱和时，溶液中的溶质单体满足：
+
+$$
+\mu_{\text{单体}}>\mu_{(\infty)}
+$$
+
+意味着形成晶体可以降低自由能
+
+
+$$
+\Delta G=\int_0^n
+\left(\mu_r-\mu_{\text{单体}}\right)\,\mathrm{d}n
+$$
+
+$$
+=
+\left(\mu_\infty-\mu_{\text{单体}}\right)
+\frac{4\pi r^3}{3V_m}
++4\pi r^2\sigma
+$$
+
+
+
+![](image/image-40.png){: .center width="290"}
+
+如图临界成核尺寸，成核需要越过**能垒**
+
+---
+
+## 第三节 分散系的热力学性质
+
+### 3.1 聚集的自发性
+
+小液滴（气泡）化学势更高，表面积更大。聚集降低表面自由能。
+
+---
+
+###　3.2 电解质溶液中的胶体粒子
+
+
+![](image/image-41.png){: .center width="290"}
+
+形成双电层互相排斥，保持稳定不易聚集。若加入电解质，发生聚集。
+
+---
+
+### 3.3 纳米晶-配体络合物
+
+![](image/image-42.png){: .center width="290"}
+
+$$
+\chi_{\text{粒子(饱和)}}
+=
+e^{-\Delta_{\text{粒子(熔)}}G_m/RT}
+\times
+e^{-\Delta_{\text{液混(非)}}G_{\mathrm{粒子}}/RT}
+$$
+
+高频溶剂后一项趋近于1。摩尔熔融焓和摩尔熔融熵都取决于配体层。链长增加，摩尔熔融焓增加，显著降低溶解度，摩尔熔融熵变化小。支链配体使得摩尔熔融熵占主导，称为熵配体。

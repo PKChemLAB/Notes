@@ -152,7 +152,7 @@ nav:
 
       - 溶液与多相混合物: physical-chem-2/chapter-10.md
 
-      - 表界面与胶体: physical-chem-2/chapter-11.md
+      - 表界面与胶体: physical-chem-2/chapter-11&12.md
 
 
   - 数据结构基础:
@@ -267,7 +267,7 @@ extra_javascript:
 
 extra_css:
 
-  - stylesheets/extra.css?v=2026.11.07.1946
+  - stylesheets/extra.css?v=2026.11.11.2020
 
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css
 
