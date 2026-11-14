@@ -569,7 +569,7 @@ $$
 H_m=U_m+PV_m\approx U_m= U(0)_m+Q_m
 $$
 
-其中对于液体：
+其中对于液体摩尔体积（温度）会影响基态能：
 
 $$
 \frac{\partial U(0)_m}{\partial V}=0
@@ -900,6 +900,8 @@ $$
 
 ### 5.2 固体的定压摩尔热容
 
+从焓的定义出发，省略$PV$对$T$的偏导得到：
+
 $$
 C_{P,m,\text{固}}
 =\sum_{j=1}^{3N_A}
@@ -910,6 +912,8 @@ k_B\left(\frac{h\nu_j}{k_BT}\right)^2
 }
 +\left(\frac{\partial U_m(0)}{\partial T}\right)_P
 $$
+
+从热力学恒等式出发：
 
 $$
 C_{P,m,\text{固}}
